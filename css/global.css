@@ -65,7 +65,7 @@ body {
   display: block;
   padding: 12px 42px;
   border-radius: 12px;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   background: var(--color-font);
   color: var(--ux-global-color-accent-1);
   transform: translateY(-6px);
@@ -87,7 +87,7 @@ body {
     --bs-navbar-active-color: var(--color-font);
 
     font-family: Minercraftory, sans-serif;
-    font-size: 1.5rem;
+
 }
 
 .navbar li {
@@ -97,6 +97,11 @@ body {
 /* Sfondo della navbar */
 .nav-custom-bg {
     background-image: url("../img/header/navbar-bg.png");
+}
+
+.letto-navbar{
+    width: 7rem;
+    height: 7rem;
 }
 
 /* Rimuove effetti sul burger menu */
@@ -158,5 +163,13 @@ body {
   }
   100% {
     transform: scale(1.2); /* Ingrandisce del 20%, simulando l'avvicinamento */
+  }
+}
+
+
+/* Esempio: su schermi piccolissimi voglio che tutto sia più minuto */
+@media (max-width: 600px) {
+  html {
+    font-size: 14px; /* Ora 1rem = 14px per tutto il sito */
   }
 }
