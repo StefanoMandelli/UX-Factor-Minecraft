@@ -1,0 +1,40 @@
+/* Css */
+:root {
+    --color-font: #E4D8D4;
+}
+
+@font-face {
+   font-family: 'Minercraftory';
+   src: url('../font/Minercraftory.ttf') format('truetype');
+}
+
+body {
+    background-color: #1B1B1B;
+    color: var(--color-font);
+}
+
+.navbar {
+    --bs-navbar-color: var(--color-font);
+    --bs-navbar-active-color: var(--color-font);
+
+    font-family: Minercraftory, sans-serif;
+    font-size: 1.5rem;
+}
+
+.navbar li {
+    margin-bottom: 1.5rem;
+}
+
+/* Sfondo della navbar */
+.nav-custom-bg {
+    background-image: url("../img/header/navbar-bg.png");
+}
+
+/* Rimuove effetti sul burger menu */
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    box-shadow: none;
+    border: none;
+}
