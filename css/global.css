@@ -15,11 +15,38 @@
     --ux-dark-color: #232323;
 
     --ux-border-btn: 5px;
+
+    --ux-footer-font: 400 1.2rem "DMSans", sans-serif;
+
+    /* Base */
+    --ux-font-DMSans: 'DMSans', sans-serif;
+  
+    /* Stili predefiniti (Shorthand) */
+    /* Sintassi: weight size/line-height family */
+    --ux-txt-h3: 400 2rem/3.1rem var(--ux-font-DMSans);
 }
 
 @font-face {
    font-family: 'Minercraftory';
    src: url('../font/Minercraftory.ttf') format('truetype');
+}
+
+@font-face {
+   font-family: 'DMSans';
+   src: url('../font/DMSans-Regular.ttf') format('truetype');
+   font-weight: 400;
+}
+
+@font-face {
+   font-family: 'DMSans';
+   src: url('../font/DMSans-Medium.ttf') format('truetype');
+   font-weight: 500;
+}
+
+@font-face {
+   font-family: 'DMSans';
+   src: url('../font/DMSans-Bold.ttf') format('truetype');
+   font-weight: 700;
 }
 
 body {
@@ -63,9 +90,9 @@ body {
 
 .front {
   display: block;
-  padding: 12px 42px;
+  padding: 1em 2em;
   border-radius: 12px;
-  font-size: 1.5rem;
+  font-size: 0.8rem;
   background: var(--color-font);
   color: var(--ux-global-color-accent-1);
   transform: translateY(-6px);
@@ -87,11 +114,10 @@ body {
     --bs-navbar-active-color: var(--color-font);
 
     font-family: Minercraftory, sans-serif;
-
 }
 
 .navbar li {
-    margin-bottom: 3rem;
+    margin-top: 2rem;
 }
 
 /* Sfondo della navbar */
@@ -99,9 +125,8 @@ body {
     background-image: url("../img/header/navbar-bg.png");
 }
 
-.letto-navbar{
-    width: 7rem;
-    height: 7rem;
+.footer-custom-bg{
+ background-image: url("../img/footer/footer-bg.png"); 
 }
 
 /* Rimuove effetti sul burger menu */
@@ -133,8 +158,7 @@ body {
   
 }
 
-.navbar-toggler,
-.navbar-brand {
+.navbar-toggler{
   z-index: 1;
 }
 
@@ -166,10 +190,19 @@ body {
   }
 }
 
+/* Footer */
 
-/* Esempio: su schermi piccolissimi voglio che tutto sia più minuto */
-@media (max-width: 600px) {
-  html {
-    font-size: 14px; /* Ora 1rem = 14px per tutto il sito */
-  }
+#icon-twitter{
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.footer-anchor{
+  font: var(--ux-txt-h3);
+}
+
+.footer-font-dinecraft{
+  color: var(--ux-global-color-accent-2);
+  font-family: Minercraftory, sans-serif;
+  font-size: 1.5rem;
 }
