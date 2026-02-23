@@ -196,6 +196,20 @@ body {
   }
 }
 
+.navbar-toggler[aria-expanded="false"] .icon-close {
+  display: none; /* Nascondi la X */
+}
+.navbar-toggler[aria-expanded="false"] .icon-burger {
+  display: inline-block; /* Mostra l'hamburger */
+}
+.navbar-toggler[aria-expanded="true"] .icon-burger {
+  display: none; /* Nascondi l'hamburger */
+}
+.navbar-toggler[aria-expanded="true"] .icon-close {
+  display: inline-block; /* Mostra la X */
+}
+
+
 /* Footer */
 
 #icon-twitter{
