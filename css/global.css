@@ -1,6 +1,7 @@
 /* Css */
 :root {
 
+    /* Colori */
     --ux-global-color-background: #1a3323;
     --ux-global-color-accent-1: #446a1b;
     --ux-global-color-accent-2: #727272;
@@ -11,19 +12,25 @@
     --ux-end-color-background: #3f1e54;
     --ux-end-color-accent: #85647a;
 
-    --color-font: #e4d8d4;
     --ux-dark-color: #232323;
 
     --ux-border-btn: 5px;
 
-    --ux-footer-font: 400 1.2rem "DMSans", sans-serif;
+    /* Tipografia */
 
-    /* Base */
+    --color-font: #e4d8d4;
     --ux-font-DMSans: 'DMSans', sans-serif;
+    --ux-font-Minercraftory: 'Minercraftory', sans-serif;
   
     /* Stili predefiniti (Shorthand) */
     /* Sintassi: weight size/line-height family */
-    --ux-txt-h3: 400 2rem/3.1rem var(--ux-font-DMSans);
+    --ux-txt-h1: 400 2.25rem/4rem var(--ux-font-Minercraftory);
+    --ux-txt-h2: 400 2rem/3.1rem var(--ux-font-DMSans);
+    --ux-txt-h3: 400 1.5rem/2.4rem var(--ux-font-DMSans);
+    --ux-txt-h4: 400 1rem/1.5rem var(--ux-font-DMSans);
+    /* Duplicato perchè da desktop a mobile abbiamo scalato da di uno. Ad esempio h1 diventa h2 */
+    --ux-txt-h5: 400 1rem/1.5rem var(--ux-font-DMSans); 
+    --ux-txt-body: 400 1rem/1.5rem var(--ux-font-DMSans);
 }
 
 @font-face {
@@ -53,7 +60,6 @@ body {
     background-color: var(--ux-dark-color);
     color: var(--color-font);
 }
-
 
 /* Bottoni */
 
@@ -199,10 +205,11 @@ body {
 
 .footer-anchor{
   font: var(--ux-txt-h3);
+  color: var(--color-font);
 }
 
 .footer-font-dinecraft{
   color: var(--ux-global-color-accent-2);
   font-family: Minercraftory, sans-serif;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
