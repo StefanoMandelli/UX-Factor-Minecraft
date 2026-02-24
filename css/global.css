@@ -61,6 +61,7 @@
 body {
     background-color: var(--ux-dark-color);
     color: var(--color-font);
+    
 }
 
 /* Bottoni */
@@ -162,6 +163,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
   
 }
 
@@ -195,6 +197,10 @@ body {
   100% {
     transform: scale(1.2); /* Ingrandisce del 20%, simulando l'avvicinamento */
   }
+}
+
+body:has(.navbar-collapse.show) {
+  overflow: hidden;
 }
 
 .navbar-toggler[aria-expanded="false"] .icon-close {
