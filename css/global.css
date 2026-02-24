@@ -24,13 +24,15 @@
   
     /* Stili predefiniti (Shorthand) */
     /* Sintassi: weight size/line-height family */
-    --ux-txt-h1: 400 2.25rem/4rem var(--ux-font-Minercraftory);
+    --ux-txt-h1: 400 2rem/4rem var(--ux-font-Minercraftory);
     --ux-txt-h2: 400 2rem/3.1rem var(--ux-font-DMSans);
     --ux-txt-h3: 400 1.5rem/2.4rem var(--ux-font-DMSans);
     --ux-txt-h4: 400 1rem/1.5rem var(--ux-font-DMSans);
     /* Duplicato perchè da desktop a mobile abbiamo scalato da di uno. Ad esempio h1 diventa h2 */
     --ux-txt-h5: 400 1rem/1.5rem var(--ux-font-DMSans); 
     --ux-txt-body: 400 1rem/1.5rem var(--ux-font-DMSans);
+
+    
 }
 
 @font-face {
@@ -99,6 +101,7 @@ body {
   padding: 1em 2em;
   border-radius: 12px;
   font-size: 0.8rem;
+  font-family: Minercraftory, sans-serif;
   background: var(--color-font);
   color: var(--ux-global-color-accent-1);
   transform: translateY(-6px);
@@ -118,8 +121,6 @@ body {
 .navbar {
     --bs-navbar-color: var(--color-font);
     --bs-navbar-active-color: var(--color-font);
-
-    font-family: Minercraftory, sans-serif;
 }
 
 .navbar li {
@@ -209,6 +210,22 @@ body {
   display: inline-block; /* Mostra la X */
 }
 
+/* Body */
+h1{
+  font: var(--ux-txt-h1);
+}
+h2{
+  font: var(--ux-txt-h2);
+}
+h3{
+  font: var(--ux-txt-h3);
+}
+h4{
+  font: var(--ux-txt-h4);
+}
+h5{
+  font: var(--ux-txt-h5);
+}
 
 /* Footer */
 
@@ -227,3 +244,4 @@ body {
   font-family: Minercraftory, sans-serif;
   font-size: 1rem;
 }
+
