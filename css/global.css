@@ -75,18 +75,18 @@ body {
   --bs-btn-font-weight: 600;
   --bs-btn-color: var(--ux-global-color-accent-1);
   --bs-btn-bg: var(--color-font);
-  --bs-btn-border-color: var(--ux-global-color-accent-1);
+  --bs-btn-border-color: var(--color-font);
   --bs-btn-border-radius: var(--ux-border-btn);
 
   --bs-btn-hover-color: var(--color-font);
   --bs-btn-hover-bg: var(--ux-global-color-accent-1);
-  --bs-btn-hover-border-color: var(--color-font);
+  --bs-btn-hover-border-color: var(--ux-global-color-accent-1);
 
   --bs-btn-focus-shadow-rgb: var();
 
   --bs-btn-active-color: var(--color-font);
   --bs-btn-active-bg: var(--ux-global-color-accent-1);
-  --bs-btn-active-border-color: var(--color-font);
+  --bs-btn-active-border-color: var(--ux-global-color-accent-1);
 }
 
 .pushable {
@@ -203,12 +203,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  
+  z-index: 1;
 }
 
 .navbar-toggler{
-  z-index: 1;
+  z-index: 2;
 }
 
 /* Letto NavBar */
