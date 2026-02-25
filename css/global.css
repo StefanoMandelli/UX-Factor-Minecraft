@@ -1,76 +1,68 @@
-/* Css */
+/* Variabili globali CSS */
 :root {
+  /* Colori */
+  --ux-global-color-background: #1a3323;
+  --ux-global-color-accent-1: #446a1b;
+  --ux-global-color-accent-2: #727272;
 
-    /* Colori */
-    --ux-global-color-background: #1a3323;
-    --ux-global-color-accent-1: #446a1b;
-    --ux-global-color-accent-2: #727272;
+  --ux-nether-color-background: #531f1d;
+  --ux-nether-color-accent: #a51f20;
 
-    --ux-nether-color-background: #531f1d;
-    --ux-nether-color-accent: #a51f20;
+  --ux-end-color-background: #3f1e54;
+  --ux-end-color-accent: #85647a;
 
-    --ux-end-color-background: #3f1e54;
-    --ux-end-color-accent: #85647a;
+  --ux-dark-color: #232323;
 
-    --ux-dark-color: #232323;
+  --ux-border-btn: 5px;
 
-    --ux-border-btn: 5px;
+  /* Tipografia */
+  --color-font: #e4d8d4;
+  --ux-font-DMSans: "DMSans", sans-serif;
+  --ux-font-Minercraftory: "Minercraftory", sans-serif;
 
-    /* Tipografia */
+  /* Font iPhoneSE */
+  --ux-txt-h1: 400 2rem/3.5rem var(--ux-font-Minercraftory);
+  --ux-txt-h2: 400 2rem/3.1rem var(--ux-font-DMSans);
+  --ux-txt-h3: 400 1.5rem/2.4rem var(--ux-font-DMSans);
+  --ux-txt-h4: 400 1rem/1.5rem var(--ux-font-DMSans);
+  --ux-txt-h5: 400 1rem/1.5rem var(--ux-font-DMSans); /* Duplicato perchè da desktop a mobile abbiamo scalato da di uno. Ad esempio h1 diventa h2 */
+  --ux-txt-body: 400 1rem/1.5rem var(--ux-font-DMSans);
 
-    --color-font: #e4d8d4;
-    --ux-font-DMSans: 'DMSans', sans-serif;
-    --ux-font-Minercraftory: 'Minercraftory', sans-serif;
-  
-    /* Font IphoneSE*/
+  /* Font da 576 */
+  --ux-txt-h1-576: 400 2.25rem/4rem var(--ux-font-Minercraftory);
+}
 
-    --ux-txt-h1: 400 2rem/3.5rem var(--ux-font-Minercraftory);
-    --ux-txt-h2: 400 2rem/3.1rem var(--ux-font-DMSans);
-    --ux-txt-h3: 400 1.5rem/2.4rem var(--ux-font-DMSans);
-    --ux-txt-h4: 400 1rem/1.5rem var(--ux-font-DMSans);
-    /* Duplicato perchè da desktop a mobile abbiamo scalato da di uno. Ad esempio h1 diventa h2 */
-    --ux-txt-h5: 400 1rem/1.5rem var(--ux-font-DMSans); 
-    --ux-txt-body: 400 1rem/1.5rem var(--ux-font-DMSans);
-
-    /* Font 576 */
-
-    --ux-txt-h1-576: 400 2.25rem/4rem var(--ux-font-Minercraftory);
-    
+/* FONT */
+@font-face {
+  font-family: "Minercraftory";
+  src: url("../font/Minercraftory.ttf") format("truetype");
 }
 
 @font-face {
-   font-family: 'Minercraftory';
-   src: url('../font/Minercraftory.ttf') format('truetype');
+  font-family: "DMSans";
+  src: url("../font/DMSans-Regular.ttf") format("truetype");
+  font-weight: 400;
 }
 
 @font-face {
-   font-family: 'DMSans';
-   src: url('../font/DMSans-Regular.ttf') format('truetype');
-   font-weight: 400;
+  font-family: "DMSans";
+  src: url("../font/DMSans-Medium.ttf") format("truetype");
+  font-weight: 500;
 }
 
 @font-face {
-   font-family: 'DMSans';
-   src: url('../font/DMSans-Medium.ttf') format('truetype');
-   font-weight: 500;
-}
-
-@font-face {
-   font-family: 'DMSans';
-   src: url('../font/DMSans-Bold.ttf') format('truetype');
-   font-weight: 700;
+  font-family: "DMSans";
+  src: url("../font/DMSans-Bold.ttf") format("truetype");
+  font-weight: 700;
 }
 
 body {
-    background-color: var(--ux-dark-color);
-    color: var(--color-font);
-    
+  background-color: var(--ux-dark-color);
+  color: var(--color-font);
 }
 
-/* Bottoni */
-
-
-/* Bottoni prima versione */
+/* BOTTONI */
+/* Bottoni - prima versione (sfondo bianco e scritta verde) */
 .btn-menu {
   --bs-btn-font-weight: 600;
   --bs-btn-color: var(--ux-global-color-accent-1);
@@ -98,8 +90,9 @@ body {
   outline-offset: 4px;
 }
 
-.pushable:hover, .pushable.active {
-  background: var(--color-font)
+.pushable:hover,
+.pushable.active {
+  background: var(--color-font);
 }
 
 .front {
@@ -113,7 +106,8 @@ body {
   transform: translateY(-6px);
 }
 
-.pushable:hover .front, .pushable.active .front{
+.pushable:hover .front,
+.pushable.active .front {
   background: var(--ux-global-color-accent-1);
   color: var(--color-font);
 }
@@ -122,7 +116,7 @@ body {
   transform: translateY(-2px);
 }
 
-/*Bottoni seconda versione*/
+/* Bottoni - seconda versione (sfondo verde e scritta bianca) */
 .btn-menu.inverted {
   --bs-btn-color: var(--color-font);
   --bs-btn-bg: var(--ux-global-color-accent-1);
@@ -141,7 +135,7 @@ body {
   background: var(--color-font);
 }
 
-.pushable.inverted:hover, 
+.pushable.inverted:hover,
 .pushable.inverted.active {
   background: var(--ux-global-color-accent-1);
 }
@@ -151,30 +145,26 @@ body {
   color: var(--color-font);
 }
 
-.pushable.inverted:hover .front, 
+.pushable.inverted:hover .front,
 .pushable.inverted.active .front {
   background: var(--color-font);
   color: var(--ux-global-color-accent-1);
 }
 
+/* HEADER */
 /* Navbar */
-
 .navbar {
-    --bs-navbar-color: var(--color-font);
-    --bs-navbar-active-color: var(--color-font);
+  --bs-navbar-color: var(--color-font);
+  --bs-navbar-active-color: var(--color-font);
 }
 
 .navbar li {
-    margin-top: 2rem;
+  margin-top: 2rem;
 }
 
 /* Sfondo della navbar */
 .nav-custom-bg {
-    background-image: url("../img/header/navbar-bg.png");
-}
-
-.footer-custom-bg{
- background-image: url("../img/footer/footer-bg.png"); 
+  background-image: url("../img/header/navbar-bg.png");
 }
 
 /* Rimuove effetti sul burger menu */
@@ -182,13 +172,13 @@ body {
 .navbar-toggler:focus,
 .navbar-toggler:active,
 .navbar-toggler-icon:focus {
-    box-shadow: none;
-    border: none;
+  box-shadow: none;
+  border: none;
 }
 
 .collapsing {
-    transition: none !important;
-    display: none !important; /* Evita che si veda il passaggio intermedio */
+  transition: none !important;
+  display: none !important; /* Evita che si veda il passaggio intermedio */
 }
 
 .navbar-collapse {
@@ -206,27 +196,20 @@ body {
   z-index: 1;
 }
 
-.navbar-toggler{
+.navbar-toggler {
   z-index: 2;
 }
 
-/* Letto NavBar */
+/* Animazione letto nella Navbar */
 /* ----------------------------------------------
  * Generated by Animista on 2026-2-19 15:11:27
  * Licensed under FreeBSD License.
  * See http://animista.net/license for more info. 
  * w: http://animista.net, t: @cssanimista
  * ---------------------------------------------- */
-
-/**
- * ----------------------------------------
- * animation slide-fwd-center
- * ----------------------------------------
- */
-
 .slide-fwd-center {
-    display: inline-block; /* Fondamentale per le animazioni di trasformazione */
-    animation: slide-fwd-center 0.45s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  display: inline-block;
+  animation: slide-fwd-center 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 @keyframes slide-fwd-center {
@@ -238,10 +221,12 @@ body {
   }
 }
 
+/* Per evitare che il body scrolli quando il menu è aperto */
 body:has(.navbar-collapse.show) {
   overflow: hidden;
 }
 
+/* Cambia l'icona del burger menu in una X quando è attivo */
 .navbar-toggler[aria-expanded="false"] .icon-close {
   display: none; /* Nascondi la X */
 }
@@ -255,42 +240,46 @@ body:has(.navbar-collapse.show) {
   display: inline-block; /* Mostra la X */
 }
 
-/* Body */
-h1{
+/* BODY */
+h1 {
   font: var(--ux-txt-h1);
 }
-h2{
+h2 {
   font: var(--ux-txt-h2);
 }
-h3{
+h3 {
   font: var(--ux-txt-h3);
 }
-h4{
+h4 {
   font: var(--ux-txt-h4);
 }
-h5{
+h5 {
   font: var(--ux-txt-h5);
 }
 
-.first-background{
-  background-image: url("../img/body/homepage/first-background.png"); 
+/* Primo sfondo della homepage */
+.first-background {
+  background-image: url("../img/body/homepage/first-background.png");
 }
 
-/* Footer */
+/* FOOTER */
+/* Sfondo del footer */
+.footer-custom-bg {
+  background-image: url("../img/footer/footer-bg.png");
+}
 
-#icon-twitter{
+#icon-twitter {
   margin-left: 2rem;
   margin-right: 2rem;
 }
 
-.footer-anchor{
+.footer-anchor {
   font: var(--ux-txt-h3);
   color: var(--color-font);
 }
 
-.footer-font-dinecraft{
+.footer-font-dinecraft {
   color: var(--ux-global-color-accent-2);
   font-family: Minercraftory, sans-serif;
   font-size: 1rem;
 }
-
