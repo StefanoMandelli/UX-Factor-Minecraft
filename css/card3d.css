@@ -74,23 +74,23 @@
 
 .vaso-fiore {
   position: absolute;
-  bottom: -50px;
-  left: -25px;
-  width: 90px;
+  bottom: -10%;
+  left: -5%;
+  width: 27%;
 }
 
 .occhio {
   position: absolute;
-  bottom: -30px;
-  left: 270px;
-  width: 75px;
+  bottom: -10%;
+  left: 75%;
+  width: 32%;
 }
 
 .accendino {
   position: absolute;
-  bottom: 270px;
+  bottom: 80%;
   left: 75%;
-  width: 105px;
+  width: 32%;
 }
 
 @media (min-width: 452px) {
