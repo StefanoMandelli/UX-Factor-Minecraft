@@ -7,23 +7,23 @@
   /* Rimuove lo sfarfallio in alcuni browser */
   backface-visibility: hidden;
   /* Un bordino opzionale per staccare la carta dallo spessore */
-  border: 1px solid #34342f;
+  border: 1px solid #1a1816;
 
   width: 88%;
   aspect-ratio: 1/1;
 
-  /* EFFETTO MATTONCINO: 10 strati solidi (grigio #34342f) + 1 strato sfocato */
+  /* EFFETTO MATTONCINO: 10 strati solidi (grigio #1a1816) + 1 strato sfocato */
   box-shadow:
-    1px 1px 0px #34342f,
-    2px 2px 0px #34342f,
-    3px 3px 0px #34342f,
-    4px 4px 0px #34342f,
-    5px 5px 0px #34342f,
-    6px 6px 0px #34342f,
-    7px 7px 0px #34342f,
-    8px 8px 0px #34342f,
-    9px 9px 0px #34342f,
-    10px 10px 0px #34342f,
+    1px 1px 0px #45403b,
+    2px 2px 0px #1a1816,
+    3px 3px 0px #1a1816,
+    4px 4px 0px #1a1816,
+    5px 5px 0px #1a1816,
+    6px 6px 0px #1a1816,
+    7px 7px 0px #1a1816,
+    8px 8px 0px #1a1816,
+    9px 9px 0px #1a1816,
+    10px 10px 0px #1a1816,
     15px 15px 20px rgba(0, 0, 0, 0.15),
 
     inset 8px 8px 0px rgba(0, 0, 0, 0.4), /* Ombra interna */
@@ -33,16 +33,16 @@
 .card-3d:hover {
   /* In hover, lo spessore solido resta intatto, ma l'ombra sfocata finale si allarga! */
   box-shadow:
-    1px 1px 0px #34342f,
-    2px 2px 0px #34342f,
-    3px 3px 0px #34342f,
-    4px 4px 0px #34342f,
-    5px 5px 0px #34342f,
-    6px 6px 0px #34342f,
-    7px 7px 0px #34342f,
-    8px 8px 0px #34342f,
-    9px 9px 0px #34342f,
-    10px 10px 0px #34342f,
+    1px 1px 0px #1a1816,
+    2px 2px 0px #1a1816,
+    3px 3px 0px #1a1816,
+    4px 4px 0px #1a1816,
+    5px 5px 0px #1a1816,
+    6px 6px 0px #1a1816,
+    7px 7px 0px #1a1816,
+    8px 8px 0px #1a1816,
+    9px 9px 0px #1a1816,
+    10px 10px 0px #1a1816,
     20px 20px 30px rgba(0, 0, 0, 0.3) !important;
   z-index: 10;
 }
@@ -69,6 +69,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .vaso-fiore {
@@ -81,15 +82,15 @@
 .occhio {
   position: absolute;
   bottom: -30px;
-  left: 250px;
+  left: 270px;
   width: 75px;
 }
 
 .accendino {
   position: absolute;
   bottom: 270px;
-  left: 250px;
-  width: 100px;
+  left: 270px;
+  width: 80px;
 }
 
 @media (min-width: 452px) {
