@@ -7,23 +7,23 @@
   /* Rimuove lo sfarfallio in alcuni browser */
   backface-visibility: hidden;
   /* Un bordino opzionale per staccare la carta dallo spessore */
-  border: 1px solid #3c3733;
+  border: 1px solid #2e2a27;
 
   width: 88%;
   aspect-ratio: 1/1;
 
-  /* EFFETTO MATTONCINO: 10 strati solidi (grigio #3c3733) + 1 strato sfocato */
+  /* EFFETTO MATTONCINO: 10 strati solidi (grigio #2e2a27) + 1 strato sfocato */
   box-shadow:
-    1px 1px 0px #3c3733,
-    2px 2px 0px #3c3733,
-    3px 3px 0px #3c3733,
-    4px 4px 0px #3c3733,
-    5px 5px 0px #3c3733,
-    6px 6px 0px #3c3733,
-    7px 7px 0px #3c3733,
-    8px 8px 0px #3c3733,
-    9px 9px 0px #3c3733,
-    10px 10px 0px #3c3733,
+    1px 1px 0px #2e2a27,
+    2px 2px 0px #2e2a27,
+    3px 3px 0px #2e2a27,
+    4px 4px 0px #2e2a27,
+    5px 5px 0px #2e2a27,
+    6px 6px 0px #2e2a27,
+    7px 7px 0px #2e2a27,
+    8px 8px 0px #2e2a27,
+    9px 9px 0px #2e2a27,
+    10px 10px 0px #2e2a27,
     15px 15px 20px rgba(0, 0, 0, 0.15),
 
     inset 8px 8px 0px rgba(0, 0, 0, 0.4), /* Ombra interna */
@@ -33,16 +33,16 @@
 .card-3d:hover {
   /* In hover, lo spessore solido resta intatto, ma l'ombra sfocata finale si allarga! */
   box-shadow:
-    1px 1px 0px #3c3733,
-    2px 2px 0px #3c3733,
-    3px 3px 0px #3c3733,
-    4px 4px 0px #3c3733,
-    5px 5px 0px #3c3733,
-    6px 6px 0px #3c3733,
-    7px 7px 0px #3c3733,
-    8px 8px 0px #3c3733,
-    9px 9px 0px #3c3733,
-    10px 10px 0px #3c3733,
+    1px 1px 0px #2e2a27,
+    2px 2px 0px #2e2a27,
+    3px 3px 0px #2e2a27,
+    4px 4px 0px #2e2a27,
+    5px 5px 0px #2e2a27,
+    6px 6px 0px #2e2a27,
+    7px 7px 0px #2e2a27,
+    8px 8px 0px #2e2a27,
+    9px 9px 0px #2e2a27,
+    10px 10px 0px #2e2a27,
     20px 20px 30px rgba(0, 0, 0, 0.3) !important;
   z-index: 10;
 }
