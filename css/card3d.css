@@ -5,39 +5,42 @@
   transform-style: preserve-3d;
   will-change: transform;
   /* Rimuove lo sfarfallio in alcuni browser */
-  backface-visibility: hidden; 
+  backface-visibility: hidden;
   /* Un bordino opzionale per staccare la carta dallo spessore */
-  border: 1px solid #dee2e6;
+  border: 1px solid #88887d;
 
-  /* EFFETTO MATTONCINO: 10 strati solidi (grigio #adb5bd) + 1 strato sfocato */
-  box-shadow: 
-    1px 1px 0px #adb5bd,
-    2px 2px 0px #adb5bd,
-    3px 3px 0px #adb5bd,
-    4px 4px 0px #adb5bd,
-    5px 5px 0px #adb5bd,
-    6px 6px 0px #adb5bd,
-    7px 7px 0px #adb5bd,
-    8px 8px 0px #adb5bd,
-    9px 9px 0px #adb5bd,
-    10px 10px 0px #adb5bd,
-    15px 15px 20px rgba(0,0,0,0.15) !important;
+  width: 88%;
+  aspect-ratio: 1/1;
+
+  /* EFFETTO MATTONCINO: 10 strati solidi (grigio #88887d) + 1 strato sfocato */
+  box-shadow:
+    1px 1px 0px #88887d,
+    2px 2px 0px #88887d,
+    3px 3px 0px #88887d,
+    4px 4px 0px #88887d,
+    5px 5px 0px #88887d,
+    6px 6px 0px #88887d,
+    7px 7px 0px #88887d,
+    8px 8px 0px #88887d,
+    9px 9px 0px #88887d,
+    10px 10px 0px #88887d,
+    15px 15px 20px rgba(0, 0, 0, 0.15) !important;
 }
 
 .card-3d:hover {
   /* In hover, lo spessore solido resta intatto, ma l'ombra sfocata finale si allarga! */
-  box-shadow: 
-    1px 1px 0px #adb5bd,
-    2px 2px 0px #adb5bd,
-    3px 3px 0px #adb5bd,
-    4px 4px 0px #adb5bd,
-    5px 5px 0px #adb5bd,
-    6px 6px 0px #adb5bd,
-    7px 7px 0px #adb5bd,
-    8px 8px 0px #adb5bd,
-    9px 9px 0px #adb5bd,
-    10px 10px 0px #adb5bd,
-    20px 20px 30px rgba(0,0,0,0.3) !important;
+  box-shadow:
+    1px 1px 0px #88887d,
+    2px 2px 0px #88887d,
+    3px 3px 0px #88887d,
+    4px 4px 0px #88887d,
+    5px 5px 0px #88887d,
+    6px 6px 0px #88887d,
+    7px 7px 0px #88887d,
+    8px 8px 0px #88887d,
+    9px 9px 0px #88887d,
+    10px 10px 0px #88887d,
+    20px 20px 30px rgba(0, 0, 0, 0.3) !important;
   z-index: 10;
 }
 
@@ -45,6 +48,51 @@
 .card-3d .card-body {
   transform: translateZ(10px);
 }
+
 .card-3d .card-img-top {
   transform: translateZ(10px);
+}
+
+.card-3d-background {
+  background-image: url("../img/body/homepage/sfondo1-card.png");
+}
+
+.card-title,
+.card-text {
+  color: var(--color-font);
+}
+
+.card-body {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.vaso-fiore {
+  position: absolute;
+  bottom: -50px;
+  left: -25px;
+  width: 90px;
+}
+
+@media (min-width: 452px) {
+  .card-body {
+    padding-left: 5rem !important;
+    padding-right: 5rem !important;
+  }
+
+  .vaso-fiore {
+    width: 115px;
+  }
+}
+
+@media (min-width: 576px) {
+  .card-body {
+    padding-left: 6rem !important;
+    padding-right: 6rem !important;
+  }
+
+  .vaso-fiore {
+    width: 115px;
+  }
 }

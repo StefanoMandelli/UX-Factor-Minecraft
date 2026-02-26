@@ -23,13 +23,15 @@
   /* Font iPhoneSE */
   --ux-txt-h1: 400 2rem/3.5rem var(--ux-font-Minercraftory);
   --ux-txt-h2: 400 2rem/3.1rem var(--ux-font-DMSans);
-  --ux-txt-h3: 400 1.5rem/2.4rem var(--ux-font-DMSans);
+  --ux-txt-h3: 400 1.5rem/2.1rem var(--ux-font-DMSans);
   --ux-txt-h4: 400 1rem/1.5rem var(--ux-font-DMSans);
   --ux-txt-h5: 400 1rem/1.5rem var(--ux-font-DMSans); /* Duplicato perchè da desktop a mobile abbiamo scalato da di uno. Ad esempio h1 diventa h2 */
   --ux-txt-body: 400 1rem/1.5rem var(--ux-font-DMSans);
 
   /* Font da 576 */
   --ux-txt-h1-576: 400 2.25rem/4rem var(--ux-font-Minercraftory);
+  --ux-txt-h3-576: 400 1.6rem/2.4rem var(--ux-font-DMSans);
+  --ux-txt-body-576: 400 1.3rem/2rem var(--ux-font-DMSans);
 }
 
 /* FONT */
@@ -256,6 +258,9 @@ h4 {
 h5 {
   font: var(--ux-txt-h5);
 }
+p{
+  font: var(--ux-txt-body);
+}
 
 /* Primo sfondo della homepage */
 .first-background {
@@ -282,4 +287,19 @@ h5 {
   color: var(--ux-global-color-accent-2);
   font-family: Minercraftory, sans-serif;
   font-size: 1rem;
+}
+
+@media (min-width: 576px) {
+
+  h1{
+    font: var(--ux-txt-h1-576);
+  }
+
+  h3{
+    font: var(--ux-txt-h3-576);
+  }
+
+  p{
+    font: var(--ux-txt-body-576);
+  }
 }

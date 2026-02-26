@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 // La card si inclina sia verticalmente che lateralmente mentre scivola via
                 card.style.transform = `perspective(800px) rotateX(${distanceFromCenter * 10}deg) rotateY(${distanceFromCenter * 10}deg)`;
-                card.style.transition = "transform 0.1s ease-out"; // Per rendere il movimento fluido
+                card.style.transition = "transform 0.5s ease-out"; // Per rendere il movimento fluido
             }
         });
     });
