@@ -23,7 +23,7 @@
     7px 7px 0px #1d1a18,
     8px 8px 0px #1d1a18,
     9px 9px 0px #1d1a18,
-    10px 10px 0px #1d1a18,
+    10px 10px 0px #161616,
     15px 15px 20px rgba(0, 0, 0, 0.15),
 
     inset 8px 8px 0px rgba(0, 0, 0, 0.4), /* Ombra interna */
@@ -89,7 +89,7 @@
 .accendino {
   position: absolute;
   bottom: 270px;
-  left: 80%;
+  left: 75%;
   width: 105px;
 }
 
