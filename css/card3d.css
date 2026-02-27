@@ -74,36 +74,25 @@
   position: relative;
 }
 
-.vaso-fiore {
+.flower-vase {
   position: absolute;
   bottom: -10%;
   left: -5%;
   width: 27%;
 }
 
-.occhio {
+.eye {
   position: absolute;
   bottom: -10%;
   left: 75%;
   width: 32%;
 }
 
-.accendino {
+.lighter {
   position: absolute;
   bottom: 80%;
   left: 75%;
   width: 32%;
-}
-
-@media (min-width: 452px) {
-  .card-body {
-    padding-left: 5rem !important;
-    padding-right: 5rem !important;
-  }
-
-  .vaso-fiore {
-    width: 115px;
-  }
 }
 
 @media (min-width: 576px) {

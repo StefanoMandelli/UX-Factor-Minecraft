@@ -283,39 +283,42 @@ p {
   background-image: url("../img/body/homepage/first-background.png");
 }
 
-.titolo-home {
+.title-home {
   text-shadow:
-    0 3px 0 #105f29,
+    0 2px 0 #446a1b,
     /* Primo gradino */
-    0 6px 0 #105f29,
+    0 4px 0 #446a1b,
     /* Secondo gradino (leggermente più scuro) */
-    0 9px 0 #105f29,
+    0 6px 0 #446a1b,
     /* Terzo gradino */
-    0 12px 0 #105f29;
+    0 8px 0 #446a1b;
   /* Quarto gradino */
 }
 
-.blocco-overworld {
-  position: absolute;
-  left: 0%;
-  right: 0%;
-  width: 100vw;
-  /* Copre tutta la larghezza */
-  height: 32px;
-  /* Altezza pari a quella del tuo blocco */
-  background-image: url("../img/body/homepage/decorazioni/blocco-overworld96.png");
-  background-repeat: repeat-x;
-  /* Ripete il blocco solo in orizzontale */
-  background-size: 32px 32px;
-  /* Mantiene le proporzioni del blocco */
+.menù-homepage{
+  width: 100%;
+}
 
-  /* Trucco per non far sfuocare i pixel sui display moderni */
-  image-rendering: pixelated;
+.redstone-background{
+  background-image: url("../img/body/homepage/redstone-background.png");
+  width: 100%;
+}
 
-  /* Opzionale: un po' di ombra per dare profondità */
-  filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.3)),
-  brightness(0.3);
-  
+.thunder-background{
+  background: url("../img/body/homepage/fulmine-homepage.png") center / cover no-repeat;
+}
+
+.dinecraft-humans{
+  width: 100%;
+}
+
+.awards-promo{
+  width:70%;
+}
+
+.amethyst-background{
+  background-image: url("../img/body/homepage/amethyst-background.png");
+  width: 100%;
 }
 
 /* FOOTER */
@@ -342,9 +345,9 @@ p {
 
 @media (min-width: 430px) {
 
- .blocco-overworld {
+ .block-overworld {
 
-  background-image: url("../img/body/homepage/decorazioni/blocco-overworld96.png");
+  background-image: url("../img/body/homepage/decorazioni/block-overworld96.png");
  
   
 }
