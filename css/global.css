@@ -321,6 +321,10 @@ p {
   width: 100%;
 }
 
+.text-countdown{
+  font: var(--ux-txt-h1);
+}
+
 /* FOOTER */
 /* Sfondo del footer */
 .footer-custom-bg {
