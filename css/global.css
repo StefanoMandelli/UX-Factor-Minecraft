@@ -25,7 +25,8 @@
   --ux-txt-h2: 400 2rem/3.1rem var(--ux-font-DMSans);
   --ux-txt-h3: 400 1.5rem/2.1rem var(--ux-font-DMSans);
   --ux-txt-h4: 400 1rem/1.5rem var(--ux-font-DMSans);
-  --ux-txt-h5: 400 1rem/1.5rem var(--ux-font-DMSans); /* Duplicato perchè da desktop a mobile abbiamo scalato da di uno. Ad esempio h1 diventa h2 */
+  --ux-txt-h5: 400 1rem/1.5rem var(--ux-font-DMSans);
+  /* Duplicato perchè da desktop a mobile abbiamo scalato da di uno. Ad esempio h1 diventa h2 */
   --ux-txt-body: 400 1rem/1.5rem var(--ux-font-DMSans);
 
   /* Font da 576 */
@@ -180,7 +181,8 @@ body {
 
 .collapsing {
   transition: none !important;
-  display: none !important; /* Evita che si veda il passaggio intermedio */
+  display: none !important;
+  /* Evita che si veda il passaggio intermedio */
 }
 
 .navbar-collapse {
@@ -218,8 +220,10 @@ body {
   0% {
     transform: scale(1);
   }
+
   100% {
-    transform: scale(1.2); /* Ingrandisce del 20%, simulando l'avvicinamento */
+    transform: scale(1.2);
+    /* Ingrandisce del 20%, simulando l'avvicinamento */
   }
 }
 
@@ -230,41 +234,88 @@ body:has(.navbar-collapse.show) {
 
 /* Cambia l'icona del burger menu in una X quando è attivo */
 .navbar-toggler[aria-expanded="false"] .icon-close {
-  display: none; /* Nascondi la X */
+  display: none;
+  /* Nascondi la X */
 }
+
 .navbar-toggler[aria-expanded="false"] .icon-burger {
-  display: inline-block; /* Mostra l'hamburger */
+  display: inline-block;
+  /* Mostra l'hamburger */
 }
+
 .navbar-toggler[aria-expanded="true"] .icon-burger {
-  display: none; /* Nascondi l'hamburger */
+  display: none;
+  /* Nascondi l'hamburger */
 }
+
 .navbar-toggler[aria-expanded="true"] .icon-close {
-  display: inline-block; /* Mostra la X */
+  display: inline-block;
+  /* Mostra la X */
 }
 
 /* BODY */
 h1 {
   font: var(--ux-txt-h1);
 }
+
 h2 {
   font: var(--ux-txt-h2);
 }
+
 h3 {
   font: var(--ux-txt-h3);
 }
+
 h4 {
   font: var(--ux-txt-h4);
 }
+
 h5 {
   font: var(--ux-txt-h5);
 }
-p{
+
+p {
   font: var(--ux-txt-body);
 }
 
 /* Primo sfondo della homepage */
 .first-background {
   background-image: url("../img/body/homepage/first-background.png");
+}
+
+.titolo-home {
+  text-shadow:
+    0 3px 0 #105f29,
+    /* Primo gradino */
+    0 6px 0 #105f29,
+    /* Secondo gradino (leggermente più scuro) */
+    0 9px 0 #105f29,
+    /* Terzo gradino */
+    0 12px 0 #105f29;
+  /* Quarto gradino */
+}
+
+.blocco-overworld {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  width: 100vw;
+  /* Copre tutta la larghezza */
+  height: 32px;
+  /* Altezza pari a quella del tuo blocco */
+  background-image: url("../img/body/homepage/decorazioni/blocco-overworld96.png");
+  background-repeat: repeat-x;
+  /* Ripete il blocco solo in orizzontale */
+  background-size: 32px 32px;
+  /* Mantiene le proporzioni del blocco */
+
+  /* Trucco per non far sfuocare i pixel sui display moderni */
+  image-rendering: pixelated;
+
+  /* Opzionale: un po' di ombra per dare profondità */
+  filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.3)),
+  brightness(0.3);
+  
 }
 
 /* FOOTER */
@@ -289,17 +340,27 @@ p{
   font-size: 1rem;
 }
 
+@media (min-width: 430px) {
+
+ .blocco-overworld {
+
+  background-image: url("../img/body/homepage/decorazioni/blocco-overworld96.png");
+ 
+  
+}
+}
+
 @media (min-width: 576px) {
 
-  h1{
+  h1 {
     font: var(--ux-txt-h1-576);
   }
 
-  h3{
+  h3 {
     font: var(--ux-txt-h3-576);
   }
 
-  p{
+  p {
     font: var(--ux-txt-body-576);
   }
 }

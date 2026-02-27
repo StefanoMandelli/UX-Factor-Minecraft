@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Più è in alto, più si inclina "indietro", più è in basso, più "in avanti"
 
                 // La card si inclina sia verticalmente che lateralmente mentre scivola via
-                card.style.transform = `perspective(800px) rotateX(${distanceFromCenter * 3}deg) rotateY(${distanceFromCenter * 3}deg)`;
+                card.style.transform = `perspective(800px) rotateX(${distanceFromCenter * 4}deg) rotateY(${distanceFromCenter * 4}deg)`;
                 card.style.transition = "transform 0.5s ease-out"; // Per rendere il movimento fluido
             }
         });
