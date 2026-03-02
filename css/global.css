@@ -23,7 +23,7 @@
   /* Font iPhoneSE */
   --ux-txt-h1: 400 2rem/3.5rem var(--ux-font-Minercraftory);
   --ux-txt-h2: 400 2rem/3.1rem var(--ux-font-DMSans);
-  --ux-txt-h3: 400 1.5rem/2.1rem var(--ux-font-DMSans);
+  --ux-txt-h3: 400 1.2rem/1.9rem var(--ux-font-DMSans);
   --ux-txt-h4: 400 1rem/1.5rem var(--ux-font-DMSans);
   --ux-txt-h5: 400 1rem/1.5rem var(--ux-font-DMSans);
   /* Duplicato perchè da desktop a mobile abbiamo scalato da di uno. Ad esempio h1 diventa h2 */
@@ -186,7 +186,7 @@ body {
 }
 
 .navbar-collapse {
-  background-color: var(--ux-dark-color);
+  background-image: url("../img/header/navbar-bg.png");
 
   position: absolute;
   top: 0;
@@ -304,6 +304,11 @@ p {
   width: 100%;
 }
 
+.text-shadow-titletaste{
+  /*text-shadow: 2px 2px 0px #b81919;*/
+  text-shadow: 0px 2px 0px #d32d2d;
+}
+
 .thunder-background{
   background: url("../img/body/homepage/fulmine-homepage.png") center / cover no-repeat;
 }
@@ -323,6 +328,10 @@ p {
 
 .text-countdown{
   font: var(--ux-txt-h1);
+}
+
+.style-countdown{
+  background-color: var(--ux-global-color-accent-1);
 }
 
 /* FOOTER */
