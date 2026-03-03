@@ -254,6 +254,11 @@ body:has(.navbar-collapse.show) {
 }
 
 /* BODY */
+
+.video-home {
+  mix-blend-mode: lighten;
+}
+
 h1 {
   font: var(--ux-txt-h1);
 }
@@ -401,5 +406,15 @@ p {
   .navbar li {
     margin: 0;
   }
+
+ /* BODY */
+
+  .video-home{
+    min-width: 100%;
+  }
+
+  .hero-desktop{
+    padding: 6.5rem 0 6.5rem 0 !important;
+  } 
 
 }
