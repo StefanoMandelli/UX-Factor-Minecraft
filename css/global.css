@@ -23,8 +23,8 @@
   /* Font iPhoneSE */
   --ux-txt-h1: 400 2rem/3.5rem var(--ux-font-Minercraftory);
   --ux-txt-h2: 400 2rem/3.1rem var(--ux-font-DMSans);
-  --ux-txt-h3: 400 1.2rem/1.9rem var(--ux-font-DMSans);
-  --ux-txt-h4: 400 1rem/1.5rem var(--ux-font-DMSans);
+  --ux-txt-h3: 400 1.5rem/1.9rem var(--ux-font-DMSans);
+  --ux-txt-h4: 400 1.2rem/1.6rem var(--ux-font-DMSans);
   --ux-txt-h5: 400 1rem/1.5rem var(--ux-font-DMSans);
   /* Duplicato perchè da desktop a mobile abbiamo scalato da di uno. Ad esempio h1 diventa h2 */
   --ux-txt-body: 400 1rem/1.5rem var(--ux-font-DMSans);
@@ -86,7 +86,7 @@ body {
 
 .pushable {
   background: var(--ux-global-color-accent-1);
-  border-radius: 12px;
+  border-radius: 5px;
   border: none;
   padding: 0;
   cursor: pointer;
@@ -101,7 +101,7 @@ body {
 .front {
   display: block;
   padding: 1em 2em;
-  border-radius: 12px;
+  border-radius: 5px;
   font-size: 0.8rem;
   font-family: Minercraftory, sans-serif;
   background: var(--color-font);
@@ -218,11 +218,11 @@ body {
 
 @keyframes slide-fwd-center {
   0% {
-    transform: scale(1);
+    transform: scale(0.8);
   }
 
   100% {
-    transform: scale(1.2);
+    transform: scale(1);
     /* Ingrandisce del 20%, simulando l'avvicinamento */
   }
 }
@@ -295,42 +295,42 @@ p {
   /* Quarto gradino */
 }
 
-.menù-homepage{
+.menù-homepage {
   width: 100%;
 }
 
-.redstone-background{
+.redstone-background {
   background-image: url("../img/body/homepage/redstone-background.png");
   width: 100%;
 }
 
-.text-shadow-titletaste{
+.text-shadow-titletaste {
   /*text-shadow: 2px 2px 0px #b81919;*/
   text-shadow: 0px 2px 0px #d32d2d;
 }
 
-.thunder-background{
+.thunder-background {
   background: url("../img/body/homepage/fulmine-homepage.png") center / cover no-repeat;
 }
 
-.dinecraft-humans{
+.dinecraft-humans {
   width: 100%;
 }
 
-.awards-promo{
-  width:70%;
+.awards-promo {
+  width: 70%;
 }
 
-.amethyst-background{
+.amethyst-background {
   background-image: url("../img/body/homepage/amethyst-background.png");
   width: 100%;
 }
 
-.text-countdown{
+.text-countdown {
   font: var(--ux-txt-h1);
 }
 
-.style-countdown{
+.style-countdown {
   background-color: var(--ux-global-color-accent-1);
 }
 
@@ -356,16 +356,6 @@ p {
   font-size: 1rem;
 }
 
-@media (min-width: 430px) {
-
- .block-overworld {
-
-  background-image: url("../img/body/homepage/decorazioni/block-overworld96.png");
- 
-  
-}
-}
-
 @media (min-width: 576px) {
 
   h1 {
@@ -379,4 +369,37 @@ p {
   p {
     font: var(--ux-txt-body-576);
   }
+}
+
+@media (min-width: 992px) {
+
+  /* Navbar */
+
+  .navbar-collapse {
+    height: auto;
+    position: relative;
+    justify-content: flex-end;
+
+  }
+
+  .navbar-nav {
+    gap: 2.5rem;
+    align-items: center;
+
+  }
+
+  .front {
+    padding: 0.5em 1em;
+    font-size: 1.25rem;
+  }
+
+  .bed-navbar {
+    width: 10%;
+
+  }
+
+  .navbar li {
+    margin: 0;
+  }
+
 }
