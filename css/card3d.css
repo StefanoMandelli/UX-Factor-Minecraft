@@ -26,7 +26,8 @@
     10px 10px 0px #161616,
     15px 15px 20px rgba(0, 0, 0, 0.15),
 
-    inset 8px 8px 0px rgba(0, 0, 0, 0.4), /* Ombra interna */
+    inset 8px 8px 0px rgba(0, 0, 0, 0.4),
+    /* Ombra interna */
     4px 4px 0px rgba(255, 255, 255, 0.05);
 }
 
@@ -43,8 +44,8 @@
     8px 8px 0px #1d1a18,
     9px 9px 0px #1d1a18,
     10px 10px 0px #1d1a18,
-    20px 20px 30px rgba(0, 0, 0, 0.3)
-    inset 8px 8px 0px rgba(0, 0, 0, 0.4), /* Ombra interna */
+    20px 20px 30px rgba(0, 0, 0, 0.3) inset 8px 8px 0px rgba(0, 0, 0, 0.4),
+    /* Ombra interna */
     4px 4px 0px rgba(255, 255, 255, 0.05);
   z-index: 10;
 }
@@ -59,7 +60,7 @@
 }
 
 .card-3d-background {
-  background-image: url("../img/body/homepage/sfondo1-card.png");
+  background: url("../img/body/homepage/sfondo-card.png")  center / cover no-repeat;
 }
 
 .card-title,
@@ -105,3 +106,4 @@
     width: 115px;
   }
 }
+

@@ -33,6 +33,15 @@
   --ux-txt-h1-576: 400 2.25rem/4rem var(--ux-font-Minercraftory);
   --ux-txt-h3-576: 400 1.6rem/2.4rem var(--ux-font-DMSans);
   --ux-txt-body-576: 400 1.3rem/2rem var(--ux-font-DMSans);
+
+  /* Font Desktop */
+  --ux-txt-h1-1920: 400 4rem/6.25rem var(--ux-font-Minercraftory);
+  --ux-txt-h2-1920: 400 3rem/4.7rem var(--ux-font-DMSans);
+  --ux-txt-h3-1920: 400 2rem/3.1rem var(--ux-font-DMSans);
+  --ux-txt-h4-1920: 400 1.5rem/2.4rem var(--ux-font-DMSans);
+  --ux-txt-h5-1920: 400 1rem/1.5rem var(--ux-font-DMSans);
+  /* Duplicato perchè da desktop a mobile abbiamo scalato da di uno. Ad esempio h1 diventa h2 */
+  --ux-txt-body-1920: 400 1rem/1.5rem var(--ux-font-DMSans);
 }
 
 /* FONT */
@@ -378,6 +387,31 @@ p {
 
 @media (min-width: 992px) {
 
+  /* DA SISTEMARE */
+  h1 {
+    font: var(--ux-txt-h1-1920);
+  }
+
+  h2 {
+    font: var(--ux-txt-h2-992);
+  }
+
+  h3 {
+    font: var(--ux-txt-h3-992);
+  }
+
+  h4 {
+    font: var(--ux-txt-h4-992);
+  }
+
+  h5 {
+    font: var(--ux-txt-h5-992);
+  }
+
+  p {
+    font: var(--ux-txt-body-992);
+  }
+
   /* Navbar */
 
   .navbar-collapse {
@@ -407,14 +441,51 @@ p {
     margin: 0;
   }
 
- /* BODY */
+  /* BODY */
 
-  .video-home{
+  .video-home {
     min-width: 100%;
   }
 
-  .hero-desktop{
+  .hero-desktop {
     padding: 6.5rem 0 6.5rem 0 !important;
-  } 
+  }
+
+}
+
+@media (min-width: 1920px) {
+
+  h1 {
+    font: var(--ux-txt-h1-1920);
+  }
+
+  h2 {
+    font: var(--ux-txt-h3-1920);
+  }
+
+  h3 {
+    font: var(--ux-txt-h3-1920);
+  }
+
+  h4 {
+    font: var(--ux-txt-h4-1920);
+  }
+
+  h5 {
+    font: var(--ux-txt-h5-1920);
+  }
+
+  p {
+    font: var(--ux-txt-body-1920);
+  }
+
+  .card-desktop {
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
+  }
+
+  .menù-homepage {
+    width: 40%;
+  }
 
 }
