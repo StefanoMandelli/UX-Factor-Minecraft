@@ -70,9 +70,10 @@
 
 .card-body {
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
   position: relative;
+  gap: 3rem;
 }
 
 .flower-vase {
