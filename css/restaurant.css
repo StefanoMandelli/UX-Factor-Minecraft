@@ -1,0 +1,60 @@
+@import url(card3d.css);
+@import url(global.css);
+
+.restaurant-hero {
+    width: 100%;
+}
+
+.title-menu {
+    margin-bottom: 2rem !important;
+}
+
+.card-3d {
+    width: 100%;
+    aspect-ratio: initial;
+}
+
+
+.torch-text {
+    width: 70%;
+    position: relative;
+}
+
+.torch-text::before{
+    content: ""; /* FONDAMENTALE: senza questo non appare nulla */
+    position: absolute; /* FONDAMENTALE per muoverlo dietro il testo */
+    top: 50%;
+    left: 30%; 
+    transform: translate(-50%, -50%);
+    width: 200%; 
+    height: 150%;
+    /* Il gradiente radiale che hai scelto */
+    background: radial-gradient(circle, rgba(255,0,0,0.8) 0%, rgba(255,0,0,0) 70%);
+    filter: blur(40px);
+    z-index: -1; /* Lo sposta dietro al testo del paragrafo */
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    pointer-events: none; /* Evita che la luce interferisca con i click sul testo */
+}
+
+.torch-text-active::before {
+    color: var(--color-font);
+    opacity: 1;
+}
+
+.torch-text-active {
+    color: var(--color-font);
+}
+
+
+
+@media (min-width: 576px) {
+    .card-body {
+        padding: 4rem 1.5rem 4rem 0rem !important; 
+    }
+
+}
+
+.card-3d-background {
+    background: url("../img/body/homepage/redstone-background.png") center / cover no-repeat;
+}

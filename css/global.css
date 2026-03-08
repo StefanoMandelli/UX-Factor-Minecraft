@@ -267,9 +267,6 @@ body:has(.navbar-collapse.show) {
 
 /* BODY */
 
-.video-home {
-  mix-blend-mode: lighten;
-}
 
 h1 {
   font: var(--ux-txt-h1);
@@ -345,10 +342,15 @@ p {
 
 .text-countdown {
   font: var(--ux-txt-h1);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .style-countdown {
   background-color: var(--ux-global-color-accent-1);
+  aspect-ratio: 1/1;
 }
 
 /* FOOTER */
@@ -373,13 +375,20 @@ p {
   font-size: 1rem;
 }
 
+#promo-socks,
+#promo-toothbrush,
+#promo-drill,
+#promo-creeper {
+  display: none;
+}
+
 @media (min-width: 576px) {
 
   h1 {
     font: var(--ux-txt-h1-576);
   }
 
-  h2{
+  h2 {
     font: var(--ux-txt-h2-576);
   }
 
@@ -387,11 +396,11 @@ p {
     font: var(--ux-txt-h3-576);
   }
 
-  h4{
+  h4 {
     font: var(--ux-txt-h4-576);
   }
 
-  h5{
+  h5 {
     font: var(--ux-txt-h5-576);
   }
 
@@ -466,6 +475,46 @@ p {
     padding: 6.5rem 0 6.5rem 0 !important;
   }
 
+  .awards-promo {
+    display: none;
+  }
+
+  #promo-socks {
+    display: block;
+    display: none;
+    position: absolute;
+    width: 10%;
+    height: auto;
+    left: 80%;
+  }
+
+  #promo-toothbrush {
+    display: block;
+    display: none;
+    position: absolute;
+    width: 11%;
+  }
+
+  #promo-drill {
+    display: block;
+    display: none;
+    position: absolute;
+    width: 11%;
+  }
+
+  #promo-creeper {
+    display: block;
+    display: none;
+    position: absolute;
+    left: 10%;
+    width: 23%;
+    height: auto;
+  }
+
+  .box-countdown{
+    width: 21%;
+  }
+
 }
 
 @media (min-width: 1920px) {
@@ -502,5 +551,9 @@ p {
   .menù-homepage {
     width: 40%;
   }
+
+  .text-countdown {
+  font: var(--ux-txt-h1-1920);
+}
 
 }
