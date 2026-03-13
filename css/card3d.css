@@ -97,6 +97,20 @@
   width: 32%;
 }
 
+.axe {
+  position: absolute;
+  bottom: -10%;
+  right: -5%;
+  width: 30%;
+}
+
+.red-arrow {
+  position: absolute;
+  bottom: -10%;
+  right: -5%;
+  width: 25%;
+}
+
 @media (min-width: 576px) {
   .card-body {
     padding-left: 6rem !important;
