@@ -1,0 +1,71 @@
+@import url(card3d.css);
+@import url(global.css);
+
+.greenstack-burger-card {
+    background-color: rgba(26, 51, 35, 0.7);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 3rem;
+    border: 7px solid rgba(26, 51, 35, 1);
+
+    /* 1. ABILITA IL MOVIMENTO MORBIDO */
+    transition: transform 0.1s ease-out, box-shadow 0.1s ease-out;
+
+    /* 2. ABILITA LA TERZA DIMENSIONE */
+    transform-style: preserve-3d;
+    will-change: transform;
+    backface-visibility: hidden;
+
+    /* 3. AGGIUNGI LO SPESSORE (BOX-SHADOW) */
+    box-shadow:
+        10px 10px 0px #161616, 15px 15px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* 4. FAI GALLEGGIARE IL CONTENUTO (Effetto Pop-out) */
+.greenstack-burger-card img,
+.greenstack-burger-card h3,
+.greenstack-burger-card .price-container {
+    transform: translateZ(20px);
+    /* Più alto è il numero, più "esce" dalla card */
+}
+
+.redstone-background .row {
+    perspective: 1000px;
+}
+
+.number {
+    /* Sfondo e bordo */
+    background-color: var(--ux-global-color-accent-1);
+
+    /* Dimensioni e testo */
+    padding: 5px 10px;
+    font-family: var(--ux-font-Minercraftory);
+    font-size: 20px;
+}
+
+.comma {
+    font-family: var(--ux-font-Minercraftory);
+    font-size: 20px;
+}
+
+.dinecraft-card {
+    background-color: rgba(26, 51, 35, 0.7);
+    border-radius: 5px;
+    border: 7px solid rgba(26, 51, 35);
+    display: flex;
+    flex-direction: column;
+    /* Mette l'immagine sopra e il testo sotto */
+    align-items: center;
+    /* Centra tutto orizzontalmente */
+    padding: 3rem;
+}
+
+.dinecraft-card img {
+    /* Fondamentale: l'immagine si adatta alla larghezza del div meno il padding */
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
