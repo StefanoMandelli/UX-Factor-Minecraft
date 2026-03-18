@@ -1,0 +1,11 @@
+@import url(global.css);
+
+.hero-promo {
+   background-image: url('../img/body/pagina-libera/HERO\ PROMO.png');
+   width: 100%;
+}
+
+.countdown-bg{
+    background-image: url('../img/body/pagina-libera/COUNTDOWN_bg.png');
+    width: 100%;
+}
