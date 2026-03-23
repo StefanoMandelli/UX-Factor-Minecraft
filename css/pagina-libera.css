@@ -1,4 +1,6 @@
 @import url(global.css);
+@import url(card3d.css);
+@import url(piattosingolo1.css);
 
 .hero-promo {
    background-image: url('../img/body/pagina-libera/HERO\ PROMO.png');
@@ -8,4 +10,36 @@
 .countdown-bg{
     background-image: url('../img/body/pagina-libera/COUNTDOWN_bg.png');
     width: 100%;
+}
+
+.menu-eventi {
+    background-image: url('../img/body/pagina-libera/MENU\ PROMO\ dsk.png');
+    width: 100%;
+}
+
+
+/*card nether*/
+.netherstack-burger-card .greenstack-burger-card {
+    background-color: rgba(83, 31, 29, 0.7);
+    border: 7px solid var(--ux-nether-color-background)
+}
+
+.netherstack-burger-card .greenstack-burger-card .number{
+    background-color: var(--ux-nether-color-accent)
+}
+
+/*card end*/
+.end-burger-card .greenstack-burger-card {
+    background-color: rgba(63, 30, 84, 0.7);
+    border: 7px solid var(--ux-end-color-background)
+}
+
+.end-burger-card .greenstack-burger-card .number{
+    background-color: var(--ux-end-color-accent)
+}
+
+/*mistery box*/
+.mistery-box .greenstack-burger-card {
+    background-color: rgba(23, 23, 23, 0.7);
+    border: 7px solid var(--ux-dark-color)
 }
