@@ -1,6 +1,8 @@
 .card-3d {
   /* Imposta una transizione rapida per ammorbidire il tracciamento del mouse */
-  transition: transform 0.1s ease-out, box-shadow 0.1s ease-out;
+  transition:
+    transform 0.1s ease-out,
+    box-shadow 0.1s ease-out;
   /* Attiva il render 3D per gli elementi interni */
   transform-style: preserve-3d;
   will-change: transform;
@@ -8,9 +10,6 @@
   backface-visibility: hidden;
   /* Un bordino opzionale per staccare la carta dallo spessore */
   border: 1px solid #1d1a18;
-
-  width: 88%;
-  aspect-ratio: 1/1;
 
   /* EFFETTO MATTONCINO: 10 strati solidi (grigio #1d1a18) + 1 strato sfocato */
   box-shadow:
@@ -25,10 +24,8 @@
     9px 9px 0px #1d1a18,
     10px 10px 0px #161616,
     15px 15px 20px rgba(0, 0, 0, 0.15),
-
     inset 8px 8px 0px rgba(0, 0, 0, 0.4),
-    /* Ombra interna */
-    4px 4px 0px rgba(255, 255, 255, 0.05);
+    /* Ombra interna */ 4px 4px 0px rgba(255, 255, 255, 0.05);
 }
 
 .card-3d:hover {
@@ -45,9 +42,13 @@
     9px 9px 0px #1d1a18,
     10px 10px 0px #1d1a18,
     20px 20px 30px rgba(0, 0, 0, 0.3) inset 8px 8px 30px rgba(0, 0, 0, 0.4),
-    /* Ombra interna */
-    4px 4px 0px rgba(255, 255, 255, 0.05);
+    /* Ombra interna */ 4px 4px 0px rgba(255, 255, 255, 0.05);
   z-index: 10;
+}
+
+.card-3d:not(.carousel-info) {
+  width: 88%;
+  aspect-ratio: 1/1;
 }
 
 /* Fa "uscire" il contenuto dallo schermo sopra al mattoncino! */
@@ -59,8 +60,9 @@
   transform: translateZ(10px);
 }
 
-.card-3d-background {
-  background: url("../img/body/homepage/sfondo-card.png")  center / cover no-repeat;
+.card-3d-background:not(.carousel-info) {
+  background: url("../img/body/homepage/sfondo-card.png") center / cover
+    no-repeat;
 }
 
 .card-title,
@@ -121,4 +123,3 @@
     width: 115px;
   }
 }
-

@@ -7,6 +7,7 @@
     <title>Homepage</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/card3d.css">
     <link rel="stylesheet" href="css/info.css">
 </head>
 
@@ -95,10 +96,55 @@
     </div>
 
     <div class="g-0 container-fluid text-center stone-background">
-        <div class="row p-store g-0 ">
+        <div class="row p-store g-0">
             <div class="col-12 d-flex flex-column align-items-center">
-                <h2 class="w-75">Vieni a trovarci <b>dovunque</b> tu sia!</h2>
+                <h2 class="w-75 pb-5">Vieni a trovarci <b>dovunque</b> tu sia!</h2>
                 <!-- Carosello!!! -->
+                <div id="carouselExampleIndicators" class="card-3d card-3d-background carousel slide w-100 carousel-info carousel-fade">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active p-5 overworld-card">
+                            <h2>Overworld</h2>
+                            <img src="./img/body/info/overworld_1.png" class="pb-4 pt-3" alt="Ristorantte Overworld">
+                            <h3>-3232 / 4354 / 435</h3>
+                            <h3>+1 331 222 4242</h3>
+                            <h3>12 - 15 / 19 - 22</h3>
+                        </div>
+                        
+                        <div class="carousel-item p-5 overworld-card">
+                            <h2>Overworld</h2>
+                            <img src="./img/body/info/overworld_2.png" class="pb-4 pt-3" alt="Ristorantte Overworld">
+                            <h3>-3232 / 4354 / 435</h3>
+                            <h3>+1 331 222 4242</h3>
+                            <h3>12 - 15 / 19 - 22</h3>
+                        </div>
+
+                        <div class="carousel-item p-5 overworld-card">
+                            <h2>Overworld</h2>
+                            <img src="./img/body/info/overworld_3.png" class="pb-4 pt-3" alt="Ristorantte Overworld">
+                            <h3>-3232 / 4354 / 435</h3>
+                            <h3>+1 331 222 4242</h3>
+                            <h3>12 - 15 / 19 - 22</h3>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
             </div>
         </div>
     </div>

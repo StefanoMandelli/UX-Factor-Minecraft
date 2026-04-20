@@ -1,3 +1,11 @@
 .p-store {
     padding: 96px 48px;
 }
+
+.overworld-card {
+    background-image: url("../img/body/info/card-overworld.png");
+    background-position: center; /* Oppure 50% 50% */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #1A3323; /* Questo apparirà se l'immagine non carica o ha trasparenze */
+}
