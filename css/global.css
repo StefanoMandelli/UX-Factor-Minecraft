@@ -292,11 +292,6 @@ p {
   font: var(--ux-txt-body);
 }
 
-/* Primo sfondo della homepage */
-.first-background {
-  background-image: url("../img/body/homepage/first-background.png");
-}
-
 .title-home {
   text-shadow:
     0 2px 0 #446a1b,
@@ -313,18 +308,10 @@ p {
   width: 100%;
 }
 
-.redstone-background {
-  background-image: url("../img/body/homepage/redstone-background.png");
-  width: 100%;
-}
 
 .text-shadow-titletaste {
   /*text-shadow: 2px 2px 0px #b81919;*/
   text-shadow: 0px 2px 0px #d32d2d;
-}
-
-.thunder-background {
-  background: url("../img/body/homepage/fulmine-homepage.png") center / cover no-repeat;
 }
 
 .dinecraft-humans {
@@ -333,11 +320,6 @@ p {
 
 .awards-promo {
   width: 70%;
-}
-
-.amethyst-background {
-  background-image: url("../img/body/homepage/amethyst-background.png");
-  width: 100%;
 }
 
 .text-countdown {
@@ -352,6 +334,33 @@ p {
   background-color: var(--ux-global-color-accent-1);
   aspect-ratio: 1/1;
 }
+
+/* VARI BACKGROUND */
+
+.first-background {
+  background-image: url("../img/background/first-background.png");
+}
+
+.redstone-background {
+  background-image: url("../img/background/redstone-background.png");
+  width: 100%;
+}
+
+.thunder-background {
+  background: url("../img/background/fulmine-background.png") center / cover no-repeat;
+}
+
+.amethyst-background {
+  background-image: url("../img/background/amethyst-background.png");
+  width: 100%;
+}
+
+.stone-background {
+  background-image: url("../img/background/stone-background.png");
+  width: 100%;
+}
+
+
 
 /* FOOTER */
 /* Sfondo del footer */

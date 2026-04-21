@@ -1,4 +1,6 @@
 @import url(global.css);
+@import url(card3d.css);
+@import url(piattosingolo1.css);
 
 .hero-promo {
    background-image: url('../img/body/pagina-libera/HERO\ PROMO.png');
@@ -8,4 +10,105 @@
 .countdown-bg{
     background-image: url('../img/body/pagina-libera/COUNTDOWN_bg.png');
     width: 100%;
+}
+
+.menu-eventi {
+    background-image: url('../img/body/pagina-libera/MENU\ PROMO\ dsk.png');
+    width: 100%;
+}
+
+
+/*card nether*/
+.netherstack-burger-card .greenstack-burger-card {
+    background-color: rgba(83, 31, 29, 0.7);
+    border: 7px solid var(--ux-nether-color-background)
+}
+
+.netherstack-burger-card .greenstack-burger-card .number{
+    background-color: var(--ux-nether-color-accent)
+}
+
+/*card end*/
+.end-burger-card .greenstack-burger-card {
+    background-color: rgba(63, 30, 84, 0.7);
+    border: 7px solid var(--ux-end-color-background)
+}
+
+.end-burger-card .greenstack-burger-card .number{
+    background-color: var(--ux-end-color-accent)
+}
+
+/*mistery box*/
+.mistery-box .greenstack-burger-card {
+    background-color: rgba(23, 23, 23, 0.7);
+    border: 7px solid var(--ux-dark-color)
+}
+
+/* Carosello premi (no js)  */
+.carousel-slide{
+  background-image: url(../img/body/pagina-libera/ITEMS\ PROMO_bg.png);
+   width: 100%;
+}
+
+#slider {
+position: relative;
+    width: 100%;
+    height: 400px;/* In base all'altezza dei tuoi box */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;/* Dà profondità all'effetto */
+}
+
+#slider label {
+  position: absolute;
+  width: 300px; /* Larghezza del box */
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* --- LOGICA PER SLIDE 1 AL CENTRO --- */
+#s1:checked ~ #slide1 { transform: translateX(0) scale(1.1); z-index: 5; opacity: 1; }
+#s1:checked ~ #slide2 { transform: translateX(110%) scale(0.8); z-index: 1; opacity: 0.3; }
+#s1:checked ~ #slide3 { transform: translateX(-110%) scale(0.8); z-index: 1; opacity: 0.3; }
+
+/* --- LOGICA PER SLIDE 2 AL CENTRO --- */
+#s2:checked ~ #slide1 { transform: translateX(-110%) scale(0.8); z-index: 1; opacity: 0.3; }
+#s2:checked ~ #slide2 { transform: translateX(0) scale(1.1); z-index: 5; opacity: 1; }
+#s2:checked ~ #slide3 { transform: translateX(110%) scale(0.8); z-index: 1; opacity: 0.3; }
+
+/* --- LOGICA PER SLIDE 3 AL CENTRO --- */
+#s3:checked ~ #slide1 { transform: translateX(110%) scale(0.8); z-index: 1; opacity: 0.3; }
+#s3:checked ~ #slide2 { transform: translateX(-110%) scale(0.8); z-index: 1; opacity: 0.3; }
+#s3:checked ~ #slide3 { transform: translateX(0) scale(1.1); z-index: 5; opacity: 1; }
+
+.box-slider {
+    width:100%;
+    max-width:100vw;
+    overflow: hidden; /* Fondamentale per il mobile */
+    padding: 20px 0;
+}
+
+input{
+    display: none;
+}
+
+.fake-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Per posizionare i finti button alla metà del container */
+    z-index: 10; /* Per poter stare sopra le slide */
+    pointer-events: none; /* I click possono attraversare la lable e triggerare lo spostamento */
+    opacity: 1;
+}
+
+.fake-button.prev {
+    left: 5%; /* Regola la distanza dal bordo sinistro */
+}
+
+.fake-button.next {
+    right: 5%; /* Regola la distanza dal bordo destro */
 }

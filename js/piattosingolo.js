@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Selezioniamo specificamente la tua card Greenstack
-    const cards = document.querySelectorAll('.greenstack-burger-card');
+    const cards = document.querySelectorAll('.burger-card');
 
     cards.forEach(card => {
         // Effetto al movimento del mouse

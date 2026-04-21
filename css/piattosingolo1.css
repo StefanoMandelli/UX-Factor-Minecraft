@@ -1,7 +1,7 @@
 @import url(card3d.css);
 @import url(global.css);
 
-.greenstack-burger-card {
+.burger-card {
     background-color: rgba(26, 51, 35, 0.7);
     border-radius: 5px;
     display: flex;
@@ -25,13 +25,23 @@
 }
 
 /* 4. FAI GALLEGGIARE IL CONTENUTO (Effetto Pop-out) */
-.greenstack-burger-card img,
-.greenstack-burger-card h3,
-.greenstack-burger-card .price-container {
+.burger-card img,
+.burger-card h3,
+.burger-card .price-container {
     transform: translateZ(20px);
     /* Più alto è il numero, più "esce" dalla card */
 }
 
+.conf-menu{
+    padding: 1.25rem;
+}
+
+.allergens-card img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%; /* Evita che l'immagine sia più larga della card */
+}
 .redstone-background .row {
     perspective: 1000px;
 }
@@ -68,4 +78,20 @@
     max-width: 100%;
     height: auto;
     display: block;
+}
+
+@media (min-width: 576px) {
+    .contenitore-craft {
+        display: flex;         /* Attiva il flex solo qui */
+        gap: 4.4rem;          /* Mette i tuoi 71px solo qui */
+        justify-content: center; 
+    }
+
+    .greenstack-burger-card {
+        /* Permette alle card di dividersi lo spazio equamente */
+        flex: 1;
+        width: auto !important;
+        /* Riduciamo leggermente il padding per far stare tutto con il gap grande */
+        padding: 2rem !important;
+    }
 }
