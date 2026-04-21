@@ -1,0 +1,18 @@
+@import url(card3d.css);
+@import url(global.css);
+@import url(piattosingolo1.css);
+
+.burger-card {
+    background-color: rgba(83, 31, 29, 0.7);
+    border: 7px solid rgba(83, 31, 29, 1);
+}
+
+.number {
+    /* Sfondo e bordo */
+    background-color: var( --ux-nether-color-accent);
+}
+
+.dinecraft-card {
+    background-color: rgba(83, 31, 29, 0.7);
+    border: 7px solid rgba(83, 31, 29, 1);
+}

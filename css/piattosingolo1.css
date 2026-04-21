@@ -1,7 +1,7 @@
 @import url(card3d.css);
 @import url(global.css);
 
-.greenstack-burger-card {
+.burger-card {
     background-color: rgba(26, 51, 35, 0.7);
     border-radius: 5px;
     display: flex;
@@ -25,9 +25,9 @@
 }
 
 /* 4. FAI GALLEGGIARE IL CONTENUTO (Effetto Pop-out) */
-.greenstack-burger-card img,
-.greenstack-burger-card h3,
-.greenstack-burger-card .price-container {
+.burger-card img,
+.burger-card h3,
+.burger-card .price-container {
     transform: translateZ(20px);
     /* Più alto è il numero, più "esce" dalla card */
 }
