@@ -17,29 +17,38 @@
     width: 100%;
 }
 
+/*card overworld*/
+.greenstack-burger-card {
+    background-color: rgba(26, 51, 35, 0.7);
+    border: 7px solid var(--ux-global-color-background)
+}
+
+.greenstack-burger-card .number{
+    background-color: var(--ux-global-color-accent-1)
+}
 
 /*card nether*/
-.netherstack-burger-card .greenstack-burger-card {
+.netherstack-burger-card .burger-card {
     background-color: rgba(83, 31, 29, 0.7);
     border: 7px solid var(--ux-nether-color-background)
 }
 
-.netherstack-burger-card .greenstack-burger-card .number{
+.netherstack-burger-card .burger-card .number{
     background-color: var(--ux-nether-color-accent)
 }
 
 /*card end*/
-.end-burger-card .greenstack-burger-card {
+.end-burger-card .burger-card {
     background-color: rgba(63, 30, 84, 0.7);
     border: 7px solid var(--ux-end-color-background)
 }
 
-.end-burger-card .greenstack-burger-card .number{
+.end-burger-card .burger-card .number{
     background-color: var(--ux-end-color-accent)
 }
 
 /*mistery box*/
-.mistery-box .greenstack-burger-card {
+.mistery-box .burger-card {
     background-color: rgba(23, 23, 23, 0.7);
     border: 7px solid var(--ux-dark-color)
 }
