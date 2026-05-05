@@ -8,4 +8,21 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #1A3323; /* Questo apparirà se l'immagine non carica o ha trasparenze */
+    padding-bottom: 9rem !important;
+}
+
+/* Trasforma gli indicatori in quadratini */
+.carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+    margin-bottom: 3rem !important;
+    background-color: var(--color-font);
+    opacity: 1 !important;
+}
+
+/* Stile per il quadratino attivo */
+.carousel-indicators .active {
+    background-color: var(--ux-global-color-accent-1);
+    opacity: 1 !important;
 }
