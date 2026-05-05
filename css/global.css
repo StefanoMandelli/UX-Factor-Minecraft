@@ -360,6 +360,11 @@ p {
   width: 100%;
 }
 
+.gold-background {
+  background-image: url("../img/background/gold-background.png");
+  width: 100%;
+}
+
 
 
 /* FOOTER */
