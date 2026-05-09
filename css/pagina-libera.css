@@ -4,6 +4,9 @@
 
 .hero-promo {
    background-image: url('../img/body/pagina-libera/HERO\ PROMO.png');
+   background-size: cover;
+   background-position: center;
+   min-height: 100vh;
    width: 100%;
 }
 
