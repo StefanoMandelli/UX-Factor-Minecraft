@@ -1,28 +1,67 @@
-.p-store {
-    padding: 96px 48px;
+.p-section {
+  padding: 96px 48px;
 }
 
 .overworld-card {
-    background-image: url("../img/body/info/card-overworld.png");
-    background-position: center; /* Oppure 50% 50% */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: #1A3323; /* Questo apparirà se l'immagine non carica o ha trasparenze */
-    padding-bottom: 9rem !important;
+  background-image: url("../img/body/info/card-overworld.png");
+  background-position: center; /* Oppure 50% 50% */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #1a3323; /* Questo apparirà se l'immagine non carica o ha trasparenze */
+  padding-bottom: 9rem !important;
 }
 
 /* Trasforma gli indicatori in quadratini */
 .carousel-indicators [data-bs-target] {
-    width: 10px;
-    height: 10px;
-    margin-right: 5px;
-    margin-bottom: 3rem !important;
-    background-color: var(--color-font);
-    opacity: 1 !important;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+  margin-bottom: 3rem !important;
+  background-color: var(--color-font);
+  opacity: 1 !important;
 }
 
 /* Stile per il quadratino attivo */
 .carousel-indicators .active {
-    background-color: var(--ux-global-color-accent-1);
-    opacity: 1 !important;
+  background-color: var(--ux-global-color-accent-1);
+  opacity: 1 !important;
+}
+
+.torch-info {
+  background-color: var(--ux-torch-background);
+  padding: 2rem;
+  border-radius: 5px;
+  background: var(
+    --Torcia,
+    radial-gradient(
+      108.03% 58.34% at 16.77% 39.37%,
+      rgba(201, 137, 64, 0.25) 9.85%,
+      rgba(48, 27, 27, 0.05) 100%
+    ),
+    #221709
+  );
+}
+
+.code-info {
+  background: rgba(114, 114, 114, 0.2);
+  color: var(--color-font, #e4d8d4);
+  padding: 0.75rem 1.5rem;
+}
+
+.code-info h4 {
+  font: var(--ux-txt-codeinfo);
+  color: var(--color-font);
+  margin: 0rem;
+}
+
+.code-info h4 .assistenza {
+  color: var(--ux-nether-color-accent);
+}
+
+.code-info h4 .feedback {
+  color: var(--ux-global-color-accent-1);
+}
+
+.code-info h4 .collaborazioni {
+  color: var(--ux-end-color-accent);
 }

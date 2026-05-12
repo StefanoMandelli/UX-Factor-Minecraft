@@ -46,7 +46,7 @@
   z-index: 10;
 }
 
-.card-3d:not(.carousel-info) {
+.card-3d:not(.carousel-info, .torch-info) {
   width: 88%;
   aspect-ratio: 1/1;
 }
@@ -60,7 +60,7 @@
   transform: translateZ(10px);
 }
 
-.card-3d-background:not(.carousel-info) {
+.card-3d-background {
   background: url("../img/body/homepage/sfondo-card.png") center / cover
     no-repeat;
 }
