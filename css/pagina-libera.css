@@ -8,6 +8,15 @@
    background-position: center;
    min-height: 100vh;
    width: 100%;
+   overflow-x: hidden;
+   position: relative;
+}
+
+.mano-promo {
+    position: absolute;
+    right: -13rem; 
+    bottom: 13rem;
+    z-index: 1;
 }
 
 .countdown-bg{
