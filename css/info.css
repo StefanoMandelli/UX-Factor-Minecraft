@@ -2,13 +2,26 @@
   padding: 96px 48px;
 }
 
-.overworld-card {
-  background-image: url("../img/body/info/card-overworld.png");
-  background-position: center; /* Oppure 50% 50% */
+.shop-card {
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: #1a3323; /* Questo apparirà se l'immagine non carica o ha trasparenze */
   padding-bottom: 9rem !important;
+}
+
+.overworld {
+  background-image: url("../img/body/info/card-overworld.png");
+  background-color: #1a3323;
+}
+
+.nether {
+  background-image: url("../img/body/info/card-nether.png");
+  background-color: #531F1d;
+}
+
+.end {
+  background-image: url("../img/body/info/card-end.png");
+  background-color: #3f1e54;
 }
 
 /* Trasforma gli indicatori in quadratini */
@@ -24,6 +37,16 @@
 /* Stile per il quadratino attivo */
 .carousel-indicators .active {
   background-color: var(--ux-global-color-accent-1);
+  opacity: 1 !important;
+}
+
+#carouselNether .carousel-indicators .active {
+  background-color: var(--ux-nether-color-accent);
+  opacity: 1 !important;
+}
+
+#carouselEnd .carousel-indicators .active {
+  background-color: var(--ux-end-color-accent);
   opacity: 1 !important;
 }
 
