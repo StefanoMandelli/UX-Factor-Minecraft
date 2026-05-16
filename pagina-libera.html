@@ -79,7 +79,7 @@
 
 <!-- HERO PROMO -->
 <div class="container-fluid hero-promo">
-    <div class="row p-5 align-items-center align-items-lg-end">
+    <div class="row p-5 mt-lg-5 align-items-center align-items-lg-end">
 
         <!-- COLONNA TESTO: a sinistra su desktop (lg-6), piena su mobile (12) -->
         <div class="col-12 col-lg-6 text-center text-lg-start order-1 offset-lg-1">
@@ -153,13 +153,13 @@
 
 <!--Card eventi Overworld-->
             <div class="container-fluid text-center menu-eventi g-0">
-                <div class="row py-5 g-0">
+                <div class="row py-5 g-0 justify-content-center">
                     <div class="col-12 pb-5 d-flex justify-content-center">
                         <h2>Scegli la <b>combo</b> e ottieni il tuo <b>item</b></h2>
                     </div>
-                    <div class="col-8 mx-auto pb-5">
+                    <div class="col-8 col-lg-3 mx-auto mx-lg-4 pb-5">
                         <div class="greenstack-burger-card burger-card">
-                            <img class="img-fluid" src="img/body/pagina-libera/Mistery overworld.png" alt="smallcraft">
+                            <img class="img-fluid bread" src="img/body/pagina-libera/Mistery overworld.png" alt="smallcraft">
                             <h3>Mistery Overworld</h3>
                             <div class="price-container pt-4">
                                 <span class="number">2</span>
@@ -172,10 +172,10 @@
                         </div>
                     </div>
                     <!--Card eventi nether-->
-                    <div class="col-8 mx-auto pb-5">
+                    <div class="col-8 col-lg-3 mx-auto mx-lg-4 pb-5">
                         <div class="netherstack-burger-card">
                             <div class="burger-card">
-                                <img class="img-fluid" src="img/body/pagina-libera/Mistery nether.png" alt="smallcraft">
+                                <img class="img-fluid bread" src="img/body/pagina-libera/Mistery nether.png" alt="smallcraft">
                                 <h3>Mistery Nether</h3>
                                 <div class="price-container pt-4">
                                     <span class="number">2</span>
@@ -189,10 +189,10 @@
                         </div>
                     </div>
                     <!--Card eventi end -->
-                    <div class="col-8 mx-auto pb-5">
+                    <div class="col-8 col-lg-3 mx-auto mx-lg-4 pb-5">
                         <div class="end-burger-card">
                             <div class="burger-card">
-                                <img class="img-fluid" src="img/body/pagina-libera/Mistery end.png" alt="smallcraft">
+                                <img class="img-fluid bread" src="img/body/pagina-libera/Mistery end.png" alt="smallcraft">
                                 <h3>Mistery End</h3>
                                 <div class="price-container pt-4">
                                     <span class="number">2</span>
@@ -206,20 +206,27 @@
                         </div>
                     </div>
                     <!--Mistery box-->
-                    <div class="col-8 mx-auto pb-5">
+                    <div class="col-8 col-lg-10 mx-auto pb-5">
                         <div class="mistery-box">
                             <div class="burger-card">
-                                <img class="img-fluid" src="img/body/pagina-libera/Mistery box.png" alt="mistery-box">
-                                <h3>In cosa consiste la promo</h3>
-                                <p class="pt-4">Se ordini uno a scelta tra i 3 menù mostrati qui sopra otterrai in omaggio un
-                                    umanissimo
-                                    gadget! Non ti resta che
-                                    scoprire quale!</p>
-                                <a class="btn btn-menu pushable inverted" aria-current="page" href="#">
-                                    <span class="front">
-                                        VAI AGLI ITEM
-                                    </span>
-                                </a>
+                                <div class="row align-items-center">
+                                    <!-- Immagine a sinistra: occupa tutta la larghezza su mobile, metà su desktop -->
+                                    <div class="col-12 col-lg-5">
+                                        <img class="img-fluid" src="img/body/pagina-libera/Mistery box.png" alt="mistery-box">
+                                    </div>
+                                    <!-- Testo + bottone a destra: idem -->
+                                    <div class="col-12 col-lg-7">
+                                        <h3>In cosa consiste la promo</h3>
+                                        <p class="py-4">Se ordini uno a scelta tra i 3 menù mostrati qui sopra otterrai in omaggio
+                                            un
+                                            umanissimo gadget! Non ti resta che scoprire quale!</p>
+                                        <a class="btn btn-menu pushable inverted" aria-current="page" href="#">
+                                            <span class="front">
+                                                VAI AGLI ITEM
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -228,45 +235,59 @@
 
 <!--Carosello premi da modificare-->
         <div class="container-fluid text-center carousel-slide g-0">
-        <div class="row py-5 g-0 ">
-            <div class="col-12 pb-5 d-flex flex-column align-items-center">
-                <h2 class="mb-4">Quale item si nasconde nella tua mistery? Vieni a scoprirlo!</h2>
-                <div class="box-slider">
-                    <section id="slider">
-                        <input type="radio" name="slider" id="s1">
-                        <input type="radio" name="slider" id="s2">
-                        <input type="radio" name="slider" id="s3" checked>
-                        <label for="s1" id="slide1">
-                            <div class="item">
-                                <img class="img-fluid" src="img/body/pagina-libera/calzino.png" alt="Socks">
-                            </div>
-                            <h3 class="text-center mt-2">Calzino colorato</h3>
-                        </label>
-
-                        <label for="s2" id="slide2">
-                        <div class="item">
-                                <img class="img-fluid" src="img/body/pagina-libera/trapano.png" alt="Socks">
-                            </div>
-                            <h3 class="text-center mt-2">Trapano forante</h3>
-                        </label>
-
-                        <label for="s3" id="slide3">
-                        <div class="item">
-                                <img class="img-fluid" src="img/body/pagina-libera/Spazzolino.png" alt="Socks">
-                            </div>
-                            <h3 class="text-center mt-2">Spazzolino elettrico</h3>
-                        </label>
-                        <div class="fake-button next">
-                                <img src="img/body/pagina-libera/icona next.svg" alt="Next">
-                        </div>
-                        <div class="fake-button prev">
-                                <img src="img/body/pagina-libera/icona prev.svg" alt="Prev">
-                        </div>
-                </section>
+            <div class="row py-5 g-0 ">
+                <div class="col-12 pb-5 d-flex flex-column align-items-center">
+                    <h2 class="mb-4">Quale item si nasconde nella tua mistery? Vieni a scoprirlo!</h2>
+                    <div class="box-slider">
+                        <section id="slider">
+                            <input type="radio" name="slider" id="s1">
+                            <input type="radio" name="slider" id="s2">
+                            <input type="radio" name="slider" id="s3" checked>
+                            <label for="s1" id="slide1">
+                                <div class="item">
+                                    <img class="img-fluid" src="img/body/pagina-libera/calzino.png" alt="Socks">
+                                </div>
+                                <h3 class="text-center mt-2">Calzino colorato</h3>
+                                <!-- Freccia NEXT visibile solo quando s3 è attivo (slide1 è a destra) -->
+                                <div class="arrow arrow-next">
+                                    <img src="img/body/pagina-libera/icona next.svg" alt="Next">
+                                </div>
+                                <!-- Freccia PREV visibile solo quando s2 è attivo (slide1 è a sinistra) -->
+                                <div class="arrow arrow-prev">
+                                    <img src="img/body/pagina-libera/icona prev.svg" alt="Prev">
+                                </div>
+                            </label>
+        
+                            <label for="s2" id="slide2">
+                                <div class="item">
+                                    <img class="img-fluid" src="img/body/pagina-libera/trapano.png" alt="Socks">
+                                </div>
+                                <h3 class="text-center mt-2">Trapano forante</h3>
+                                <div class="arrow arrow-next">
+                                    <img src="img/body/pagina-libera/icona next.svg" alt="Next">
+                                </div>
+                                <div class="arrow arrow-prev">
+                                    <img src="img/body/pagina-libera/icona prev.svg" alt="Prev">
+                                </div>
+                            </label>
+        
+                            <label for="s3" id="slide3">
+                                <div class="item">
+                                    <img class="img-fluid" src="img/body/pagina-libera/Spazzolino.png" alt="Socks">
+                                </div>
+                                <h3 class="text-center mt-2">Spazzolino elettrico</h3>
+                                <div class="arrow arrow-next">
+                                    <img src="img/body/pagina-libera/icona next.svg" alt="Next">
+                                </div>
+                                <div class="arrow arrow-prev">
+                                    <img src="img/body/pagina-libera/icona prev.svg" alt="Prev">
+                                </div>
+                            </label>
+                        </section>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
     <footer class="container-fluid bg-dark py-5 footer-custom-bg">
         <div class="row align-items-center">
