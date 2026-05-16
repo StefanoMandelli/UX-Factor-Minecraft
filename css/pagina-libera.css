@@ -65,7 +65,7 @@
     border: 7px solid var(--ux-dark-color)
 }
 
-/* Carosello premi (no js)  */
+/* Carosello premi */
 .carousel-slide{
   background-image: url(../img/body/pagina-libera/ITEMS\ PROMO_bg.png);
    width: 100%;
@@ -74,7 +74,7 @@
 #slider {
 position: relative;
     width: 100%;
-    height: 400px;/* In base all'altezza dei tuoi box */
+    height: 25rem;/* In base all'altezza dei tuoi box */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -83,7 +83,7 @@ position: relative;
 
 #slider label {
   position: absolute;
-  width: 300px; /* Larghezza del box */
+  width: 19rem; /* Larghezza del box */
   transition: transform 0.4s ease, opacity 0.4s ease;
   cursor: pointer;
   display: flex;
@@ -133,3 +133,5 @@ input{
 .fake-button.next {
     right: 5%; /* Regola la distanza dal bordo destro */
 }
+
+
