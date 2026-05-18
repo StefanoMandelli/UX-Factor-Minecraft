@@ -535,7 +535,7 @@ p {
   }
 
   h2 {
-    font: var(--ux-txt-h3-1920);
+    font: var(--ux-txt-h2-1920);
   }
 
   h3 {
@@ -565,5 +565,9 @@ p {
 
   .text-countdown {
     font: var(--ux-txt-h1-1920);
+  }
+
+  .mascotte {
+    width: 100%;
   }
 }
