@@ -80,7 +80,7 @@
     <div class="g-0 container-fluid text-center text-lg-start first-background">
         <div class="hero-desktop row p-5 g-0">
             <div class="col-12 col-lg-3 offset-lg-1 order-lg-2 pb-5">
-                <img src="img/body/info/info_hero.png" alt="Info Hero" />
+                <img src="img/body/info/info_hero.png" alt="Info Hero" class="img-fluid mascotte" />
             </div>
             <div class="col-12 col-lg-4 offset-lg-2 order-lg-1 align-self-lg-center">
                 <h1 class="mb-5 title-home">SCOPRI DOVE E COME VENIRE A TROVARCI</h1>
@@ -100,271 +100,561 @@
             <div class="col-12 d-flex flex-column align-items-center">
                 <h2 class="w-75">Vieni a trovarci <b>dovunque</b> tu sia!</h2>
 
-                <!-- Carosello overworld (fs) -->
-                <div id="carouselExampleIndicators" class="mt-5 card-3d carousel slide w-100 carousel-info carousel-fade">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
+                <!-- CAROSELLO MOBILE-->
+                <div class="d-block d-lg-none">
+                    <!-- Carosello overworld (fs) -->
+                    <div id="carouselExampleIndicators"
+                        class="mt-5 card-3d carousel slide w-100 carousel-info carousel-fade">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div
+                                class="carousel-item active p-5 shop-card overworld d-flex flex-column align-items-center gap-5">
+
+                                <h2 class="m-0">Overworld</h2>
+
+                                <img src="./img/body/info/overworld_1.png" alt="Overworld">
+
+                                <div class="d-flex flex-column align-items-start text-start gap-2">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img src="./img/body/info/location.svg" alt="Location icon">
+                                        <h3 class="m-0">-3232 / 4354 / 435</h3>
+                                    </div>
+
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img src="./img/body/info/mobile.svg" alt="Phone icon">
+                                        <h3 class="m-0">+1 331 222 4242</h3>
+                                    </div>
+
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img src="./img/body/info/time.svg" alt="Clock icon">
+                                        <h3 class="m-0">12 - 15 / 19 - 22</h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="carousel-item p-5 shop-card overworld d-flex flex-column align-items-center gap-5">
+
+                                <h2 class="m-0">Overworld</h2>
+
+                                <img src="./img/body/info/overworld_2.png" alt="Overworld">
+
+                                <div class="d-flex flex-column align-items-start text-start gap-2">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img src="./img/body/info/location.svg" alt="Location icon">
+                                        <h3 class="m-0">10404 / 443 / 95</h3>
+                                    </div>
+
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img src="./img/body/info/mobile.svg" alt="Phone icon">
+                                        <h3 class="m-0">+1 935 774 999</h3>
+                                    </div>
+
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img src="./img/body/info/time.svg" alt="Clock icon">
+                                        <h3 class="m-0">12 - 15 / 19 - 22</h3>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div
+                                class="carousel-item p-5 shop-card overworld d-flex flex-column align-items-center gap-5">
+
+                                <h2 class="m-0">Overworld</h2>
+
+                                <img src="./img/body/info/overworld_3.png" alt="Overworld">
+
+                                <div class="d-flex flex-column align-items-start text-start gap-2">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img src="./img/body/info/location.svg" alt="Location icon">
+                                        <h3 class="m-0">4 / 12 / 4000</h3>
+                                    </div>
+
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img src="./img/body/info/mobile.svg" alt="Phone icon">
+                                        <h3 class="m-0">+1 888 443 1121</h3>
+                                    </div>
+
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img src="./img/body/info/time.svg" alt="Clock icon">
+                                        <h3 class="m-0">12 - 15 / 19 - 22</h3>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
-                    <div class="carousel-inner">
-                        <div
-                            class="carousel-item active p-5 shop-card overworld d-flex flex-column align-items-center gap-5">
 
-                            <h2 class="m-0">Overworld</h2>
-
-                            <img src="./img/body/info/overworld_1.png" alt="Overworld">
-
-                            <div class="d-flex flex-column align-items-start text-start gap-2">
-                                <div class="d-flex align-items-center gap-2">
-                                    <img src="./img/body/info/location.svg" alt="Location icon">
-                                    <h3 class="m-0">-3232 / 4354 / 435</h3>
-                                </div>
-
-                                <div class="d-flex align-items-center gap-2">
-                                    <img src="./img/body/info/mobile.svg" alt="Phone icon">
-                                    <h3 class="m-0">+1 331 222 4242</h3>
-                                </div>
-
-                                <div class="d-flex align-items-center gap-2">
-                                    <img src="./img/body/info/time.svg" alt="Clock icon">
-                                    <h3 class="m-0">12 - 15 / 19 - 22</h3>
-                                </div>
-                            </div>
+                    <!-- Carosello nether (fs) -->
+                    <div id="carouselNether" class="mt-5 card-3d carousel slide w-100 carousel-info carousel-fade">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselNether" data-bs-slide-to="0" class="active"
+                                aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselNether" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselNether" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
                         </div>
+                        <div class="carousel-inner">
+                            <div
+                                class="carousel-item active p-5 shop-card nether d-flex flex-column align-items-center gap-5">
 
-                        <div class="carousel-item p-5 shop-card overworld d-flex flex-column align-items-center gap-5">
+                                <h2 class="m-0">Nether</h2>
 
-                            <h2 class="m-0">Overworld</h2>
+                                <img src="./img/body/info/nether_1.png" alt="Nether">
 
-                            <img src="./img/body/info/overworld_2.png" alt="Overworld">
+                                <div class="d-flex flex-column align-items-start text-start gap-2">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img src="./img/body/info/location.svg" alt="Location icon">
+                                        <h3 class="m-0">-3232 / 4354 / 435</h3>
+                                    </div>
 
-                            <div class="d-flex flex-column align-items-start text-start gap-2">
-                                <div class="d-flex align-items-center gap-2">
-                                    <img src="./img/body/info/location.svg" alt="Location icon">
-                                    <h3 class="m-0">10404 / 443 / 95</h3>
-                                </div>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img src="./img/body/info/mobile.svg" alt="Phone icon">
+                                        <h3 class="m-0">+1 331 222 4242</h3>
+                                    </div>
 
-                                <div class="d-flex align-items-center gap-2">
-                                    <img src="./img/body/info/mobile.svg" alt="Phone icon">
-                                    <h3 class="m-0">+1 935 774 999</h3>
-                                </div>
-
-                                <div class="d-flex align-items-center gap-2">
-                                    <img src="./img/body/info/time.svg" alt="Clock icon">
-                                    <h3 class="m-0">12 - 15 / 19 - 22</h3>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img src="./img/body/info/time.svg" alt="Clock icon">
+                                        <h3 class="m-0">12 - 15 / 19 - 22</h3>
+                                    </div>
                                 </div>
                             </div>
 
-                        </div>
+                            <div class="carousel-item p-5 shop-card nether d-flex flex-column align-items-center gap-5">
 
-                        <div class="carousel-item p-5 shop-card overworld d-flex flex-column align-items-center gap-5">
+                                <h2 class="m-0">Nether</h2>
 
-                            <h2 class="m-0">Overworld</h2>
+                                <img src="./img/body/info/nether_2.png" alt="Nether">
 
-                            <img src="./img/body/info/overworld_3.png" alt="Overworld">
+                                <div class="d-flex flex-column align-items-start text-start gap-2">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img src="./img/body/info/location.svg" alt="Location icon">
+                                        <h3 class="m-0">10404 / 443 / 95</h3>
+                                    </div>
 
-                            <div class="d-flex flex-column align-items-start text-start gap-2">
-                                <div class="d-flex align-items-center gap-2">
-                                    <img src="./img/body/info/location.svg" alt="Location icon">
-                                    <h3 class="m-0">4 / 12 / 4000</h3>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img src="./img/body/info/mobile.svg" alt="Phone icon">
+                                        <h3 class="m-0">+1 935 774 999</h3>
+                                    </div>
+
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img src="./img/body/info/time.svg" alt="Clock icon">
+                                        <h3 class="m-0">12 - 15 / 19 - 22</h3>
+                                    </div>
                                 </div>
 
-                                <div class="d-flex align-items-center gap-2">
-                                    <img src="./img/body/info/mobile.svg" alt="Phone icon">
-                                    <h3 class="m-0">+1 888 443 1121</h3>
-                                </div>
-
-                                <div class="d-flex align-items-center gap-2">
-                                    <img src="./img/body/info/time.svg" alt="Clock icon">
-                                    <h3 class="m-0">12 - 15 / 19 - 22</h3>
-                                </div>
                             </div>
 
+                            <div class="carousel-item p-5 shop-card nether d-flex flex-column align-items-center gap-5">
+
+                                <h2 class="m-0">Nether</h2>
+
+                                <img src="./img/body/info/nether_3.png" alt="Nether">
+
+                                <div class="d-flex flex-column align-items-start text-start gap-2">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img src="./img/body/info/location.svg" alt="Location icon">
+                                        <h3 class="m-0">4 / 12 / 4000</h3>
+                                    </div>
+
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img src="./img/body/info/mobile.svg" alt="Phone icon">
+                                        <h3 class="m-0">+1 888 443 1121</h3>
+                                    </div>
+
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img src="./img/body/info/time.svg" alt="Clock icon">
+                                        <h3 class="m-0">12 - 15 / 19 - 22</h3>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselNether"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselNether"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+
+                    <!-- Carosello end (fs) -->
+                    <div id="carouselEnd" class="mt-5 card-3d carousel slide w-100 carousel-info carousel-fade">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselEnd" data-bs-slide-to="0" class="active"
+                                aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselEnd" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div
+                                class="carousel-item active p-5 shop-card end d-flex flex-column align-items-center gap-5">
+
+                                <h2 class="m-0">End</h2>
+
+                                <img src="./img/body/info/end_1.png" alt="End">
+
+                                <div class="d-flex flex-column align-items-start text-start gap-2">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img src="./img/body/info/location.svg" alt="Location icon">
+                                        <h3 class="m-0">-3232 / 4354 / 435</h3>
+                                    </div>
+
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img src="./img/body/info/mobile.svg" alt="Phone icon">
+                                        <h3 class="m-0">+1 331 222 4242</h3>
+                                    </div>
+
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img src="./img/body/info/time.svg" alt="Clock icon">
+                                        <h3 class="m-0">12 - 15 / 19 - 22</h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item p-5 shop-card end d-flex flex-column align-items-center gap-5">
+
+                                <h2 class="m-0">End</h2>
+
+                                <img src="./img/body/info/end_2.png" alt="End">
+
+                                <div class="d-flex flex-column align-items-start text-start gap-2">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img src="./img/body/info/location.svg" alt="Location icon">
+                                        <h3 class="m-0">10404 / 443 / 95</h3>
+                                    </div>
+
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img src="./img/body/info/mobile.svg" alt="Phone icon">
+                                        <h3 class="m-0">+1 935 774 999</h3>
+                                    </div>
+
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img src="./img/body/info/time.svg" alt="Clock icon">
+                                        <h3 class="m-0">12 - 15 / 19 - 22</h3>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselEnd"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselEnd"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
                 </div>
 
-                <!-- Carosello nether (fs) -->
-                <div id="carouselNether" class="mt-5 card-3d carousel slide w-100 carousel-info carousel-fade">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselNether" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselNether" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselNether" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
+                <!-- CAROSELLO DESKTOP -->
+                <div class="d-none d-lg-block">
+                    <div id="carouselDSK" class="mt-5 card-3d carousel slide carousel-info carousel-fade">
+                        <div class="carousel-indicators">
+                            <button id="carouselDSK-indicator-0" type="button" data-bs-target="#carouselDSK"
+                                data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button id="carouselDSK-indicator-1" type="button" data-bs-target="#carouselDSK"
+                                data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button id="carouselDSK-indicator-2" type="button" data-bs-target="#carouselDSK"
+                                data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div
+                                class="carousel-item active p-5 shop-card overworld d-flex flex-column align-items-center gap-5">
+
+                                <h2 class="m-0">Overworld</h2>
+
+                                <div class="container">
+                                    <div class="row align-items-center">
+                                        <div class="col-2 offset-3">
+                                            <img src="./img/body/info/overworld_1.png" alt="Overworld">
+                                        </div>
+
+                                        <div class="col">
+                                            <div class="d-flex flex-column align-items-start text-start gap-2">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <img src="./img/body/info/location.svg" alt="Location icon">
+                                                    <h3 class="m-0">-3232 / 4354 / 435</h3>
+                                                </div>
+
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <img src="./img/body/info/mobile.svg" alt="Phone icon">
+                                                    <h3 class="m-0">+1 331 222 4242</h3>
+                                                </div>
+
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <img src="./img/body/info/time.svg" alt="Clock icon">
+                                                    <h3 class="m-0">12 - 15 / 19 - 22</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="container ">
+                                    <div class="row align-items-center">
+                                        <div class="col-2 offset-3">
+                                            <img src="./img/body/info/overworld_2.png" alt="Overworld">
+                                        </div>
+
+                                        <div class="col-4">
+                                            <div class="d-flex flex-column align-items-start text-start gap-2">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <img src="./img/body/info/location.svg" alt="Location icon">
+                                                    <h3 class="m-0">-3232 / 4354 / 435</h3>
+                                                </div>
+
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <img src="./img/body/info/mobile.svg" alt="Phone icon">
+                                                    <h3 class="m-0">+1 331 222 4242</h3>
+                                                </div>
+
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <img src="./img/body/info/time.svg" alt="Clock icon">
+                                                    <h3 class="m-0">12 - 15 / 19 - 22</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="container ">
+                                    <div class="row align-items-center">
+                                        <div class="col-2 offset-3">
+                                            <img src="./img/body/info/overworld_3.png" alt="Overworld">
+                                        </div>
+
+                                        <div class="col-4">
+                                            <div class="d-flex flex-column align-items-start text-start gap-2">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <img src="./img/body/info/location.svg" alt="Location icon">
+                                                    <h3 class="m-0">-3232 / 4354 / 435</h3>
+                                                </div>
+
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <img src="./img/body/info/mobile.svg" alt="Phone icon">
+                                                    <h3 class="m-0">+1 331 222 4242</h3>
+                                                </div>
+
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <img src="./img/body/info/time.svg" alt="Clock icon">
+                                                    <h3 class="m-0">12 - 15 / 19 - 22</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item p-5 shop-card nether d-flex flex-column align-items-center gap-5">
+
+                                <h2 class="m-0">Nether</h2>
+
+                                <div class="container">
+                                    <div class="row align-items-center">
+                                        <div class="col-2 offset-3">
+                                            <img src="./img/body/info/nether_1.png" alt="Nether">
+                                        </div>
+
+                                        <div class="col">
+                                            <div class="d-flex flex-column align-items-start text-start gap-2">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <img src="./img/body/info/location.svg" alt="Location icon">
+                                                    <h3 class="m-0">-3232 / 4354 / 435</h3>
+                                                </div>
+
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <img src="./img/body/info/mobile.svg" alt="Phone icon">
+                                                    <h3 class="m-0">+1 331 222 4242</h3>
+                                                </div>
+
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <img src="./img/body/info/time.svg" alt="Clock icon">
+                                                    <h3 class="m-0">12 - 15 / 19 - 22</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="container ">
+                                    <div class="row align-items-center">
+                                        <div class="col-2 offset-3">
+                                            <img src="./img/body/info/nether_2.png" alt="Nether">
+                                        </div>
+
+                                        <div class="col-4">
+                                            <div class="d-flex flex-column align-items-start text-start gap-2">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <img src="./img/body/info/location.svg" alt="Location icon">
+                                                    <h3 class="m-0">-3232 / 4354 / 435</h3>
+                                                </div>
+
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <img src="./img/body/info/mobile.svg" alt="Phone icon">
+                                                    <h3 class="m-0">+1 331 222 4242</h3>
+                                                </div>
+
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <img src="./img/body/info/time.svg" alt="Clock icon">
+                                                    <h3 class="m-0">12 - 15 / 19 - 22</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="container ">
+                                    <div class="row align-items-center">
+                                        <div class="col-2 offset-3">
+                                            <img src="./img/body/info/nether_3.png" alt="Nether">
+                                        </div>
+
+                                        <div class="col-4">
+                                            <div class="d-flex flex-column align-items-start text-start gap-2">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <img src="./img/body/info/location.svg" alt="Location icon">
+                                                    <h3 class="m-0">-3232 / 4354 / 435</h3>
+                                                </div>
+
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <img src="./img/body/info/mobile.svg" alt="Phone icon">
+                                                    <h3 class="m-0">+1 331 222 4242</h3>
+                                                </div>
+
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <img src="./img/body/info/time.svg" alt="Clock icon">
+                                                    <h3 class="m-0">12 - 15 / 19 - 22</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item p-5 shop-card end d-flex flex-column align-items-center gap-5">
+
+                                <h2 class="m-0">End</h2>
+
+                                <div class="container">
+                                    <div class="row align-items-center">
+                                        <div class="col-2 offset-3">
+                                            <img src="./img/body/info/end_1.png" alt="End">
+                                        </div>
+
+                                        <div class="col">
+                                            <div class="d-flex flex-column align-items-start text-start gap-2">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <img src="./img/body/info/location.svg" alt="Location icon">
+                                                    <h3 class="m-0">-3232 / 4354 / 435</h3>
+                                                </div>
+
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <img src="./img/body/info/mobile.svg" alt="Phone icon">
+                                                    <h3 class="m-0">+1 331 222 4242</h3>
+                                                </div>
+
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <img src="./img/body/info/time.svg" alt="Clock icon">
+                                                    <h3 class="m-0">12 - 15 / 19 - 22</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="container ">
+                                    <div class="row align-items-center">
+                                        <div class="col-2 offset-3">
+                                            <img src="./img/body/info/end_2.png" alt="End">
+                                        </div>
+
+                                        <div class="col-4">
+                                            <div class="d-flex flex-column align-items-start text-start gap-2">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <img src="./img/body/info/location.svg" alt="Location icon">
+                                                    <h3 class="m-0">-3232 / 4354 / 435</h3>
+                                                </div>
+
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <img src="./img/body/info/mobile.svg" alt="Phone icon">
+                                                    <h3 class="m-0">+1 331 222 4242</h3>
+                                                </div>
+
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <img src="./img/body/info/time.svg" alt="Clock icon">
+                                                    <h3 class="m-0">12 - 15 / 19 - 22</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="container shop-hide">
+                                    <div class="row align-items-center">
+                                        <div class="col-2 offset-3">
+                                            <img src="./img/body/info/end_2.png" alt="End">
+                                        </div>
+
+                                        <div class="col-4">
+                                            <div class="d-flex flex-column align-items-start text-start gap-2">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <img src="./img/body/info/location.svg" alt="Location icon">
+                                                    <h3 class="m-0">-3232 / 4354 / 435</h3>
+                                                </div>
+
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <img src="./img/body/info/mobile.svg" alt="Phone icon">
+                                                    <h3 class="m-0">+1 331 222 4242</h3>
+                                                </div>
+
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <img src="./img/body/info/time.svg" alt="Clock icon">
+                                                    <h3 class="m-0">12 - 15 / 19 - 22</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselDSK"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselDSK"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
-                    <div class="carousel-inner">
-                        <div
-                            class="carousel-item active p-5 shop-card nether d-flex flex-column align-items-center gap-5">
-
-                            <h2 class="m-0">Nether</h2>
-
-                            <img src="./img/body/info/nether_1.png" alt="Nether">
-
-                            <div class="d-flex flex-column align-items-start text-start gap-2">
-                                <div class="d-flex align-items-center gap-2">
-                                    <img src="./img/body/info/location.svg" alt="Location icon">
-                                    <h3 class="m-0">-3232 / 4354 / 435</h3>
-                                </div>
-
-                                <div class="d-flex align-items-center gap-2">
-                                    <img src="./img/body/info/mobile.svg" alt="Phone icon">
-                                    <h3 class="m-0">+1 331 222 4242</h3>
-                                </div>
-
-                                <div class="d-flex align-items-center gap-2">
-                                    <img src="./img/body/info/time.svg" alt="Clock icon">
-                                    <h3 class="m-0">12 - 15 / 19 - 22</h3>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="carousel-item p-5 shop-card nether d-flex flex-column align-items-center gap-5">
-
-                            <h2 class="m-0">Nether</h2>
-
-                            <img src="./img/body/info/nether_2.png" alt="Nether">
-
-                            <div class="d-flex flex-column align-items-start text-start gap-2">
-                                <div class="d-flex align-items-center gap-2">
-                                    <img src="./img/body/info/location.svg" alt="Location icon">
-                                    <h3 class="m-0">10404 / 443 / 95</h3>
-                                </div>
-
-                                <div class="d-flex align-items-center gap-2">
-                                    <img src="./img/body/info/mobile.svg" alt="Phone icon">
-                                    <h3 class="m-0">+1 935 774 999</h3>
-                                </div>
-
-                                <div class="d-flex align-items-center gap-2">
-                                    <img src="./img/body/info/time.svg" alt="Clock icon">
-                                    <h3 class="m-0">12 - 15 / 19 - 22</h3>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="carousel-item p-5 shop-card nether d-flex flex-column align-items-center gap-5">
-
-                            <h2 class="m-0">Nether</h2>
-
-                            <img src="./img/body/info/nether_3.png" alt="Nether">
-
-                            <div class="d-flex flex-column align-items-start text-start gap-2">
-                                <div class="d-flex align-items-center gap-2">
-                                    <img src="./img/body/info/location.svg" alt="Location icon">
-                                    <h3 class="m-0">4 / 12 / 4000</h3>
-                                </div>
-
-                                <div class="d-flex align-items-center gap-2">
-                                    <img src="./img/body/info/mobile.svg" alt="Phone icon">
-                                    <h3 class="m-0">+1 888 443 1121</h3>
-                                </div>
-
-                                <div class="d-flex align-items-center gap-2">
-                                    <img src="./img/body/info/time.svg" alt="Clock icon">
-                                    <h3 class="m-0">12 - 15 / 19 - 22</h3>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselNether"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselNether"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-
-                <!-- Carosello end (fs) -->
-                <div id="carouselEnd" class="mt-5 card-3d carousel slide w-100 carousel-info carousel-fade">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselEnd" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselEnd" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div
-                            class="carousel-item active p-5 shop-card end d-flex flex-column align-items-center gap-5">
-
-                            <h2 class="m-0">End</h2>
-
-                            <img src="./img/body/info/end_1.png" alt="End">
-
-                            <div class="d-flex flex-column align-items-start text-start gap-2">
-                                <div class="d-flex align-items-center gap-2">
-                                    <img src="./img/body/info/location.svg" alt="Location icon">
-                                    <h3 class="m-0">-3232 / 4354 / 435</h3>
-                                </div>
-
-                                <div class="d-flex align-items-center gap-2">
-                                    <img src="./img/body/info/mobile.svg" alt="Phone icon">
-                                    <h3 class="m-0">+1 331 222 4242</h3>
-                                </div>
-
-                                <div class="d-flex align-items-center gap-2">
-                                    <img src="./img/body/info/time.svg" alt="Clock icon">
-                                    <h3 class="m-0">12 - 15 / 19 - 22</h3>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="carousel-item p-5 shop-card end d-flex flex-column align-items-center gap-5">
-
-                            <h2 class="m-0">End</h2>
-
-                            <img src="./img/body/info/end_2.png" alt="End">
-
-                            <div class="d-flex flex-column align-items-start text-start gap-2">
-                                <div class="d-flex align-items-center gap-2">
-                                    <img src="./img/body/info/location.svg" alt="Location icon">
-                                    <h3 class="m-0">10404 / 443 / 95</h3>
-                                </div>
-
-                                <div class="d-flex align-items-center gap-2">
-                                    <img src="./img/body/info/mobile.svg" alt="Phone icon">
-                                    <h3 class="m-0">+1 935 774 999</h3>
-                                </div>
-
-                                <div class="d-flex align-items-center gap-2">
-                                    <img src="./img/body/info/time.svg" alt="Clock icon">
-                                    <h3 class="m-0">12 - 15 / 19 - 22</h3>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselEnd"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselEnd"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
                 </div>
             </div>
         </div>
@@ -372,7 +662,7 @@
 
     <div class="g-0 container-fluid text-center gold-background" id="scrivici">
         <div class="row p-section g-0">
-            <div class="col-12 d-flex flex-column align-items-center">
+            <div class="col-12 d-flex flex-column align-items-center desktop-shops">
                 <h2 class="pb-5">Scrivici, saremo <b>sempre</b> pronti ad <b>ascoltarti</b>!</h2>
                 <h4 class="pb-5">Se hai idee per migliorare il nostro mondo gastronomico, usa i comandi che trovi di
                     seguito, e scrivici un <b>messaggio</b> in chat: nuovi piatti da <i>craftare</i> nel menu, un
@@ -381,57 +671,59 @@
                 <div class="container">
                     <div class="row justify-content-center gap-5">
                         <div class="col-12 text-start">
-                            <div class="card-3d torch-info">
-                                <div class="row align-items-center mb-4">
-                                    <div class="col-5 p-0">
-                                        <img src="img/body/info/torcia.png" class="img-fluid" alt="Torcia">
-                                    </div>
-                                    <div class="col-7 p-0">
-                                        <h3 class="mb-4"><b>Assistenza</b></h3>
-                                        <h5>Se durante la tua esperienza qualcosa non è andato come previsto, puoi
-                                            usare
-                                            questo comando per chiedere supporto. È pensato per segnalare problemi,
-                                            imprevisti o situazioni che richiedono l’intervento dello staff. Il team
-                                            verrà
-                                            avvisato e si occuperà della richiesta.</h5>
-                                    </div>
+                            <div class="card-3d torch-grid p-4">
+
+                                <div class="torch-img">
+                                    <img src="img/body/info/torcia.png" class="img-fluid w-100" alt="Torcia">
                                 </div>
-                                <div class="p-3 code-info">
-                                    <h4>> /dinecraft -<span class="assistenza">assistenza</span></h4>
+
+                                <div class="torch-text">
+                                    <h3 class="mb-4"><b>Assistenza</b></h3>
+                                    <h5>Se durante la tua esperienza qualcosa non è andato come previsto, puoi
+                                        usare questo comando per chiedere supporto. È pensato per segnalare problemi,
+                                        imprevisti o situazioni che richiedono l’intervento dello staff. Il team
+                                        verrà avvisato e si occuperà della richiesta.</h5>
+                                </div>
+
+                                <div class="p-3 code-info torch-code">
+                                    <h4 class="m-0">> /dinecraft -<span class="assistenza">assistenza</span></h4>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-12 text-start">
+                            <div class="card-3d torch-grid p-4">
+
+                                <div class="torch-img">
+                                    <img src="img/body/info/torcia.png" class="img-fluid w-100" alt="Torcia">
+                                </div>
+
+                                <div class="torch-text">
+                                    <h3 class="mb-4"><b>Feedback</b></h3>
+                                    <h5>Questo comando ti permette di condividere la tua esperienza dopo la visita al ristorante. Puoi lasciare un commento, un suggerimento o una valutazione su ciò che hai apprezzato o meno. Ogni feedback contribuisce a migliorare il nostro servizio.</h5>
+                                </div>
+
+                                <div class="p-3 code-info torch-code">
+                                    <h4 class="m-0">> /dinecraft -<span class="feedback">feedback</span></h4>
                                 </div>
                             </div>
                         </div>
 
                         <div class="col-12 text-start">
-                            <div class="card-3d torch-info">
-                                <div class="row align-items-center mb-4">
-                                    <div class="col-5 p-0">
-                                        <img src="img/body/info/torcia.png" class="img-fluid" alt="Torcia">
-                                    </div>
-                                    <div class="col-7 p-0">
-                                        <h3 class="mb-4"><b>Feedback</b></h3>
-                                        <h5>Questo comando ti permette di condividere la tua esperienza dopo la visita al ristorante. Puoi lasciare un commento, un suggerimento o una valutazione su ciò che hai apprezzato o meno. Ogni feedback contribuisce a migliorare il nostro servizio.</h5>
-                                    </div>
-                                </div>
-                                <div class="p-3 code-info">
-                                    <h4>> /dinecraft -<span class="feedback">feedback</span></h4>
-                                </div>
-                            </div>
-                        </div>
+                            <div class="card-3d torch-grid p-4">
 
-                        <div class="col-12 text-start">
-                            <div class="card-3d torch-info">
-                                <div class="row align-items-center mb-4">
-                                    <div class="col-5 p-0">
-                                        <img src="img/body/info/torcia.png" class="img-fluid" alt="Torcia">
-                                    </div>
-                                    <div class="col-7 p-0">
-                                        <h3 class="mb-4"><b>Collaborazioni</b></h3>
-                                        <h5>Usa questo comando per proporre collaborazioni, eventi o iniziative speciali. È anche lo spazio dedicato a chi è interessato a lavorare con noi o a entrare a far parte dello staff. Le richieste verranno valutate dal team e verrai informato al più presto.</h5>
-                                    </div>
+                                <div class="torch-img">
+                                    <img src="img/body/info/torcia.png" class="img-fluid w-100" alt="Torcia">
                                 </div>
-                                <div class="p-3 code-info">
-                                    <h4>> /dinecraft -<span class="collaborazioni">collaborazioni</span></h4>
+
+                                <div class="torch-text">
+                                    <h3 class="mb-4"><b>Collaborazioni</b></h3>
+                                    <h5>Usa questo comando per proporre collaborazioni, eventi o iniziative speciali. È anche lo spazio dedicato a chi è interessato a lavorare con noi o a entrare a far parte dello staff. Le richieste verranno valutate dal team e verrai informato al più presto.</h5>
+                                </div>
+
+                                <div class="p-3 code-info torch-code">
+                                    <h4 class="m-0">> /dinecraft -<span class="collaborazioni">collaborazioni</span></h4>
                                 </div>
                             </div>
                         </div>
