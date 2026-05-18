@@ -28,7 +28,7 @@
     /* Ombra interna */ 4px 4px 0px rgba(255, 255, 255, 0.05);
 }
 
-.card-3d:hover:not(.carousel-info, .torch-grid) {
+.card-3d:hover:not(.carousel-info) {
   /* In hover, lo spessore solido resta intatto, ma l'ombra sfocata finale si allarga! */
   box-shadow:
     1px 1px 0px #1d1a18,
