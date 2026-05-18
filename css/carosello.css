@@ -1,49 +1,52 @@
-
 /* NASCONDI I RADIO MA NON ELIMINARLI */
 [type=radio] {
   display: none;
 }
 
-body{
-    margin: 0;
+body {
+  margin: 0;
 }
 
 .box-slider {
-    width: 100vw;
-    display: flex;
-    justify-content: center; /* Centra lo slider orizzontalmente */
-    align-items: center;
-    overflow: hidden; /* Evita scrollbar indesiderate per via del 3D */
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  /* Centra lo slider orizzontalmente */
+  align-items: center;
+  overflow: hidden;
+  /* Evita scrollbar indesiderate per via del 3D */
 }
 
 /* CONTENITORE PRINCIPALE (Il binario del carosello) */
 #slider {
-    position: relative;
-    width: 55%; /* Ridotto per lasciare spazio alle card laterali di sporgere */
-     aspect-ratio: 1/1;
-    perspective: 1000px;
-    transform-style: preserve-3d;
+  position: relative;
+  width: 55%;
+  /* Ridotto per lasciare spazio alle card laterali di sporgere */
+  aspect-ratio: 1/1;
+  perspective: 1000px;
+  transform-style: preserve-3d;
 }
 
 /* LE CARD */
 #slider label {
-    position: absolute;
-    width: 100%; /* La card è larga quanto lo slider */
-    height: 100%;
-    left: 0;
-    top: 0;
-    border-radius: 20px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.5s ease, opacity 0.5s ease;
-    border: 2px solid rgba(255,255,255,0.2);
-    
-    /* Importante: assicura che il contenuto sia centrato nella card */
-    text-align: center;
+  position: absolute;
+  width: 100%;
+  /* La card è larga quanto lo slider */
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  border: 2px solid rgba(255, 255, 255, 0.2);
 
-    box-shadow:
+  /* Importante: assicura che il contenuto sia centrato nella card */
+  text-align: center;
+
+  box-shadow:
     1px 1px 0px #1d1a18,
     2px 2px 0px #1d1a18,
     3px 3px 0px #1d1a18,
@@ -64,53 +67,85 @@ body{
 /* --- LOGICA DI MOVIMENTO --- */
 
 /* CARD SELEZIONATA */
-#s1:checked ~ #slide1, #s2:checked ~ #slide2,
-#s3:checked ~ #slide3, #s4:checked ~ #slide4,
-#s5:checked ~ #slide5 {
+#s1:checked~#slide1,
+#s2:checked~#slide2,
+#s3:checked~#slide3,
+#s4:checked~#slide4,
+#s5:checked~#slide5 {
   transform: translate3d(0, 0, 0);
   z-index: 10;
   opacity: 1;
 }
 
 /* CARD A SINISTRA (Livello 1) */
-#s1:checked ~ #slide5, #s2:checked ~ #slide1,
-#s3:checked ~ #slide2, #s4:checked ~ #slide3,
-#s5:checked ~ #slide4 {
+#s1:checked~#slide5,
+#s2:checked~#slide1,
+#s3:checked~#slide2,
+#s4:checked~#slide3,
+#s5:checked~#slide4 {
   transform: translate3d(-40%, 0, -150px);
   z-index: 5;
   opacity: 0.5;
 }
 
 /* CARD A DESTRA (Livello 1) */
-#s1:checked ~ #slide2, #s2:checked ~ #slide3,
-#s3:checked ~ #slide4, #s4:checked ~ #slide5,
-#s5:checked ~ #slide1 {
+#s1:checked~#slide2,
+#s2:checked~#slide3,
+#s3:checked~#slide4,
+#s4:checked~#slide5,
+#s5:checked~#slide1 {
   transform: translate3d(40%, 0, -150px);
   z-index: 5;
   opacity: 0.5;
 }
 
 /* CARD SULLO SFONDO SINISTRA (Livello 2) */
-#s1:checked ~ #slide4, #s2:checked ~ #slide5,
-#s3:checked ~ #slide1, #s4:checked ~ #slide2,
-#s5:checked ~ #slide3 {
+#s1:checked~#slide4,
+#s2:checked~#slide5,
+#s3:checked~#slide1,
+#s4:checked~#slide2,
+#s5:checked~#slide3 {
   transform: translate3d(-70%, 0, -300px);
   z-index: 1;
   opacity: 0.2;
 }
 
 /* CARD SULLO SFONDO DESTRA (Livello 2) */
-#s1:checked ~ #slide3, #s2:checked ~ #slide4,
-#s3:checked ~ #slide5, #s4:checked ~ #slide1,
-#s5:checked ~ #slide2 {
+#s1:checked~#slide3,
+#s2:checked~#slide4,
+#s3:checked~#slide5,
+#s4:checked~#slide1,
+#s5:checked~#slide2 {
   transform: translate3d(70%, 0, -300px);
   z-index: 1;
   opacity: 0.2;
 }
 
 /* COLORI DECISI PER IL TEST */
-#slide1 { background: url("../img/body/ristorante/immagine1ristorante.png")  center / cover no-repeat; }
-#slide2 { background: url("../img/body/ristorante/immagine2ristorante.png")  center / cover no-repeat; }
-#slide3 { background: url("../img/body/ristorante/immagine2ristorante.png")  center / cover no-repeat; }
-#slide4 { background: url("../img/body/ristorante/immagine2ristorante.png")  center / cover no-repeat; }
-#slide5 { background: url("../img/body/ristorante/immagine2ristorante.png")  center / cover no-repeat; }
+#slide1 {
+  background: url("../img/body/ristorante/immagine1ristorante.png") center / cover no-repeat;
+}
+
+#slide2 {
+  background: url("../img/body/ristorante/immagine2ristorante.png") center / cover no-repeat;
+}
+
+#slide3 {
+  background: url("../img/body/ristorante/immagine2ristorante.png") center / cover no-repeat;
+}
+
+#slide4 {
+  background: url("../img/body/ristorante/immagine2ristorante.png") center / cover no-repeat;
+}
+
+#slide5 {
+  background: url("../img/body/ristorante/immagine2ristorante.png") center / cover no-repeat;
+}
+
+@media (min-width: 1920px) {
+
+  .box-slider {
+    width: 60vw;
+  }
+
+}

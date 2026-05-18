@@ -98,11 +98,12 @@
 
     <div class="container-fluid text-center redstone-background g-0">
         <div class="row py-5 g-0 ">
-            <div class="col-12 pb-5 d-flex justify-content-center col-lg-5 py-lg-0 offset-lg-1">
-                <img src="img/body/ristorante/immagine-overworld.png" alt="immagine ristorante nell'overworld">
+            <div class="col-8 offset-2 pb-5 col-lg-3 py-lg-0 offset-lg-2">
+                <img class="w-100" src="img/body/ristorante/immagine-overworld.png"
+                    alt="immagine ristorante nell'overworld">
             </div>
             <div
-                class="col-8 offset-2 col-lg-5 offset-lg-0 py-lg-0 d-lg-flex flex-column justify-content-center align-items-center">
+                class="col-8 offset-2 col-lg-4 offset-lg-1 py-lg-0 d-lg-flex flex-column justify-content-center align-items-center">
                 <h3 class="title-menu">Il Menù Overworld è un’ode al verde Prodotti selezionati evocano i doni segreti
                     che si celano nei vari biomi</h3>
                 <a class="btn btn-menu pushable" aria-current="page" href="#">
@@ -116,11 +117,14 @@
 
     <div class="container-fluid text-center redstone-background g-0">
         <div class="row py-5 g-0 ">
-            <div class="col-12 pb-5 d-flex justify-content-center col-lg-5 py-lg-0 offset-lg-0 order-lg-2">
-                <img src="img/body/ristorante/immagine-overworld.png" alt="immagine ristorante nell'overworld">
+            <div class="col-8 offset-2 position-relative pb-5 col-lg-3 py-lg-0 offset-lg-1 order-lg-2">
+                <img id="decoration-fungus" src="img/body/ristorante/decorazioni/fungo-nether.png"
+                    alt="decorazione fungo nether">
+                <img class="w-100" src="img/body/ristorante/immagine-nether.png"
+                    alt="immagine ristorante nell'overworld">
             </div>
             <div
-                class="col-8 offset-2 col-lg-5 offset-lg-1 py-lg-0 d-lg-flex flex-column justify-content-center align-items-center">
+                class="col-8 offset-2 col-lg-4 offset-lg-2 py-lg-0 d-lg-flex flex-column justify-content-center align-items-center">
                 <h3 class="title-menu">Il Menù Nether è un’ode alla fiamma. Sapori scelti rievocano gli elementi roventi
                     e gli enigmi delle sue cavità infuocate</h3>
                 <a class="btn btn-menu pushable" aria-current="page" href="#">
@@ -134,11 +138,13 @@
 
     <div class="container-fluid text-center redstone-background g-0">
         <div class="row py-5 g-0 ">
-            <div class="col-12 pb-5 d-flex justify-content-center col-lg-5 py-lg-0 offset-lg-0 order-lg-2">
-                <img src="img/body/ristorante/immagine-overworld.png" alt="immagine ristorante nell'overworld">
+            <div class="col-8 offset-2 position-relative pb-5 col-lg-3 py-lg-0 offset-lg-2">
+                <img id="decoration-tree" src="img/body/ristorante/decorazioni/albero-end.png"
+                    alt="decorazione albero end">
+                <img class="w-100" src="img/body/ristorante/immagine-end.png" alt="immagine ristorante nell'overworld">
             </div>
             <div
-                class="col-8 offset-2 col-lg-5 offset-lg-1 py-lg-0 d-lg-flex flex-column justify-content-center align-items-center">
+                class="col-8 offset-2 col-lg-4 offset-lg-1 py-lg-0 d-lg-flex flex-column justify-content-center align-items-center">
                 <h3 class="title-menu">Il Menù End è un’ode all'oscurità. Prodotti selezionati evocano i tesori proibiti
                     che fluttuano nel silenzio del vuoto</h3>
                 <a class="btn btn-menu pushable" aria-current="page" href="#">
@@ -172,21 +178,116 @@
         </div>
     </div>
 
-    <div class="container-fluid text-center redstone-background g-0">
-        <div class="row py-5 g-0 d-flex justify-content-center">
-            <div class="d-none col-lg-12 ">
-                <img src="img/body/ristorante/immagine-overworld.png" alt="immagine ristorante nell'overworld">
+    <div class="container-fluid position-relative text-center redstone-background g-0">
+        <div class="redstone-line-horizontal">
+        </div>
+        <div class="redstone-line-vertical">
+        </div>
+        <div class="row py-5 g-0 d-flex justify-content-center justify-content-lg-start">
+            <div class=" z-3 d-none col-lg-2 d-lg-block offset-lg-2">
+                <img class="lever" src="img/body/ristorante/leva-alzata.png" alt="immagine leva alzata minecraft" 
+                data-end-src="img/body/ristorante/torcia attiva lg.png">
             </div>
-            <div class="background-card-torch col-8 d-flex justify-content-center">
-                <div class="card card-3d card-3d-background">
-                    <div class="card-body d-flex ">
-                        <div class="d-flex scroll-section">
-                            <img src="img/body/ristorante/torcia disattivata.png" class="torch"
-                                data-end-src="img/body/ristorante/torcia accesa.png" alt="torcia-disattivata">
-                            <div class="torch-text d-flex flex-column">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin feugiat dolor in metus
+            <div class="background-card-torch col-8 d-flex align-items-center col-lg-4 offset-lg-2">
+                <div class="card z-3 card-3d card-3d-background">
+                    <div class="card-body scroll-section">
+                        <img src="img/body/ristorante/torcia disattivata lg.png" class="torch"
+                            data-end-src="img/body/ristorante/ok.png" alt="torcia-disattivata">
+                        <div class="d-flex justify-content-end ">
+                            <div class="torch-text">
+                                <h2 class="d-none d-lg-block"> Più di un locale </h2>
+                                <h4 class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin feugiat
+                                    dolor in metus
                                     facilisis, vel mollis nulla molestie.
-                                </p>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid position-relative text-center redstone-background g-0">
+        <div class="redstone-line-horizontal2">
+        </div>
+        <div class=" redstone-line-vertical redstone-line-vertical2">
+        </div>
+        <div class="row py-5 g-0 d-flex justify-content-center justify-content-lg-start">
+            <div class=" z-3 d-none col-lg-2 d-lg-block offset-lg-2 order-lg-2">
+                <img class="lever" src="img/body/ristorante/leva-alzata.png" alt="immagine leva alzata minecraft" 
+                data-end-src="img/body/ristorante/torcia attiva lg.png">
+            </div>
+            <div class="background-card-torch col-8 d-flex align-items-center col-lg-4 offset-lg-2">
+                <div class="card z-3 card-3d card-3d-background">
+                    <div class="card-body scroll-section">
+                        <img src="img/body/ristorante/torcia disattivata lg.png" class="torch"
+                            data-end-src="img/body/ristorante/ok.png" alt="torcia-disattivata">
+                        <div class="d-flex justify-content-end ">
+                            <div class="torch-text">
+                                <h2 class="d-none d-lg-block"> Più di un locale </h2>
+                                <h4 class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin feugiat
+                                    dolor in metus
+                                    facilisis, vel mollis nulla molestie.
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid position-relative text-center redstone-background g-0">
+        <div class="redstone-line-horizontal2">
+        </div>
+        <div class="redstone-line-vertical">
+        </div>
+        <div class="row py-5 g-0 d-flex justify-content-center justify-content-lg-start">
+            <div class=" z-3 d-none col-lg-2 d-lg-block offset-lg-3">
+                <img class="lever" src="img/body/ristorante/leva-alzata.png" alt="immagine leva alzata minecraft" 
+                data-end-src="img/body/ristorante/torcia attiva lg.png">
+            </div>
+            <div class="background-card-torch col-8 d-flex align-items-center col-lg-4 offset-lg-1">
+                <div class="card z-3 card-3d card-3d-background">
+                    <div class="card-body scroll-section">
+                        <img src="img/body/ristorante/torcia disattivata lg.png" class="torch"
+                            data-end-src="img/body/ristorante/ok.png" alt="torcia-disattivata">
+                        <div class="d-flex justify-content-end ">
+                            <div class="torch-text">
+                                <h2 class="d-none d-lg-block"> Più di un locale </h2>
+                                <h4 class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin feugiat
+                                    dolor in metus
+                                    facilisis, vel mollis nulla molestie.
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid position-relative text-center redstone-background g-0">
+        <div class="redstone-line-horizontal">
+        </div>
+        <div class="row py-5 g-0 d-flex justify-content-center justify-content-lg-start">
+            <div class=" z-3 d-none col-lg-2 d-lg-block offset-lg-2 order-lg-2">
+                <img class="lever" src="img/body/ristorante/leva-alzata.png" alt="immagine leva alzata minecraft" 
+                data-end-src="img/body/ristorante/torcia attiva lg.png">
+            </div>
+            <div class="background-card-torch col-8 d-flex align-items-center col-lg-4 offset-lg-2">
+                <div class="card z-3 card-3d card-3d-background">
+                    <div class="card-body scroll-section">
+                        <img src="img/body/ristorante/torcia disattivata lg.png" class="torch"
+                            data-end-src="img/body/ristorante/ok.png" alt="torcia-disattivata">
+                        <div class="d-flex justify-content-end ">
+                            <div class="torch-text">
+                                <h2 class="d-none d-lg-block"> Più di un locale </h2>
+                                <h4 class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin feugiat
+                                    dolor in metus
+                                    facilisis, vel mollis nulla molestie.
+                                </h4>
                             </div>
                         </div>
                     </div>
@@ -239,8 +340,8 @@
 
     <script src="js/carosello.js"></script>
     <script src="js/torchscript.js"></script>
+    <script src="js/lever.js"></script>
     <script src="js/card3dscript.js"></script>
-    <script src="js/bootstrap.bundle.js"></script>
     <script src="js/bootstrap.bundle.js"></script>
     <script src="js/global.js"></script>
 </body>
