@@ -75,6 +75,21 @@
     background-size: 5rem 5rem;
 }
 
+.carousel-control-prev, 
+.carousel-control-next, 
+.carousel-indicators {
+    z-index: 999 !important;
+    pointer-events: auto !important;
+}
+
+.card-3d {
+    pointer-events: none; 
+}
+
+.card-3d > * {
+    pointer-events: auto;
+}
+
 .torch-img {
   grid-area: image;
 }
