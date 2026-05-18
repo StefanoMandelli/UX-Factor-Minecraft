@@ -56,6 +56,25 @@
   opacity: 1 !important;
 }
 
+.carousel-control-prev,
+.carousel-control-next {
+    opacity: 1 !important;
+}
+
+.carousel-control-prev-icon {
+    background-image: url('../img/body/info/arrow_sx.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 5rem 5rem;
+}
+
+.carousel-control-next-icon {
+    background-image: url('../img/body/info/arrow_dx.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 5rem 5rem;
+}
+
 .torch-img {
   grid-area: image;
 }
