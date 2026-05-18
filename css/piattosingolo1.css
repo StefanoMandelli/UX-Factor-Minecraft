@@ -36,15 +36,75 @@
     padding: 1.25rem;
 }
 
-.allergens-card img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 100%; /* Evita che l'immagine sia più larga della card */
+.price-container{
+    white-space: nowrap;
 }
+
+.allergens-card {
+    padding: 0rem;
+    gap: 2rem; /* Gap verticale su mobile */
+}
+
+.allergen-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.allergen-img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem; /* Spazio costante tra l'immagine e il testo */
+    width: 100%;
+}
+
+/* 2. Il tuo stile originale per le immagini (pulito e fluido) */
+.allergen-item img {
+    max-height: 100%; /* Si adatta all'altezza del contenitore */
+    width: auto;
+    object-fit: contain;
+}
+
+/* 3. Il nuovo div del testo */
+.allergen-text-container {
+    width: 100%;
+}
+
+
+/* ==========================================
+   AGGIUNTE PER IL DESKTOP (Da 992px in su)
+   ========================================== */
+@media (min-width: 992px) {
+    .allergens-card {
+        display: flex;
+        flex-direction: row;        /* Gira gli allergeni in orizzontale */
+        gap: 2.5625rem !important;  /* Il tuo gap millimetrico di 41px (41/16) */
+        justify-content: center;
+    }
+
+    .allergen-item {
+        flex: 1 1 0px;              /* Forza le 3 colonne a essere larghe IDENTICHE */         
+        justify-content: space-between; /* Spinge il testo alla base se l'immagine sopra è più bassa */
+    }
+
+    /* 4. Il trucco magico: blocchiamo l'altezza del contenitore foto solo su desktop */
+    .allergen-img-container {
+        height: 170px; /* Crea una scatola invisibile alta uguale per Latte, Grano e Uova */
+    }
+
+    .allergen-text-container h3 {
+        white-space: nowrap;        /* Impedisce a "Uova di pollo" di spezzarsi su due righe */
+        margin: 0;                  /* Azzera i margini per un allineamento millimetrico */
+    }
+}
+
 .redstone-background .row {
     perspective: 1000px;
 }
+
 
 .number {
     /* Sfondo e bordo */
@@ -71,13 +131,35 @@
     align-items: center;
     /* Centra tutto orizzontalmente */
     padding: 3rem;
+    
 }
 
 .dinecraft-card img {
     /* Fondamentale: l'immagine si adatta alla larghezza del div meno il padding */
-    max-width: 100%;
+    max-width: 70%;
     height: auto;
     display: block;
+}
+
+@media (min-width: 992px) {
+    .dinecraft-card {
+        flex-direction: row; /* Layout orizzontale */
+        width: 100% !important;
+        
+        /* 1. APPLICHIAMO LE MISURE DI FIGMA CONVERTITE IN REM */
+        height: auto;
+        padding: 4.375rem !important;  /* I tuoi 70px */
+        
+        /* 2. CENTRATURA VERTICALE PERFETTA DEL CONTENUTO */
+        align-items: center !important; 
+        justify-content: space-between;
+    }
+
+
+    /* Allineamento testo */
+    .dinecraft-text-container {
+        text-align: start !important;
+    }
 }
 
 @media (min-width: 576px) {
