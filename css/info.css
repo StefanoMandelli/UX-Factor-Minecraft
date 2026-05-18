@@ -1,0 +1,90 @@
+.p-section {
+  padding: 96px 48px;
+}
+
+.shop-card {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 9rem !important;
+}
+
+.overworld {
+  background-image: url("../img/body/info/card-overworld.png");
+  background-color: #1a3323;
+}
+
+.nether {
+  background-image: url("../img/body/info/card-nether.png");
+  background-color: #531F1d;
+}
+
+.end {
+  background-image: url("../img/body/info/card-end.png");
+  background-color: #3f1e54;
+}
+
+/* Trasforma gli indicatori in quadratini */
+.carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+  margin-bottom: 3rem !important;
+  background-color: var(--color-font);
+  opacity: 1 !important;
+}
+
+/* Stile per il quadratino attivo */
+.carousel-indicators .active {
+  background-color: var(--ux-global-color-accent-1);
+  opacity: 1 !important;
+}
+
+#carouselNether .carousel-indicators .active {
+  background-color: var(--ux-nether-color-accent);
+  opacity: 1 !important;
+}
+
+#carouselEnd .carousel-indicators .active {
+  background-color: var(--ux-end-color-accent);
+  opacity: 1 !important;
+}
+
+.torch-info {
+  background-color: var(--ux-torch-background);
+  padding: 2rem;
+  border-radius: 5px;
+  background: var(
+    --Torcia,
+    radial-gradient(
+      108.03% 58.34% at 16.77% 39.37%,
+      rgba(201, 137, 64, 0.25) 9.85%,
+      rgba(48, 27, 27, 0.05) 100%
+    ),
+    #221709
+  );
+}
+
+.code-info {
+  background: rgba(114, 114, 114, 0.2);
+  color: var(--color-font, #e4d8d4);
+  padding: 0.75rem 1.5rem;
+}
+
+.code-info h4 {
+  font: var(--ux-txt-codeinfo);
+  color: var(--color-font);
+  margin: 0rem;
+}
+
+.code-info h4 .assistenza {
+  color: var(--ux-nether-color-accent);
+}
+
+.code-info h4 .feedback {
+  color: var(--ux-global-color-accent-1);
+}
+
+.code-info h4 .collaborazioni {
+  color: var(--ux-end-color-accent);
+}

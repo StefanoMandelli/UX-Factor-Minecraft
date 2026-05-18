@@ -1,0 +1,97 @@
+@import url(card3d.css);
+@import url(global.css);
+
+.burger-card {
+    background-color: rgba(26, 51, 35, 0.7);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 3rem;
+    border: 7px solid rgba(26, 51, 35, 1);
+
+    /* 1. ABILITA IL MOVIMENTO MORBIDO */
+    transition: transform 0.1s ease-out, box-shadow 0.1s ease-out;
+
+    /* 2. ABILITA LA TERZA DIMENSIONE */
+    transform-style: preserve-3d;
+    will-change: transform;
+    backface-visibility: hidden;
+
+    /* 3. AGGIUNGI LO SPESSORE (BOX-SHADOW) */
+    box-shadow:
+        10px 10px 0px #161616, 15px 15px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* 4. FAI GALLEGGIARE IL CONTENUTO (Effetto Pop-out) */
+.burger-card img,
+.burger-card h3,
+.burger-card .price-container {
+    transform: translateZ(20px);
+    /* Più alto è il numero, più "esce" dalla card */
+}
+
+.conf-menu{
+    padding: 1.25rem;
+}
+
+.allergens-card img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%; /* Evita che l'immagine sia più larga della card */
+}
+.redstone-background .row {
+    perspective: 1000px;
+}
+
+.number {
+    /* Sfondo e bordo */
+    background-color: var(--ux-global-color-accent-1);
+
+    /* Dimensioni e testo */
+    padding: 5px 10px;
+    font-family: var(--ux-font-Minercraftory);
+    font-size: 20px;
+}
+
+.comma {
+    font-family: var(--ux-font-Minercraftory);
+    font-size: 20px;
+}
+
+.dinecraft-card {
+    background-color: rgba(26, 51, 35, 0.7);
+    border-radius: 5px;
+    border: 7px solid rgba(26, 51, 35);
+    display: flex;
+    flex-direction: column;
+    /* Mette l'immagine sopra e il testo sotto */
+    align-items: center;
+    /* Centra tutto orizzontalmente */
+    padding: 3rem;
+}
+
+.dinecraft-card img {
+    /* Fondamentale: l'immagine si adatta alla larghezza del div meno il padding */
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (min-width: 576px) {
+    .contenitore-craft {
+        display: flex;         /* Attiva il flex solo qui */
+        gap: 4.4rem;          /* Mette i tuoi 71px solo qui */
+        justify-content: center; 
+    }
+
+    .greenstack-burger-card {
+        /* Permette alle card di dividersi lo spazio equamente */
+        flex: 1;
+        width: auto !important;
+        /* Riduciamo leggermente il padding per far stare tutto con il gap grande */
+        padding: 2rem !important;
+    }
+}

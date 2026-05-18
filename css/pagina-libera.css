@@ -1,0 +1,192 @@
+@import url(global.css);
+@import url(card3d.css);
+@import url(piattosingolo1.css);
+
+.hero-promo {
+   background-image: url('../img/body/pagina-libera/HERO\ PROMO.png');
+   background-size: cover;
+   background-position: center;
+   min-height: 100vh;
+   width: 100%;
+   overflow-x: hidden;
+   position: relative;
+}
+
+.panino-promo {
+    width:100%;
+    height: auto;
+}
+.mano-promo {
+    position: absolute;
+    right: -13rem; 
+    bottom: 13rem;
+    z-index: 1;
+}
+
+.countdown-bg{
+    background-image: url('../img/body/pagina-libera/COUNTDOWN_bg.png');
+    width: 100%;
+}
+
+.menu-eventi {
+    background-image: url('../img/body/pagina-libera/MENU\ PROMO\ dsk.png');
+    width: 100%;
+}
+
+/*card alcuni brkpoint hanno i numeri che escono fuori, questo è un fix*/
+.burger-card, .netherstack-burger-card .burger-card, .end-burger-card .burger-card {
+    padding: 2rem !important;
+} 
+
+/*card overworld*/
+.greenstack-burger-card {
+    background-color: rgba(26, 51, 35, 0.7);
+    border: 7px solid var(--ux-global-color-background)
+}
+
+
+.greenstack-burger-card .number{
+    background-color: var(--ux-global-color-accent-1)
+}
+
+/*card nether*/
+.netherstack-burger-card .burger-card {
+    background-color: rgba(83, 31, 29, 0.7);
+    border: 7px solid var(--ux-nether-color-background)
+}
+
+.netherstack-burger-card .burger-card .number{
+    background-color: var(--ux-nether-color-accent)
+}
+
+/*card end*/
+.end-burger-card .burger-card {
+    background-color: rgba(63, 30, 84, 0.7);
+    border: 7px solid var(--ux-end-color-background)
+}
+
+.end-burger-card .burger-card .number{
+    background-color: var(--ux-end-color-accent)
+}
+
+/*mistery box*/
+.mistery-box .burger-card {
+    background-color: rgba(23, 23, 23, 0.7);
+    border: 7px solid var(--ux-dark-color)
+}
+
+/*Immagini card*/
+.img-fluid .bread{
+    width: 80%;
+    height: auto;
+}
+
+/* Carosello premi */
+.carousel-slide{
+  background-image: url(../img/body/pagina-libera/ITEMS\ PROMO_bg.png);
+   width: 100%;
+}
+
+#slider {
+position: relative;
+    width: 100%;
+    height: 25rem;/* In base all'altezza dei box */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 62.5rem;/* Dà profondità all'effetto */
+}
+
+#slider label {
+  position: absolute;
+  width: 19rem; /* Larghezza del box */
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* --- Slide 1 al centro --- */
+#s1:checked ~ #slide1 { transform: translateX(0) scale(1.1); z-index: 5; opacity: 1; }
+#s1:checked ~ #slide2 { transform: translateX(98%) scale(0.8); z-index: 1; opacity: 0.3; }
+#s1:checked ~ #slide3 { transform: translateX(-98%) scale(0.8); z-index: 1; opacity: 0.3; }
+
+/* --- Slide 2 al centro --- */
+#s2:checked ~ #slide1 { transform: translateX(-98%) scale(0.8); z-index: 1; opacity: 0.3; }
+#s2:checked ~ #slide2 { transform: translateX(0) scale(1.1); z-index: 5; opacity: 1; }
+#s2:checked ~ #slide3 { transform: translateX(98%) scale(0.8); z-index: 1; opacity: 0.3; }
+
+/* --- Slide 3 al centro --- */
+#s3:checked ~ #slide1 { transform: translateX(98%) scale(0.8); z-index: 1; opacity: 0.3; }
+#s3:checked ~ #slide2 { transform: translateX(-98%) scale(0.8); z-index: 1; opacity: 0.3; }
+#s3:checked ~ #slide3 { transform: translateX(0) scale(1.1); z-index: 5; opacity: 1; }
+
+.box-slider {
+    width:100%;
+    max-width:100vw;
+    overflow: hidden; 
+    padding: 1.25rem 0;
+}
+
+input{
+    display: none;
+}
+
+
+/* Nascondo tutte le frecce di default */
+.arrow {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    bottom: 50%;
+}
+
+.arrow-prev { left: -10%; transform: translateX(-4rem); }
+.arrow-next { right: -10%; transform: translateX(4rem); } /* speculare */
+
+.arrow img { width: 100%;}
+
+/* s1 attivo → slide2 è a destra (next), slide3 è a sinistra (prev) */
+#s1:checked ~ #slide2 .arrow-next { display: block; }
+#s1:checked ~ #slide3 .arrow-prev { display: block; }
+
+/* s2 attivo → slide3 è a destra (next), slide1 è a sinistra (prev) */
+#s2:checked ~ #slide3 .arrow-next { display: block; }
+#s2:checked ~ #slide1 .arrow-prev { display: block; }
+
+/* s3 attivo → slide1 è a destra (next), slide2 è a sinistra (prev) */
+#s3:checked ~ #slide1 .arrow-next { display: block; }
+#s3:checked ~ #slide2 .arrow-prev { display: block; }
+
+/* Media query per nascondere le frecce su schermi piccoli */
+
+@media (max-width: 576px) {
+    .arrow-next, .arrow-prev {
+        display: none !important;
+    }
+}
+
+/* Media query per regolare la card dell'overworld */
+@media (min-width: 576px) {
+    .greenstack-burger-card {
+        padding: 2rem !important;
+    }
+}
+
+/* Media query per togliere l'opacità al carosello e aumentare il translatex */
+@media (min-width: 992px){
+.box-slider #slider {
+#s1:checked ~ #slide1 { transform: translateX(0) scale(1.1); z-index: 5; opacity: 1; }
+#s1:checked ~ #slide2 { transform: translateX(130%) scale(0.8); z-index: 1; opacity: 1; }
+#s1:checked ~ #slide3 { transform: translateX(-130%) scale(0.8); z-index: 1; opacity: 1; }
+
+#s2:checked ~ #slide1 { transform: translateX(-130%) scale(0.8); z-index: 1; opacity: 1; }
+#s2:checked ~ #slide2 { transform: translateX(0) scale(1.1); z-index: 5; opacity: 1; }
+#s2:checked ~ #slide3 { transform: translateX(130%) scale(0.8); z-index: 1; opacity: 1; }
+
+#s3:checked ~ #slide1 { transform: translateX(130%) scale(0.8); z-index: 1; opacity: 1; }
+#s3:checked ~ #slide2 { transform: translateX(-130%) scale(0.8); z-index: 1; opacity: 1; }
+#s3:checked ~ #slide3 { transform: translateX(0) scale(1.1); z-index: 5; opacity: 1; };
+    }
+}
