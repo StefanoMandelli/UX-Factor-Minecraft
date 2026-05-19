@@ -1,5 +1,3 @@
-
-
 @font-face {
   font-family: "DMSans";
   src: url("../font/DMSans-Regular.ttf") format("truetype");
@@ -33,7 +31,7 @@
     --color-font: #e4d8d4;
 }
 */
-/* Global reset and base */
+
 *,
 *::before,
 *::after {
@@ -51,10 +49,14 @@ body {
 /* Page backgroung */
 .page-bg {
     position: relative;
-    min-height: 100vh;
+    min-height: 1131px;
     padding: 24px 16px;
     background-image: url("../img/background/first-background.png");
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -63,8 +65,8 @@ body {
     position: relative;
     z-index: 1;
     width: 100%;
-    max-width: 640px;
-    min-height: 80vh;
+    max-width: 1395px;
+    min-height: 766px;
     background-image: url("../img/body/prenota/booking_background.png");
     background-size: 200%;
     background-position: center;
@@ -82,7 +84,14 @@ body {
 }
 
 .booking-card::before {
-    filter: brightness(0.2);
+    position: absolute;                  /* AGGIUNTO */
+    inset: 0;                            /* AGGIUNTO — copre tutta la card */
+    background: inherit;                 /* AGGIUNTO — eredita la stessa immagine */
+    background-size: inherit;            /* AGGIUNTO */
+    background-position: inherit;        /* AGGIUNTO */
+    filter: brightness(0.2) blur(6px);   /* MODIFICATO — aggiunto blur */
+    border-radius: inherit;              /* AGGIUNTO — stessi bordi arrotondati */
+    z-index: -1;                         /* AGGIUNTO — va dietro al contenuto */
 
 }
 
@@ -90,6 +99,7 @@ body {
 .step {
     display: none;
     animation: fadeSlideIn var(--transition-speed) ease-out;
+    width: 100%;
 }
 
 .step-active {
@@ -134,6 +144,9 @@ h3.step-title {
 }
 
 .custom-input {
+    max-width: 340px;
+    justify-self: center;
+    margin-bottom: 40px;
     background-color: var(--color-input-bg);
     border: 1px solid var(--color-input-border);
     border-radius: var(--input-radius);
@@ -449,10 +462,16 @@ h3.step-title {
 }
 
 /* mobile */
-@media (max-width: 575.98px) {
+@media (max-width: 576px) {
     .booking-card {
         padding: 28px 20px;
         border-radius: 12px;
+        min-height: 80vh;
+        margin: 24px 24px;
+    }
+
+    .booking-top-title {
+        font-size: 1.5rem;
     }
 
     h2.step-title {
@@ -461,6 +480,12 @@ h3.step-title {
 
     h3.step-title {
         font-size: 1.15rem;
+    }
+
+    .custom-input {
+        max-width: 100%;
+        padding: 12px 20px;
+        font-size: 0.9rem;
     }
 
     .btn-booking {

@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prenota</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-   <link rel="stylesheet" href="css/booking.css"> 
+    <link rel="stylesheet" href="css/prenota.css">
+    <link rel="stylesheet" href="css/booking.css"> 
    <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/card3d.css">
     
@@ -103,57 +104,95 @@
 
 
 
-<!-- Missione del mese -->
-<div class="col-12 py-5 text-center">
-    <h2><b>Missione del mese</b></h2>
-</div>
+<!-- Sezione missione del mese -->
+<div class="container-fluid mission">
+    <!-- Titolo -->
+    <div class="row">
+        <div class="col-12 py-5 text-center">
+            <h2><b>Missione del mese</b></h2>
+        </div>
+    </div>
 
-    <div class="container-fluid text-center g-0 text-lg-start">
-        <div class="row pb-5 g-0 ">
-            <div class="col-12 pb-5 d-flex justify-content-center  col-lg-5 py-lg-0 offset-lg-1">
-                <div>
-                    <div class="row p-4 d-flex align-self-lg-center">
-                        <h3 class="mb-5"><b>Lo Chef Sbadato</b></h3>
-                        <p>Il nostro chef ha perso la lista della spesa nel Nether e non può aprire
-                             il ristorante senza gli ingredienti speciali. Aiutalo a ritrovarli!
-                            Cerca i tre ingredienti nell’Overworld e riportali allo chef.</p>
-                        <img class="col-8 offset-2 p-4" src="img/body/prenota/health_bar.png" alt="Health bar">
-                    </div>
-                    <div class="row p-4 d-flex align-self-lg-center">
-                        <img class="col-12 p-4" src="img/body/prenota/missione_chef.png"
-                            alt="Missione dello chef">
-                    </div>
+    <!-- Blocco 1 -->
+    <div class="container">
+        <div class="row align-items-center justify-content-center">
+            
+            <div class="col-12 col-lg-6 text-center text-lg-start order-1 p-3">
+                <div class="p-4">
+                    <h3 class="mb-4"><b>Lo Chef Sbadato</b></h3>
+                    <p>Il nostro chef ha perso la lista della spesa nel Nether e non può aprire
+                        il ristorante senza gli ingredienti speciali. Aiutalo a ritrovarli!
+                        Cerca i tre ingredienti nell'Overworld e riportali allo chef.</p>
+                    <img class="img-fluid mt-3" src="img/body/prenota/health_bar.png"
+                        alt="Health bar" style="max-width: 300px;">
+                </div>
+            </div>
+            
+
+            <div class="col-12 col-lg-6 text-center order-2 py-3">
+                <div class="p-4 position-relative">
+                    <img class="img-fluid" src="img/body/prenota/missione_chef.png"
+                        alt="Missione dello chef">
+                   
+                    <img src="img/body/prenota/exp.png" alt=""
+                        class="position-absolute exp-orb exp-chef-1">
+                    
+                    <img src="img/body/prenota/exp.png" alt=""
+                        class="position-absolute exp-orb exp-chef-2">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="container d-none d-lg-block position-relative" style="height: 0;">
+        
+        <img src="img/body/prenota/exp.png" alt=""
+            class="position-absolute exp-orb exp-center-1">
+        
+        <img src="img/body/prenota/exp.png" alt=""
+            class="position-absolute exp-orb exp-center-2">
+    </div>
+
+    <!-- Blocco 2 -->
+    <div class="container">
+        <div class="row align-items-center justify-content-center mt-5">
+            
+            <div class="col-12 col-lg-6 text-center order-2 order-lg-1 py-3">
+                <div class="p-4 position-relative">
+                    <img class="img-fluid" src="img/body/prenota/missione_fireball.png"
+                        alt="Missione - seconda parte">
+                    
+                    <img src="img/body/prenota/exp.png" alt=""
+                        class="position-absolute exp-orb exp-fire-1">
+                   
+                    <img src="img/body/prenota/exp.png" alt=""
+                        class="position-absolute exp-orb exp-fire-2">
+                   
+                    <img src="img/body/prenota/exp.png" alt=""
+                        class="position-absolute exp-orb exp-fire-3">
                 </div>
             </div>
            
-
-    
-
-    <div class="container-fluid text-center g-0 text-lg-start">
-        <div class="row py-5 g-0 ">
-            <div class="col-12 pb-5 d-flex justify-content-center col-lg-5 py-lg-0 offset-lg-1">
-                <div>
-                    <div class="row p-4 d-flex align-self-lg-center">
-                        <h3 class="my-3"><b>Scarica la mappa e inizia la missione!</b></h3>
-                        <p>Clicca il bottone qui sotto e scopri come ottenere il codice segreto per prenotare!</p>
-                        <a class="btn btn-menu pushable mt-3" aria-current="page" href="#">
-                            <span class="front ">
-                                MAPPA
-                            </span>
-                        </a>
-                    </div>
-                    <div class="row p-4 d-flex align-self-lg-center">
-                        <img class="col-12 p-4" src="img/body/prenota/missione_fireball.png"
-                            alt="Missione - seconda parte">
-                    </div>      
+            <div class="col-12 col-lg-6 text-center text-lg-end order-1 order-lg-2 py-3">
+                <div class="p-4">
+                    <h3 class="mb-3"><b>Scarica la mappa e inizia la missione!</b></h3>
+                    <p>Clicca il bottone qui sotto e scopri come ottenere il codice segreto per prenotare!</p>
+                    <a class="btn btn-menu pushable mt-4" aria-current="page" href="#">
+                        <span class="front">
+                            MAPPA
+                        </span>
+                    </a>
                 </div>
             </div>
-
+        </div>
+    </div>
+</div>
 
 
 <!-- Form -->
- 
-    <div class="page-bg d-flex align-items-center justify-content-center vh-80">
+<div class="container-fluid g-0">
+    <div class="page-bg d-flex align-items-center justify-content-center">
         <div class="booking-card" id="bookingCard">
 
             <!--Step 1 -->
@@ -353,7 +392,7 @@
 
         </div>
     </div>
-
+</div>
 
 
 
