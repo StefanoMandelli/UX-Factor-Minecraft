@@ -1,0 +1,48 @@
+.nav-pills .nav-link {
+  color: var(--ux-color) !important;
+  padding: 2rem 1rem !important;
+  border: none;
+  font: var(--ux-txt-h3);
+}
+
+.nav-pills .overworld-btn:not(.active) {
+  background-color: var(--ux-global-color-background) !important;
+}
+
+.nav-pills .nether-btn:not(.active) {
+  background-color: var(--ux-nether-color-background) !important;
+}
+
+.nav-pills .end-btn:not(.active) {
+  background-color: var(--ux-end-color-background) !important;
+}
+
+.nav-pills .overworld-btn.active,
+.nav-pills .nether-btn.active,
+.nav-pills .end-btn.active {
+  background-color: transparent !important;
+  font-weight: bold;
+}
+
+.menu-section {
+  transition: background 0.4s ease-in-out;
+  background-color: #2b2b2b; /* Sfondo di base opzionale */
+}
+
+.menu-section:has(.overworld-btn.active) {
+  background: url("../img/body/menu/pattern-overworld.png") center / cover !important;
+}
+
+.menu-section:has(.nether-btn.active) {
+  background: url("../img/body/menu/pattern-nether.png") center / cover !important;
+}
+
+.menu-section:has(.end-btn.active) {
+  background: url("../img/body/menu/pattern-end.png") center / cover !important;
+}
+
+@media (min-width: 992px) {
+  .nav-pills .nav-link {
+    font: var(--ux-txt-h2);
+  }
+}
