@@ -30,7 +30,7 @@
 }
 
 .menu-section:has(.overworld-btn.active) {
-  background: url("../img/body/menu/pattern-overworld.png") center !important;
+  background: url("../img/body/menu/pattern-overworld.png") rgba(26, 51, 35, 0.20) center !important;
 }
 
 .menu-section:has(.nether-btn.active) {
@@ -60,7 +60,7 @@
     /* Ombra interna */ 4px 4px 0px rgba(255, 255, 255, 0.05);
 }
 
-.overworld .special-hamburger:hover {
+#overworld .special-hamburger:hover {
   /* In hover, lo spessore solido resta intatto, ma l'ombra sfocata finale si allarga! */
   box-shadow:
     1px 1px 0px var(--ux-global-color-accent-1),
@@ -83,8 +83,40 @@
   font-family: "Minercraftory";
 }
 
+#overworld .mc-divider-line {
+  flex-grow: 1;
+  height: 5px;
+  background-color: var(--ux-global-color-accent-1); /* Inserisci qui la tua variabile del verde */
+  position: relative;
+}
+
+.mc-divider-line.left::after,
+.mc-divider-line.right::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: inherit;
+  top: 50%;
+}
+
+.mc-divider-line.left::after {
+  right: 0;
+  transform: translate(50%, -50%) rotate(45deg);
+}
+
+.mc-divider-line.right::after {
+  left: 0;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
 @media (min-width: 992px) {
   .nav-pills .nav-link {
     font: var(--ux-txt-h2);
+  }
+
+  .sub-section {
+    padding-right: 11rem !important;
+    padding-left: 11rem !important;
   }
 }
