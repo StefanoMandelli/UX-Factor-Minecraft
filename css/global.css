@@ -455,6 +455,10 @@ p {
   /* Navbar */
 
   .navbar-collapse {
+    background: none;
+  }
+
+  .navbar-collapse {
     height: auto;
     position: relative;
     justify-content: flex-end;
