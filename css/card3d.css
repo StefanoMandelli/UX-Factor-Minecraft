@@ -51,7 +51,7 @@
     transform: perspective(1000px) rotateX(0deg) rotateY(0deg) !important;
 }
 
-.card-3d:not(.carousel-info, .torch-grid) {
+.card-3d:not(.carousel-info, .torch-grid, .special-hamburger) {
   width: 88%;
   aspect-ratio: 1/1;
 }
