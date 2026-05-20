@@ -7,10 +7,10 @@
     <title>Prenota</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/prenota.css">
-    <link rel="stylesheet" href="css/booking.css"> 
+    <link rel="stylesheet" href="css/booking.css">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/card3d.css">
-    
+
 </head>
 
 
@@ -84,10 +84,10 @@
 
 
     <!-- Hero -->
-     <div class="g-0 container-fluid text-center text-lg-start first-background">
+    <div class="g-0 container-fluid text-center text-lg-start first-background">
         <div class="hero-desktop row p-5 g-0">
             <div class="col-12 col-lg-3 offset-lg-1 order-lg-2 pb-5">
-               <img class="img-hero-booking" src="img/body/prenota/creeper_hero.png" alt="Creeper Hero Prenota" />
+                <img class="img-hero-booking" src="img/body/prenota/creeper_hero.png" alt="Creeper Hero Prenota" />
             </div>
             <div class="col-12 col-lg-4 offset-lg-2 order-lg-1 align-self-lg-center">
                 <h1 class="mb-5 title-home">CONQUISTA IL TUO POSTO DA NOI!</h1>
@@ -104,315 +104,282 @@
 
 
 
-<!-- Sezione missione del mese -->
-<div class="container-fluid mission">
-    <!-- Titolo -->
-    <div class="row">
-        <div class="col-12 py-5 text-center">
-            <h2><b>Missione del mese</b></h2>
-        </div>
-    </div>
-
-    <!-- Blocco 1 -->
-    <div class="container">
-        <div class="row align-items-center justify-content-center">
-            
-            <div class="col-12 col-lg-6 text-center text-lg-start order-1 p-3">
-                <div class="p-4">
-                    <h2 class="mb-4"><b>Lo Chef Sbadato</b></h2>
-                    <h3>Il nostro chef ha perso la lista della spesa nel Nether e non può aprire
-                        il ristorante senza gli ingredienti speciali. Aiutalo a ritrovarli!
-                        Cerca i tre ingredienti nell'Overworld e riportali allo chef.</h3>
-                    <img class="img-fluid mt-5" src="img/body/prenota/health_bar.png"
-                        alt="Health bar" style="max-width: 300px;">
-                </div>
-            </div>
-            
-
-            <div class="col-12 col-lg-6 text-center order-2 py-3">
-                <div class="p-4 position-relative">
-                    <img class="img-fluid" src="img/body/prenota/missione_chef.png"
-                        alt="Missione dello chef">
-                   
-                    <img src="img/body/prenota/exp.png" alt=""
-                        class="position-absolute exp-orb exp-chef-1">
-                    
-                    <img src="img/body/prenota/exp.png" alt=""
-                        class="position-absolute exp-orb exp-chef-2">
-                </div>
+    <!-- Sezione missione del mese -->
+    <div class="container-fluid mission">
+        <!-- Titolo -->
+        <div class="row">
+            <div class="col-12 py-5 text-center">
+                <h2><b>Missione del mese</b></h2>
             </div>
         </div>
-    </div>
 
-    
-    <div class="container d-none d-lg-block position-relative" style="height: 0;">
-        
-        <img src="img/body/prenota/exp.png" alt=""
-            class="position-absolute exp-orb exp-center-1">
-        
-        <img src="img/body/prenota/exp.png" alt=""
-            class="position-absolute exp-orb exp-center-2">
-    </div>
+        <!-- Blocco 1 -->
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
 
-    <!-- Blocco 2 -->
-    <div class="container">
-        <div class="row align-items-center justify-content-center mt-5">
-            
-            <div class="col-12 col-lg-6 text-center order-2 order-lg-1 py-3">
-                <div class="p-4 position-relative">
-                    <img class="img-fluid" src="img/body/prenota/missione_fireball.png"
-                        alt="Missione - seconda parte">
-                    
-                    <img src="img/body/prenota/exp.png" alt=""
-                        class="position-absolute exp-orb exp-fire-1">
-                   
-                    <img src="img/body/prenota/exp.png" alt=""
-                        class="position-absolute exp-orb exp-fire-2">
-                   
-                    <img src="img/body/prenota/exp.png" alt=""
-                        class="position-absolute exp-orb exp-fire-3">
-                </div>
-            </div>
-           
-            <div class="col-12 col-lg-6 text-center text-lg-end order-1 order-lg-2 py-3">
-                <div class="p-4">
-                    <h2 class="mb-3"><b>Scarica la mappa e inizia la missione!</b></h2>
-                    <h3>Clicca il bottone qui sotto e scopri come ottenere il codice segreto per prenotare!</h3>
-                    <a class="btn btn-menu pushable mt-5" aria-current="page" href="#">
-                        <span class="front">
-                            MAPPA
-                        </span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<!-- Form -->
-<div class="container-fluid g-0">
-    <div class="page-bg d-flex align-items-center justify-content-center">
-
-        <div class="booking-wrapper text-center">
-
-            <!-- Titolo Form -->
-            <h2 class="booking-top-title mb-5">Hai completato la missione?</h2>
-        </div>
-
-        <div class="booking-card" id="bookingCard">
-
-            <!--Step 1 -->
-            <div class="step step-active" id="step1">
-                <h2 class="step-title text-center">Inserisci il tuo codice</h2>
-
-                <div class="mb-4">
-                    <input
-                        type="text"
-                        id="inputCode"
-                        class="form-control custom-input"
-                        placeholder="Scrivi qui il tuo codice"
-                        autocomplete="off"
-                    >
-                </div>
-
-                <div class="text-center">
-                    <button class="btn btn-menu pushable inverted mb-3" id="btnStep1Next">
-                        AVANTI
-                    </button>
-                </div>
-
-                <div class="text-center mb-4">
-                    <a href="#" class="code-help-link" data-bs-toggle="#" data-bs-target="#">
-                        <i class="bi bi-question-circle me-1"></i>Non hai un codice? Scopri come ottenerlo!
-                    </a>
-                </div>
-
-            </div>
-
-            <!-- Step 2-->
-            <div class="step" id="step2">
-
-                <div class="row g-3 justify-content-center world-cards">
-                    <!-- Overworld -->
-                    <div class="col-12 col-md-4">
-                        <button class="world-card w-100" data-world="overworld">
-                            <div class="world-icon">
-                                <i class="bi bi-tree"></i>
-                            </div>
-                            <span class="world-name">Overworld</span>
-                        </button>
+                <div class="col-12 col-lg-6 text-center text-lg-start order-1 p-3">
+                    <div class="p-4">
+                        <h2 class="mb-4"><b>Lo Chef Sbadato</b></h2>
+                        <h3>Il nostro chef ha perso la lista della spesa nel Nether e non può aprire
+                            il ristorante senza gli ingredienti speciali. Aiutalo a ritrovarli!
+                            Cerca i tre ingredienti nell'Overworld e riportali allo chef.</h3>
+                        <img class="img-fluid mt-5" src="img/body/prenota/health_bar.png" alt="Health bar"
+                            style="max-width: 300px;">
                     </div>
-                    <!-- Nether -->
-                    <div class="col-12 col-md-4">
-                        <button class="world-card w-100" data-world="nether">
-                            <div class="world-icon nether-icon">
-                                <i class="bi bi-fire"></i>
-                            </div>
-                            <span class="world-name">Nether</span>
-                        </button>
-                    </div>
-                    <!-- End -->
-                    <div class="col-12 col-md-4">
-                        <button class="world-card w-100" data-world="end">
-                            <div class="world-icon end-icon">
-                                <i class="bi bi-stars"></i>
-                            </div>
-                            <span class="world-name">End</span>
-                        </button>
+                </div>
+
+
+                <div class="col-12 col-lg-6 text-center order-2 py-3">
+                    <div class="p-4 position-relative">
+                        <img class="img-fluid" src="img/body/prenota/missione_chef.png" alt="Missione dello chef">
+
+                        <img src="img/body/prenota/exp.png" alt="" class="position-absolute exp-orb exp-chef-1">
+
+                        <img src="img/body/prenota/exp.png" alt="" class="position-absolute exp-orb exp-chef-2">
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!-- Step 3 -->
-            <div class="step" id="step3">
-                <h2 class="step-title text-center">Prenota il tuo tavolo</h2>
 
-                <form id="bookingForm" novalidate>
-                    <div class="row g-3">
+        <div class="container d-none d-lg-block position-relative" style="height: 0;">
 
-                        <!-- Data della prenotazione -->
-                        <div class="col-12 col-md-6">
-                            <label for="inputDate" class="form-label custom-label">Seleziona una data:</label>
-                            <div class="input-group custom-input-group">
-                                <span class="input-group-text custom-input-icon">
-                                    <i class="bi bi-calendar3"></i>
-                                </span>
-                                <input
-                                    type="date"
-                                    id="inputDate"
-                                    class="form-control custom-input"
-                                    required
-                                >
-                            </div>
+            <img src="img/body/prenota/exp.png" alt="" class="position-absolute exp-orb exp-center-1">
+
+            <img src="img/body/prenota/exp.png" alt="" class="position-absolute exp-orb exp-center-2">
+        </div>
+
+        <!-- Blocco 2 -->
+        <div class="container">
+            <div class="row align-items-center justify-content-center mt-5">
+
+                <div class="col-12 col-lg-6 text-center order-2 order-lg-1 py-3">
+                    <div class="p-4 position-relative">
+                        <img class="img-fluid" src="img/body/prenota/missione_fireball.png"
+                            alt="Missione - seconda parte">
+
+                        <img src="img/body/prenota/exp.png" alt="" class="position-absolute exp-orb exp-fire-1">
+
+                        <img src="img/body/prenota/exp.png" alt="" class="position-absolute exp-orb exp-fire-2">
+
+                        <img src="img/body/prenota/exp.png" alt="" class="position-absolute exp-orb exp-fire-3">
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-6 text-center text-lg-end order-1 order-lg-2 py-3">
+                    <div class="p-4">
+                        <h2 class="mb-3"><b>Scarica la mappa e inizia la missione!</b></h2>
+                        <h3>Clicca il bottone qui sotto e scopri come ottenere il codice segreto per prenotare!</h3>
+                        <a class="btn btn-menu pushable mt-5" aria-current="page" href="#">
+                            <span class="front">
+                                MAPPA
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Form -->
+    <div class="container-fluid g-0">
+        <div class="page-bg d-flex align-items-center justify-content-center">
+
+            <div class="booking-wrapper text-center">
+
+                <!-- Titolo Form -->
+                <h2 class="booking-top-title mb-5">Hai completato la missione?</h2>
+            </div>
+
+            <div class="booking-card" id="bookingCard">
+
+                <!--Step 1 -->
+                <div class="step step-active" id="step1">
+                    <h2 class="step-title text-center">Inserisci il tuo codice</h2>
+
+                    <div class="mb-4">
+                        <input type="text" id="inputCode" class="form-control custom-input"
+                            placeholder="Scrivi qui il tuo codice" autocomplete="off">
+                    </div>
+
+                    <div class="text-center">
+                        <button class="btn btn-menu pushable inverted mb-3" id="btnStep1Next">
+                            <span class="front ">
+                                AVANTI
+                            </span>
+                        </button>
+                    </div>
+
+                    <div class="text-center mb-4">
+                        <a href="#" class="code-help-link" data-bs-toggle="#" data-bs-target="#">
+                            <i class="bi bi-question-circle me-1"></i>Non hai un codice? Scopri come ottenerlo!
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Step 2-->
+                <div class="step" id="step2">
+
+                    <div class="row g-3 justify-content-center world-cards">
+                        <!-- Overworld -->
+                        <div class="col-12 col-md-4">
+                            <button class="world-card w-100" data-world="overworld">
+                                <div class="world-icon">
+                                    <i class="bi bi-tree"></i>
+                                </div>
+                                <span class="world-name">Overworld</span>
+                            </button>
                         </div>
-
-                        <!-- Orario della prenotazione -->
-                        <div class="col-12 col-md-6">
-                            <label for="inputTime" class="form-label custom-label">Seleziona un orario:</label>
-                            <div class="input-group custom-input-group">
-                                <span class="input-group-text custom-input-icon">
-                                    <i class="bi bi-clock"></i>
-                                </span>
-                                <input
-                                    type="time"
-                                    id="inputTime"
-                                    class="form-control custom-input"
-                                    required
-                                >
-                            </div>
+                        <!-- Nether -->
+                        <div class="col-12 col-md-4">
+                            <button class="world-card w-100" data-world="nether">
+                                <div class="world-icon nether-icon">
+                                    <i class="bi bi-fire"></i>
+                                </div>
+                                <span class="world-name">Nether</span>
+                            </button>
                         </div>
+                        <!-- End -->
+                        <div class="col-12 col-md-4">
+                            <button class="world-card w-100" data-world="end">
+                                <div class="world-icon end-icon">
+                                    <i class="bi bi-stars"></i>
+                                </div>
+                                <span class="world-name">End</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
-                        <!-- Numero di persone -->
-                        <div class="col-12 col-md-6">
-                            <label for="inputGuests" class="form-label custom-label">In quanti siete?</label>
-                            <div class="input-group custom-input-group guest-stepper">
-                                <span class="input-group-text custom-input-icon">
-                                    <i class="bi bi-people"></i>
-                                </span>
-                                <input
-                                    type="number"
-                                    id="inputGuests"
-                                    class="form-control custom-input"
-                                    value="2"
-                                    min="1"
-                                    max="20"
-                                    readonly
-                                    required
-                                >
-                                <div class="stepper-buttons">
-                                    <button type="button" class="stepper-btn stepper-up" id="btnGuestsUp" aria-label="Aggiungi ospite">
-                                        <i class="bi bi-chevron-up"></i>
-                                    </button>
-                                    <button type="button" class="stepper-btn stepper-down" id="btnGuestsDown" aria-label="Rimuovi ospite">
-                                        <i class="bi bi-chevron-down"></i>
-                                    </button>
+                <!-- Step 3 -->
+                <div class="step" id="step3">
+                    <h2 class="step-title text-center">Prenota il tuo tavolo</h2>
+
+                    <form id="bookingForm" novalidate>
+                        <div class="row g-3">
+
+                            <!-- Data della prenotazione -->
+                            <div class="col-12 col-md-6">
+                                <label for="inputDate" class="form-label custom-label">Seleziona una data:</label>
+                                <div class="input-group custom-input-group">
+                                    <span class="input-group-text custom-input-icon">
+                                        <i class="bi bi-calendar3"></i>
+                                    </span>
+                                    <input type="date" id="inputDate" class="form-control custom-input" required>
+                                </div>
+                            </div>
+
+                            <!-- Orario della prenotazione -->
+                            <div class="col-12 col-md-6">
+                                <label for="inputTime" class="form-label custom-label">Seleziona un orario:</label>
+                                <div class="input-group custom-input-group">
+                                    <span class="input-group-text custom-input-icon">
+                                        <i class="bi bi-clock"></i>
+                                    </span>
+                                    <input type="time" id="inputTime" class="form-control custom-input" required>
+                                </div>
+                            </div>
+
+                            <!-- Numero di persone -->
+                            <div class="col-12 col-md-6">
+                                <label for="inputGuests" class="form-label custom-label">In quanti siete?</label>
+                                <div class="input-group custom-input-group guest-stepper">
+                                    <span class="input-group-text custom-input-icon">
+                                        <i class="bi bi-people"></i>
+                                    </span>
+                                    <input type="number" id="inputGuests" class="form-control custom-input" value="2"
+                                        min="1" max="20" readonly required>
+                                    <div class="stepper-buttons">
+                                        <button type="button" class="stepper-btn stepper-up" id="btnGuestsUp"
+                                            aria-label="Aggiungi ospite">
+                                            <i class="bi bi-chevron-up"></i>
+                                        </button>
+                                        <button type="button" class="stepper-btn stepper-down" id="btnGuestsDown"
+                                            aria-label="Rimuovi ospite">
+                                            <i class="bi bi-chevron-down"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Nickname -->
+                            <div class="col-12 col-md-6">
+                                <label for="inputNickname" class="form-label custom-label">Il tuo nickname:</label>
+                                <div class="input-group custom-input-group">
+                                    <span class="input-group-text custom-input-icon">
+                                        <i class="bi bi-person"></i>
+                                    </span>
+                                    <input type="text" id="inputNickname" class="form-control custom-input"
+                                        placeholder="Steve" required>
+                                </div>
+                            </div>
+
+                            <!-- Numero di telefono -->
+                            <div class="col-12">
+                                <label for="inputPhone" class="form-label custom-label">Numero di telefono:</label>
+                                <div class="input-group custom-input-group phone-group">
+                                    <span class="input-group-text custom-input-icon">
+                                        <i class="bi bi-telephone"></i>
+                                    </span>
+                                    <select id="phonePrefix" class="form-select phone-prefix" aria-label="Prefisso">
+                                        <option value="+39" selected>+39</option>
+                                        <option value="+1">+1</option>
+                                        <option value="+44">+44</option>
+                                        <option value="+49">+49</option>
+                                        <option value="+33">+33</option>
+                                        <option value="+34">+34</option>
+                                    </select>
+                                    <input type="tel" id="inputPhone" class="form-control custom-input"
+                                        placeholder="123 456 7890" required>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Nickname -->
-                        <div class="col-12 col-md-6">
-                            <label for="inputNickname" class="form-label custom-label">Il tuo nickname:</label>
-                            <div class="input-group custom-input-group">
-                                <span class="input-group-text custom-input-icon">
-                                    <i class="bi bi-person"></i>
+                        <!-- Pulsante PRENOTA -->
+                        <div class="text-center mt-4">
+                            <button type="submit" class="btn btn-booking btn-booking-lg" id="btnPrenota">
+                                <span class="front">
+                                    PRENOTA
                                 </span>
-                                <input
-                                    type="text"
-                                    id="inputNickname"
-                                    class="form-control custom-input"
-                                    placeholder="Steve"
-                                    required
-                                >
-                            </div>
+                            </button>
                         </div>
+                    </form>
+                </div>
 
-                        <!-- Numero di telefono -->
-                        <div class="col-12">
-                            <label for="inputPhone" class="form-label custom-label">Numero di telefono:</label>
-                            <div class="input-group custom-input-group phone-group">
-                                <span class="input-group-text custom-input-icon">
-                                    <i class="bi bi-telephone"></i>
-                                </span>
-                                <select id="phonePrefix" class="form-select phone-prefix" aria-label="Prefisso">
-                                    <option value="+39" selected>+39</option>
-                                    <option value="+1">+1</option>
-                                    <option value="+44">+44</option>
-                                    <option value="+49">+49</option>
-                                    <option value="+33">+33</option>
-                                    <option value="+34">+34</option>
-                                </select>
-                                <input
-                                    type="tel"
-                                    id="inputPhone"
-                                    class="form-control custom-input"
-                                    placeholder="123 456 7890"
-                                    required
-                                >
-                            </div>
+                <!-- Step 4 -->
+                <div class="step" id="step4">
+                    <div class="confirmation-content text-center">
+                        <div class="confirm-icon-wrapper mb-3">
+                            <i class="bi bi-check-circle-fill confirm-icon"></i>
                         </div>
-                    </div>
-
-                    <!-- Pulsante PRENOTA -->
-                    <div class="text-center mt-4">
-                        <button type="submit" class="btn btn-booking btn-booking-lg" id="btnPrenota">
-                            PRENOTA
+                        <h2 class="step-title">La tua prenotazione è confermata</h2>
+                        <p class="confirm-details" id="confirmDetails"></p>
+                        <button class="btn btn-menu mt-4" id="btnCancel">
+                            <span class="front">
+                                Cancella la prenotazione
+                            </span>
                         </button>
                     </div>
-                </form>
-            </div>
-
-            <!-- Step 4 -->
-            <div class="step" id="step4">
-                <div class="confirmation-content text-center">
-                    <div class="confirm-icon-wrapper mb-3">
-                        <i class="bi bi-check-circle-fill confirm-icon"></i>
-                    </div>
-                    <h2 class="step-title">La tua prenotazione è confermata</h2>
-                    <p class="confirm-details" id="confirmDetails"></p>
-                    <button class="btn btn-primary mt-4" id="btnCancel">
-                        Cancella la prenotazione
-                    </button>
                 </div>
-            </div>
 
+            </div>
         </div>
     </div>
-</div>
 
 
 
 
-<!-- Card per promo e contattaci -->
+    <!-- Card per promo e contattaci -->
     <div class="container-fluid text-center redstone-background g-0 py-5">
         <div class="row py-5 g-0 ">
             <div class="col-12 pb-5 d-flex justify-content-center  col-lg-5 py-lg-0 offset-lg-1 card-desktop">
                 <div class="card card-3d card-3d-background">
                     <div class="p-4 card-body d-flex ">
                         <h3 class="card-title"><b>Si apre il portale: scopri Dinecraft x Umani!</b></h3>
-                        <h4 class="card-text">Un'occasione unica per gustare piatti pixelati creati 
-                            per palati terrestri. Prenota il tuo tavolo, preparati a un'avventura 
+                        <h4 class="card-text">Un'occasione unica per gustare piatti pixelati creati
+                            per palati terrestri. Prenota il tuo tavolo, preparati a un'avventura
                             gastronomica di un altro livello!</h4>
                         <a class="btn btn-menu pushable" aria-current="page" href="#">
                             <span class="front">
@@ -427,8 +394,8 @@
                 <div class="card card-3d card-3d-background">
                     <div class="p-4 card-body d-flex">
                         <h3 class="card-title"><b>La nostra chat è sempre aperta!</b></h3>
-                        <h4 class="card-text">Per <i>informazioni, curiosità o richieste speciali,</i> 
-                            il nostro team è a tua disposizione: attraverso il nostro circuito di redstone, 
+                        <h4 class="card-text">Per <i>informazioni, curiosità o richieste speciali,</i>
+                            il nostro team è a tua disposizione: attraverso il nostro circuito di redstone,
                             riceverai una risposta alla velocità della luce.
                         </h4>
                         <a class="btn btn-menu pushable" aria-current="page" href="#">
@@ -445,7 +412,7 @@
 
 
     <!-- Footer -->
-     <footer class="container-fluid bg-dark py-5 footer-custom-bg">
+    <footer class="container-fluid bg-dark py-5 footer-custom-bg">
         <div class="row align-items-center">
 
             <div class="col-12 col-md-6 order-1 order-md-2 text-center text-md-end mb-4 mb-md-5">
