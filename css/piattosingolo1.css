@@ -1,6 +1,22 @@
 @import url(card3d.css);
 @import url(global.css);
 
+
+.burger-hero {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Quando lo schermo è un Desktop Grande (da 1400px in su, fino a coprire i 1920px) */
+@media (min-width: 1920px) {
+    .hero-desktop .burger-hero {
+        width: 728px !important;    /* Forza l'esatta dimensione di Figma */
+        max-width: 100% !important; /* Sicurezza per non spaccare il layout */
+        height: auto !important;    /* Proporzioni perfette garantite */
+        display: block !important;
+    }
+}
 /* ==========================================================================
    1. STRUTTURA BASE DELLE CARD (Uguale per tutte le pagine - Niente Colori)
    ========================================================================== */
