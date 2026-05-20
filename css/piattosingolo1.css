@@ -162,18 +162,32 @@
     }
 }
 
-@media (min-width: 576px) {
-    .contenitore-craft {
-        display: flex;         /* Attiva il flex solo qui */
-        gap: 4.4rem;          /* Mette i tuoi 71px solo qui */
-        justify-content: center; 
+.container-craft {
+    gap: 3rem;
+}
+
+.spacer-bottom-menu {
+    /* 48px / 16px = 3rem. Applica lo stesso distanziamento sia su mobile che su desktop */
+    margin-top: 3rem !important; 
+}
+
+@media (min-width: 992px) {
+    .container-craft {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        gap: 3rem !important; 
     }
 
-    .greenstack-burger-card {
-        /* Permette alle card di dividersi lo spazio equamente */
-        flex: 1;
-        width: auto !important;
-        /* Riduciamo leggermente il padding per far stare tutto con il gap grande */
-        padding: 2rem !important;
+    /* CORRETTO: Usiamo .burger-card (la classe reale del tuo HTML) */
+    .container-craft .burger-card {
+        /* Il segreto è questo: flex: 1 1 0px dice alle card di ignorare la loro larghezza naturale
+           e di dividersi lo spazio disponibile in 3 parti esattamente identiche. */
+        flex: 1 1 0px !important; 
+        min-width: 0 !important; /* Impedisce al contenuto di forzare l'allargamento della card */
+        
+        /* Riduciamo leggermente il padding sui lati (da 3rem a 1.5rem) così a risoluzioni minori 
+           come 1156px i testi e i prezzi hanno spazio di respirare senza far allargare la card */
+        padding: 3rem 1.5rem !important; 
     }
 }
