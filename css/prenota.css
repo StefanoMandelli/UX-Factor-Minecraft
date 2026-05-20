@@ -1,6 +1,11 @@
+img.img-hero-booking {
+    width: 80%;
+    height: auto;
+}
+
 .mission {
     background-image: url(../img/background/stone-background.png);
-    background-size: fill;
+    background-size: cover;
 }
 
 .exp-orb {
@@ -61,6 +66,10 @@
 
 @media (max-width: 992px) {
 
+    img.img-hero-booking {
+        width: 40%;
+        height: auto;
+    }
     
     .exp-chef-1 {
         width: 105px;

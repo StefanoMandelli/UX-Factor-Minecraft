@@ -427,6 +427,7 @@ p {
 }
 
 @media (min-width: 992px) {
+
   /* DA SISTEMARE */
   h1 {
     font: var(--ux-txt-h1-1920);
@@ -534,6 +535,11 @@ p {
 }
 
 @media (min-width: 1920px) {
+
+  .menù-homepage {
+    width: 40%;
+  }
+
   h1 {
     font: var(--ux-txt-h1-1920);
   }
@@ -563,9 +569,7 @@ p {
     padding-right: 4.5rem;
   }
 
-  .menù-homepage {
-    width: 40%;
-  }
+  
 
   .text-countdown {
     font: var(--ux-txt-h1-1920);
