@@ -186,7 +186,7 @@
 }
 
 /* --- RESPONSIVE DESKTOP (Da 992px in su) --- */
-@media (min-width: 992px) {
+@media (min-width: 1920px) {
     .allergens-card {
         display: flex;
         flex-direction: row;        
@@ -200,7 +200,7 @@
     }
 
     .allergen-img-container {
-        height: 170px; 
+        height: 280px; 
     }
 
     .allergen-text-container h3 {
