@@ -17,9 +17,10 @@
     height: auto;
 }
 .mano-promo {
+    width: 60%;
     position: absolute;
-    right: -13rem; 
-    bottom: 13rem;
+    right: -12vw;
+    bottom: 80%;
     z-index: 1;
 }
 
@@ -188,5 +189,10 @@ input{
 #s3:checked ~ #slide1 { transform: translateX(130%) scale(0.8); z-index: 1; opacity: 1; }
 #s3:checked ~ #slide2 { transform: translateX(-130%) scale(0.8); z-index: 1; opacity: 1; }
 #s3:checked ~ #slide3 { transform: translateX(0) scale(1.1); z-index: 5; opacity: 1; };
+    }
+    
+
+.heroPromo-distance {
+    margin-top: 8.4rem;
     }
 }
