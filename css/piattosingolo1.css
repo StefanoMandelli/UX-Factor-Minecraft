@@ -1,48 +1,119 @@
 @import url(card3d.css);
 @import url(global.css);
 
+/* ==========================================================================
+   1. STRUTTURA BASE DELLE CARD (Uguale per tutte le pagine - Niente Colori)
+   ========================================================================== */
 .burger-card {
-    background-color: rgba(26, 51, 35, 0.7);
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1.25rem;
     padding: 3rem;
-    border: 7px solid rgba(26, 51, 35, 1);
 
-    /* 1. ABILITA IL MOVIMENTO MORBIDO */
+    /* ABILITA IL MOVIMENTO MORBIDO */
     transition: transform 0.1s ease-out, box-shadow 0.1s ease-out;
 
-    /* 2. ABILITA LA TERZA DIMENSIONE */
+    /* ABILITA LA TERZA DIMENSIONE */
     transform-style: preserve-3d;
     will-change: transform;
     backface-visibility: hidden;
 
-    /* 3. AGGIUNGI LO SPESSORE (BOX-SHADOW) */
-    box-shadow:
-        10px 10px 0px #161616, 15px 15px 20px rgba(0, 0, 0, 0.15);
+    /* AGGIUNGI LO SPESSORE (BOX-SHADOW) */
+    box-shadow: 10px 10px 0px #161616, 15px 15px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* 4. FAI GALLEGGIARE IL CONTENUTO (Effetto Pop-out) */
+/* FAI GALLEGGIARE IL CONTENUTO (Effetto Pop-out) */
 .burger-card img,
 .burger-card h3,
 .burger-card .price-container {
     transform: translateZ(20px);
-    /* Più alto è il numero, più "esce" dalla card */
 }
 
-.conf-menu{
+.dinecraft-card {
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+}
+
+.dinecraft-card img {
+    max-width: 70%;
+    height: auto;
+    display: block;
+}
+
+.number {
+    padding: 5px 10px;
+    font-family: var(--ux-font-Minercraftory);
+    font-size: 20px;
+}
+
+.comma {
+    font-family: var(--ux-font-Minercraftory);
+    font-size: 20px;
+}
+
+.conf-menu {
     padding: 1.25rem;
 }
 
-.price-container{
+.price-container {
     white-space: nowrap;
 }
 
+/* ==========================================================================
+   CONTROLLO COLORI TRAMITE IL GENITORE (Specificità Solida)
+   ========================================================================== */
+
+/* --- OVERWORLD / GREENSTACK THEME (Plate 1 - Green) --- */
+.theme-greenstack .burger-card {
+    background-color: rgba(26, 51, 35, 0.7);
+    border: 7px solid rgba(26, 51, 35, 1);
+}
+.theme-greenstack .dinecraft-card {
+    background-color: rgba(26, 51, 35, 0.7);
+    border: 7px solid rgba(26, 51, 35, 1);
+}
+.theme-greenstack .number {
+    background-color: var(--ux-global-color-accent-1);
+}
+
+/* --- NETHER THEME (Plate 2 - Red) --- */
+.theme-nether .burger-card {
+    background-color: rgba(83, 31, 29, 0.7);
+    border: 7px solid rgba(83, 31, 29, 1);
+}
+.theme-nether .dinecraft-card {
+    background-color: rgba(83, 31, 29, 0.7);
+    border: 7px solid rgba(83, 31, 29, 1);
+}
+.theme-nether .number {
+    background-color: var(--ux-nether-color-accent);
+}
+
+/* --- END THEME (Plate 3 - Purple) --- */
+.theme-end .burger-card {
+    background-color: rgba(63, 30, 84, 0.7);
+    border: 7px solid rgba(63, 30, 84, 1);
+}
+.theme-end .dinecraft-card {
+    background-color: rgba(63, 30, 84, 0.7);
+    border: 7px solid rgba(63, 30, 84, 1);
+}
+.theme-end .number {
+    background-color: var(--ux-end-color-accent);
+}
+
+
+/* ==========================================================================
+   3. STRUTTURA DELLE ALLERGENS CARD E CORREZIONI RESPONSIVE
+   ========================================================================== */
 .allergens-card {
     padding: 0rem;
-    gap: 2rem; /* Gap verticale su mobile */
+    gap: 2rem; 
 }
 
 .allergen-item {
@@ -57,109 +128,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1rem; /* Spazio costante tra l'immagine e il testo */
+    margin-bottom: 1rem; 
     width: 100%;
 }
 
-/* 2. Il tuo stile originale per le immagini (pulito e fluido) */
 .allergen-item img {
-    max-height: 100%; /* Si adatta all'altezza del contenitore */
+    max-height: 100%; 
     width: auto;
     object-fit: contain;
 }
 
-/* 3. Il nuovo div del testo */
 .allergen-text-container {
     width: 100%;
-}
-
-
-/* ==========================================
-   AGGIUNTE PER IL DESKTOP (Da 992px in su)
-   ========================================== */
-@media (min-width: 992px) {
-    .allergens-card {
-        display: flex;
-        flex-direction: row;        /* Gira gli allergeni in orizzontale */
-        gap: 2.5625rem !important;  /* Il tuo gap millimetrico di 41px (41/16) */
-        justify-content: center;
-    }
-
-    .allergen-item {
-        flex: 1 1 0px;              /* Forza le 3 colonne a essere larghe IDENTICHE */         
-        justify-content: space-between; /* Spinge il testo alla base se l'immagine sopra è più bassa */
-    }
-
-    /* 4. Il trucco magico: blocchiamo l'altezza del contenitore foto solo su desktop */
-    .allergen-img-container {
-        height: 170px; /* Crea una scatola invisibile alta uguale per Latte, Grano e Uova */
-    }
-
-    .allergen-text-container h3 {
-        white-space: nowrap;        /* Impedisce a "Uova di pollo" di spezzarsi su due righe */
-        margin: 0;                  /* Azzera i margini per un allineamento millimetrico */
-    }
-}
-
-.redstone-background .row {
-    perspective: 1000px;
-}
-
-
-.number {
-    /* Sfondo e bordo */
-    background-color: var(--ux-global-color-accent-1);
-
-    /* Dimensioni e testo */
-    padding: 5px 10px;
-    font-family: var(--ux-font-Minercraftory);
-    font-size: 20px;
-}
-
-.comma {
-    font-family: var(--ux-font-Minercraftory);
-    font-size: 20px;
-}
-
-.dinecraft-card {
-    background-color: rgba(26, 51, 35, 0.7);
-    border-radius: 5px;
-    border: 7px solid rgba(26, 51, 35);
-    display: flex;
-    flex-direction: column;
-    /* Mette l'immagine sopra e il testo sotto */
-    align-items: center;
-    /* Centra tutto orizzontalmente */
-    padding: 3rem;
-    
-}
-
-.dinecraft-card img {
-    /* Fondamentale: l'immagine si adatta alla larghezza del div meno il padding */
-    max-width: 70%;
-    height: auto;
-    display: block;
-}
-
-@media (min-width: 992px) {
-    .dinecraft-card {
-        flex-direction: row; /* Layout orizzontale */
-        width: 100% !important;
-        
-        /* 1. APPLICHIAMO LE MISURE DI FIGMA CONVERTITE IN REM */
-        height: auto;
-        padding: 4.375rem !important;  /* I tuoi 70px */
-        
-        /* 2. CENTRATURA VERTICALE PERFETTA DEL CONTENUTO */
-        align-items: center !important; 
-        justify-content: space-between;
-    }
-
-
-    /* Allineamento testo */
-    .dinecraft-text-container {
-        text-align: start !important;
-    }
 }
 
 .container-craft {
@@ -167,11 +147,36 @@
 }
 
 .spacer-bottom-menu {
-    /* 48px / 16px = 3rem. Applica lo stesso distanziamento sia su mobile che su desktop */
     margin-top: 3rem !important; 
 }
 
+.redstone-background .row {
+    perspective: 1000px;
+}
+
+/* --- RESPONSIVE DESKTOP (Da 992px in su) --- */
 @media (min-width: 992px) {
+    .allergens-card {
+        display: flex;
+        flex-direction: row;        
+        gap: 2.5625rem !important;  
+        justify-content: center;
+    }
+
+    .allergen-item {
+        flex: 1 1 0px;              
+        justify-content: space-between; 
+    }
+
+    .allergen-img-container {
+        height: 170px; 
+    }
+
+    .allergen-text-container h3 {
+        white-space: nowrap;        
+        margin: 0;                  
+    }
+
     .container-craft {
         display: flex !important;
         flex-direction: row !important;
@@ -179,15 +184,22 @@
         gap: 3rem !important; 
     }
 
-    /* CORRETTO: Usiamo .burger-card (la classe reale del tuo HTML) */
     .container-craft .burger-card {
-        /* Il segreto è questo: flex: 1 1 0px dice alle card di ignorare la loro larghezza naturale
-           e di dividersi lo spazio disponibile in 3 parti esattamente identiche. */
         flex: 1 1 0px !important; 
-        min-width: 0 !important; /* Impedisce al contenuto di forzare l'allargamento della card */
-        
-        /* Riduciamo leggermente il padding sui lati (da 3rem a 1.5rem) così a risoluzioni minori 
-           come 1156px i testi e i prezzi hanno spazio di respirare senza far allargare la card */
+        min-width: 0 !important; 
         padding: 3rem 1.5rem !important; 
+    }
+
+    .dinecraft-card {
+        flex-direction: row; 
+        width: 100% !important;
+        height: auto;
+        padding: 4.375rem !important;  
+        align-items: center !important; 
+        justify-content: space-between;
+    }
+
+    .dinecraft-text-container {
+        text-align: start !important;
     }
 }
