@@ -46,9 +46,21 @@
 }
 
 .number {
-    padding: 5px 10px;
+    /* Rimuove il padding laterale e tiene solo quello verticale */
+    padding: 5px 0; 
+    
+    /* Larghezza fissa: 2.75rem equivalgono a 44px, perfetto per ospitare il font da 24px */
+    width: 2.75rem; 
+    
+    /* Centratura perfetta del font all'interno del blocchetto */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Le tue specifiche del font e del raggio */
     font-family: var(--ux-font-Minercraftory);
-    font-size: 20px;
+    font-size: 24px;       /* Aggiornato a 24px */
+    border-radius: 5px;    
 }
 
 .comma {
@@ -62,6 +74,9 @@
 
 .price-container {
     white-space: nowrap;
+    display: inline-flex;  /* Evita gli spazi casuali dell'HTML e attiva il gap */
+    align-items: center;   /* Mantiene i numeri e la virgola perfettamente allineati al centro */
+    gap: 8.25px;           /* La distanza esatta che hai misurato su Figma */
 }
 
 /* ==========================================================================
