@@ -118,13 +118,49 @@
   width: 25%;
 }
 
+.chicken {
+  position: absolute;
+  bottom: -3%;
+  right: -6%;
+  width: 30%;
+}
+
+.redstone {
+  position: absolute;
+  top: -12%;
+  left: -11%;
+  width: 40%;
+}
+
 @media (min-width: 576px) {
   .card-body {
-    padding-left: 6rem !important;
-    padding-right: 6rem !important;
+    padding-left: 7.5rem !important;
+    padding-right: 7.5rem !important;
   }
 
   .vaso-fiore {
     width: 115px;
   }
+  
+}
+
+@media (min-width: 992px) {
+  .chicken {
+  position: absolute;
+  bottom: -5%;
+  right: -15%;
+  width: 45%;
+}
+
+.redstone {
+  position: absolute;
+  top: -12%;
+  left: 71%;
+  width: 50%;
+}
+
+.sect-card {
+  padding-top: 12rem !important;
+  padding-bottom: 12rem !important;
+}
 }
