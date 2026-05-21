@@ -185,6 +185,20 @@
     perspective: 1000px;
 }
 
+#decoration-tomato-right {
+    position: absolute;
+    width: 20%;
+    left: 80%;
+    top: 89%
+}
+
+#decoration-tomato-left {
+    position: absolute;
+    width: 20%;
+    right: 80%;
+    top: 170%;
+}
+
 /* --- RESPONSIVE DESKTOP (Da 992px in su) --- */
 @media (min-width: 1920px) {
     .allergens-card {
@@ -234,3 +248,4 @@
         text-align: start !important;
     }
 }
+
