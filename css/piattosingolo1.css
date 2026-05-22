@@ -194,14 +194,14 @@
     position: absolute;
     width: 20%;
     left: 80%;
-    top: 89%
+    top: 69%
 }
 
 #decoration-tomato-left {
     position: absolute;
     width: 20%;
     right: 80%;           /* Spinge l'immagine sul bordo sinistro dello schermo */
-    top: 205%;
+    top: 180%;
 }
 
 /* --- RESPONSIVE DESKTOP (Da 992px in su) --- */
