@@ -41,13 +41,14 @@
     8px 8px 0px #1d1a18,
     9px 9px 0px #1d1a18,
     10px 10px 0px #1d1a18,
-    20px 20px 30px rgba(0, 0, 0, 0.3) inset 8px 8px 30px rgba(0, 0, 0, 0.4),
+    20px 20px 30px rgba(0, 0, 0, 0.3) 
+    inset 8px 8px 30px rgba(0, 0, 0, 0.4),
     /* Ombra interna */ 4px 4px 0px rgba(255, 255, 255, 0.05);
   z-index: 10;
 }
 
 .carousel-info:hover.card-3d {
-  transform: perspective(1000px) rotateX(0deg) rotateY(0deg) !important;
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg) !important;
 }
 
 .card-3d:not(.carousel-info, .torch-grid, .special-hamburger) {
@@ -79,7 +80,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  gap: 1.5rem;
+  gap: 3rem;
 }
 
 .flower-vase {
@@ -136,32 +137,30 @@
     padding-left: 7.5rem !important;
     padding-right: 7.5rem !important;
   }
+
+  .vaso-fiore {
+    width: 115px;
+  }
+  
 }
 
 @media (min-width: 992px) {
   .chicken {
-    position: absolute;
-    bottom: -5%;
-    right: -15%;
-    width: 45%;
-  }
+  position: absolute;
+  bottom: -5%;
+  right: -15%;
+  width: 45%;
+}
 
-  .redstone {
-    position: absolute;
-    top: -12%;
-    left: 71%;
-    width: 50%;
-  }
+.redstone {
+  position: absolute;
+  top: -12%;
+  left: 71%;
+  width: 50%;
+}
 
-  .flower-vase {
-    position: absolute;
-    bottom: -20%;
-    left: 70%;
-    width: 40%;
-  }
-
-  .sect-card {
-    padding-top: 12rem !important;
-    padding-bottom: 12rem !important;
-  }
+.sect-card {
+  padding-top: 12rem !important;
+  padding-bottom: 12rem !important;
+}
 }

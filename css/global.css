@@ -310,6 +310,10 @@ p {
   /* Quarto gradino */
 }
 
+.menù-homepage {
+  width: 100%;
+}
+
 .text-shadow-titletaste {
   /*text-shadow: 2px 2px 0px #b81919;*/
   text-shadow: 0px 2px 0px #d32d2d;
@@ -331,14 +335,9 @@ p {
   justify-content: center;
 }
 
-.label-countdown {
-  font: var(--ux-txt-h2);
-}
-
 .style-countdown {
   background-color: var(--ux-global-color-accent-1);
   aspect-ratio: 1/1;
-  border-radius: 0.3rem;
 }
 
 /* VARI BACKGROUND */
@@ -428,6 +427,7 @@ p {
 }
 
 @media (min-width: 992px) {
+
   /* DA SISTEMARE */
   h1 {
     font: var(--ux-txt-h1-1920);
@@ -499,40 +499,43 @@ p {
 
   #promo-socks {
     display: block;
+    display: none;
     position: absolute;
-    right: 8%;
     width: 10%;
     height: auto;
-    
-    top: 40%;
+    left: 80%;
   }
 
   #promo-toothbrush {
     display: block;
+    display: none;
     position: absolute;
     width: 11%;
-    right: 3%;
-    top: 65%;
   }
 
   #promo-drill {
     display: block;
+    display: none;
     position: absolute;
-    right: 5%;
     width: 11%;
-    top: 14%;
   }
 
   #promo-creeper {
     display: block;
+    display: none;
     position: absolute;
+    left: 10%;
     width: 23%;
     height: auto;
-    top: 20%;
+  }
+
+  .box-countdown {
+    width: 21%;
   }
 }
 
 @media (min-width: 1920px) {
+
   .menù-homepage {
     width: 40%;
   }
@@ -566,12 +569,10 @@ p {
     padding-right: 4.5rem;
   }
 
+  
+
   .text-countdown {
     font: var(--ux-txt-h1-1920);
-  }
-
-  .label-countdown {
-    font: var(--ux-txt-h2-1920);
   }
 
   .mascotte {
