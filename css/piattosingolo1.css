@@ -47,6 +47,11 @@
     transform: translateZ(20px);
 }
 
+.burger-card, .dinecraft-card {
+    position: relative;   /* --- FONDAMENTALE: attiva il potere dello z-index --- */
+    z-index: 2;
+}
+
 .dinecraft-card {
     border-radius: 5px;
     display: flex;
@@ -195,8 +200,9 @@
 #decoration-tomato-left {
     position: absolute;
     width: 20%;
-    right: 80%;
-    top: 170%;
+    right: 80%;           /* Spinge l'immagine sul bordo sinistro dello schermo */
+    top: 205%;
+    
 }
 
 /* --- RESPONSIVE DESKTOP (Da 992px in su) --- */
