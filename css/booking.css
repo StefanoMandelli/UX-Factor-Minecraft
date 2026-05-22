@@ -81,7 +81,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center !important;
 }
 
 .booking-card::before {
@@ -145,9 +145,6 @@ h3.step-title {
 }
 
 .custom-input {
-    max-width: 340px;
-    justify-self: center;
-    margin-bottom: 40px;
     background-color: var(--color-input-bg);
     border: 1px solid var(--color-input-border);
     border-radius: var(--input-radius);
@@ -157,6 +154,12 @@ h3.step-title {
     padding: 10px 14px;
     transition: border-color 0.2s, box-shadow 0.2s;
     background-color: var(--color-input-bg);
+}
+
+#inputCode {
+    max-width: 500 px !important;
+    margin: 0 auto 40px auto;
+    display: block;
 }
 
 .custom-input:focus {
@@ -173,18 +176,26 @@ h3.step-title {
 }
 
 /* Input Group Addon Icon */
+
+.custom-input-group {
+    overflow: hidden;
+    border-radius: var(--input-radius);
+}
+
 .custom-input-group .custom-input-icon {
     background-color: var(--color-input-bg);
     border: 1px solid var(--color-input-border);
     border-right: none;
     color: var(--color-input-icon);
-    border-radius: var(--input-radius) 0 0 var(--input-radius);
+    flex-shrink: 0;
     font-size: 1rem;
 }
 
 .custom-input-group .custom-input {
     border-left: none;
-    border-radius: 0 var(--input-radius) var(--input-radius) 0;
+    border-radius: 0;
+    max-width: none;
+    margin-bottom: 0;
 }
 
 /* Guest stepper */
@@ -197,6 +208,8 @@ h3.step-title {
     text-align: center;
     font-weight: 600;
     padding-right: 44px;
+    max-width: none;
+    margin-bottom: 0;
 }
 
 .stepper-buttons {
@@ -204,7 +217,7 @@ h3.step-title {
     flex-direction: column;
     border: 1px solid var(--color-input-border);
     border-left: none;
-    border-radius: 0 var(--input-radius) var(--input-radius) 0;
+    border-radius: 0;
     overflow: hidden;
 }
 
@@ -245,7 +258,7 @@ h3.step-title {
     font-weight: 600;
     font-size: 0.9rem;
     max-width: 90px;
-    border-radius: 0;
+    
     padding: 10px 8px;
     cursor: pointer;
 }
@@ -257,7 +270,19 @@ h3.step-title {
 
 .phone-group .custom-input {
     border-left: none;
+    max-width: none;
+    margin-bottom: 0;
 }
+
+#step3 form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#step3 .row.g-3 > [class*="col-"] {
+    margin-bottom: 0.5rem;
+}
+
 
 /* Buttons primary */
 .btn-booking {
@@ -336,14 +361,18 @@ h3.step-title {
 .world-card {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center !important;
     justify-content: center;
-    gap: 12px;
-    background: rgba(255, 255, 255, 0.06);
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    padding: 28px 16px;
+    justify-items: center;
+    aspect-ratio: 1/1;
+    max-width: 350px;
+    height: 350px;
+    border: none;
+    border-radius: 5px;
+    padding: 16px;
     cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
     transition:
         background-color var(--transition-speed),
         border-color var(--transition-speed),
@@ -358,54 +387,38 @@ h3.step-title {
 }
 
 /* Overworld */
+.world-card[data-world="overworld"], 
 .world-card[data-world="overworld"]:hover,
 .world-card[data-world="overworld"].selected {
-    background: rgba(95, 163, 62, 0.15);
+    background-color: #1A3323;
     border-color: var(--color-overworld);
-    box-shadow: 0 0 20px rgba(95, 163, 62, 0.25);
+    box-shadow: 20px 20px 20px #131519;
 }
 
 /* Nether */
+.world-card[data-world="nether"], 
 .world-card[data-world="nether"]:hover,
 .world-card[data-world="nether"].selected {
-    background: rgba(184, 48, 48, 0.15);
+    background-color: #531F1D; 
     border-color: var(--color-nether);
-    box-shadow: 0 0 20px rgba(184, 48, 48, 0.25);
+    box-shadow: 20px 20px 20px #131519;
 }
 
 /* End */
+.world-card[data-world="end"], 
 .world-card[data-world="end"]:hover,
 .world-card[data-world="end"].selected {
-    background: rgba(138, 110, 201, 0.15);
+    background-color: #3F1E54;
     border-color: var(--color-end);
-    box-shadow: 0 0 20px rgba(138, 110, 201, 0.25);
+    box-shadow: 20px 20px 20px #131519;
 }
 
-.world-icon {
-    font-size: 2.4rem;
-    width: 64px;
-    height: 64px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background: rgba(95, 163, 62, 0.2);
-    color: var(--color-overworld);
-}
 
-.world-icon.nether-icon {
-    background: rgba(184, 48, 48, 0.2);
-    color: var(--color-nether);
-}
-
-.world-icon.end-icon {
-    background: rgba(138, 110, 201, 0.2);
-    color: var(--color-end);
-}
 
 .world-name {
+    color: var(--color-link);
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: 3rem;
     letter-spacing: 0.02em;
 }
 
@@ -467,8 +480,9 @@ h3.step-title {
     .booking-card {
         padding: 28px 20px;
         border-radius: 12px;
-        min-height: 80vh;
+        height: 100vh;
         margin: 24px 24px;
+        align-items: center !important;
     }
 
     .booking-top-title {
@@ -490,7 +504,6 @@ h3.step-title {
     }
 
     .btn-booking {
-        width: 100%;
         padding: 14px 24px;
     }
 
@@ -508,11 +521,6 @@ h3.step-title {
         gap: 16px;
     }
 
-    .world-icon {
-        font-size: 1.8rem;
-        width: 52px;
-        height: 52px;
-    }
 }
 
 
@@ -530,18 +538,6 @@ h3.step-title {
     animation: shake 0.4s ease;
 }
 
-/* colori dei mondi */
-.world-label-overworld {
-    color: var(--color-overworld);
-}
-
-.world-label-nether {
-    color: var(--color-nether);
-}
-
-.world-label-end {
-    color: var(--color-end);
-}
 
 /* Data e ora */
 input[type="date"]::-webkit-calendar-picker-indicator,
