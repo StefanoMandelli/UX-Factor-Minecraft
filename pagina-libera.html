@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/pagina-libera.css">
-    <link rel="stylesheet" href="css/carosellopromo.css">
 </head>
 
 <body>
@@ -124,25 +123,31 @@
         <div class="row p-5 g-0 ">
             <div class="col-12 col-lg-6 offset-lg-3">
                 <h2 class="my-5 px-5"> La <b>promo</b> del mese resta <b>valida</b> ancora per</h2>
-                <div class="d-flex flex-row justify-content-center align-items-center">
-                    <div class="box-countdown ">
-                        <p id="hours" class="text-countdown style-countdown">00</p>
-                        <p>Ore</p>
+                <div class="d-flex flex-row justify-content-center align-items-start">
+
+                    <div class="d-flex flex-column align-items-center">
+                        <p id="days" class="text-countdown style-countdown p-3 p-lg-5 mb-0">00</p>
+                        <span class="label-countdown mt-2">giorni</span>
                     </div>
-                    <div class="mx-3">
-                        <p class="text-countdown">:</p>
+
+                    <div class="mx-3 mx-lg-4 mt-3 mt-lg-4">
+                        <p class="text-countdown mb-0">:</p>
                     </div>
-                    <div class="box-countdown">
-                        <p id="minutes" class="text-countdown style-countdown">00</p>
-                        <p>Minuti</p>
+
+                    <div class="d-flex flex-column align-items-center">
+                        <p id="hours" class="text-countdown style-countdown p-3 p-lg-5 mb-0">00</p>
+                        <span class="label-countdown mt-2">ore</span>
                     </div>
-                    <div class="mx-3">
-                        <p class="text-countdown">:</p>
+
+                    <div class="mx-3 mx-lg-4 mt-3 mt-lg-4">
+                        <p class="text-countdown mb-0">:</p>
                     </div>
-                    <div class="box-countdown">
-                        <p id="seconds" class="text-countdown style-countdown">00</p>
-                        <p>Secondi</p>
+
+                    <div class="d-flex flex-column align-items-center">
+                        <p id="minutes" class="text-countdown style-countdown p-3 p-lg-5 mb-0">00</p>
+                        <span class="label-countdown mt-2">minuti</span>
                     </div>
+
                 </div>
                 <div class="col-12 d-flex flex-column align-items-center">
                     <h3 class="my-5 px-5">Scegliendo uno dei tre menù prima che scada il tempo avrai un magnifico
@@ -244,33 +249,59 @@
         </div>
 
         <!--Carosello premi da modificare-->
-        <div class="carousel-container">
-            <button class="nav-btn prev-btn" id="prevBtn">&lt;</button>
+        <div class="container-fluid text-center carousel-slide g-0">
+            <div class="row py-5 g-0 ">
+                <div class="col-12 pb-5 d-flex flex-column align-items-center">
+                    <h2 class="mb-4">Quale item si nasconde nella tua mistery? Vieni a scoprirlo!</h2>
+                    <div class="box-slider">
+                        <section id="slider">
+                            <input type="radio" name="slider" id="s1">
+                            <input type="radio" name="slider" id="s2">
+                            <input type="radio" name="slider" id="s3" checked>
+                            <label for="s1" id="slide1">
+                                <div class="item">
+                                    <img class="img-fluid" src="img/body/pagina-libera/calzino.png" alt="Socks">
+                                </div>
+                                <h3 class="text-center mt-2">Calzino colorato</h3>
+                                <!-- Freccia NEXT visibile solo quando s3 è attivo (slide1 è a destra) -->
+                                <div class="arrow arrow-next">
+                                    <img src="img/body/pagina-libera/icona next.svg" alt="Next">
+                                </div>
+                                <!-- Freccia PREV visibile solo quando s2 è attivo (slide1 è a sinistra) -->
+                                <div class="arrow arrow-prev">
+                                    <img src="img/body/pagina-libera/icona prev.svg" alt="Prev">
+                                </div>
+                            </label>
 
-            <div class="carousel-viewport">
-                <!-- Rimosso l'id dal track, non serve più muoverlo di pixel -->
-                <div class="carousel-track">
+                            <label for="s2" id="slide2">
+                                <div class="item">
+                                    <img class="img-fluid" src="img/body/pagina-libera/trapano.png" alt="Socks">
+                                </div>
+                                <h3 class="text-center mt-2">Trapano forante</h3>
+                                <div class="arrow arrow-next">
+                                    <img src="img/body/pagina-libera/icona next.svg" alt="Next">
+                                </div>
+                                <div class="arrow arrow-prev">
+                                    <img src="img/body/pagina-libera/icona prev.svg" alt="Prev">
+                                </div>
+                            </label>
 
-                    <!-- Assegniamo le tre posizioni di partenza direttamente con le classi -->
-                    <div class="card left">
-                        <div class="card-box"><img src="img/body/pagina-libera/Spazzolino.png" alt="Spazzolino"></div>
-                        <div class="card-title">Spazzolino elettrico</div>
+                            <label for="s3" id="slide3">
+                                <div class="item">
+                                    <img class="img-fluid" src="img/body/pagina-libera/Spazzolino.png" alt="Socks">
+                                </div>
+                                <h3 class="text-center mt-2">Spazzolino elettrico</h3>
+                                <div class="arrow arrow-next">
+                                    <img src="img/body/pagina-libera/icona next.svg" alt="Next">
+                                </div>
+                                <div class="arrow arrow-prev">
+                                    <img src="img/body/pagina-libera/icona prev.svg" alt="Prev">
+                                </div>
+                            </label>
+                        </section>
                     </div>
-
-                    <div class="card center active">
-                        <div class="card-box"><img src="img/body/pagina-libera/trapano.png" alt="Trapano"></div>
-                        <div class="card-title">Trapano forante</div>
-                    </div>
-
-                    <div class="card right">
-                        <div class="card-box"><img src="img/body/pagina-libera/calzino.png" alt="Calzino"></div>
-                        <div class="card-title">Calzino colorato</div>
-                    </div>
-
                 </div>
             </div>
-
-            <button class="nav-btn next-btn" id="nextBtn">&gt;</button>
         </div>
 
         <footer class="container-fluid bg-dark py-5 footer-custom-bg">
@@ -320,7 +351,6 @@
         <script src="js/global.js"></script>
         <script src="js/time.js"></script>
         <script src="js/piattosingolo.js"></script>
-        <script src="js/carosellopromo.js"></script>
 </body>
 
 </html>

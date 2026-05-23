@@ -1,56 +1,34 @@
-// Seleziona tutti i radio button che hanno name="slider"
-const slides = document.querySelectorAll('input[name="slider"]');
-let currentIndex = Array.from(slides).findIndex(input => input.checked); 
-const intervalTime = 4000; // 4 secondi di intervallo
-let slideInterval = setInterval(nextSlide, intervalTime);
 
-function nextSlide() {
-  // Passa alla slide successiva (torna a 0 dopo l'ultima)
-  currentIndex = (currentIndex + 1) % slides.length;
-  slides[currentIndex].checked = true;
-}
+  // Seleziona tutti i radio button che hanno name="slider"
+  const slides = document.querySelectorAll('input[name="slider"]');
+  let currentIndex = Array.from(slides).findIndex(input => input.checked); 
+  const intervalTime = 4000; // 4 secondi tra uno scorrimento e l'altro
 
-function prevSlide() {
-  // Passa alla slide precedente (torna all'ultima se scende sotto lo zero)
-  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-  slides[currentIndex].checked = true;
-}
+  function nextSlide() {
+    // Calcola l'indice della prossima slide (0, 1, 2, 3, 4 e poi torna a 0)
+    currentIndex = (currentIndex + 1) % slides.length;
+    
+    // Attiva il radio button corrispondente
+    slides[currentIndex].checked = true;
+  }
 
-// Resetta il timer dell'autoplay per evitare cambi di slide troppo ravvicinati
-function resetInterval() {
-  clearInterval(slideInterval);
-  slideInterval = setInterval(nextSlide, intervalTime);
-}
+  // Avvia l'automatismo
+  let slideInterval = setInterval(nextSlide, intervalTime);
 
-// Gestione clic manuale sulle card del carosello
-slides.forEach((input, index) => {
-  input.addEventListener('change', () => {
-    currentIndex = index;
-    resetInterval();
-  });
-});
-
-// Gestione clic sulle frecce direzionali
-const prevArrow = document.querySelector('.prev-arrow');
-const nextArrow = document.querySelector('.next-arrow');
-
-if (nextArrow && prevArrow) {
-  nextArrow.addEventListener('click', () => {
-    nextSlide();
-    resetInterval();
+  // GESTIONE INTERAZIONE UTENTE
+  // Se l'utente clicca su una card, aggiorniamo l'indice per non far "saltare" il carosello
+  slides.forEach((input, index) => {
+    input.addEventListener('change', () => {
+      currentIndex = index;
+      // Reset del timer: l'autoplay riparte da zero dopo un clic manuale
+      clearInterval(slideInterval);
+      slideInterval = setInterval(nextSlide, intervalTime);
+    });
   });
 
-  prevArrow.addEventListener('click', () => {
-    prevSlide();
-    resetInterval();
-  });
-}
-
-// Ferma l'autoplay quando il mouse entra nel carosello e lo riavvia quando esce
-const sliderBox = document.querySelector('.box-slider');
-if (sliderBox) {
+  // (Opzionale) Ferma il movimento quando il mouse è sopra il carosello
+  const sliderBox = document.querySelector('.box-slider');
   sliderBox.addEventListener('mouseenter', () => clearInterval(slideInterval));
   sliderBox.addEventListener('mouseleave', () => {
     slideInterval = setInterval(nextSlide, intervalTime);
   });
-}

@@ -1,4 +1,4 @@
-/* --- NASCONDI I RADIO MA NON ELIMINARLI --- */
+/* NASCONDI I RADIO MA NON ELIMINARLI */
 [type=radio] {
   display: none;
 }
@@ -11,24 +11,27 @@ body {
   width: 100vw;
   display: flex;
   justify-content: center;
+  /* Centra lo slider orizzontalmente */
   align-items: center;
   overflow: hidden;
-  position: relative; /* Utile per dare un punto di riferimento */
+  /* Evita scrollbar indesiderate per via del 3D */
 }
 
-/* --- CONTENITORE PRINCIPALE (Il binario del carosello) --- */
+/* CONTENITORE PRINCIPALE (Il binario del carosello) */
 #slider {
   position: relative;
   width: 55%;
+  /* Ridotto per lasciare spazio alle card laterali di sporgere */
   aspect-ratio: 1/1;
   perspective: 1000px;
   transform-style: preserve-3d;
 }
 
-/* --- LE CARD --- */
+/* LE CARD */
 #slider label {
   position: absolute;
   width: 100%;
+  /* La card è larga quanto lo slider */
   height: 100%;
   left: 0;
   top: 0;
@@ -39,7 +42,10 @@ body {
   justify-content: center;
   transition: transform 0.5s ease, opacity 0.5s ease;
   border: 2px solid rgba(255, 255, 255, 0.2);
+
+  /* Importante: assicura che il contenuto sia centrato nella card */
   text-align: center;
+
   box-shadow:
     1px 1px 0px #1d1a18,
     2px 2px 0px #1d1a18,
@@ -52,7 +58,9 @@ body {
     9px 9px 0px #1d1a18,
     10px 10px 0px #161616,
     15px 15px 20px rgba(0, 0, 0, 0.15),
+
     inset 8px 8px 10px rgba(0, 0, 0, 0.4),
+    /* Ombra interna */
     4px 4px 0px rgba(255, 255, 255, 0);
 }
 
@@ -113,55 +121,31 @@ body {
   opacity: 0.2;
 }
 
-/* SFONDI IMMAGINI CAROUSEL */
-#slide1 { background: url("../img/body/ristorante/immagine1ristorante.png") center / cover no-repeat; }
-#slide2 { background: url("../img/body/ristorante/immagine2ristorante.png") center / cover no-repeat; }
-#slide3 { background: url("../img/body/ristorante/immagine2ristorante.png") center / cover no-repeat; }
-#slide4 { background: url("../img/body/ristorante/immagine2ristorante.png") center / cover no-repeat; }
-#slide5 { background: url("../img/body/ristorante/immagine2ristorante.png") center / cover no-repeat; }
-
-/* --- STRUTTURA DELLE FRECCE (DI BASE NASCOSTE) --- */
-.slider-arrow {
-  display: none;
-  background: var(--ux-global-color-accent-1);
-  color: var(--color-font);
-  border: 3px solid #1d1a18;
-  border-radius: 5px;
-  font-size: 1.5rem;
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-  z-index: 100;
-  transition: background 0.2s, transform 0.1s;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 3px 3px 0px #1d1a18;
+/* COLORI DECISI PER IL TEST */
+#slide1 {
+  background: url("../img/body/ristorante/immagine1ristorante.png") center / cover no-repeat;
 }
 
-.slider-arrow:hover {
-  background: var(--color-font);
-  color: var(--ux-global-color-accent-1);
+#slide2 {
+  background: url("../img/body/ristorante/immagine2ristorante.png") center / cover no-repeat;
 }
 
-.slider-arrow:active {
-  transform: translate(2px, 2px);
-  box-shadow: 1px 1px 0px #1d1a18;
+#slide3 {
+  background: url("../img/body/ristorante/immagine2ristorante.png") center / cover no-repeat;
 }
 
-/* --- RESPONSIVE DA 1920px IN SU --- */
+#slide4 {
+  background: url("../img/body/ristorante/immagine2ristorante.png") center / cover no-repeat;
+}
+
+#slide5 {
+  background: url("../img/body/ristorante/immagine2ristorante.png") center / cover no-repeat;
+}
+
 @media (min-width: 1920px) {
+
   .box-slider {
-    width: 80vw; /* Riportato a 100vw per occupare tutto lo schermo */
-    justify-content: space-between; /* Spinge le frecce agli estremi sinistro e destro */
-    padding: 0 50px; /* Evita che le frecce tocchino il bordo esatto dello schermo */
-    box-sizing: border-box;
+    width: 60vw;
   }
 
-  #slider {
-    width: 45%; /* Ridotto leggermente per lasciare spazio visivo alle card laterali e alle frecce */
-  }
-
-  .slider-arrow {
-    display: flex; /* Mostra le frecce */
-  }
 }

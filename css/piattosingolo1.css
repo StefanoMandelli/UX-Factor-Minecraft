@@ -1,19 +1,30 @@
 @import url(card3d.css);
 @import url(global.css);
 
+
+.burger-hero {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Quando lo schermo è un Desktop Grande (da 1400px in su, fino a coprire i 1920px) */
+@media (min-width: 1920px) {
+    .hero-desktop .burger-hero {
+        width: 728px !important;    /* Forza l'esatta dimensione di Figma */
+        max-width: 100% !important; /* Sicurezza per non spaccare il layout */
+        height: auto !important;    /* Proporzioni perfette garantite */
+        display: block !important;
+    }
+}
 /* ==========================================================================
-   1. STRUTTURA BASE DELLE CARD & EFFETTO SANDWICH (Niente Colori)
+   1. STRUTTURA BASE DELLE CARD (Uguale per tutte le pagine - Niente Colori)
    ========================================================================== */
-.burger-card, .dinecraft-card {
-    position: relative;         /* --- FONDAMENTALE: Attiva lo z-index --- */
-    z-index: 2;                 /* --- EFFETTO SANDWICH: Spinge le card SOPRA i pomodori --- */
+.burger-card {
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.burger-card {
     gap: 1.25rem;
     padding: 3rem;
 
@@ -37,6 +48,10 @@
 }
 
 .dinecraft-card {
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 3rem;
 }
 
@@ -46,24 +61,21 @@
     display: block;
 }
 
-/* ==========================================================================
-   2. PREZZI ALLINEATI AL MILLIMETRO (Stile Blocco di Minecraft)
-   ========================================================================== */
-.price-container {
-    white-space: nowrap;
-    display: inline-flex;  /* Evita gli spazi casuali dell'HTML e attiva il gap */
-    align-items: center;   /* Mantiene i numeri e la virgola perfettamente allineati al centro */
-    gap: 8.25px;           /* Distanza esatta da Figma */
-}
-
 .number {
-    padding: 5px 0;        /* Rimuove il padding laterale fastidioso */
-    width: 2.75rem;        /* Larghezza fissa: perfetto cubetto da 44px */
+    /* Rimuove il padding laterale e tiene solo quello verticale */
+    padding: 5px 0; 
+    
+    /* Larghezza fissa: 2.75rem equivalgono a 44px, perfetto per ospitare il font da 24px */
+    width: 2.75rem; 
+    
+    /* Centratura perfetta del font all'interno del blocchetto */
     display: inline-flex;
     justify-content: center;
-    align-items: center;   /* Centratura pixel-perfect del numero */
+    align-items: center;
+
+    /* Le tue specifiche del font e del raggio */
     font-family: var(--ux-font-Minercraftory);
-    font-size: 24px;       
+    font-size: 24px;       /* Aggiornato a 24px */
     border-radius: 5px;    
 }
 
@@ -76,25 +88,59 @@
     padding: 1.25rem;
 }
 
+.price-container {
+    white-space: nowrap;
+    display: inline-flex;  /* Evita gli spazi casuali dell'HTML e attiva il gap */
+    align-items: center;   /* Mantiene i numeri e la virgola perfettamente allineati al centro */
+    gap: 8.25px;           /* La distanza esatta che hai misurato su Figma */
+}
+
 /* ==========================================================================
-   3. DECORAZIONI SFONDO (Pomodori Volanti)
+   CONTROLLO COLORI TRAMITE IL GENITORE (Specificità Solida)
    ========================================================================== */
-#decoration-tomato-right {
-    position: absolute;
-    width: 20%;
-    left: 80%;
-    top: 89%;               
+
+/* --- OVERWORLD / GREENSTACK THEME (Plate 1 - Green) --- */
+.theme-greenstack .burger-card {
+    background-color: rgba(26, 51, 35, 0.7);
+    border: 7px solid rgba(26, 51, 35, 1);
+}
+.theme-greenstack .dinecraft-card {
+    background-color: rgba(26, 51, 35, 0.7);
+    border: 7px solid rgba(26, 51, 35, 1);
+}
+.theme-greenstack .number {
+    background-color: var(--ux-global-color-accent-1);
 }
 
-#decoration-tomato-left {
-    position: absolute;
-    width: 20%;
-    right: 80%;
-    top: 190%;             
+/* --- NETHER THEME (Plate 2 - Red) --- */
+.theme-nether .burger-card {
+    background-color: rgba(83, 31, 29, 0.7);
+    border: 7px solid rgba(83, 31, 29, 1);
 }
+.theme-nether .dinecraft-card {
+    background-color: rgba(83, 31, 29, 0.7);
+    border: 7px solid rgba(83, 31, 29, 1);
+}
+.theme-nether .number {
+    background-color: var(--ux-nether-color-accent);
+}
+
+/* --- END THEME (Plate 3 - Purple) --- */
+.theme-end .burger-card {
+    background-color: rgba(63, 30, 84, 0.7);
+    border: 7px solid rgba(63, 30, 84, 1);
+}
+.theme-end .dinecraft-card {
+    background-color: rgba(63, 30, 84, 0.7);
+    border: 7px solid rgba(63, 30, 84, 1);
+}
+.theme-end .number {
+    background-color: var(--ux-end-color-accent);
+}
+
 
 /* ==========================================================================
-   4. STRUTTURA DELLE ALLERGENS CARD (Base Mobile)
+   3. STRUTTURA DELLE ALLERGENS CARD E CORREZIONI RESPONSIVE
    ========================================================================== */
 .allergens-card {
     padding: 0rem;
@@ -139,85 +185,41 @@
     perspective: 1000px;
 }
 
-/* ==========================================================================
-   5. CONTROLLO COLORI E BORDI SMANTELLATI (Gestione Tre Mondi)
-   ========================================================================== */
-
-/* --- OVERWORLD / GREENSTACK THEME (Piatto 1 - Verde) --- */
-.theme-greenstack .burger-card {
-    background-color: rgba(26, 51, 35, 0.7);
-    border: 7px solid rgba(26, 51, 35, 1);
-}
-.theme-greenstack .dinecraft-card {
-    background-color: rgba(26, 51, 35, 0.7);
-    border: 7px solid rgba(26, 51, 35, 1);
-}
-.theme-greenstack .number {
-    background-color: var(--ux-global-color-accent-1);
+#decoration-tomato-right {
+    position: absolute;
+    width: 20%;
+    left: 80%;
+    top: 89%
 }
 
-/* --- NETHER THEME (Piatto 2 - Rosso) --- */
-.theme-nether .burger-card {
-    background-color: rgba(83, 31, 29, 0.7);
-    border: 7px solid rgba(83, 31, 29, 1);
-}
-.theme-nether .dinecraft-card {
-    background-color: rgba(83, 31, 29, 0.7);
-    border: 7px solid rgba(83, 31, 29, 1);
-}
-.theme-nether .number {
-    background-color: var(--ux-nether-color-accent);
+#decoration-tomato-left {
+    position: absolute;
+    width: 20%;
+    right: 80%;
+    top: 170%;
 }
 
-/* --- END THEME (Piatto 3 - Viola) --- */
-.theme-end .burger-card {
-    background-color: rgba(63, 30, 84, 0.7);
-    border: 7px solid rgba(63, 30, 84, 1);
-}
-.theme-end .dinecraft-card {
-    background-color: rgba(63, 30, 84, 0.7);
-    border: 7px solid rgba(63, 30, 84, 1);
-}
-.theme-end .number {
-    background-color: var(--ux-end-color-accent);
-}
-
-/* ==========================================================================
-   6. HERO BURGER IMAGE BASE (Mobile/Fluid)
-   ========================================================================== */
-.burger-hero {
-    width: 100%;
-    max-width: 420px;
-    height: auto;
-    object-fit: contain;
-}
-
-/* ==========================================================================
-   7. RESPONSIVE DESKTOP MEDIO / LAPTOP (Da 992px in su)
-   ========================================================================== */
-@media (min-width: 992px) {
+/* --- RESPONSIVE DESKTOP (Da 992px in su) --- */
+@media (min-width: 1920px) {
     .allergens-card {
         display: flex;
         flex-direction: row;        
         gap: 2.5625rem !important;  
         justify-content: center;
-        padding: 2rem 0 !important; 
     }
 
     .allergen-item {
         flex: 1 1 0px;              
         justify-content: space-between; 
-        height: 100%;
     }
 
     .allergen-img-container {
-        height: 280px;         /* Allergeni ingranditi a 488px complessivi */
+        height: 280px; 
     }
 
     .allergen-text-container h3 {
-        font-size: 28px !important;  
         white-space: nowrap;        
-        margin: 1.5rem 0 0 0;                  
+        margin: 0;                  
     }
 
     .container-craft {
@@ -241,21 +243,9 @@
         align-items: center !important; 
         justify-content: space-between;
     }
-}
-
-/* ==========================================================================
-   8. RESPONSIVE ULTRA-DESKTOP FIGMA MATCH (Mediaquery in 1920)
-   ========================================================================== */
-@media (min-width: 1920px) {
-    /* Il panino della hero si sblocca e diventa gigante a 728px esatti su schermi full HD */
-    .hero-desktop .burger-hero {
-        width: 728px !important;     
-        max-width: 100% !important;  
-        height: auto !important;     
-        display: block !important;
-    }
 
     .dinecraft-text-container {
         text-align: start !important;
     }
 }
+
