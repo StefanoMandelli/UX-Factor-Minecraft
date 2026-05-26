@@ -13,11 +13,6 @@
     --color-input-text:    #232323;
     --color-input-icon:    #6b6159;
     --color-label:         rgba(255, 255, 255, 0.7);
-    /*--color-btn-primary:   #4e7a37;
-    --color-btn-primary-dark: #3a5d28;
-    --color-btn-primary-shadow: #2d4a1f;
-    --color-btn-cancel:    #a83232;
-    --color-btn-cancel-dark: #7a2222;*/
     --color-white:         #ffffff;
     --color-link:          #E4D8D4;
     --color-overworld:     #446a1b;
@@ -85,14 +80,14 @@ body {
 }
 
 .booking-card::before {
-    position: absolute;                  /* AGGIUNTO */
-    inset: 0;                            /* AGGIUNTO — copre tutta la card */
-    background: inherit;                 /* AGGIUNTO — eredita la stessa immagine */
-    background-size: inherit;            /* AGGIUNTO */
-    background-position: inherit;        /* AGGIUNTO */
-    filter: brightness(0.2) blur(6px);   /* MODIFICATO — aggiunto blur */
-    border-radius: inherit;              /* AGGIUNTO — stessi bordi arrotondati */
-    z-index: -1;                         /* AGGIUNTO — va dietro al contenuto */
+    position: absolute;
+    inset: 0;
+    background: inherit;               
+    background-size: inherit;           
+    background-position: inherit;      
+    filter: brightness(0.2) blur(6px);   
+    border-radius: inherit;              
+    z-index: -1;                         
 
 }
 
