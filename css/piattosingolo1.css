@@ -203,6 +203,20 @@
     top: 170%;
 }
 
+#decoration-chicken-right {
+    position: absolute;
+    width: 15%;
+    left: 85%;
+    top: 0%;
+}
+
+#decoration-chicken-left {
+    position: absolute;
+    width: 15%;
+    right: 85%;
+    top: 200%;
+}
+
 /* --- RESPONSIVE DESKTOP (Da 992px in su) --- */
 @media (min-width: 1920px) {
     .allergens-card {
