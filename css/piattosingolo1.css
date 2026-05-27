@@ -61,6 +61,10 @@
     display: block;
 }
 
+.burger-card, .dinecraft-card {
+    position: relative;   /* --- FONDAMENTALE: Attiva il potere dello z-index --- */
+    z-index: 2;
+}
 .number {
     /* Rimuove il padding laterale e tiene solo quello verticale */
     padding: 5px 0; 
@@ -189,7 +193,7 @@
     position: absolute;
     width: 20%;
     left: 80%;
-    top: 89%
+    top: 74%
 }
 
 #decoration-tomato-left {
