@@ -217,6 +217,20 @@
     top: 200%;
 }
 
+#decoration-fries-right {
+    position: absolute;
+    width: 18%;
+    left: 84%;
+    top: 0%;
+}
+
+#decoration-fries-left {
+    position: absolute;
+    width: 18%;
+    right: 84%;
+    top: 320%;
+}
+
 /* --- RESPONSIVE DESKTOP (Da 992px in su) --- */
 @media (min-width: 1920px) {
     .allergens-card {
