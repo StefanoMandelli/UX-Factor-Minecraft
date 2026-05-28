@@ -92,15 +92,14 @@
     justify-content: center;
     position: relative;
     margin: 0 auto;
-    padding: 20px;
+    padding: 1.25rem;
     width: 100%;
 }
 
 .carousel-viewport {
     overflow: visible; /* Manteniamo visibili le card che escono dal raggio d'azione */
     width: 100%;
-    max-width: 1000px; /* Aumentato per dare respiro alle card più grandi */
-    height: 450px;     /* Aumentato l'altezza per ospitare il nuovo box da 300px + testi */
+    height: 28rem;     /* Aumentato l'altezza per ospitare il nuovo box da 300px + testi */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -141,7 +140,7 @@
 /* POSIZIONE SINISTRA: Ingrandita (scale 0.85) e distanziata proporzionalmente */
 .card.left {
     opacity: 0.5; /* Leggermente più visibile rispetto a prima */
-    transform: translate(-145%, -50%) scale(0.85); 
+    transform: translate(-165%, -50%) scale(0.85); 
     z-index: 1;
 }
 
@@ -156,14 +155,14 @@
 /* POSIZIONE DESTRA: Ingrandita (scale 0.85) e distanziata proporzionalmente */
 .card.right {
     opacity: 0.5;
-    transform: translate(45%, -50%) scale(0.85);
+    transform: translate(65%, -50%) scale(0.85);
     z-index: 1;
 }
 
-/* BOX IMMAGINE: Portato da 220px a 300px per renderlo nettamente più imponente */
+/* BOX IMMAGINE: 19 rem per renderlo nettamente più imponente */
 .card-box {
-    width: 300px;
-    height: 300px;
+    width: 19rem;
+    height: 19rem;
     box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.6), 0 10px 25px rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
@@ -178,14 +177,12 @@
 }
 
 .card-title {
-    margin-top: 18px;
-    font-size: 1.2rem; /* Leggermente più grande per seguire le proporzioni */
-    text-align: center;
-    font-weight: 500;
-    color: var(--color-font);}
+    font-size: var(--font-size); 
+    color: var(--color-font);
+}
 
 .card.center .card-title {
-    font-size: 1.45rem; /* Testo centrale più visibile */
+    font-size: var(--font-size);
     color: var(--color-font);
 }
 
