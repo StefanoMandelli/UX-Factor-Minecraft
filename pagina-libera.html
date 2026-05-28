@@ -249,60 +249,46 @@
         </div>
 
         <!--Carosello premi da modificare-->
-        <div class="container-fluid text-center carousel-slide g-0">
-            <div class="row py-5 g-0 ">
-                <div class="col-12 pb-5 d-flex flex-column align-items-center">
-                    <h2 class="mb-4">Quale item si nasconde nella tua mistery? Vieni a scoprirlo!</h2>
-                    <div class="box-slider">
-                        <section id="slider">
-                            <input type="radio" name="slider" id="s1">
-                            <input type="radio" name="slider" id="s2">
-                            <input type="radio" name="slider" id="s3" checked>
-                            <label for="s1" id="slide1">
-                                <div class="item">
-                                    <img class="img-fluid" src="img/body/pagina-libera/calzino.png" alt="Socks">
+        <section class="py-4 carousel-slide">
+            <div class="container-fluid px-0">
+                <div class="carousel-container">
+                    <button class="nav-btn prev-btn border-0 p-0 bg-transparent" id="prevBtn">
+                        <img id="img-prev" src="img/body/pagina-libera/icona prev.svg" alt="Left arrow icon">
+                    </button>
+        
+                    <div class="carousel-viewport">
+                        <div class="carousel-track">
+        
+                            <div class="card left">
+                                <div class="card-box">
+                                    <img src="img/body/pagina-libera/Spazzolino.png" alt="Spazzolino">
                                 </div>
-                                <h3 class="text-center mt-2">Calzino colorato</h3>
-                                <!-- Freccia NEXT visibile solo quando s3 è attivo (slide1 è a destra) -->
-                                <div class="arrow arrow-next">
-                                    <img src="img/body/pagina-libera/icona next.svg" alt="Next">
+                                <div class="card-title">Spazzolino elettrico</div>
+                            </div>
+        
+                            <div class="card center active">
+                                <div class="card-box">
+                                    <img src="img/body/pagina-libera/trapano.png" alt="Trapano">
                                 </div>
-                                <!-- Freccia PREV visibile solo quando s2 è attivo (slide1 è a sinistra) -->
-                                <div class="arrow arrow-prev">
-                                    <img src="img/body/pagina-libera/icona prev.svg" alt="Prev">
+                                <div class="card-title">Trapano forante</div>
+                            </div>
+        
+                            <div class="card right">
+                                <div class="card-box">
+                                    <img src="img/body/pagina-libera/calzino.png" alt="Calzino">
                                 </div>
-                            </label>
-
-                            <label for="s2" id="slide2">
-                                <div class="item">
-                                    <img class="img-fluid" src="img/body/pagina-libera/trapano.png" alt="Socks">
-                                </div>
-                                <h3 class="text-center mt-2">Trapano forante</h3>
-                                <div class="arrow arrow-next">
-                                    <img src="img/body/pagina-libera/icona next.svg" alt="Next">
-                                </div>
-                                <div class="arrow arrow-prev">
-                                    <img src="img/body/pagina-libera/icona prev.svg" alt="Prev">
-                                </div>
-                            </label>
-
-                            <label for="s3" id="slide3">
-                                <div class="item">
-                                    <img class="img-fluid" src="img/body/pagina-libera/Spazzolino.png" alt="Socks">
-                                </div>
-                                <h3 class="text-center mt-2">Spazzolino elettrico</h3>
-                                <div class="arrow arrow-next">
-                                    <img src="img/body/pagina-libera/icona next.svg" alt="Next">
-                                </div>
-                                <div class="arrow arrow-prev">
-                                    <img src="img/body/pagina-libera/icona prev.svg" alt="Prev">
-                                </div>
-                            </label>
-                        </section>
+                                <div class="card-title">Calzino colorato</div>
+                            </div>
+        
+                        </div>
                     </div>
+        
+                    <button class="nav-btn next-btn border-0 p-0 bg-transparent" id="nextBtn">
+                        <img id="img-next" src="img/body/pagina-libera/icona next.svg" alt="Right arrow icon">
+                    </button>
                 </div>
             </div>
-        </div>
+        </section>
 
         <footer class="container-fluid bg-dark py-5 footer-custom-bg">
             <div class="row align-items-center">
@@ -351,6 +337,7 @@
         <script src="js/global.js"></script>
         <script src="js/time.js"></script>
         <script src="js/piattosingolo.js"></script>
+        <script src="js/carosellopromo.js"></script>
 </body>
 
 </html>
