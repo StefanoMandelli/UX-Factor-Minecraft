@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Applichiamo la trasformazione
             // Rimuoviamo la transition durante il mousemove per non avere ritardi nel "seguire" il cursore
-            card.style.transition = "none";
+            card.style.transition = "transform 0.1s ease-out";
             card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
         });
 
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Applichiamo l'effetto solo se la card è visibile
             if (rect.top < windowHeight && rect.bottom > 0) {
-                card.style.transition = "transform 0.2s ease-out"; 
+                card.style.transition = "transform 0.5s ease-out"; 
                 card.style.transform = `perspective(800px) rotateX(${distanceFromCenter * 5}deg)`;
             }
         });

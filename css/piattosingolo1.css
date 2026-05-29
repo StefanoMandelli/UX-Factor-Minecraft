@@ -189,20 +189,97 @@
     perspective: 1000px;
 }
 
+/*
 #decoration-tomato-right {
     position: absolute;
     width: 20%;
     left: 80%;
-    top: 74%
+    top: 90%
 }
 
 #decoration-tomato-left {
     position: absolute;
     width: 20%;
     right: 80%;
-    top: 170%;
+    top: 190%;
+}
+*/
+
+/* ==========================================================================
+   4. GERARCHIA GENERALE DELLE SEZIONI (La Scalinata dei Livelli)
+   ========================================================================== */
+/* 1° BLOCCO CONTENUTI: "Il tuo Craft" (Massima priorità tra i contenuti) */
+.stone-background:first-of-type,
+.redstone-background {
+    position: relative;
+    z-index: 3 !important;                 
+    overflow: visible !important;
 }
 
+/* 2° BLOCCO CONTENUTI: "Ingredienti" (Sta sotto a Craft ma sopra ad Allergeni) */
+.first-background {
+    position: relative;
+    z-index: 2 !important; 
+    overflow: visible !important;
+}
+
+/* 3° BLOCCO CONTENUTI: "Allergeni" (Livello base, si fa coprire da Ingredienti) */
+.stone-background:last-of-type,
+.container-fluid:has(.allergens-card) {
+    position: relative;
+    z-index: 1 !important; 
+    overflow: visible !important;
+}
+
+/* ==========================================================================
+   5. COMPORTAMENTO BASE DECORAZIONI (Tutte Absolute e trasparenti ai click)
+   ========================================================================== */
+#decoration-tomato-right, #decoration-tomato-left,
+#decoration-chicken-right, #decoration-chicken-left,
+#decoration-fries-right, #decoration-fries-left {
+    position: absolute;
+    pointer-events: none;
+}
+
+/* --- POMODORI (Inseriti dentro .stone-background e .first-background) --- */
+#decoration-tomato-right {
+    width: 20%;
+    left: 80%;
+    top: 80%; /* Rispetto a Il tuo Craft */
+}
+
+#decoration-tomato-left {
+    width: 20%;
+    right: 80%;
+    top: 20%; /* Rispetto a Ingredienti */
+}
+
+/* --- POLLO (Assicurati che l'HTML sia dentro la sezione corretta, es. Allergeni) --- */
+#decoration-chicken-right {
+    width: 15%;
+    left: 85%;
+    top: 15%; /* Percentuale locale ridotta */
+}
+
+#decoration-chicken-left {
+    width: 15%;
+    right: 85%;
+    top: 35%; /* Percentuale locale ridotta */
+}
+
+/* --- PATATINE (Assicurati che l'HTML sia dentro la sezione corretta) --- */
+#decoration-fries-right {
+    width: 18%;
+    left: 82%;
+    top: 8%; /* Percentuale locale ridotta */
+}
+
+#decoration-fries-left {
+    width: 18%;
+    right: 84%;
+    top: 40%; /* Percentuale locale ridotta */
+}
+/*
 #decoration-chicken-right {
     position: absolute;
     width: 15%;
@@ -228,7 +305,7 @@
     position: absolute;
     width: 18%;
     right: 84%;
-    top: 320%;
+    top: 200%;
 }
 
 /* --- RESPONSIVE DESKTOP (Da 992px in su) --- */
