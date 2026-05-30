@@ -5,17 +5,17 @@
 .hero-promo {
    background-image: url('../img/body/pagina-libera/HERO\ PROMO.png');
    background-size: cover;
-   min-height: auto;
+   max-height: 100vh;
    width: 100%;
    overflow-x: hidden;
    position:relative;
 }
 
-.panino-promo {
+.bread-promo {
     width:100%;
     height: auto;
 }
-.mano-promo {
+.hand-promo {
     width: 60%;
     position: absolute;
     right: -12vw;
@@ -27,7 +27,7 @@
     width: 100%;
 }
 
-.menu-eventi {
+.menu-events {
     background-image: url('../img/body/pagina-libera/MENU\ PROMO\ dsk.png');
     width: 100%;
 }
