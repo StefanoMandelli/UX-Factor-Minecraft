@@ -99,7 +99,7 @@
 .carousel-viewport {
     overflow: visible; /* Manteniamo visibili le card che escono dal raggio d'azione */
     width: 100%;
-    height: 28rem;     /* Aumentato l'altezza per ospitare il nuovo box da 300px + testi */
+    height: 28rem;     /* Aumentato l'altezza per ospitare il nuovo box più grande */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -139,7 +139,7 @@
 
 /* POSIZIONE SINISTRA: Ingrandita (scale 0.85) e distanziata proporzionalmente */
 .card.left {
-    opacity: 0.5; /* Leggermente più visibile rispetto a prima */
+    opacity: 1; /* Leggermente più visibile rispetto a prima */
     transform: translate(-165%, -50%) scale(0.85); 
     z-index: 1;
 }
@@ -154,7 +154,7 @@
 
 /* POSIZIONE DESTRA: Ingrandita (scale 0.85) e distanziata proporzionalmente */
 .card.right {
-    opacity: 0.5;
+    opacity: 1;
     transform: translate(65%, -50%) scale(0.85);
     z-index: 1;
 }
@@ -209,21 +209,5 @@
     .card-box { width: 50vw; height: 50vw; } /* Box mobile ingrandito dal 40vw al 50vw */
     .card.left { transform: translate(-125%, -50%) scale(0.8); }
     .card.right { transform: translate(25%, -50%) scale(0.8); }
-    .card-title { font-size: 4vw; }
-    .card.center .card-title { font-size: 4.5vw; }
-}
-
-
-/* Media query per regolare la card dell'overworld */
-@media (min-width: 576px) {
-    .greenstack-burger-card {
-        padding: 2rem !important;
-    }
-}
-
-/* Media query per togliere l'opacità al carosello e aumentare il translatex */
-@media (min-width: 992px){
-    .heroPromo-distance{
-        margin-top: 6rem;
-    }
+    .card.right, .card.left { opacity: 0.5; } /* Leggermente più visibili su mobile */
 }
