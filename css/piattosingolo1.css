@@ -208,24 +208,22 @@
 /* ==========================================================================
    4. GERARCHIA GENERALE DELLE SEZIONI (La Scalinata dei Livelli)
    ========================================================================== */
-/* 1° BLOCCO CONTENUTI: "Il tuo Craft" (Massima priorità tra i contenuti) */
-.stone-background:first-of-type,
-.redstone-background {
+/* Il blocco "Il tuo Craft" sta in alto e domina visivamente (z-index: 3) */
+.section-craft {
     position: relative;
     z-index: 3 !important;                 
     overflow: visible !important;
 }
 
-/* 2° BLOCCO CONTENUTI: "Ingredienti" (Sta sotto a Craft ma sopra ad Allergeni) */
-.first-background {
+/* Il blocco "Ingredienti" sta in mezzo (z-index: 2) */
+.section-ingredients {
     position: relative;
     z-index: 2 !important; 
     overflow: visible !important;
 }
 
-/* 3° BLOCCO CONTENUTI: "Allergeni" (Livello base, si fa coprire da Ingredienti) */
-.stone-background:last-of-type,
-.container-fluid:has(.allergens-card) {
+/* Il blocco "Allergeni" sta sotto a tutto (z-index: 1) */
+.section-allergens {
     position: relative;
     z-index: 1 !important; 
     overflow: visible !important;
@@ -245,7 +243,6 @@
 #decoration-tomato-right {
     width: 20%;
     left: 80%;
-    top: 80%; /* Rispetto a Il tuo Craft */
 }
 
 #decoration-tomato-left {
@@ -258,7 +255,6 @@
 #decoration-chicken-right {
     width: 15%;
     left: 85%;
-    top: 15%; /* Percentuale locale ridotta */
 }
 
 #decoration-chicken-left {
@@ -269,14 +265,14 @@
 
 /* --- PATATINE (Assicurati che l'HTML sia dentro la sezione corretta) --- */
 #decoration-fries-right {
-    width: 18%;
-    left: 82%;
-    top: 8%; /* Percentuale locale ridotta */
+    width: 17%;
+    left: 84%;
+    
 }
 
 #decoration-fries-left {
-    width: 18%;
-    right: 84%;
+    width: 17%;
+    right: 87%;
     top: 40%; /* Percentuale locale ridotta */
 }
 /*
