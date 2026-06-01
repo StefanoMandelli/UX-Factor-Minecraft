@@ -61,6 +61,10 @@
     display: block;
 }
 
+.burger-card, .dinecraft-card {
+    position: relative;   /* --- FONDAMENTALE: Attiva il potere dello z-index --- */
+    z-index: 2;
+}
 .number {
     /* Rimuove il padding laterale e tiene solo quello verticale */
     padding: 5px 0; 
@@ -185,18 +189,119 @@
     perspective: 1000px;
 }
 
+/*
 #decoration-tomato-right {
     position: absolute;
     width: 20%;
     left: 80%;
-    top: 89%
+    top: 90%
 }
 
 #decoration-tomato-left {
     position: absolute;
     width: 20%;
     right: 80%;
-    top: 170%;
+    top: 190%;
+}
+*/
+
+/* ==========================================================================
+   4. GERARCHIA GENERALE DELLE SEZIONI (La Scalinata dei Livelli)
+   ========================================================================== */
+/* Il blocco "Il tuo Craft" sta in alto e domina visivamente (z-index: 3) */
+.section-craft {
+    position: relative;
+    z-index: 3 !important;                 
+    overflow: visible !important;
+}
+
+/* Il blocco "Ingredienti" sta in mezzo (z-index: 2) */
+.section-ingredients {
+    position: relative;
+    z-index: 2 !important; 
+    overflow: visible !important;
+}
+
+/* Il blocco "Allergeni" sta sotto a tutto (z-index: 1) */
+.section-allergens {
+    position: relative;
+    z-index: 1 !important; 
+    overflow: visible !important;
+}
+
+/* ==========================================================================
+   5. COMPORTAMENTO BASE DECORAZIONI (Tutte Absolute e trasparenti ai click)
+   ========================================================================== */
+#decoration-tomato-right, #decoration-tomato-left,
+#decoration-chicken-right, #decoration-chicken-left,
+#decoration-fries-right, #decoration-fries-left {
+    position: absolute;
+    pointer-events: none;
+}
+
+/* --- POMODORI (Inseriti dentro .stone-background e .first-background) --- */
+#decoration-tomato-right {
+    width: 20%;
+    left: 80%;
+}
+
+#decoration-tomato-left {
+    width: 20%;
+    right: 80%;
+    top: 20%; /* Rispetto a Ingredienti */
+}
+
+/* --- POLLO (Assicurati che l'HTML sia dentro la sezione corretta, es. Allergeni) --- */
+#decoration-chicken-right {
+    width: 15%;
+    left: 85%;
+}
+
+#decoration-chicken-left {
+    width: 15%;
+    right: 85%;
+    top: 35%; /* Percentuale locale ridotta */
+}
+
+/* --- PATATINE (Assicurati che l'HTML sia dentro la sezione corretta) --- */
+#decoration-fries-right {
+    width: 17%;
+    left: 84%;
+    
+}
+
+#decoration-fries-left {
+    width: 17%;
+    right: 87%;
+    top: 40%; /* Percentuale locale ridotta */
+}
+/*
+#decoration-chicken-right {
+    position: absolute;
+    width: 15%;
+    left: 85%;
+    top: 0%;
+}
+
+#decoration-chicken-left {
+    position: absolute;
+    width: 15%;
+    right: 85%;
+    top: 200%;
+}
+
+#decoration-fries-right {
+    position: absolute;
+    width: 18%;
+    left: 84%;
+    top: 0%;
+}
+
+#decoration-fries-left {
+    position: absolute;
+    width: 18%;
+    right: 84%;
+    top: 200%;
 }
 
 /* --- RESPONSIVE DESKTOP (Da 992px in su) --- */

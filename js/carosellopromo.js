@@ -54,4 +54,29 @@ cards.forEach(card => {
             rotateCarousel('prev');
         }
     });
+    // Swipe mobile
+let touchStartX = 0;
+let touchEndX = 0;
+
+const viewport = document.querySelector('.carousel-viewport');
+
+viewport.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+});
+
+viewport.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+});
+
+function handleSwipe() {
+    const diff = touchStartX - touchEndX;
+    if (Math.abs(diff) < 50) return; // soglia minima per evitare swipe accidentali
+    
+    if (diff > 0) {
+        rotateCarousel('next'); // swipe a sinistra → avanti
+    } else {
+        rotateCarousel('prev'); // swipe a destra → indietro
+    }
+}
 });
