@@ -115,8 +115,8 @@
     font-family: monospace;
 }
 
-.prev-btn { left: 25%; }
-.next-btn { right: 25%; }
+.prev-btn { left: 10%; }
+.next-btn { right: 10%; }
 
 /* Responsive Mobile */
 @media (max-width: 576px) {
