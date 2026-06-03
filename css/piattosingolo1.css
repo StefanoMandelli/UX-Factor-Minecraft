@@ -92,7 +92,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;    /* Centra gli elementi orizzontalmente su mobile */
-    gap: 35px !important;   /* <--- Questa è la distanza verticale uniforme tra tutti gli elementi */
+    gap: 20px;   /* <--- Questa è la distanza verticale uniforme tra tutti gli elementi */
     padding: 1.25rem;
 }
 
@@ -318,6 +318,7 @@
     top: 200%;
 }
 
+
 /* --- RESPONSIVE DESKTOP (Da 992px in su) --- */
 @media (min-width: 1920px) {
     .allergens-card {
@@ -339,6 +340,10 @@
     .allergen-text-container h3 {
         white-space: nowrap;        
         margin: 0;                  
+    }
+
+    .conf-menu {
+        gap: 35px !important; /* <--- Ripristina i 35px di spazio solo su Desktop */
     }
 
     .container-craft {
@@ -367,4 +372,6 @@
         text-align: start !important;
     }
 }
+
+
 
