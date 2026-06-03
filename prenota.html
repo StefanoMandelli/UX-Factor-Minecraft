@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="css/booking.css">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/card3d.css">
+
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 </head>
 
 
@@ -86,7 +88,10 @@
     <div class="g-0 container-fluid text-center text-lg-start first-background">
         <div class="hero-desktop row p-5 g-0">
             <div class="col-12 col-lg-3 offset-lg-1 order-lg-2 pb-5">
-                <img class="img-hero-booking" src="img/body/prenota/creeper_hero.png" alt="Creeper Hero Prenota" />
+               <model-viewer src="img/body/prenota/Prenota-compressed.glb" alt="Prenota Hero" camera-controls touch-action="pan-y"
+                    shadow-intensity="1" auto-rotate rotation-per-second="30deg"
+                    style="width: 100%; height: 500px; background-color: transparent;">
+                </model-viewer>
             </div>
             <div class="col-12 col-lg-4 offset-lg-2 order-lg-1 align-self-lg-center">
                 <h1 class="mb-5 title-home">CONQUISTA IL TUO POSTO DA NOI!</h1>
