@@ -89,7 +89,21 @@
 }
 
 .conf-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* Centra gli elementi orizzontalmente su mobile */
+    gap: 35px !important;   /* <--- Questa è la distanza verticale uniforme tra tutti gli elementi */
     padding: 1.25rem;
+}
+
+.conf-menu h4 {
+    text-align: center; 
+    margin-left: 20px;
+    margin-right: 20px; 
+}
+
+.img-menu {
+    width:50%;
 }
 
 .price-container {
