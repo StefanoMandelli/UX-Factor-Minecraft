@@ -257,23 +257,25 @@
 #decoration-tomato-right {
     width: 20%;
     left: 80%;
+    top: 0%;
 }
 
 #decoration-tomato-left {
     width: 20%;
     right: 80%;
-    top: 20%; /* Rispetto a Ingredienti */
+    top: 40%; /* Rispetto a Ingredienti */
 }
 
 /* --- POLLO (Assicurati che l'HTML sia dentro la sezione corretta, es. Allergeni) --- */
 #decoration-chicken-right {
     width: 15%;
     left: 85%;
+    top: 0%;
 }
 
 #decoration-chicken-left {
     width: 15%;
-    right: 85%;
+    right: 86%;
     top: 35%; /* Percentuale locale ridotta */
 }
 
@@ -281,12 +283,13 @@
 #decoration-fries-right {
     width: 17%;
     left: 84%;
+    top:0%;
     
 }
 
 #decoration-fries-left {
     width: 17%;
-    right: 87%;
+    right: 84%;
     top: 40%; /* Percentuale locale ridotta */
 }
 /*
