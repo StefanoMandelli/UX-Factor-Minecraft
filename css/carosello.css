@@ -142,7 +142,21 @@ body {
   background: url("../img/body/ristorante/immagine2ristorante.png") center / cover no-repeat;
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 576px) {
+
+  .box-slider {
+    width: 90vw;
+  }
+}
+
+@media (min-width: 992px) {
+
+  .box-slider {
+    width: 80vw;
+  }
+}
+
+@media (min-width: 1200px) {
 
   .box-slider {
     width: 60vw;

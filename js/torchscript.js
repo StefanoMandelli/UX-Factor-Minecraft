@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     // 1. Definiamo la condizione: larghezza massima 576px
-    const isMobile = window.matchMedia("(max-width: 576px)");
+    const isMobile = window.matchMedia("(max-width: 1200px)");
 
     const sections = document.querySelectorAll('.scroll-section');
 
