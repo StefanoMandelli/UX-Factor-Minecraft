@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/card3d.css">
 
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 </head>
 
 
@@ -87,13 +88,16 @@
     <div class="g-0 container-fluid text-center text-lg-start first-background">
         <div class="hero-desktop row p-5 g-0">
             <div class="col-12 col-lg-3 offset-lg-1 order-lg-2 pb-5">
-                <img class="img-hero-booking" src="img/body/prenota/creeper_hero.png" alt="Creeper Hero Prenota" />
+               <model-viewer src="img/body/prenota/Prenota-compressed.glb" alt="Prenota Hero" camera-controls touch-action="pan-y"
+                    shadow-intensity="1" auto-rotate rotation-per-second="30deg"
+                    style="width: 100%; height: 500px; background-color: transparent;">
+                </model-viewer>
             </div>
             <div class="col-12 col-lg-4 offset-lg-2 order-lg-1 align-self-lg-center">
                 <h1 class="mb-5 title-home">CONQUISTA IL TUO POSTO DA NOI!</h1>
                 <h3 class="mb-5">Vuoi assaporare i nostri piatti? Completa la missione e prenota il tuo tavolo!
                 </h3>
-                <a class="btn btn-menu pushable inverted mb-5" aria-current="page" href="#">
+                <a class="btn btn-menu pushable inverted mb-5" aria-current="page" href="#bookingForm">
                     <span class="front ">
                         PRENOTA
                     </span>
@@ -119,10 +123,10 @@
 
                 <div class="col-12 col-lg-6 text-center text-lg-start order-1 p-3">
                     <div class="p-4">
-                        <h2 class="mb-4"><b>Lo Chef Sbadato</b></h2>
-                        <h3>Il nostro chef ha perso la lista della spesa nel Nether e non può aprire
+                        <h3 class="mb-4"><b>Lo Chef Sbadato</b></h3>
+                        <h4>Il nostro chef ha perso la lista della spesa nel Nether e non può aprire
                             il ristorante senza gli ingredienti speciali. Aiutalo a ritrovarli!
-                            Cerca i tre ingredienti nell'Overworld e riportali allo chef.</h3>
+                            Cerca i tre ingredienti nell'Overworld e riportali allo chef.</h4>
                         <img class="img-fluid mt-5" src="img/body/prenota/health_bar.png" alt="Health bar"
                             style="max-width: 300px;">
                     </div>
@@ -131,11 +135,11 @@
 
                 <div class="col-12 col-lg-6 text-center order-2 py-3">
                     <div class="p-4 position-relative">
-                        <img class="img-fluid" src="img/body/prenota/missione_chef.png" alt="Missione dello chef">
+                        <img class="img-fluid" src="img/body/prenota/missione_chef.png" alt="chef mission">
 
-                        <img src="img/body/prenota/exp.png" alt="" class="position-absolute exp-orb exp-chef-1">
+                        <img src="img/body/prenota/exp.png" alt="eye minecraft decoration" class="position-absolute exp-orb exp-chef-1">
 
-                        <img src="img/body/prenota/exp.png" alt="" class="position-absolute exp-orb exp-chef-2">
+                        <img src="img/body/prenota/exp.png" alt="eye minecraft decoration" class="position-absolute exp-orb exp-chef-2">
                     </div>
                 </div>
             </div>
@@ -144,9 +148,9 @@
 
         <div class="container d-none d-lg-block position-relative" style="height: 0;">
 
-            <img src="img/body/prenota/exp.png" alt="" class="position-absolute exp-orb exp-center-1">
+            <img src="img/body/prenota/exp.png" alt="eye minecraft decoration" class="position-absolute exp-orb exp-center-1">
 
-            <img src="img/body/prenota/exp.png" alt="" class="position-absolute exp-orb exp-center-2">
+            <img src="img/body/prenota/exp.png" alt="eye minecraft decoration" class="position-absolute exp-orb exp-center-2">
         </div>
 
         <!-- Blocco 2 -->
@@ -155,22 +159,21 @@
 
                 <div class="col-12 col-lg-6 text-center order-2 order-lg-1 py-3">
                     <div class="p-4 position-relative">
-                        <img class="img-fluid" src="img/body/prenota/missione_fireball.png"
-                            alt="Missione - seconda parte">
+                        <img class="img-fluid" src="img/body/prenota/missione_fireball.png" alt="Missione - seconda parte">
 
-                        <img src="img/body/prenota/exp.png" alt="" class="position-absolute exp-orb exp-fire-1">
+                        <img src="img/body/prenota/exp.png" alt="eye minecraft decoration" class="position-absolute exp-orb exp-fire-1">
 
-                        <img src="img/body/prenota/exp.png" alt="" class="position-absolute exp-orb exp-fire-2">
+                        <img src="img/body/prenota/exp.png" alt="eye minecraft decoration" class="position-absolute exp-orb exp-fire-2">
 
-                        <img src="img/body/prenota/exp.png" alt="" class="position-absolute exp-orb exp-fire-3">
+                        <img src="img/body/prenota/exp.png" alt="eye minecraft decoration" class="position-absolute exp-orb exp-fire-3">
                     </div>
                 </div>
 
                 <div class="col-12 col-lg-6 text-center text-lg-end order-1 order-lg-2 py-3">
                     <div class="p-4">
-                        <h2 class="mb-3"><b>Scarica la mappa e inizia la missione!</b></h2>
-                        <h3>Clicca il bottone qui sotto e scopri come ottenere il codice segreto per prenotare!</h3>
-                        <a class="btn btn-menu pushable mt-5" aria-current="page" href="#">
+                        <h3 class="mb-3"><b>Scarica la mappa e inizia la missione!</b></h3>
+                        <h4>Clicca il bottone qui sotto e scopri come ottenere il codice segreto per prenotare!</h4>
+                        <a class="btn btn-menu pushable mt-4" aria-current="page" href="/img/body/prenota/missione_del_mese_v2.pdf" download="Missione del mese - Dinecraft.pdf">
                             <span class="front">
                                 MAPPA
                             </span>
@@ -183,7 +186,7 @@
 
 
     <!-- Form -->
-    <div class="container-fluid g-0">
+    <div id="bookingForm" class="container-fluid g-0">
         <div class="page-bg d-flex align-items-center justify-content-center">
 
             <div class="booking-wrapper text-center">
@@ -363,28 +366,29 @@
 
 
     <!-- Card per promo e contattaci -->
-    <div class="container-fluid text-center redstone-background g-0 py-5">
-        <div class="row py-5 g-0 ">
-            <div class="col-12 pb-5 d-flex justify-content-center  col-lg-5 py-lg-0 offset-lg-1 card-desktop">
+    <div class="container-fluid text-center text-lg-start redstone-background g-0">
+        <div class="row py-5 g-0 sect-card">
+            <div class="col-12 pb-5 d-flex justify-content-center col-lg-5 py-lg-0 offset-lg-1 card-desktop">
                 <div class="card card-3d card-3d-background">
-                    <div class="p-4 card-body d-flex ">
-                        <h3 class="card-title"><b>Si apre il portale: scopri Dinecraft x Umani!</b></h3>
+                    <div class="p-4 card-body d-flex align-items-center align-items-lg-start">
+                        <h3 class="card-title"><b>Si apre il portale: scopri Dinecraft x Umani!</b> </h3>
                         <h4 class="card-text">Un'occasione unica per gustare piatti pixelati creati
                             per palati terrestri. Prenota il tuo tavolo, preparati a un'avventura
-                            gastronomica di un altro livello!</h4>
-                        <a class="btn btn-menu pushable" aria-current="page" href="#">
+                            gastronomica di un altro livello!
+                        </h4>
+                        <a class="btn btn-menu pushable" aria-current="page" href="./pagina-libera.html">
                             <span class="front">
                                 PROMO
                             </span>
                         </a>
-                        <img class="axe" src="img/body/prenota/axe.png" alt="piccone">
+                        <img class="axe" src="img/body/prenota/axe.png" alt="minecraft pickaxe decoration">
                     </div>
                 </div>
             </div>
             <div class="col-12 pt-5 d-flex justify-content-center col-lg-5 py-lg-0 card-desktop">
                 <div class="card card-3d card-3d-background">
-                    <div class="p-4 card-body d-flex">
-                        <h3 class="card-title"><b>La nostra chat è sempre aperta!</b></h3>
+                    <div class="p-4 card-body d-flex align-items-center align-items-lg-start">
+                        <h3 class="card-title pr-3"><b>La nostra chat è sempre aperta!</b></h3>
                         <h4 class="card-text">Per <i>informazioni, curiosità o richieste speciali,</i>
                             il nostro team è a tua disposizione: attraverso il nostro circuito di redstone,
                             riceverai una risposta alla velocità della luce.
@@ -394,13 +398,12 @@
                                 CONTATTACI
                             </span>
                         </a>
-                        <img class="red-arrow" src="img/body/prenota/red_arrow.png" alt="freccia">
+                        <img class="red-arrow" src="img/body/prenota/red_arrow.png" alt="redstone arrow decoration">
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 
     <!-- Footer -->
     <footer class="container-fluid bg-dark py-5 footer-custom-bg">

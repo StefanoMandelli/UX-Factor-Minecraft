@@ -41,6 +41,20 @@
   --ux-txt-h5-576: 400 1rem/1.5rem var(--ux-font-DMSans);
   --ux-txt-body-576: 400 1rem/1.5rem var(--ux-font-DMSans);
 
+  /* Font da 768 */
+  --ux-txt-h3-768: 400 1.7rem/2.6rem var(--ux-font-DMSans);
+  --ux-txt-h4-768: 400 1.2rem/1.7rem var(--ux-font-DMSans);
+  --ux-txt-h5-768: 400 1rem/1.5rem var(--ux-font-DMSans);
+  --ux-txt-body-768: 400 1rem/1.5rem var(--ux-font-DMSans);
+
+  /* Font da 992 */
+  --ux-txt-h1-992: 400 3.5rem/5.2rem var(--ux-font-Minercraftory);
+  --ux-txt-h2-992: 400 2.5rem/3.6rem var(--ux-font-DMSans);
+  --ux-txt-h3-992: 400 2rem/2.9rem var(--ux-font-DMSans);
+  --ux-txt-h4-992: 400 1.5rem/2rem var(--ux-font-DMSans);
+  --ux-txt-h5-992: 400 1.5rem/2rem var(--ux-font-DMSans);
+  --ux-txt-body-992: 400 1rem/1.5rem var(--ux-font-DMSans);
+
   /* Font Desktop */
   --ux-txt-h1-1920: 400 4rem/6.25rem var(--ux-font-Minercraftory);
   --ux-txt-h2-1920: 400 3rem/4.7rem var(--ux-font-DMSans);
@@ -427,33 +441,59 @@ p {
   }
 }
 
-@media (min-width: 992px) {
-  /* DA SISTEMARE */
-  h1 {
-    font: var(--ux-txt-h1-1920);
-  }
-
-  h2 {
-    font: var(--ux-txt-h2-992);
-  }
-
+@media (min-width: 768px) {
   h3 {
-    font: var(--ux-txt-h3-992);
+    font: var(--ux-txt-h3-768);
   }
 
   h4 {
-    font: var(--ux-txt-h4-992);
+    font: var(--ux-txt-h4-768);
   }
 
   h5 {
-    font: var(--ux-txt-h5-992);
+    font: var(--ux-txt-h5-576);
   }
 
   p {
-    font: var(--ux-txt-body-992);
+    font: var(--ux-txt-body-576);
   }
 
-  /* Navbar */
+  .front {
+    padding: 0.5em 1em;
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 992px) {
+  /* DA SISTEMARE */
+  h1 {
+    font: var(--ux-txt-h1-576);
+  }
+
+  h2 {
+    font: var(--ux-txt-h2-576);
+  }
+
+  h3 {
+    font: var(--ux-txt-h3-576);
+  }
+
+  h4 {
+    font: var(--ux-txt-h4-576);
+  }
+
+  h5 {
+    font: var(--ux-txt-h5-576);
+  }
+
+  p {
+    font: var(--ux-txt-body-576);
+  }
+
+}
+
+@media (min-width: 1200px) {
+    /* Navbar */
 
   .navbar-collapse {
     background: none;
@@ -530,6 +570,7 @@ p {
     height: auto;
     top: 20%;
   }
+
 }
 
 @media (min-width: 1920px) {
@@ -577,4 +618,6 @@ p {
   .mascotte {
     width: 100%;
   }
+
+  
 }
