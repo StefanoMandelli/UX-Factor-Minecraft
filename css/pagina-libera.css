@@ -176,28 +176,18 @@
     display: block;
 }
 
-.card-title {
-    font-size: var(--font-size); 
-    color: var(--color-font);
-}
-
-.card.center .card-title {
-    font-size: var(--font-size);
-    color: var(--color-font);
-}
-
 
 /* Pulsanti navigazione */
 .nav-btn #prevBtn #img-prev, .nav-btn #nextBtn #img-next {
     cursor: pointer;
-    position: absolute;
+    position: relative;
     top: 50%;
     z-index: 10;
     background-color: transparent;
     border: none;
 }
 
-/* Allargate le frecce verso i bordi esterni per non toccare le card maggiorate */
+/* Allargo le frecce verso i bordi esterni per non toccare le card maggiorate */
 .prev-btn { left: 5%; }
 .next-btn { right: 5%; }
 
@@ -210,4 +200,30 @@
     .card.left { transform: translate(-125%, -50%) scale(0.8); }
     .card.right { transform: translate(25%, -50%) scale(0.8); }
     .card.right, .card.left { opacity: 0.5; } /* Leggermente più visibili su mobile */
+}
+
+@media (max-width: 1200px) {
+
+    .carousel-viewport { height: 60vw; order: 1; width: 100%;} /* Alzato il viewport mobile per evitare tagli */
+    .card-box { width: 40vw; height: 40vw; } /* Box mobile ingrandito dal 40vw al 50vw */
+    .card.left { transform: translate(-125%, -50%) scale(0.8); }
+    .card.right { transform: translate(25%, -50%) scale(0.8); }
+    .card.right, .card.left { opacity: 0.3; } /* Leggermente più visibili su tablet */
+    /* Sotto 1200px: frecce sotto il carosello */
+    .carousel-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .prev-btn {
+        order: 2;
+        left: auto;
+        margin-top: 1rem;
+    }
+
+    .next-btn {
+        order: 3;
+        right: auto;
+        margin-top: 1rem;
+    }
 }
