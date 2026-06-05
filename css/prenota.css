@@ -34,12 +34,14 @@ img.img-hero-booking {
     width: 143px;
     top: -45px;
     left: 46%;
+    z-index: 0;
 }
 
 .exp-center-2 {
     width: 80px;
     top: 50px;
     left: 41%;
+    z-index: 0;
 }
 
 .exp-fire-1 {
@@ -66,6 +68,10 @@ img.img-hero-booking {
 
 @media (max-width: 992px) {
 
+    .navbar-collapse {
+        z-index: 100;
+    }
+
     img.img-hero-booking {
         width: 40%;
         height: auto;
@@ -75,12 +81,14 @@ img.img-hero-booking {
         width: 105px;
         top: -3%;
         right: 0%;
+        z-index: 0;
     }
 
     .exp-chef-2 {
         width: 72px;
         top: 17%;
         right: -2%;
+        z-index: 0;
     }
 
     
@@ -88,17 +96,24 @@ img.img-hero-booking {
         width: 97px;
         bottom: 0%;
         left: 0%;
+        z-index: 0;
     }
 
     .exp-fire-2 {
         width: 75px;
         bottom: -1%;
         left: 18%;
+        z-index: 0;
     }
 
     .exp-fire-3 {
         width: 51px;
         bottom: 3%;
         left: 33%;
+        z-index: 0;
+    }
+
+    .hero-tablet {
+        justify-content: center !important;
     }
 }

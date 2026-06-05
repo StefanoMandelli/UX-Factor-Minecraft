@@ -470,6 +470,21 @@ h3.step-title {
     margin-top: 4px;
 }
 
+/*tablet*/
+@media (max-width: 1200px) {
+    .world-card {
+        max-width: auto;
+        height: auto;
+        aspect-ratio: 1/1;
+        flex-direction: column;
+    }
+
+    .world-name {
+        font-size: 2rem;
+    }
+}
+
+
 /* mobile */
 @media (max-width: 576px) {
     .booking-card {
@@ -517,6 +532,9 @@ h3.step-title {
         gap: 16px;
     }
 
+    .world-name {
+        font-size: 1.5rem;
+    }
 }
 
 
