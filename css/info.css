@@ -90,22 +90,26 @@
   pointer-events: auto;
 }
 
-.leaf1, .leaf2 {
+.leaf1,
+.leaf2 {
   z-index: 0;
   position: absolute;
-    pointer-events: none;
-    height: auto;
+  pointer-events: none;
+  height: auto;
+}
+
+h2 {
+  z-index: 1;
 }
 
 .leaf1 {
-    bottom: 0;
-    left: 0;
+  bottom: 0;
+  left: 0;
 }
 
-
 .leaf2 {
-    top: 0;
-    right: 0;
+  top: 0;
+  right: 0;
 }
 
 .torch-img {
@@ -166,9 +170,15 @@
   color: var(--ux-end-color-accent);
 }
 
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 992px) {
   .p-section {
-    padding: 6rem 21rem;
+    padding: 6rem 8rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .p-section {
+    padding: 4rem 10rem;
   }
 
   .torch-grid {
@@ -190,5 +200,11 @@
 
   .torch-img {
     align-self: center;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .p-section {
+    padding: 6rem 20rem;
   }
 }
