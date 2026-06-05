@@ -120,14 +120,14 @@
 .chicken {
   position: absolute;
   bottom: -3%;
-  right: -6%;
-  width: 30%;
+  right: -3%;
+  width: 33%;
 }
 
 .redstone {
   position: absolute;
   top: -12%;
-  left: -11%;
+  left: -8%;
   width: 40%;
 }
 
