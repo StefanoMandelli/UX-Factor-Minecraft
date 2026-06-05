@@ -114,10 +114,6 @@
   padding-bottom: 5rem !important;
 }
 
-/*sono Anna, quando ho inserito la mascotte ho notato che c'era da fare sistemazione del menu a tendina in mobile, quando lo aprivo vedevo che la hero lo copriva. Ho nascosto la hero quando il menu è aperto. Era un problema della tua pagina perchè nelle altre stessa mascotte non succedeva nulla*/
-body:has(.navbar-collapse.show) .first-background {
-  visibility: hidden;
-}
 
 @media (min-width: 992px) {
   .nav-pills .nav-link {
