@@ -312,9 +312,12 @@ p {
 .title-home {
   text-shadow:
     0 2px 0 #446a1b,
-    /* Primo gradino */ 0 4px 0 #446a1b,
-    /* Secondo gradino (leggermente più scuro) */ 0 6px 0 #446a1b,
-    /* Terzo gradino */ 0 8px 0 #446a1b;
+    /* Primo gradino */
+    0 4px 0 #446a1b,
+    /* Secondo gradino (leggermente più scuro) */
+    0 6px 0 #446a1b,
+    /* Terzo gradino */
+    0 8px 0 #446a1b;
   /* Quarto gradino */
 }
 
@@ -361,8 +364,7 @@ p {
 }
 
 .thunder-background {
-  background: url("../img/background/fulmine-background.png") center / cover
-    no-repeat;
+  background: url("../img/background/fulmine-background.png") center / cover no-repeat;
 }
 
 .amethyst-background {
@@ -448,9 +450,12 @@ p {
     padding: 0.5em 1em;
     font-size: 1.2rem;
   }
+
+
 }
 
 @media (min-width: 992px) {
+
   /* DA SISTEMARE */
   h1 {
     font: var(--ux-txt-h1-992);
