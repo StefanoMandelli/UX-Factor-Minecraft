@@ -8,15 +8,6 @@
     object-fit: contain;
 }
 
-/* Quando lo schermo è un Desktop Grande (da 1400px in su, fino a coprire i 1920px) */
-@media (min-width: 1920px) {
-    .hero-desktop .burger-hero {
-        width: 728px !important;    /* Forza l'esatta dimensione di Figma */
-        max-width: 100% !important; /* Sicurezza per non spaccare il layout */
-        height: auto !important;    /* Proporzioni perfette garantite */
-        display: block !important;
-    }
-}
 /* ==========================================================================
    1. STRUTTURA BASE DELLE CARD (Uguale per tutte le pagine - Niente Colori)
    ========================================================================== */
@@ -27,6 +18,7 @@
     align-items: center;
     gap: 1.25rem;
     padding: 3rem;
+    justify-content: space-between;
 
     /* ABILITA IL MOVIMENTO MORBIDO */
     transition: transform 0.1s ease-out, box-shadow 0.1s ease-out;
@@ -37,7 +29,8 @@
     backface-visibility: hidden;
 
     /* AGGIUNGI LO SPESSORE (BOX-SHADOW) */
-    box-shadow: 10px 10px 0px #161616, 15px 15px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 1), 
+                0 8px 20px rgba(0, 0, 0, 0.60);
 }
 
 /* FAI GALLEGGIARE IL CONTENUTO (Effetto Pop-out) */
@@ -93,7 +86,7 @@
     flex-direction: column;
     align-items: center;    /* Centra gli elementi orizzontalmente su mobile */
     gap: 20px;   /* <--- Questa è la distanza verticale uniforme tra tutti gli elementi */
-    padding: 1.25rem;
+    padding: 0 1.25rem 0 1.25rem;
 }
 
 .conf-menu h4 {
@@ -104,6 +97,7 @@
 
 .img-menu {
     width:50%;
+    padding-bottom: 1.25rem;
 }
 
 .price-container {
@@ -171,6 +165,8 @@
     align-items: center;
     text-align: center;
     width: 100%;
+    /* Spinge i contenuti a distribuirsi uniformemente se l'altezza varia */
+    justify-content: space-between; 
 }
 
 .allergen-img-container {
@@ -178,7 +174,10 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 1rem; 
-    width: 50%;
+    
+    /* MODIFICHE CHIAVE: impostiamo dimensioni fisse per il box dell'immagine */
+    width: 100%;       /* Puoi lasciarlo al 100% o alla percentuale che preferisci */
+    height: 150px;     /* Forza tutti i contenitori ad avere la stessa identica altezza */
 }
 
 .allergen-item img {
@@ -320,10 +319,27 @@
     right: 84%;
     top: 200%;
 }
+*/
+@media (min-width: 1200px) and (max-width: 1919px) {
+    
+    /* Riduciamo il gap tra le tre card da 3rem a 1.5rem per recuperare spazio orizzontale */
+    .container-craft {
+        gap: 1.5rem !important;
+    }
 
+    /* Riduciamo il padding interno delle card per non far stringere troppo i testi e i prezzi */
+    .container-craft .burger-card {
+        padding: 2rem 1rem !important;
+    }
+    
+    /* Stringiamo l'immagine del menù per dare più respiro a titoli e prezzi di quel blocco */
+    .img-menu {
+        width: 35% !important;
+    }
+}
 
-/* --- RESPONSIVE DESKTOP (Da 992px in su) --- */
-@media (min-width: 1920px) {
+/* --- RESPONSIVE DESKTOP (Da 1200 px in su) se metto 1920, sotto quei px si rimpiccilisce di botto --- */
+@media (min-width: 1200px) {
     .allergens-card {
         display: flex;
         flex-direction: row;        
@@ -344,6 +360,13 @@
     .allergen-text-container h3 {
         white-space: nowrap;        
         margin: 0;                  
+    }
+
+    .hero-desktop .burger-hero {
+        width: 728px !important;    /* Forza l'esatta dimensione di Figma */
+        max-width: 100% !important; /* Sicurezza per non spaccare il layout */
+        height: auto !important;    /* Proporzioni perfette garantite */
+        display: block !important;
     }
 
     .conf-menu {
