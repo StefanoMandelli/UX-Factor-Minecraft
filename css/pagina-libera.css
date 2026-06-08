@@ -16,10 +16,10 @@
     height: auto;
 }
 .hand-promo {
-    width: 60%;
+    width: 50%;
     position: absolute;
     right: -12vw;
-    bottom: 80%;
+    bottom: 70%;
 }
 
 .countdown-bg{
@@ -32,44 +32,38 @@
     width: 100%;
 }
 
-/*card alcuni brkpoint hanno i numeri che escono fuori, questo è un fix*/
-.burger-card, .netherstack-burger-card .burger-card, .end-burger-card .burger-card {
-    padding: 2rem !important;
-} 
-
 /*card overworld*/
-.greenstack-burger-card {
+.burger-card {
     background-color: rgba(26, 51, 35, 0.7);
-    border: 7px solid var(--ux-global-color-background)
+    border: 7px solid var(--ux-global-color-background);
 }
 
-
-.greenstack-burger-card .number{
+.burger-card .number{
     background-color: var(--ux-global-color-accent-1)
 }
 
 /*card nether*/
-.netherstack-burger-card .burger-card {
-    background-color: rgba(83, 31, 29, 0.7);
-    border: 7px solid var(--ux-nether-color-background)
+.netherstack {
+    background-color: rgba(83, 31, 29, 0.7)!important;
+    border: 7px solid var(--ux-nether-color-background)!important;
 }
 
-.netherstack-burger-card .burger-card .number{
-    background-color: var(--ux-nether-color-accent)
+.netherstack .number{
+    background-color: var(--ux-nether-color-accent)!important;
 }
 
 /*card end*/
-.end-burger-card .burger-card {
+.endstack {
     background-color: rgba(63, 30, 84, 0.7);
-    border: 7px solid var(--ux-end-color-background)
+    border: 7px solid var(--ux-end-color-background);
 }
 
-.end-burger-card .burger-card .number{
+.endstack .number{
     background-color: var(--ux-end-color-accent)
 }
 
 /*mistery box*/
-.mistery-box .burger-card {
+.mistery-box {
     background-color: rgba(23, 23, 23, 0.7);
     border: 7px solid var(--ux-dark-color)
 }
@@ -99,7 +93,7 @@
 .carousel-viewport {
     overflow: visible; /* Manteniamo visibili le card che escono dal raggio d'azione */
     width: 100%;
-    height: 28rem;     /* Aumentato l'altezza per ospitare il nuovo box più grande */
+    height: 60vh;     /* Aumentato l'altezza per ospitare il nuovo box più grande */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -139,7 +133,7 @@
 
 /* POSIZIONE SINISTRA: Ingrandita (scale 0.85) e distanziata proporzionalmente */
 .card.left {
-    opacity: 1; /* Leggermente più visibile rispetto a prima */
+    opacity: 0.4; /* Leggermente più visibile rispetto a prima */
     transform: translate(-165%, -50%) scale(0.85); 
     z-index: 1;
 }
@@ -154,7 +148,7 @@
 
 /* POSIZIONE DESTRA: Ingrandita (scale 0.85) e distanziata proporzionalmente */
 .card.right {
-    opacity: 1;
+    opacity: 0.4; 
     transform: translate(65%, -50%) scale(0.85);
     z-index: 1;
 }
@@ -195,17 +189,16 @@
 /* Responsive Mobile (mantiene tutto proporzionale allo schermo sotto i 576px) */
 @media (max-width: 576px) {
     .nav-btn { display: none; }
-    .carousel-viewport { height: 80vw; } /* Alzato il viewport mobile per evitare tagli */
-    .card-box { width: 50vw; height: 50vw; } /* Box mobile ingrandito dal 40vw al 50vw */
+    .carousel-viewport { height: 30vh; } /* Alzato il viewport mobile per evitare tagli */
     .card.left { transform: translate(-125%, -50%) scale(0.8); }
     .card.right { transform: translate(25%, -50%) scale(0.8); }
     .card.right, .card.left { opacity: 0.5; } /* Leggermente più visibili su mobile */
 }
 
 @media (max-width: 1200px) {
+    .hand-promo {display: none !important;}
 
-    .carousel-viewport { height: 60vw; order: 1; width: 100%;} /* Alzato il viewport mobile per evitare tagli */
-    .card-box { width: 40vw; height: 40vw; } /* Box mobile ingrandito dal 40vw al 50vw */
+    .carousel-viewport { height: 60vh; order: 1; width: 100%;} /* Alzato il viewport mobile per evitare tagli */
     .card.left { transform: translate(-125%, -50%) scale(0.8); }
     .card.right { transform: translate(25%, -50%) scale(0.8); }
     .card.right, .card.left { opacity: 0.3; } /* Leggermente più visibili su tablet */
