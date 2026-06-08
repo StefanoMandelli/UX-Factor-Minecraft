@@ -3,7 +3,7 @@
 @import url(piattosingolo1.css);
 
 .hero-promo {
-   background-image: url('../img/body/pagina-libera/HERO\ PROMO.png');
+   background-image: url('../img/body/pagina-libera/HEROPROMO.png');
    background-size: cover;
    min-height: 100vh;
    width: 100vw;
@@ -28,7 +28,7 @@
 }
 
 .menu-events {
-    background-image: url('../img/body/pagina-libera/MENU\ PROMO\ dsk.png');
+    background-image: url('../img/body/pagina-libera/MENUPROMOdsk.png');
     width: 100%;
 }
 
