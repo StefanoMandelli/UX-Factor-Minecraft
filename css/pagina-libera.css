@@ -196,8 +196,6 @@
 }
 
 @media (max-width: 1200px) {
-    .hand-promo {display: none !important;}
-
     .carousel-viewport { height: 60vh; order: 1; width: 100%;} /* Alzato il viewport mobile per evitare tagli */
     .card.left { transform: translate(-125%, -50%) scale(0.8); }
     .card.right { transform: translate(25%, -50%) scale(0.8); }
