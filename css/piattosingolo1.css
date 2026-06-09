@@ -8,9 +8,8 @@
     object-fit: contain;
 }
 
-/* ==========================================================================
-   1. STRUTTURA BASE DELLE CARD (Uguale per tutte le pagine - Niente Colori)
-   ========================================================================== */
+/* 
+   1. STRUTTURA BASE DELLE CARD */
 .burger-card {
     border-radius: 5px;
     display: flex;
@@ -33,7 +32,7 @@
                 0 8px 20px rgba(0, 0, 0, 0.60);
 }
 
-/* FAI GALLEGGIARE IL CONTENUTO (Effetto Pop-out) */
+/* FA GALLEGGIARE IL CONTENUTO (Effetto Pop-out) */
 .burger-card img,
 .burger-card h3,
 .burger-card .price-container {
@@ -55,24 +54,17 @@
 }
 
 .burger-card, .dinecraft-card {
-    position: relative;   /* --- FONDAMENTALE: Attiva il potere dello z-index --- */
+    position: relative;   
     z-index: 2;
 }
 .number {
-    /* Rimuove il padding laterale e tiene solo quello verticale */
     padding: 5px 0; 
-    
-    /* Larghezza fissa: 2.75rem equivalgono a 44px, perfetto per ospitare il font da 24px */
     width: 2.75rem; 
-    
-    /* Centratura perfetta del font all'interno del blocchetto */
     display: inline-flex;
     justify-content: center;
     align-items: center;
-
-    /* Le tue specifiche del font e del raggio */
     font-family: var(--ux-font-Minercraftory);
-    font-size: 24px;       /* Aggiornato a 24px */
+    font-size: 24px;       
     border-radius: 5px;    
 }
 
@@ -84,8 +76,8 @@
 .conf-menu {
     display: flex;
     flex-direction: column;
-    align-items: center;    /* Centra gli elementi orizzontalmente su mobile */
-    gap: 20px;   /* <--- Questa è la distanza verticale uniforme tra tutti gli elementi */
+    align-items: center;    
+    gap: 20px;   
     padding: 0 1.25rem 0 1.25rem;
 }
 
@@ -102,16 +94,11 @@
 
 .price-container {
     white-space: nowrap;
-    display: inline-flex;  /* Evita gli spazi casuali dell'HTML e attiva il gap */
-    align-items: center;   /* Mantiene i numeri e la virgola perfettamente allineati al centro */
-    gap: 8.25px;           /* La distanza esatta che hai misurato su Figma */
+    display: inline-flex;  
+    align-items: center;   
+    gap: 8.25px;           
 }
 
-/* ==========================================================================
-   CONTROLLO COLORI TRAMITE IL GENITORE (Specificità Solida)
-   ========================================================================== */
-
-/* --- OVERWORLD / GREENSTACK THEME (Plate 1 - Green) --- */
 .theme-greenstack .burger-card {
     background-color: rgba(26, 51, 35, 0.7);
     border: 7px solid rgba(26, 51, 35, 1);
@@ -124,7 +111,6 @@
     background-color: var(--ux-global-color-accent-1);
 }
 
-/* --- NETHER THEME (Plate 2 - Red) --- */
 .theme-nether .burger-card {
     background-color: rgba(83, 31, 29, 0.7);
     border: 7px solid rgba(83, 31, 29, 1);
@@ -137,7 +123,6 @@
     background-color: var(--ux-nether-color-accent);
 }
 
-/* --- END THEME (Plate 3 - Purple) --- */
 .theme-end .burger-card {
     background-color: rgba(63, 30, 84, 0.7);
     border: 7px solid rgba(63, 30, 84, 1);
@@ -151,9 +136,9 @@
 }
 
 
-/* ==========================================================================
+/* 
    3. STRUTTURA DELLE ALLERGENS CARD E CORREZIONI RESPONSIVE
-   ========================================================================== */
+   */
 .allergens-card {
     padding: 0rem;
     gap: 2rem; 
@@ -174,9 +159,7 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 1rem; 
-    
-    /* MODIFICHE CHIAVE: impostiamo dimensioni fisse per il box dell'immagine */
-    width: 100%;       /* Puoi lasciarlo al 100% o alla percentuale che preferisci */
+    width: 100%;       
     height: 150px;     /* Forza tutti i contenitori ad avere la stessa identica altezza */
 }
 
@@ -202,25 +185,8 @@
     perspective: 1000px;
 }
 
-/*
-#decoration-tomato-right {
-    position: absolute;
-    width: 20%;
-    left: 80%;
-    top: 90%
-}
+/*   4. GERARCHIA GENERALE DELLE SEZIONI (La Scalinata dei Livelli)
 
-#decoration-tomato-left {
-    position: absolute;
-    width: 20%;
-    right: 80%;
-    top: 190%;
-}
-*/
-
-/* ==========================================================================
-   4. GERARCHIA GENERALE DELLE SEZIONI (La Scalinata dei Livelli)
-   ========================================================================== */
 /* Il blocco "Il tuo Craft" sta in alto e domina visivamente (z-index: 3) */
 .section-craft {
     position: relative;
@@ -242,9 +208,6 @@
     overflow: visible !important;
 }
 
-/* ==========================================================================
-   5. COMPORTAMENTO BASE DECORAZIONI (Tutte Absolute e trasparenti ai click)
-   ========================================================================== */
 #decoration-tomato-right, #decoration-tomato-left,
 #decoration-chicken-right, #decoration-chicken-left,
 #decoration-fries-right, #decoration-fries-left {
@@ -252,7 +215,6 @@
     pointer-events: none;
 }
 
-/* --- POMODORI (Inseriti dentro .stone-background e .first-background) --- */
 #decoration-tomato-right {
     width: 20%;
     left: 80%;
@@ -262,10 +224,9 @@
 #decoration-tomato-left {
     width: 20%;
     right: 80%;
-    top: 40%; /* Rispetto a Ingredienti */
+    top: 40%; 
 }
 
-/* --- POLLO (Assicurati che l'HTML sia dentro la sezione corretta, es. Allergeni) --- */
 #decoration-chicken-right {
     width: 15%;
     left: 85%;
@@ -275,10 +236,9 @@
 #decoration-chicken-left {
     width: 15%;
     right: 86%;
-    top: 35%; /* Percentuale locale ridotta */
+    top: 35%;
 }
 
-/* --- PATATINE (Assicurati che l'HTML sia dentro la sezione corretta) --- */
 #decoration-fries-right {
     width: 17%;
     left: 83%;
@@ -289,56 +249,10 @@
 #decoration-fries-left {
     width: 17%;
     right: 84%;
-    top: 40%; /* Percentuale locale ridotta */
-}
-/*
-#decoration-chicken-right {
-    position: absolute;
-    width: 15%;
-    left: 85%;
-    top: 0%;
+    top: 40%; 
 }
 
-#decoration-chicken-left {
-    position: absolute;
-    width: 15%;
-    right: 85%;
-    top: 200%;
-}
 
-#decoration-fries-right {
-    position: absolute;
-    width: 18%;
-    left: 84%;
-    top: 0%;
-}
-
-#decoration-fries-left {
-    position: absolute;
-    width: 18%;
-    right: 84%;
-    top: 200%;
-}
-*/
-@media (min-width: 1200px) and (max-width: 1919px) {
-    
-    /* Riduciamo il gap tra le tre card da 3rem a 1.5rem per recuperare spazio orizzontale */
-    .container-craft {
-        gap: 1.5rem !important;
-    }
-
-    /* Riduciamo il padding interno delle card per non far stringere troppo i testi e i prezzi */
-    .container-craft .burger-card {
-        padding: 2rem 1rem !important;
-    }
-    
-    /* Stringiamo l'immagine del menù per dare più respiro a titoli e prezzi di quel blocco */
-    .img-menu {
-        width: 35% !important;
-    }
-}
-
-/* --- RESPONSIVE DESKTOP (Da 1200 px in su) se metto 1920, sotto quei px si rimpiccilisce di botto --- */
 @media (min-width: 1200px) {
     .allergens-card {
         display: flex;
