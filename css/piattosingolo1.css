@@ -255,7 +255,7 @@
 /* --- POMODORI (Inseriti dentro .stone-background e .first-background) --- */
 #decoration-tomato-right {
     width: 20%;
-    left: 78%;
+    left: 80%;
     top: 0%;
 }
 
@@ -268,7 +268,7 @@
 /* --- POLLO (Assicurati che l'HTML sia dentro la sezione corretta, es. Allergeni) --- */
 #decoration-chicken-right {
     width: 15%;
-    left: 83%;
+    left: 85%;
     top: 0%;
 }
 
