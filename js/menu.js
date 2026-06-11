@@ -19,7 +19,8 @@ document.addEventListener("DOMContentLoaded", function () {
             bottoniLingua.forEach(b => b.classList.remove("inverted"));
             this.classList.add("inverted");
 
-            
+            this.blur();
+
             const selezione = this.getAttribute("data-lang");
             if (selezione === "gal") {
                 menuSection.classList.add("enchanted-text");

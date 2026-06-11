@@ -121,7 +121,7 @@
 
 /* Cambio lingua */
 
-.enchanted-text *:not(.price-container):not(.price-container *) {
+.enchanted-text *:not(.price-container):not(.price-container *):not(.special-title) {
     font-family: 'Galactic', 'DMSans', sans-serif !important;
 }
 
