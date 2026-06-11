@@ -129,7 +129,6 @@ body {
   outline-offset: 4px;
 }
 
-.pushable:hover,
 .pushable.active {
   background: var(--color-font);
 }
@@ -145,7 +144,6 @@ body {
   transform: translateY(-6px);
 }
 
-.pushable:hover .front,
 .pushable.active .front {
   background: var(--ux-global-color-accent-1);
   color: var(--color-font);
@@ -174,7 +172,6 @@ body {
   background: var(--color-font);
 }
 
-.pushable.inverted:hover,
 .pushable.inverted.active {
   background: var(--ux-global-color-accent-1);
 }
@@ -184,7 +181,6 @@ body {
   color: var(--color-font);
 }
 
-.pushable.inverted:hover .front,
 .pushable.inverted.active .front {
   background: var(--color-font);
   color: var(--ux-global-color-accent-1);
@@ -415,6 +411,26 @@ p {
 #promo-drill,
 #promo-creeper {
   display: none;
+}
+
+@media (hover: hover) {
+  
+  .pushable:hover {
+    background: var(--color-font);
+  }
+  .pushable:hover .front {
+    background: var(--ux-global-color-accent-1);
+    color: var(--color-font);
+  }
+
+  .pushable.inverted:hover {
+    background: var(--ux-global-color-accent-1);
+  }
+  .pushable.inverted:hover .front {
+    background: var(--color-font);
+    color: var(--ux-global-color-accent-1);
+  }
+  
 }
 
 @media (min-width: 576px) {
