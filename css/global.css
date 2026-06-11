@@ -89,6 +89,12 @@
   font-weight: 400;
 }
 
+@font-face {
+  font-family: "Galactic";
+  src: url("../font/galactic.ttf") format("truetype");
+  font-weight: 400;
+}
+
 body {
   background-color: var(--ux-dark-color);
   color: var(--color-font);
