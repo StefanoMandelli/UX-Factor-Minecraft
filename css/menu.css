@@ -115,8 +115,8 @@
 }
 
 .special-section {
-  padding-left: 9rem !important;
-  padding-right: 9rem !important;
+  padding-left: 3rem !important;
+  padding-right: 3rem !important;
 }
 
 /* Cambio lingua */
@@ -149,6 +149,13 @@
     transform: translateY(0);
 }
 
+@media(min-width: 576px) {
+  .special-section {
+    padding-left: 7rem !important;
+    padding-right: 7rem !important;
+  }
+}
+
 @media (min-width: 992px) {
   .nav-pills .nav-link {
     font: var(--ux-txt-h2);
@@ -157,5 +164,10 @@
   .sub-section {
     padding-right: 11rem !important;
     padding-left: 11rem !important;
+  }
+
+  .special-section {
+    padding-left: 9rem !important;
+    padding-right: 9rem !important;
   }
 }

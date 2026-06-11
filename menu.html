@@ -108,21 +108,21 @@
 
             <li class="nav-item col-4 text-center" role="presentation">
                 <button class="nav-link active w-100 h-100 rounded-0 overworld-btn" id="overworld-tab"
-                    data-bs-toggle="pill" data-bs-target="#overworld" type="button" role="tab" aria-selected="true">
+                    data-bs-toggle="pill" data-bs-target="#overworld" type="button" role="tab" aria-controls="overworld" aria-selected="true">
                     Overworld
                 </button>
             </li>
 
             <li class="nav-item col-4 text-center" role="presentation">
-                <button class="nav-link w-100 h-100rounded-0 nether-btn" id="nether-tab" data-bs-toggle="pill"
-                    data-bs-target="#nether" type="button" role="tab" aria-selected="false">
+                <button class="nav-link w-100 h-100 rounded-0 nether-btn" id="nether-tab" data-bs-toggle="pill"
+                    data-bs-target="#nether" type="button" role="tab" aria-controls="nether" aria-selected="false">
                     Nether
                 </button>
             </li>
 
             <li class="nav-item col-4 text-center" role="presentation">
                 <button class="nav-link w-100 h-100 rounded-0 end-btn" id="end-tab" data-bs-toggle="pill"
-                    data-bs-target="#end" type="button" role="tab" aria-selected="false">
+                    data-bs-target="#end" type="button" role="tab" aria-controls="end" aria-selected="false">
                     End
                 </button>
             </li>
@@ -130,7 +130,7 @@
 
         <div class="tab-content" id="menu">
 
-            <div class="tab-pane fade show active theme-greenstack" id="overworld" role="tabpanel" tabindex="0">
+            <div class="tab-pane fade show active theme-greenstack" id="overworld" role="tabpanel" aria-labelledby="overworld-tab" tabindex="0">
                 <div class="special-section p-5">
                     <div class="special-hamburger card-3d p-5">
                         <div class="row align-items-center gap-4 gap-xl-0">
@@ -375,14 +375,14 @@
                 </div>
             </div>
 
-            <div class="tab-pane fade" id="nether" role="tabpanel" tabindex="0">
+            <div class="tab-pane fade" id="nether" role="tabpanel" aria-labelledby="nether-tab" tabindex="0">
                 <div class="p-4">
                     <h2 class="text-center">Nether Burger</h2>
                     <p>Contenuto piccante per il Nether...</p>
                 </div>
             </div>
 
-            <div class="tab-pane fade" id="end" role="tabpanel" tabindex="0">
+            <div class="tab-pane fade" id="end" role="tabpanel" aria-labelledby="end-tab" tabindex="0">
                 <div class="p-4">
                     <h2 class="text-center">End Burger</h2>
                     <p>Sapore cosmico e misterioso...</p>
