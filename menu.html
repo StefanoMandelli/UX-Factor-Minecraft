@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu</title>
+    <title>Menu - DineCraft</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/card3d.css">
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/piattosingolo1.css">
+
+    <link rel="icon" type="image/svg+xml" href="img/header/icons-minecraft.svg">
 
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 </head>
@@ -45,7 +47,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="btn btn-menu pushable" aria-current="page" href="./menu.html">
+                        <a class="btn btn-menu pushable inverted" aria-current="page" href="./menu.html">
                             <span class="front">
                                 MENU
                             </span>
@@ -83,16 +85,16 @@
     <div class="g-0 container-fluid text-center text-xl-start first-background">
         <div class="hero-desktop row p-5 g-0">
             <div class="col-12 col-xl-3 offset-xl-1 order-xl-2 pb-5">
-                <model-viewer src="img/body/menu/contattaci-compressed.glb" alt="Menu Hero" camera-controls touch-action="pan-y"
-                    shadow-intensity="1" auto-rotate rotation-per-second="30deg"
+                <model-viewer src="img/body/menu/contattaci-compressed.glb" alt="Menu Hero" camera-controls
+                    touch-action="pan-y" shadow-intensity="1" auto-rotate rotation-per-second="30deg"
                     style="width: 100%; height: 500px; background-color: transparent;">
                 </model-viewer>
             </div>
             <div class="col-12 col-xl-4 offset-xl-2 order-xl-1 align-self-xl-center">
                 <h1 class="mb-5 title-home">SCOPRI I NOSTRI PIATTI</h1>
-                <h3 class="mb-5">La tua barra della fame sta <b>lampeggiando</b>? Preparati a un gusto letteralmente
-                    esplosivo! Sfoglia il nostro menu pieno di pietanze leggendarie.</h3>
-                <a class="btn btn-menu pushable inverted mb-5" aria-current="page" href="menu.html#menu-tab">
+                <h2 class="mb-5">La tua barra della fame sta <b>lampeggiando</b>? Preparati a un gusto letteralmente
+                    esplosivo! Sfoglia il nostro menu pieno di pietanze leggendarie.</h2>
+                <a class="btn btn-menu pushable inverted mb-5" aria-current="page" href="menu.html#button-cards">
                     <span class="front">
                         HAI SCELTO COSA MANGIARE?
                     </span>
@@ -101,26 +103,27 @@
         </div>
     </div>
 
-    <div class="menu-section">
+    <div id="menu-section">
         <ul class="nav nav-pills row g-0 w-100 m-0 p-0" id="menu-tab" role="tablist">
 
             <li class="nav-item col-4 text-center" role="presentation">
                 <button class="nav-link active w-100 h-100 rounded-0 overworld-btn" id="overworld-tab"
-                    data-bs-toggle="pill" data-bs-target="#overworld" type="button" role="tab" aria-selected="true">
+                    data-bs-toggle="pill" data-bs-target="#overworld" type="button" role="tab" aria-controls="overworld"
+                    aria-selected="true">
                     Overworld
                 </button>
             </li>
 
             <li class="nav-item col-4 text-center" role="presentation">
-                <button class="nav-link w-100 h-100rounded-0 nether-btn" id="nether-tab" data-bs-toggle="pill"
-                    data-bs-target="#nether" type="button" role="tab" aria-selected="false">
+                <button class="nav-link w-100 h-100 rounded-0 nether-btn" id="nether-tab" data-bs-toggle="pill"
+                    data-bs-target="#nether" type="button" role="tab" aria-controls="nether" aria-selected="false">
                     Nether
                 </button>
             </li>
 
             <li class="nav-item col-4 text-center" role="presentation">
                 <button class="nav-link w-100 h-100 rounded-0 end-btn" id="end-tab" data-bs-toggle="pill"
-                    data-bs-target="#end" type="button" role="tab" aria-selected="false">
+                    data-bs-target="#end" type="button" role="tab" aria-controls="end" aria-selected="false">
                     End
                 </button>
             </li>
@@ -128,7 +131,8 @@
 
         <div class="tab-content" id="menu">
 
-            <div class="tab-pane fade show active theme-greenstack" id="overworld" role="tabpanel" tabindex="0">
+            <div class="tab-pane fade show active theme-greenstack" id="overworld" role="tabpanel"
+                aria-labelledby="overworld-tab" tabindex="0">
                 <div class="special-section p-5">
                     <div class="special-hamburger card-3d p-5">
                         <div class="row align-items-center gap-4 gap-xl-0">
@@ -138,7 +142,8 @@
                                 <img src="img/body/menu/Overworld/Panini/GreenStack.png" alt="GreenStack Burger"
                                     class="img-fluid w-100">
 
-                                <h3 class="mb-4">Scopri questo panino nelle diverse versioni a partire da:</h3>
+                                <h3 class="mb-4" data-i18n="sub-price-special">Scopri questo panino nelle diverse
+                                    versioni a partire da:</h3>
 
                                 <div class="price-container">
                                     <span class="number">7</span>
@@ -153,14 +158,16 @@
 
                                 <h2 class="mb-5 special-title">GreenStack Burger</h2>
 
-                                <h3 class="fw-bold mb-3">Riempi il tuo inventario con la nuova Stack Series!</h3>
-                                <h3 class="mb-5">Il GreenStack racchiude la freschezza dell'Overworld in un blocco
+                                <h3 class="fw-bold mb-3" data-i18n="special-description">Riempi il tuo inventario con la
+                                    nuova Stack Series!</h3>
+                                <h3 class="mb-5" data-i18n="special-overworld-subdescription">Il GreenStack racchiude la
+                                    freschezza dell'Overworld in un blocco
                                     compatto: soffice pane al muschio e ingredienti naturali per una saturazione
                                     massima, ideale per chi vuole esplorare la superficie.</h3>
 
                                 <a class="btn btn-menu pushable inverted mt-xl-5" aria-current="page"
                                     href="menu/descrizione-piatto-1.html">
-                                    <span class="front">
+                                    <span class="front" data-i18n="special-button">
                                         SCOPRI LA NOVITÁ
                                     </span>
                                 </a>
@@ -174,7 +181,7 @@
                 <!-- Sezione Fornace (overworld) -->
                 <div class="d-flex align-items-center w-100 my-4">
                     <div class="mc-divider-line left"></div>
-                    <h2 class="mx-5 mb-0">Fornace</h2>
+                    <h2 class="mx-5 mb-0" data-i18n="fornace">Fornace</h2>
                     <div class="mc-divider-line right"></div>
                 </div>
 
@@ -188,7 +195,9 @@
                                 <h2 class="mb-3 special-title">DC Classic Craft</h2>
 
                                 <div class="mt-auto">
-                                    <h3 class="mb-3">Disponibile in diverse versioni a partire da: </h3>
+                                    <h3 class="mb-3" data-i18n="sub-price">
+                                        Disponibile in diverse versioni a partire da:
+                                    </h3>
                                     <div class="price-container">
                                         <span class="number">6</span>
                                         <span class="comma">,</span>
@@ -206,7 +215,9 @@
                                 <h2 class="mb-3 special-title">L'Harvest Supreme</h2>
 
                                 <div class="mt-auto">
-                                    <h3 class="mb-3">Disponibile in diverse versioni a partire da: </h3>
+                                    <h3 class="mb-3" data-i18n="sub-price">
+                                        Disponibile in diverse versioni a partire da:
+                                    </h3>
                                     <div class="price-container">
                                         <span class="number">6</span>
                                         <span class="comma">,</span>
@@ -219,12 +230,14 @@
 
                         <div class="col-12 col-xl-4 text-center">
                             <div class="d-flex flex-column h-100 text-center">
-                                <img src="img/body/menu/Overworld/Panini/overworld-3.png" alt="Il Pollo del Bosco burger"
-                                    class="img-fluid px-5 px-xl-0">
+                                <img src="img/body/menu/Overworld/Panini/overworld-3.png"
+                                    alt="Il Pollo del Bosco burger" class="img-fluid px-5 px-xl-0">
                                 <h2 class="mb-3 special-title">Il Pollo del Bosco</h2>
 
                                 <div class="mt-auto">
-                                    <h3 class="mb-3">Disponibile in diverse versioni a partire da: </h3>
+                                    <h3 class="mb-3" data-i18n="sub-price">
+                                        Disponibile in diverse versioni a partire da:
+                                    </h3>
                                     <div class="price-container">
                                         <span class="number">6</span>
                                         <span class="comma">,</span>
@@ -241,7 +254,7 @@
                 <!-- Sezione Alambicco (overworld) -->
                 <div class="d-flex align-items-center w-100 my-4">
                     <div class="mc-divider-line left"></div>
-                    <h2 class="mx-5 mb-0">Alambicco</h2>
+                    <h2 class="mx-5 mb-0" data-i18n="alambicco">Alambicco</h2>
                     <div class="mc-divider-line right"></div>
                 </div>
 
@@ -255,7 +268,8 @@
                                 <h2 class="mb-3 special-title">Velo delle dune</h2>
 
                                 <div class="mt-auto">
-                                    <h3 class="mb-3">Calda come la TNT nascosta nel Tempio del Deserto</h3>
+                                    <h3 class="mb-3" data-i18n="alb-o-1">Calda come la TNT nascosta nel Tempio del
+                                        Deserto</h3>
                                     <div class="price-container">
                                         <span class="number">3</span>
                                         <span class="comma">,</span>
@@ -268,12 +282,13 @@
 
                         <div class="col-12 col-xl-4 text-center mb-5 mb-xl-0">
                             <div class="d-flex flex-column h-100 text-center">
-                                <img src="img/body/menu/Overworld/Bibite/overworld-2.png" alt="Respiro del ghiacciaio drink"
-                                    class="img-fluid px-5 px-xl-0">
+                                <img src="img/body/menu/Overworld/Bibite/overworld-2.png"
+                                    alt="Respiro del ghiacciaio drink" class="img-fluid px-5 px-xl-0">
                                 <h2 class="mb-3 special-title">Respiro del ghiacciaio</h2>
 
                                 <div class="mt-auto">
-                                    <h3 class="mb-3">Gela più della Neve Farinosa senza stivali in pelle</h3>
+                                    <h3 class="mb-3" data-i18n="alb-o-2">Gela più della Neve Farinosa senza stivali in
+                                        pelle</h3>
                                     <div class="price-container">
                                         <span class="number">4</span>
                                         <span class="comma">,</span>
@@ -291,7 +306,8 @@
                                 <h2 class="mb-3 special-title">Linfa di quercia</h2>
 
                                 <div class="mt-auto">
-                                    <h3 class="mb-3">Intricata come le liane in un Tempio della Giungla</h3>
+                                    <h3 class="mb-3" data-i18n="alb-o-3">Intricata come le liane in un Tempio della
+                                        Giungla</h3>
                                     <div class="price-container">
                                         <span class="number">4</span>
                                         <span class="comma">,</span>
@@ -308,7 +324,7 @@
                 <!-- Sezione Arnia (overworld) -->
                 <div class="d-flex align-items-center w-100 my-4 mt-5">
                     <div class="mc-divider-line left"></div>
-                    <h2 class="mx-5 mb-0">Arnia</h2>
+                    <h2 class="mx-5 mb-0" data-i18n="arnia">Arnia</h2>
                     <div class="mc-divider-line right"></div>
                 </div>
 
@@ -317,12 +333,13 @@
 
                         <div class="col-12 col-xl-4 text-center mb-5 mb-xl-0">
                             <div class="d-flex flex-column h-100 text-center">
-                                <img src="img/body/menu/Overworld/Dolci/overworld-1.png" alt="Terra Antica della Mesa sweet"
-                                    class="img-fluid px-5 px-xl-0">
+                                <img src="img/body/menu/Overworld/Dolci/overworld-1.png"
+                                    alt="Terra Antica della Mesa sweet" class="img-fluid px-5 px-xl-0">
                                 <h2 class="mb-3 special-title">Terra Antica della Mesa</h2>
 
                                 <div class="mt-auto">
-                                    <h3 class="mb-3">Cotto dal sole, dura come la Terracotta indurita</h3>
+                                    <h3 class="mb-3" data-i18n="arnia-o-1">Cotto dal sole, dura come la Terracotta
+                                        indurita</h3>
                                     <div class="price-container">
                                         <span class="number">5</span>
                                         <span class="comma">,</span>
@@ -340,7 +357,8 @@
                                 <h2 class="mb-3 special-title">Cristallo del Cielo</h2>
 
                                 <div class="mt-auto">
-                                    <h3 class="mb-3">Limpido come l'aria rarefatta al limite di costruzione</h3>
+                                    <h3 class="mb-3" data-i18n="arnia-o-2">Limpido come l'aria rarefatta al limite di
+                                        costruzione</h3>
                                     <div class="price-container">
                                         <span class="number">5</span>
                                         <span class="comma">,</span>
@@ -358,7 +376,8 @@
                                 <h2 class="mb-3 special-title">Foglia Incantata</h2>
 
                                 <div class="mt-auto">
-                                    <h3 class="mb-3">Così delicato che serve Tocco di Velluto per raccoglierlo</h3>
+                                    <h3 class="mb-3" data-i18n="arnia-o-3">Così delicato che serve Tocco di Velluto per
+                                        raccoglierlo</h3>
                                     <div class="price-container">
                                         <span class="number">5</span>
                                         <span class="comma">,</span>
@@ -373,14 +392,14 @@
                 </div>
             </div>
 
-            <div class="tab-pane fade" id="nether" role="tabpanel" tabindex="0">
+            <div class="tab-pane fade" id="nether" role="tabpanel" aria-labelledby="nether-tab" tabindex="0">
                 <div class="p-4">
                     <h2 class="text-center">Nether Burger</h2>
                     <p>Contenuto piccante per il Nether...</p>
                 </div>
             </div>
 
-            <div class="tab-pane fade" id="end" role="tabpanel" tabindex="0">
+            <div class="tab-pane fade" id="end" role="tabpanel" aria-labelledby="end-tab" tabindex="0">
                 <div class="p-4">
                     <h2 class="text-center">End Burger</h2>
                     <p>Sapore cosmico e misterioso...</p>
@@ -391,7 +410,8 @@
 
     <div id="button-cards" class="container-fluid text-center text-xl-start redstone-background g-0">
         <div class="row py-5 g-0 sect-card">
-            <div class="col-12 col-lg-8 offset-lg-2 pb-5 d-flex justify-content-center col-xl-5 py-xl-0 offset-xl-1 card-desktop">
+            <div
+                class="col-12 col-lg-8 offset-lg-2 pb-5 d-flex justify-content-center col-xl-5 py-xl-0 offset-xl-1 card-desktop">
                 <div class="card card-3d card-3d-background">
                     <div class="p-4 card-body d-flex align-items-center align-items-xl-start">
                         <h3 class="card-title"><b>Riempi la tua barra della fame!</b></h3>
@@ -407,7 +427,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-lg-8 offset-lg-2 pt-5 d-flex justify-content-center col-xl-5 py-xl-0 offset-xl-0 card-desktop">
+            <div
+                class="col-12 col-lg-8 offset-lg-2 pt-5 d-flex justify-content-center col-xl-5 py-xl-0 offset-xl-0 card-desktop">
                 <div class="card card-3d card-3d-background">
                     <div class="p-4 card-body d-flex align-items-center align-items-xl-start">
                         <h3 class="card-title pr-3"><b>La nostra chat è sempre aperta!</b></h3>
@@ -470,11 +491,23 @@
         </div>
     </footer>
 
+    <div id="language-switcher" class="floating-container d-flex flex-column flex-xl-row gap-3 gap-xl-2">
+        <button class="btn btn-menu pushable inverted btn-lang" data-lang="it">
+            <span class="front">ITA</span>
+        </button>
+        <button class="btn btn-menu pushable btn-lang" data-lang="en">
+            <span class="front">ENG</span>
+        </button>
+        <button class="btn btn-menu pushable btn-lang" data-lang="gal">
+            <span class="front" id="GAL">GAL</span>
+        </button>
+    </div>
+
     <script src="js/card3dscript.js"></script>
     <script src="js/bootstrap.bundle.js"></script>
     <script src="js/global.js"></script>
     <script src="js/hrefristorante.js"></script>
-    
+    <script src="js/menu.js"></script>
 </body>
 
 </html>

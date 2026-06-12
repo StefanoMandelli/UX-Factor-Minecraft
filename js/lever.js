@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (torchText) torchText.classList.remove('torch-text-active');
                 
                 if (torchImage) {
-                    torchImage.src = "img/body/ristorante/torcia disattivata lg.png";
+                    torchImage.src = "img/body/ristorante/torcia-disattivata-lg.png";
                 }
             }
         });

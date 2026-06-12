@@ -158,7 +158,7 @@ h2 {
   margin: 0rem;
 }
 
-.code-info h4 .assistenza {
+.code-info h4 .assistance {
   color: var(--ux-nether-color-accent);
 }
 
@@ -166,7 +166,7 @@ h2 {
   color: var(--ux-global-color-accent-1);
 }
 
-.code-info h4 .collaborazioni {
+.code-info h4 .collaborations {
   color: var(--ux-end-color-accent);
 }
 
