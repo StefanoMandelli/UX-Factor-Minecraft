@@ -131,15 +131,15 @@ body {
 }
 
 #slide3 {
-  background: url("../img/body/ristorante/immagine2ristorante.png") center / cover no-repeat;
+  background: url("../img/body/ristorante/immagine3ristorante.png") center / cover no-repeat;
 }
 
 #slide4 {
-  background: url("../img/body/ristorante/immagine2ristorante.png") center / cover no-repeat;
+  background: url("../img/body/ristorante/immagine4ristorante.jpg") center / cover no-repeat;
 }
 
 #slide5 {
-  background: url("../img/body/ristorante/immagine2ristorante.png") center / cover no-repeat;
+  background: url("../img/body/ristorante/immagine5ristorante.jpg") center / cover no-repeat;
 }
 
 @media (min-width: 576px) {
