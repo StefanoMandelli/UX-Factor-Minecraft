@@ -92,7 +92,7 @@
             </div>
             <div class="col-12 col-xl-4 offset-xl-2 order-xl-1 align-self-xl-center">
                 <h1 class="mb-5 title-home">SCOPRI I NOSTRI PIATTI</h1>
-                <h2 class="mb-5">La tua barra della fame sta <b>lampeggiando</b>? 
+                <h2 class="mb-5">La tua barra della fame sta <b>lampeggiando</b>?
                     Sfoglia il nostro menu pieno di pietanze leggendarie.</h2>
                 <a class="btn btn-menu pushable inverted mb-5" aria-current="page" href="menu.html#button-cards">
                     <span class="front">
@@ -186,9 +186,49 @@
                 </div>
 
                 <div class="px-5 mb-3 sub-section">
+
+                    <!-- NUOVA SEZIONE FILTRI INGREDIENTI -->
+                    <div class="row mb-5 justify-content-center">
+                        <div
+                            class="col-12 d-flex flex-column flex-md-row gap-3 gap-md-4 justify-content-center align-items-center align-items-md-center filter-wrapper">
+
+                            <span class="fw-bold special-title text-white title-filter mb-2 mb-md-0">
+                                &lt; FILTRA ALLERGENI &gt;
+                            </span>
+
+                            <div
+                                class="justify-content-center d-flex flex-column flex-sm-row flex-wrap gap-3 gap-md-4  option-filter">
+
+                                <div class="form-check form-switch item-filter">
+                                    <input class="form-check-input filtro-checkbox" type="checkbox" id="check-carne"
+                                        value="carne">
+                                    <label class="form-check-label fw-bold text-white text-nowrap"
+                                        for="check-carne">Carne Bovino</label>
+                                </div>
+
+                                <div class="form-check form-switch item-filter">
+                                    <input class="form-check-input filtro-checkbox" type="checkbox" id="check-pollo"
+                                        value="pollo">
+                                    <label class="form-check-label fw-bold text-white text-nowrap"
+                                        for="check-pollo">Pollo</label>
+                                </div>
+
+                                <div class="form-check form-switch item-filter">
+                                    <input class="form-check-input filtro-checkbox" type="checkbox" id="check-verdura"
+                                        value="verdura">
+                                    <label class="form-check-label fw-bold text-white text-nowrap"
+                                        for="check-verdura">Verdure dell'Orto</label>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Griglia dei panini modificata con la classe 'hamburger-card' e l'attributo 'data-ingredienti' -->
                     <div class="row gx-xl-5">
 
-                        <div class="col-12 col-xl-4 text-center mb-5 mb-xl-0">
+                        <!-- Panino 1: DC Classic Craft (Contiene solo Carne) -->
+                        <div class="col-12 col-xl-4 text-center mb-5 mb-xl-0 hamburger-card" data-ingredienti="carne">
                             <div class="d-flex flex-column h-100 text-center">
                                 <img src="img/body/menu/Overworld/Panini/overworld-1.png" alt="DC Classic Craft burger"
                                     class="img-fluid px-5 px-xl-0">
@@ -208,7 +248,8 @@
                             </div>
                         </div>
 
-                        <div class="col-12 col-xl-4 text-center mb-5 mb-xl-0">
+                        <!-- Panino 2: L'Harvest Supreme (Contiene solo Verdura) -->
+                        <div class="col-12 col-xl-4 text-center mb-5 mb-xl-0 hamburger-card" data-ingredienti="verdura">
                             <div class="d-flex flex-column h-100 text-center">
                                 <img src="img/body/menu/Overworld/Panini/overworld-2.png" alt="L'Harvest Supreme burger"
                                     class="img-fluid px-5 px-xl-0">
@@ -228,7 +269,8 @@
                             </div>
                         </div>
 
-                        <div class="col-12 col-xl-4 text-center">
+                        <!-- Panino 3: Il Pollo del Bosco (Contiene Pollo e Verdura) -->
+                        <div class="col-12 col-xl-4 text-center hamburger-card" data-ingredienti="pollo verdura">
                             <div class="d-flex flex-column h-100 text-center">
                                 <img src="img/body/menu/Overworld/Panini/overworld-3.png"
                                     alt="Il Pollo del Bosco burger" class="img-fluid px-5 px-xl-0">
@@ -314,6 +356,7 @@
                                         <span class="number">9</span>
                                         <span class="number">0</span>
                                     </div>
+                                
                                 </div>
                             </div>
                         </div>
@@ -508,6 +551,7 @@
     <script src="js/global.js"></script>
     <script src="js/hrefristorante.js"></script>
     <script src="js/menu.js"></script>
+    <script src="js/filtraallergeni.js"></script>
 </body>
 
 </html>
