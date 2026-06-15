@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     bottoniLingua.forEach(bottone => {
-        bottone.addEventListener("click", function() {
+        bottone.addEventListener("click", function () {
 
             bottoniLingua.forEach(b => b.classList.remove("inverted"));
             this.classList.add("inverted");
@@ -45,9 +45,45 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(menuSection);
     }
 
+    // Seleziona le checkbox usando la classe corretta presente nell'HTML
+    const checkboxes = document.querySelectorAll(".filtro-checkbox");
+    const panini = document.querySelectorAll(".allergeni");
+
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener("change", filtraPanini);
+    });
+
+    function filtraPanini() {
+        // Recupera i valori delle checkbox attualmente selezionate
+        const filtriAttivi = Array.from(checkboxes)
+            .filter(i => i.checked)
+            .map(i => i.value);
+
+        panini.forEach(panino => {
+            // Recupera gli ingredienti associati al panino dall'attributo HTML
+            const attrIngredienti = panino.getAttribute("data-ingredienti");
+            const ingredientiPanino = attrIngredienti ? attrIngredienti.split(" ") : [];
+
+            if (filtriAttivi.length === 0) {
+                // Se non ci sono filtri attivi, mostra tutti i panini normalmente
+                panino.classList.remove("filter-out");
+            } else {
+                // Controlla se il panino contiene ALMENO uno degli ingredienti selezionati
+                const corrisponde = filtriAttivi.some(ingr => ingredientiPanino.includes(ingr));
+
+                if (corrisponde) {
+                    // Se corrisponde al filtro, rimuove l'effetto grigio
+                    panino.classList.add("filter-out");
+                } else {
+                    // Se NON corrisponde, il panino diventa grigio
+                    panino.classList.remove("filter-out");
+                }
+            }
+        });
+    }
+
 });
 
-// Il dizionario
 const dizionario = {
     "it": {
         "sub-price-special": "Scopri questo panino nelle diverse versioni a partire da:",
@@ -63,7 +99,25 @@ const dizionario = {
         "arnia": "Arnia",
         "arnia-o-1": "Cotto dal sole, dura come la Terracotta indurita",
         "arnia-o-2": "Limpido come l'aria rarefatta al limite di costruzione",
-        "arnia-o-3": "Così delicato che serve Tocco di Velluto per raccoglierlo"
+        "arnia-o-3": "Così delicato che serve Tocco di Velluto per raccoglierlo",
+        "special-nether-subdescription": "Lo ShadowStack scatena il vero calore del Nether: un'audace combinazione di pane al carbone e ripieno bollente che offre un gusto esplosivo, capace di sfidare persino la tua resistenza al fuoco.",
+        "alb-n-1": "Raccolta direttamente dalle pozze di lava del Nether",
+        "alb-n-2": "Sapore denso, deciso ed eruttante come un vulcano",
+        "alb-n-3": "Preziosa come un lingotto scambiato con un Pigling",
+        "arnia-n-1": "Caldo e bruciante come un Blocco di Magma sotto i piedi",
+        "arnia-n-2": "Fatto direttamente dagli Hoglin nella Foresta Cremisi",
+        "arnia-n-3": "Un sapore che ti rallenta come la Sabbia delle Anime",
+        "special-end-subdescription": "Il BerryStack svela i segreti dell'End: pane scuro come il vuoto e note esotiche di Frutto Chorus creano un sapore misterioso che ti seguirà ovunque, anche dopo il teletrasporto.",
+        "alb-e-1": "Disorientante come un viaggio con il teletrasporto",
+        "alb-e-2": "Profonda come l'abisso infinito sotto l'isola centrale",
+        "alb-e-3": "Letale come l'area viola persistente del drago",
+        "arnia-e-1": "Un gusto teletrasportante dolce come la vittoria",
+        "arnia-e-2": "Oscuro come guardare giù dal bordo del mondo",
+        "arnia-e-3": "Frizzante e pericoloso, servito direttamente sulla EndStone",
+        "filtro_grano": "Grano del Villaggio",
+        "filtro_latticini": "Secchio di Latte",
+        "filtro_vegetale": "Orto del Villico"
+
     },
     "en": {
         "sub-price-special": "Discover it in different versions starting from:",
@@ -79,6 +133,23 @@ const dizionario = {
         "arnia": "Beehive",
         "arnia-o-1": "Sun-baked, hard as hardened Terracotta",
         "arnia-o-2": "Clear as the rarefied air at build limit",
-        "arnia-o-3": "So delicate it requires Silk Touch to collect"
+        "arnia-o-3": "So delicate it requires Silk Touch to collect",
+        "special-nether-subdescription": "The ShadowStack unleashes the true heat of the Nether: a bold combination of charcoal bread and fiery filling that offers an explosive taste, capable of challenging even your fire resistance.",
+        "alb-n-1": "Collected directly from the Nether's lava pools",
+        "alb-n-2": "Dense, bold and eruptive like a volcano",
+        "alb-n-3": "Precious as an ingot traded with a Pigling",
+        "arnia-n-1": "Hot and burning like a Magma Block under your feet",
+        "arnia-n-2": "Made directly by the Hoglins in the Crimson Forest",
+        "arnia-n-3": "A taste that slows you down like Soul Sand",
+        "special-end-subdescription": "The BerryStack unveils the secrets of the End: dark bread like the void and exotic notes of Chorus Fruit create a mysterious flavor that will follow you everywhere, even after teleportation.",
+        "alb-e-1": "Disorienting as a teleportation journey",
+        "alb-e-2": "Deep as the endless abyss beneath the central island",
+        "alb-e-3": "Deadly as the dragon's persistent purple area",
+        "arnia-e-1": "A teleporting taste as sweet as victory",
+        "arnia-e-2": "Dark as looking down from the edge of the world",
+        "arnia-e-3": "Sparkling and dangerous, served directly on End Stone",
+        "filtro_grano": "Village Wheat",
+        "filtro_latticini": "Milk Bucket",
+        "filtro_vegetale": "Villager's Garden"
     }
 };

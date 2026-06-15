@@ -1,18 +1,3 @@
-/* --- SISTEMA DI FILTRAGGIO PIATTI --- */
-
-.hamburger-card {
-  transition: filter 0.4s ease, opacity 0.4s ease;
-  will-change: filter, opacity;
-}
-
-.hamburger-card.filter-out {
-  filter: grayscale(100%) opacity(30%) !important;
-  pointer-events: none;
-  /* Impedisce interazioni e click sui panini disattivati */
-}
-
-/* Stile contenitore filtri in linea con l'interfaccia di gioco */
-
 .nav-pills .nav-link {
   color: var(--ux-color) !important;
   padding: 2rem 1rem !important;
@@ -45,7 +30,8 @@
 }
 
 #menu-section:has(.overworld-btn.active) {
-  background: url("../img/body/menu/pattern-overworld.png") rgba(26, 51, 35, 0.20) center !important;
+  background: url("../img/body/menu/pattern-overworld.png")
+    rgba(26, 51, 35, 0.2) center !important;
 }
 
 #menu-section:has(.nether-btn.active) {
@@ -72,12 +58,10 @@
     10px 10px 0px var(--ux-global-color-accent-1),
     15px 15px 20px rgba(0, 0, 0, 0.15),
     inset 8px 8px 0px var(--ux-global-color-accent-1),
-    /* Ombra interna */
     4px 4px 0px rgba(255, 255, 255, 0.05);
 }
 
 #overworld .special-hamburger:hover {
-  /* In hover, lo spessore solido resta intatto, ma l'ombra sfocata finale si allarga! */
   box-shadow:
     1px 1px 0px var(--ux-global-color-accent-1),
     2px 2px 0px var(--ux-global-color-accent-1),
@@ -91,9 +75,90 @@
     10px 10px 0px var(--ux-global-color-accent-1),
     20px 20px 30px rgba(0, 0, 0, 0.3),
     inset 8px 8px 0px var(--ux-global-color-accent-1),
-    /* Ombra interna */
     4px 4px 0px rgba(255, 255, 255, 0.05);
   z-index: 10;
+}
+
+#nether .special-hamburger {
+  background: rgba(83, 31, 29, 0.7);
+  border: none;
+  box-shadow:
+    1px 1px 0px var(--ux-nether-color-accent),
+    2px 2px 0px var(--ux-nether-color-accent),
+    3px 3px 0px var(--ux-nether-color-accent),
+    4px 4px 0px var(--ux-nether-color-accent),
+    5px 5px 0px var(--ux-nether-color-accent),
+    6px 6px 0px var(--ux-nether-color-accent),
+    7px 7px 0px var(--ux-nether-color-accent),
+    8px 8px 0px var(--ux-nether-color-accent),
+    9px 9px 0px var(--ux-nether-color-accent),
+    10px 10px 0px var(--ux-nether-color-accent),
+    15px 15px 20px rgba(0, 0, 0, 0.15),
+    inset 8px 8px 0px var(--ux-nether-color-accent),
+    /* Ombra interna */ 4px 4px 0px rgba(255, 255, 255, 0.05);
+}
+
+#nether .special-hamburger:hover {
+  box-shadow:
+    1px 1px 0px var(--ux-nether-color-accent),
+    2px 2px 0px var(--ux-nether-color-accent),
+    3px 3px 0px var(--ux-nether-color-accent),
+    4px 4px 0px var(--ux-nether-color-accent),
+    5px 5px 0px var(--ux-nether-color-accent),
+    6px 6px 0px var(--ux-nether-color-accent),
+    7px 7px 0px var(--ux-nether-color-accent),
+    8px 8px 0px var(--ux-nether-color-accent),
+    9px 9px 0px var(--ux-nether-color-accent),
+    10px 10px 0px var(--ux-nether-color-accent),
+    20px 20px 30px rgba(0, 0, 0, 0.3),
+    inset 8px 8px 0px var(--ux-nether-color-accent),
+    4px 4px 0px rgba(255, 255, 255, 0.05);
+  z-index: 10;
+}
+
+#nether .price-container .number {
+  background-color: var(--ux-nether-color-accent);
+}
+
+#end .special-hamburger {
+  background: rgba(63, 30, 84, 0.7);
+  border: none;
+  box-shadow:
+    1px 1px 0px var(--ux-end-color-accent),
+    2px 2px 0px var(--ux-end-color-accent),
+    3px 3px 0px var(--ux-end-color-accent),
+    4px 4px 0px var(--ux-end-color-accent),
+    5px 5px 0px var(--ux-end-color-accent),
+    6px 6px 0px var(--ux-end-color-accent),
+    7px 7px 0px var(--ux-end-color-accent),
+    8px 8px 0px var(--ux-end-color-accent),
+    9px 9px 0px var(--ux-end-color-accent),
+    10px 10px 0px var(--ux-end-color-accent),
+    15px 15px 20px rgba(0, 0, 0, 0.15),
+    inset 8px 8px 0px var(--ux-end-color-accent),
+    /* Ombra interna */ 4px 4px 0px rgba(255, 255, 255, 0.05);
+}
+
+#end .special-hamburger:hover {
+  box-shadow:
+    1px 1px 0px var(--ux-end-color-accent),
+    2px 2px 0px var(--ux-end-color-accent),
+    3px 3px 0px var(--ux-end-color-accent),
+    4px 4px 0px var(--ux-end-color-accent),
+    5px 5px 0px var(--ux-end-color-accent),
+    6px 6px 0px var(--ux-end-color-accent),
+    7px 7px 0px var(--ux-end-color-accent),
+    8px 8px 0px var(--ux-end-color-accent),
+    9px 9px 0px var(--ux-end-color-accent),
+    10px 10px 0px var(--ux-end-color-accent),
+    20px 20px 30px rgba(0, 0, 0, 0.3),
+    inset 8px 8px 0px var(--ux-end-color-accent),
+    4px 4px 0px rgba(255, 255, 255, 0.05);
+  z-index: 10;
+}
+
+#end .price-container .number {
+  background-color: var(--ux-end-color-accent);
 }
 
 .special-title {
@@ -104,7 +169,20 @@
   flex-grow: 1;
   height: 5px;
   background-color: var(--ux-global-color-accent-1);
-  /* Inserisci qui la tua variabile del verde */
+  position: relative;
+}
+
+#nether .mc-divider-line {
+  flex-grow: 1;
+  height: 5px;
+  background-color: var(--ux-nether-color-accent);
+  position: relative;
+}
+
+#end .mc-divider-line {
+  flex-grow: 1;
+  height: 5px;
+  background-color: var(--ux-end-color-accent);
   position: relative;
 }
 
@@ -137,11 +215,84 @@
   padding-right: 3rem !important;
 }
 
+body:has(.nether-btn.active) .special-section .btn-menu {
+  --ux-global-color-accent-1: var(--ux-nether-color-accent) !important;
+}
+
+body:has(.end-btn.active) .special-section .btn-menu {
+  --ux-global-color-accent-1: var(--ux-end-color-accent) !important;
+}
+
+/* Filtro allergeni */
+
+.allergeni {
+  transition:
+    filter 0.4s ease,
+    opacity 0.4s ease;
+  will-change: filter, opacity;
+}
+
+.allergeni.filter-out {
+  filter: grayscale(100%) opacity(30%) !important;
+  pointer-events: none;
+}
+
+.form-switch .form-check-input.filtro-checkbox {
+  border-radius: 0 !important;
+  background-color: var(--ux-dark-color) !important;
+  border: 2px solid var(--color-font) !important;
+
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3crect x='-3' y='-3' width='6' height='6' fill='%238b8b8b'/%3e%3c/svg%3e") !important;
+}
+
+.form-switch .form-check-input.filtro-checkbox:checked {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3crect x='-3' y='-3' width='6' height='6' fill='%23ffffff'/%3e%3c/svg%3e") !important;
+}
+
+.form-switch .form-check-input.filtro-checkbox:focus {
+  box-shadow: none !important;
+  border-color: var(--color-font) !important;
+}
+
+body:has(.overworld-btn.active)
+  .form-switch
+  .form-check-input.filtro-checkbox:checked {
+  background-color: var(--ux-global-color-accent-1) !important;
+  border-color: var(--ux-global-color-accent-1) !important;
+}
+
+body:has(.nether-btn.active)
+  .form-switch
+  .form-check-input.filtro-checkbox:checked {
+  background-color: var(--ux-nether-color-accent) !important;
+  border-color: var(--ux-nether-color-accent) !important;
+}
+
+body:has(.end-btn.active)
+  .form-switch
+  .form-check-input.filtro-checkbox:checked {
+  background-color: var(--ux-end-color-accent) !important;
+  border-color: var(--ux-end-color-accent) !important;
+}
+
+.form-check-label {
+  color: var(--color-font) !important;
+}
+
+.filter-wrapper {
+    padding: 2rem 0rem 4rem 0rem !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 3rem !important;
+  }
+
 /* Cambio lingua */
 
-.enchanted-text *:not(.price-container):not(.price-container *):not(.special-title),
+.enchanted-text
+  *:not(.price-container):not(.price-container *):not(.special-title),
 #GAL {
-  font-family: 'Galactic', 'DMSans', sans-serif !important;
+  font-family: "Galactic", "DMSans", sans-serif !important;
 }
 
 .floating-container {
@@ -162,7 +313,15 @@
   transform: translateY(0);
 }
 
-@media(min-width: 576px) {
+body:has(.nether-btn.active) #language-switcher {
+  --ux-global-color-accent-1: var(--ux-nether-color-accent) !important;
+}
+
+body:has(.end-btn.active) #language-switcher {
+  --ux-global-color-accent-1: var(--ux-end-color-accent) !important;
+}
+
+@media (min-width: 576px) {
   .special-section {
     padding-left: 7rem !important;
     padding-right: 7rem !important;
@@ -170,6 +329,15 @@
 }
 
 @media (min-width: 992px) {
+
+  .filter-wrapper {
+    padding: 2rem 0rem 4rem 0rem !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 3rem !important;
+  }
+
   .nav-pills .nav-link {
     font: var(--ux-txt-h2);
   }
@@ -185,52 +353,20 @@
   }
 }
 
-/* --- MODIFICHE GRAFICHE DA 1200px IN SU --- */
-/* --- MODIFICHE GRAFICHE DA 1200px IN SU --- */
-/* --- MODIFICHE GRAFICHE DA 1200px IN SU (CENTRATO E SU UNA RIGA) --- */
 @media (min-width: 1200px) {
 
-  /* Centra l'intero blocco (Titolo + Filtri) nella pagina */
-  .filter-wrapper {
-    padding: 2.5rem 4rem !important;
-    margin: 4rem 0 3rem 0 !important;
-    flex-direction: row !important;
-    /* Forza titolo e switch affiancati */
-    justify-content: center !important;
-    /* CENTRA tutto il contenuto orizzontalmente */
-    align-items: center !important;
-    /* Centra tutto verticalmente */
-    gap: 3rem !important;
-    /* Spazio tra il Titolo e il primo switch */
-  }
-
-  /* Gestione del titolo */
-  .title-filter {
-    font-size: 1rem !important;
-    margin-bottom: 0 !important;
-    white-space: nowrap !important;
-    /* Impedisce al titolo di andare a capo */
-  }
-
-  /* FORZATURA SU UNA RIGA E CENTRATO PER LE OPZIONI */
   .option-filter {
     flex-direction: row !important;
-    /* Forza i filtri in orizzontale */
     flex-wrap: nowrap !important;
-    /* Impedisce categoricamente di andare su due righe */
     justify-content: center !important;
-    /* Centra i filtri tra di loro */
     gap: 2rem !important;
-    /* Spazio uniforme tra Carne, Pollo e Verdura */
   }
 
-  /* Testi delle opzioni */
   .item-filter .form-check-label {
     font-size: 1rem !important;
     padding-left: 0.5rem;
   }
 
-  /* Ingrandimento della levetta fisica */
   .item-filter .form-check-input.filtro-checkbox {
     width: 3.5rem !important;
     height: 1.75rem !important;
@@ -247,7 +383,6 @@
 /* --- EXTRA INGRANDIMENTO DA 1920px IN SU --- */
 @media (min-width: 1920px) {
   .filter-wrapper {
-    margin: 4rem 0 4rem 0 !important;
     gap: 5rem !important;
   }
 
