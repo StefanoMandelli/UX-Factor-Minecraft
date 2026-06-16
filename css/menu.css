@@ -277,6 +277,7 @@ body:has(.end-btn.active)
 
 .form-check-label {
   color: var(--color-font) !important;
+  font: var(--ux-txt-h4) !important;
 }
 
 .filter-wrapper {
