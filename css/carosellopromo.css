@@ -10,10 +10,10 @@
 }
 
 .carousel-viewport {
-    overflow: visible; /* Importante per vedere le card laterali */
+    overflow: visible;
     width: 100%;
     max-width: 800px;
-    height: 350px; /* Altezza fissa per contenere il blocco assoluto */
+    height: 350px;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -1,4 +1,5 @@
-/* Variabili globali CSS */
+/* VARIABILI GLOBALI CSS */
+
 :root {
   /* Colori */
   --ux-global-color-background: #1a3323;
@@ -113,8 +114,6 @@ body {
   --bs-btn-hover-bg: var(--ux-global-color-accent-1);
   --bs-btn-hover-border-color: var(--ux-global-color-accent-1);
 
-  --bs-btn-focus-shadow-rgb: var();
-
   --bs-btn-active-color: var(--color-font);
   --bs-btn-active-bg: var(--ux-global-color-accent-1);
   --bs-btn-active-border-color: var(--ux-global-color-accent-1);
@@ -153,7 +152,7 @@ body {
   transform: translateY(-2px);
 }
 
-/* Bottoni - seconda versione (sfondo verde e scritta bianca) */
+/* Bottoni - seconda versione inverted (sfondo verde e scritta bianca) */
 .btn-menu.inverted {
   --bs-btn-color: var(--color-font);
   --bs-btn-bg: var(--ux-global-color-accent-1);
@@ -214,7 +213,6 @@ body {
 .collapsing {
   transition: none !important;
   display: none !important;
-  /* Evita che si veda il passaggio intermedio */
 }
 
 .navbar-collapse {
@@ -255,7 +253,6 @@ body {
 
   100% {
     transform: scale(1);
-    /* Ingrandisce del 20%, simulando l'avvicinamento */
   }
 }
 
@@ -267,22 +264,18 @@ body:has(.navbar-collapse.show) {
 /* Cambia l'icona del burger menu in una X quando è attivo */
 .navbar-toggler[aria-expanded="false"] .icon-close {
   display: none;
-  /* Nascondi la X */
 }
 
 .navbar-toggler[aria-expanded="false"] .icon-burger {
   display: inline-block;
-  /* Mostra l'hamburger */
 }
 
 .navbar-toggler[aria-expanded="true"] .icon-burger {
   display: none;
-  /* Nascondi l'hamburger */
 }
 
 .navbar-toggler[aria-expanded="true"] .icon-close {
   display: inline-block;
-  /* Mostra la X */
 }
 
 /* BODY */
@@ -311,28 +304,23 @@ p {
   font: var(--ux-txt-body);
 }
 
-.title-home {
+#title-home {
   text-shadow:
     0 2px 0 #446a1b,
-    /* Primo gradino */
     0 4px 0 #446a1b,
-    /* Secondo gradino (leggermente più scuro) */
     0 6px 0 #446a1b,
-    /* Terzo gradino */
     0 8px 0 #446a1b;
-  /* Quarto gradino */
 }
 
 .text-shadow-titletaste {
-  /*text-shadow: 2px 2px 0px #b81919;*/
   text-shadow: 0px 2px 0px #d32d2d;
 }
 
-.dinecraft-humans {
+#dinecraft-humans {
   width: 100%;
 }
 
-.awards-promo {
+#awards-promo {
   width: 70%;
 }
 
@@ -352,6 +340,12 @@ p {
   background-color: var(--ux-global-color-accent-1);
   aspect-ratio: 1/1;
   border-radius: 0.3rem;
+}
+
+.hero-model {
+  width: 100%;
+  height: 500px;
+  background-color: transparent;
 }
 
 /* VARI BACKGROUND */
@@ -477,8 +471,6 @@ p {
 }
 
 @media (min-width: 992px) {
-
-  /* DA SISTEMARE */
   h1 {
     font: var(--ux-txt-h1-992);
   }
@@ -529,7 +521,7 @@ p {
     padding: 6.5rem 0 6.5rem 0 !important;
   }
 
-  .awards-promo {
+  #awards-promo {
     display: none;
   }
 
@@ -569,10 +561,6 @@ p {
 }
 
 @media (min-width: 1920px) {
-  .menù-homepage {
-    width: 40%;
-  }
-
   h1 {
     font: var(--ux-txt-h1-1920);
   }

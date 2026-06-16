@@ -1,4 +1,3 @@
-/* NASCONDI I RADIO MA NON ELIMINARLI */
 [type=radio] {
   display: none;
 }
@@ -11,17 +10,13 @@ body {
   width: 100vw;
   display: flex;
   justify-content: center;
-  /* Centra lo slider orizzontalmente */
   align-items: center;
   overflow: hidden;
-  /* Evita scrollbar indesiderate per via del 3D */
 }
 
-/* CONTENITORE PRINCIPALE (Il binario del carosello) */
 #slider {
   position: relative;
   width: 55%;
-  /* Ridotto per lasciare spazio alle card laterali di sporgere */
   aspect-ratio: 1/1;
   perspective: 1000px;
   transform-style: preserve-3d;
@@ -31,7 +26,6 @@ body {
 #slider label {
   position: absolute;
   width: 100%;
-  /* La card è larga quanto lo slider */
   height: 100%;
   left: 0;
   top: 0;
@@ -43,7 +37,6 @@ body {
   transition: transform 0.5s ease, opacity 0.5s ease;
   border: 2px solid rgba(255, 255, 255, 0.2);
 
-  /* Importante: assicura che il contenuto sia centrato nella card */
   text-align: center;
 
   box-shadow:
@@ -64,8 +57,6 @@ body {
     4px 4px 0px rgba(255, 255, 255, 0);
 }
 
-/* --- LOGICA DI MOVIMENTO --- */
-
 /* CARD SELEZIONATA */
 #s1:checked~#slide1,
 #s2:checked~#slide2,
@@ -77,7 +68,7 @@ body {
   opacity: 1;
 }
 
-/* CARD A SINISTRA (Livello 1) */
+/* CARD A SINISTRA */
 #s1:checked~#slide5,
 #s2:checked~#slide1,
 #s3:checked~#slide2,
@@ -88,7 +79,7 @@ body {
   opacity: 0.5;
 }
 
-/* CARD A DESTRA (Livello 1) */
+/* CARD A DESTRA*/
 #s1:checked~#slide2,
 #s2:checked~#slide3,
 #s3:checked~#slide4,
@@ -99,7 +90,7 @@ body {
   opacity: 0.5;
 }
 
-/* CARD SULLO SFONDO SINISTRA (Livello 2) */
+/* CARD SULLO SFONDO SINISTRA */
 #s1:checked~#slide4,
 #s2:checked~#slide5,
 #s3:checked~#slide1,
@@ -110,7 +101,7 @@ body {
   opacity: 0.2;
 }
 
-/* CARD SULLO SFONDO DESTRA (Livello 2) */
+/* CARD SULLO SFONDO DESTRA*/
 #s1:checked~#slide3,
 #s2:checked~#slide4,
 #s3:checked~#slide5,

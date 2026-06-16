@@ -46,8 +46,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Seleziona le checkbox usando la classe corretta presente nell'HTML
-    const checkboxes = document.querySelectorAll(".filtro-checkbox");
-    const panini = document.querySelectorAll(".allergeni");
+    const checkboxes = document.querySelectorAll(".filter-checkbox");
+    const panini = document.querySelectorAll(".allergens");
 
     checkboxes.forEach(checkbox => {
         checkbox.addEventListener("change", filtraPanini);

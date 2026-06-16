@@ -3,6 +3,7 @@
   src: url("../font/DMSans-Regular.ttf") format("truetype");
   font-weight: 400;
 }
+
 /* Custom Properties */
 :root {
     --color-bg-primary:    #232323;
@@ -25,7 +26,6 @@
     --transition-speed:    0.35s;
     --color-font: #e4d8d4;
 }
-*/
 
 *,
 *::before,
@@ -152,7 +152,6 @@ h3.step-title {
 }
 
 #inputCode {
-    max-width: 500 px !important;
     margin: 0 auto 40px auto;
     display: block;
 }
@@ -430,7 +429,7 @@ h3.step-title {
     margin-top: 16px;
 }
 
-/* come reperire il codice (va cambiato) */
+/* come reperire il codice */
 .custom-modal {
     background: #1e1e3a;
     border: 1px solid rgba(255, 255, 255, 0.1);

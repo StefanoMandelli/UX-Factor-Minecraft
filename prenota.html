@@ -88,11 +88,11 @@
 
     <!-- Hero -->
     <div class="g-0 container-fluid text-center text-xl-start first-background">
-        <div class="hero-desktop hero-tablet row p-5 g-0">
+        <div class="hero-desktop row p-5 g-0" id="hero-tab">
             <div class="col-12 col-xl-3 offset-xl-1 order-xl-2 pb-5">
                <model-viewer src="img/body/prenota/Prenota-compressed.glb" alt="Prenota Hero" camera-controls touch-action="pan-y"
                     shadow-intensity="1" auto-rotate rotation-per-second="30deg"
-                    style="width: 100%; height: 500px; background-color: transparent;">
+                    class="hero-model">
                 </model-viewer>
             </div>
             <div class="col-12 col-lg-10 col-xl-4 offset-xl-2 order-xl-1 align-self-xl-center">
@@ -129,8 +129,7 @@
                         <h4>Il nostro chef ha perso la lista della spesa nel Nether e non può aprire
                             il ristorante senza gli ingredienti speciali. Aiutalo a ritrovarli!
                             Cerca i tre ingredienti nell'Overworld e riportali allo chef.</h4>
-                        <img class="img-fluid mt-5" src="img/body/prenota/health_bar.png" alt="Health bar"
-                            style="max-width: 300px;">
+                        <img class="img-fluid mt-5" src="img/body/prenota/health_bar.png" alt="Health bar" id="health">
                     </div>
                 </div>
 
@@ -141,22 +140,22 @@
                         srcset="img/body/prenota/missione_chef-small.webp 400w, 
                         img/body/prenota/missione_chef-medium.webp.webp 600w, 
                         img/body/prenota/missione_chef.webp 800w" sizes="100%"
-                        src="img/body/prenota/missione_chef.webp" alt="Chef mission">">
+                        src="img/body/prenota/missione_chef.webp" alt="Chef mission">
 
-                        <img src="img/body/prenota/exp.png" alt="eye minecraft decoration" class="position-absolute exp-orb exp-chef-1">
+                        <img src="img/body/prenota/exp.png" alt="eye minecraft decoration" class="position-absolute exp-orb" id="exp-chef-1">
 
-                        <img src="img/body/prenota/exp.png" alt="eye minecraft decoration" class="position-absolute exp-orb exp-chef-2">
+                        <img src="img/body/prenota/exp.png" alt="eye minecraft decoration" class="position-absolute exp-orb" id="exp-chef-2">
                     </div>
                 </div>
             </div>
         </div>
 
 
-        <div class="container d-none d-xl-block position-relative" style="height: 0;">
+        <div class="container d-none d-xl-block position-relative" id="exp-container">
 
-            <img src="img/body/prenota/exp.png" alt="eye minecraft decoration" class="position-absolute exp-orb exp-center-1">
+            <img src="img/body/prenota/exp.png" alt="eye minecraft decoration" class="position-absolute exp-orb" id="exp-center-1">
 
-            <img src="img/body/prenota/exp.png" alt="eye minecraft decoration" class="position-absolute exp-orb exp-center-2">
+            <img src="img/body/prenota/exp.png" alt="eye minecraft decoration" class="position-absolute exp-orb" id="exp-center-2">
         </div>
 
         <!-- Blocco 2 -->
@@ -169,13 +168,13 @@
                         srcset="img/body/prenota/missione_fireball-small.webp 400w, 
                         img/body/prenota/missione_fireball-medium.webp.webp 600w, 
                         img/body/prenota/missione_fireball.webp 800w" sizes="100%"
-                        src="img/body/prenota/missione_fireball.webp" alt="Mission - second part">">
+                        src="img/body/prenota/missione_fireball.webp" alt="Mission - second part">
 
-                        <img src="img/body/prenota/exp.png" alt="eye minecraft decoration" class="position-absolute exp-orb exp-fire-1">
+                        <img src="img/body/prenota/exp.png" alt="eye minecraft decoration" class="position-absolute exp-orb" id="exp-fire-1">
 
-                        <img src="img/body/prenota/exp.png" alt="eye minecraft decoration" class="position-absolute exp-orb exp-fire-2">
+                        <img src="img/body/prenota/exp.png" alt="eye minecraft decoration" class="position-absolute exp-orb" id="exp-fire-2">
 
-                        <img src="img/body/prenota/exp.png" alt="eye minecraft decoration" class="position-absolute exp-orb exp-fire-3">
+                        <img src="img/body/prenota/exp.png" alt="eye minecraft decoration" class="position-absolute exp-orb" id="exp-fire-3">
                     </div>
                 </div>
 

@@ -91,9 +91,9 @@
 }
 
 .carousel-viewport {
-    overflow: visible; /* Manteniamo visibili le card che escono dal raggio d'azione */
+    overflow: visible; 
     width: 100%;
-    height: 60vh;     /* Aumentato l'altezza per ospitare il nuovo box più grande */
+    height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -131,14 +131,14 @@
     box-shadow: none !important;
 }
 
-/* POSIZIONE SINISTRA: Ingrandita (scale 0.85) e distanziata proporzionalmente */
+/* POSIZIONE SINISTRA */
 .card.left {
     opacity: 0.4; /* Leggermente più visibile rispetto a prima */
     transform: translate(-165%, -50%) scale(0.85); 
     z-index: 1;
 }
 
-/* POSIZIONE CENTRALE (ATTIVA): Dimensioni massime aumentate a scale 1.15 */
+/* POSIZIONE CENTRALE */
 .card.center {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1.15);
@@ -146,14 +146,14 @@
     cursor: default;
 }
 
-/* POSIZIONE DESTRA: Ingrandita (scale 0.85) e distanziata proporzionalmente */
+/* POSIZIONE DESTRA */
 .card.right {
     opacity: 0.4; 
     transform: translate(65%, -50%) scale(0.85);
     z-index: 1;
 }
 
-/* BOX IMMAGINE: 19 rem per renderlo nettamente più imponente */
+/* BOX IMMAGINE */
 .card-box {
     width: 19rem;
     height: 19rem;
@@ -186,7 +186,7 @@
 .next-btn { right: 5%; }
 
 
-/* Responsive Mobile (mantiene tutto proporzionale allo schermo sotto i 576px) */
+/* Responsive Mobile */
 @media (max-width: 576px) {
     .nav-btn { display: none; }
     .carousel-viewport { height: 30vh; } /* Alzato il viewport mobile per evitare tagli */

@@ -1,17 +1,12 @@
 .card-3d {
-  /* Imposta una transizione rapida per ammorbidire il tracciamento del mouse */
   transition:
     transform 0.1s ease-out,
     box-shadow 0.1s ease-out;
-  /* Attiva il render 3D per gli elementi interni */
   transform-style: preserve-3d;
   will-change: transform;
-  /* Rimuove lo sfarfallio in alcuni browser */
   backface-visibility: hidden;
-  /* Un bordino opzionale per staccare la carta dallo spessore */
   border: 1px solid #1d1a18;
 
-  /* EFFETTO MATTONCINO: 10 strati solidi (grigio #1d1a18) + 1 strato sfocato */
   box-shadow:
     1px 1px 0px #1d1a18,
     2px 2px 0px #1d1a18,
@@ -29,7 +24,6 @@
 }
 
 .card-3d:hover:not(.carousel-info) {
-  /* In hover, lo spessore solido resta intatto, ma l'ombra sfocata finale si allarga! */
   box-shadow:
     1px 1px 0px #1d1a18,
     2px 2px 0px #1d1a18,
@@ -55,7 +49,6 @@
   aspect-ratio: 1/1;
 }
 
-/* Fa "uscire" il contenuto dallo schermo sopra al mattoncino! */
 .card-3d .card-body {
   transform: translateZ(10px);
 }

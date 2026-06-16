@@ -8,6 +8,14 @@ img.img-hero-booking {
     background-size: cover;
 }
 
+#healt {
+    max-width: 300px;
+}
+
+#exp-container {
+    height: 0;
+} 
+
 .exp-orb {
     pointer-events: none;          
     image-rendering: pixelated;    
@@ -15,50 +23,49 @@ img.img-hero-booking {
 }
 
 
-.exp-chef-1 {
+#exp-chef-1 {
     width: 206px;
     top: -15%;
     right: -5%;
 }
 
 
-.exp-chef-2 {
+#exp-chef-2 {
     width: 143px;
     top: 8%;
     right: -20%;
 }
 
 
-
-.exp-center-1 {
+#exp-center-1 {
     width: 143px;
     top: -45px;
     left: 46%;
     z-index: 0;
 }
 
-.exp-center-2 {
+#exp-center-2 {
     width: 80px;
     top: 50px;
     left: 41%;
     z-index: 0;
 }
 
-.exp-fire-1 {
+#exp-fire-1 {
     width: 206px;
     bottom: -5%;
     left: -10%;
 }
 
 
-.exp-fire-2 {
+#exp-fire-2 {
     width: 124px;
     bottom: -10%;
     left: 18%;
 }
 
 
-.exp-fire-3 {
+#exp-fire-3 {
     width: 80px;
     bottom: -2%;
     left: 41%;
@@ -77,14 +84,14 @@ img.img-hero-booking {
         height: auto;
     }
     
-    .exp-chef-1 {
+    #exp-chef-1 {
         width: 105px;
         top: -3%;
         right: 0%;
         z-index: 0;
     }
 
-    .exp-chef-2 {
+    #exp-chef-2 {
         width: 72px;
         top: 17%;
         right: -2%;
@@ -92,28 +99,28 @@ img.img-hero-booking {
     }
 
     
-    .exp-fire-1 {
+    #exp-fire-1 {
         width: 97px;
         bottom: 0%;
         left: 0%;
         z-index: 0;
     }
 
-    .exp-fire-2 {
+    #exp-fire-2 {
         width: 75px;
         bottom: -1%;
         left: 18%;
         z-index: 0;
     }
 
-    .exp-fire-3 {
+    #exp-fire-3 {
         width: 51px;
         bottom: 3%;
         left: 33%;
         z-index: 0;
     }
 
-    .hero-tablet {
+    #hero-tab {
         justify-content: center !important;
     }
 }

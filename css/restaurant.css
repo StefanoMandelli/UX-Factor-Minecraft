@@ -24,30 +24,23 @@
     position: absolute;
     left: 5%;
     top: 50%;
-    /* Porta il bordo superiore al centro */
     transform: translateY(-50%);
-    /* Lo sposta su del 50% della propria altezza */
 }
 
 .torch-text::before {
     content: "";
-    /* FONDAMENTALE: senza questo non appare nulla */
     position: absolute;
-    /* FONDAMENTALE per muoverlo dietro il testo */
     top: 50%;
     left: 30%;
     transform: translate(-50%, -50%);
     width: 200%;
     height: 150%;
-    /* Il gradiente radiale che hai scelto */
     background: radial-gradient(circle, rgba(255, 0, 0, 0.8) 0%, rgba(255, 0, 0, 0) 70%);
     filter: blur(40px);
     z-index: -1;
-    /* Lo sposta dietro al testo del paragrafo */
     opacity: 0;
     transition: opacity 0.8s ease;
     pointer-events: none;
-    /* Evita che la luce interferisca con i click sul testo */
 }
 
 .torch-text-active::before {
@@ -81,80 +74,6 @@
     width: 100%;
 }
 
-#redstone-line {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    right: 3%;
-}
-
-.redstone-line-horizontal {
-    background: url("../img/body/ristorante/decorazioni/redstone-96.svg");
-    /* Dimensione fissa del "mattoncino" per non farlo deformare */
-    background-size: 5vw 5vw;
-    background-repeat: repeat;
-
-    /* La linea si adatta al contenitore */
-    width: 95vw;
-    /* L'altezza deve essere uguale a un multiplo del blocco (es. 1 blocco di spessore) */
-    height: 5vw;
-
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 2;
-
-    filter: brightness(0.5);
-    filter: drop-shadow(0 0 2px rgba(255, 0, 0, 0.8));
-}
-
-.redstone-line-vertical {
-    background-image: url('../img/body/ristorante/decorazioni/redstone-96.svg');
-    background-size: 5vw 5vw;
-    background-repeat: repeat-y;
-    /* Ripete solo in verticale */
-
-    width: 5vw;
-    /* Largo quanto un blocco */
-    height: 100%;
-    /* Scende per tutta l'altezza del genitore */
-
-    position: absolute;
-    right: 5vw;
-    /* Lo attacchi al bordo destro */
-    top: 50%;
-    /* Inizia dal centro della card */
-
-    z-index: 1;
-    filter: brightness(0.5);
-    filter: drop-shadow(0 0 2px rgba(255, 0, 0, 0.8));
-}
-
-.redstone-line-horizontal2 {
-    background: url("../img/body/ristorante/decorazioni/redstone-96.svg");
-    /* Dimensione fissa del "mattoncino" per non farlo deformare */
-    background-size: 5vw 5vw;
-    background-repeat: repeat;
-
-    /* La linea si adatta al contenitore */
-    width: 90%;
-    /* L'altezza deve essere uguale a un multiplo del blocco (es. 1 blocco di spessore) */
-    height: 5vw;
-
-    position: absolute;
-    right: 5%;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 0;
-
-    filter: brightness(0.5);
-    filter: drop-shadow(0 0 2px rgba(255, 0, 0, 0.8));
-}
-
-.redstone-line-vertical2 {
-    left: 5vw;
-}
-
 @media (min-width: 576px) {
     .card-body {
         padding: 4rem 1rem 4rem 0rem !important;
@@ -186,9 +105,7 @@
         position: absolute;
         left: 5%;
         top: 50%;
-        /* Porta il bordo superiore al centro */
         transform: translateY(-50%);
-        /* Lo sposta su del 50% della propria altezza */
     }
 
     .torch-text {

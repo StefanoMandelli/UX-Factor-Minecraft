@@ -87,7 +87,7 @@
             <div class="col-12 col-xl-3 offset-xl-1 order-xl-2 pb-5">
                 <model-viewer src="img/body/menu/contattaci-compressed.glb" alt="Menu Hero" camera-controls
                     touch-action="pan-y" shadow-intensity="1" auto-rotate rotation-per-second="30deg"
-                    style="width: 100%; height: 500px; background-color: transparent;">
+                    class="hero-model">
                 </model-viewer>
             </div>
             <div class="col-12 col-xl-4 offset-xl-2 order-xl-1 align-self-xl-center">
@@ -103,7 +103,7 @@
         </div>
     </div>
 
-    <div class="g-0 container-fluid text-center pt-3 gold-background" id="contact">
+    <div class="g-0 container-fluid text-center pt-3 gold-background">
         <div class="row p-section g-0">
             <div class="col-12 d-flex flex-column align-items-center desktop-shops px-5 px-lg-0">
                 <h3 class="pt-5">Qualche intollerana o dieta alimentare? Filtra tra i nostri piatti.</h3>
@@ -111,26 +111,26 @@
                 <div class="col-12 d-flex flex-wrap justify-content-center gap-3 gap-md-4 filter-wrapper m-0">
 
                     <div class="form-check form-switch item-filter">
-                        <input class="form-check-input filtro-checkbox" type="checkbox" value="grano" id="check-grano">
-                        <label class="form-check-label fw-bold text-white text-nowrap" for="check-grano"
+                        <input class="form-check-input filter-checkbox" type="checkbox" value="grano" id="check-wheat">
+                        <label class="form-check-label fw-bold text-white text-nowrap" for="check-wheat"
                             data-i18n="filtro_grano">
                             Grano del Villaggio
                         </label>
                     </div>
 
                     <div class="form-check form-switch item-filter">
-                        <input class="form-check-input filtro-checkbox" type="checkbox" value="latticini"
-                            id="check-latticini">
-                        <label class="form-check-label fw-bold text-white text-nowrap" for="check-latticini"
+                        <input class="form-check-input filter-checkbox" type="checkbox" value="latticini"
+                            id="check-dairy">
+                        <label class="form-check-label fw-bold text-white text-nowrap" for="check-dairy"
                             data-i18n="filtro_latticini">
                             Secchio di Latte
                         </label>
                     </div>
 
                     <div class="form-check form-switch item-filter">
-                        <input class="form-check-input filtro-checkbox" type="checkbox" value="vegetale"
-                            id="check-vegetale">
-                        <label class="form-check-label fw-bold text-white text-nowrap" for="check-vegetale"
+                        <input class="form-check-input filter-checkbox" type="checkbox" value="vegetale"
+                            id="check-vegetable">
+                        <label class="form-check-label fw-bold text-white text-nowrap" for="check-vegetable"
                             data-i18n="filtro_vegetale">
                             Orto del Villico
                         </label>
@@ -177,7 +177,7 @@
                         <div class="special-hamburger card-3d p-5">
                             <div class="row align-items-center gap-4 gap-xl-0">
 
-                                <div class="col-12 col-xl-4 order-2 order-xl-1 text-center px-xl-5 allergeni"
+                                <div class="col-12 col-xl-4 order-2 order-xl-1 text-center px-xl-5 allergens"
                                     data-ingredienti="grano vegetale">
 
                                     <img src="img/body/menu/Overworld/Panini/GreenStack.png" alt="GreenStack Burger"
@@ -233,7 +233,7 @@
                         <div class="row gx-xl-5">
 
                             <!-- Panino 1: DC Classic Craft  -->
-                            <div class="col-12 col-xl-4 text-center mb-5 mb-xl-0 allergeni"
+                            <div class="col-12 col-xl-4 text-center mb-5 mb-xl-0 allergens"
                                 data-ingredienti="grano vegetale">
                                 <div class="d-flex flex-column h-100 text-center">
                                     <img src="img/body/menu/Overworld/Panini/overworld-1.png"
@@ -255,7 +255,7 @@
                             </div>
 
                             <!-- Panino 2: L'Harvest Supreme -->
-                            <div class="col-12 col-xl-4 text-center mb-5 mb-xl-0 allergeni"
+                            <div class="col-12 col-xl-4 text-center mb-5 mb-xl-0 allergens"
                                 data-ingredienti="latticini">
                                 <div class="d-flex flex-column h-100 text-center">
                                     <img src="img/body/menu/Overworld/Panini/overworld-2.png"
@@ -277,7 +277,7 @@
                             </div>
 
                             <!-- Panino 3: Il Pollo del Bosco -->
-                            <div class="col-12 col-xl-4 text-center allergeni"
+                            <div class="col-12 col-xl-4 text-center allergens"
                                 data-ingredienti="vegetale grano latticini">
                                 <div class="d-flex flex-column h-100 text-center">
                                     <img src="img/body/menu/Overworld/Panini/overworld-3.png"
@@ -383,7 +383,7 @@
                     <div class="px-5 pb-5 sub-section">
                         <div class="row gx-xl-5">
 
-                            <div class="col-12 col-xl-4 text-center mb-5 mb-xl-0 allergeni"
+                            <div class="col-12 col-xl-4 text-center mb-5 mb-xl-0 allergens"
                                 data-ingredienti="grano latticini">
                                 <div class="d-flex flex-column h-100 text-center">
                                     <img src="img/body/menu/Overworld/Dolci/overworld-1.png"
@@ -403,7 +403,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-12 col-xl-4 text-center mb-5 mb-xl-0 allergeni"
+                            <div class="col-12 col-xl-4 text-center mb-5 mb-xl-0 allergens"
                                 data-ingredienti="grano latticini">
                                 <div class="d-flex flex-column h-100 text-center">
                                     <img src="img/body/menu/Overworld/Dolci/overworld-2.png"
@@ -457,7 +457,7 @@
                         <div class="special-hamburger card-3d p-5">
                             <div class="row align-items-center gap-4 gap-xl-0">
 
-                                <div class="col-12 col-xl-4 order-2 order-xl-1 text-center px-xl-5 allergeni"
+                                <div class="col-12 col-xl-4 order-2 order-xl-1 text-center px-xl-5 allergens"
                                     data-ingredienti="grano latticini vegetale">
 
                                     <img src="img/body/menu/Nether/Panini/ShadowStack.png" alt="ShadowStack Burger"
@@ -513,7 +513,7 @@
 
                         <div class="row gx-xl-5">
 
-                            <div class="col-12 col-xl-4 text-center mb-5 mb-xl-0 allergeni"
+                            <div class="col-12 col-xl-4 text-center mb-5 mb-xl-0 allergens"
                                 data-ingredienti="grano vegetale">
                                 <div class="d-flex flex-column h-100 text-center">
                                     <img src="img/body/menu/Nether/Panini/nether-1.png" alt="Ardente Hoglin burger"
@@ -534,7 +534,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-12 col-xl-4 text-center mb-5 mb-xl-0 allergeni"
+                            <div class="col-12 col-xl-4 text-center mb-5 mb-xl-0 allergens"
                                 data-ingredienti="grano latticini">
                                 <div class="d-flex flex-column h-100 text-center">
                                     <img src="img/body/menu/Nether/Panini/nether-2.png"
@@ -555,7 +555,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-12 col-xl-4 text-center allergeni" data-ingredienti="grano vegetale">
+                            <div class="col-12 col-xl-4 text-center allergens" data-ingredienti="grano vegetale">
                                 <div class="d-flex flex-column h-100 text-center">
                                     <img src="img/body/menu/Nether/Panini/nether-3.png" alt="Il Pigling Dorato burger"
                                         class="img-fluid px-5 px-xl-0">
@@ -608,7 +608,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-12 col-xl-4 text-center mb-5 mb-xl-0 allergeni"
+                            <div class="col-12 col-xl-4 text-center mb-5 mb-xl-0 allergens"
                                 data-ingredienti="latticini">
                                 <div class="d-flex flex-column h-100 text-center">
                                     <img src="img/body/menu/Nether/Bibite/nether-2.png"
@@ -661,7 +661,7 @@
                     <div class="px-5 pb-5 sub-section">
                         <div class="row gx-xl-5">
 
-                            <div class="col-12 col-xl-4 text-center mb-5 mb-xl-0 allergeni"
+                            <div class="col-12 col-xl-4 text-center mb-5 mb-xl-0 allergens"
                                 data-ingredienti="grano latticini">
                                 <div class="d-flex flex-column h-100 text-center">
                                     <img src="img/body/menu/Nether/Dolci/nether-1.png" alt="Cuore di Magma sweet"
@@ -681,7 +681,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-12 col-xl-4 text-center mb-5 mb-xl-0 allergeni"
+                            <div class="col-12 col-xl-4 text-center mb-5 mb-xl-0 allergens"
                                 data-ingredienti="latticini">
                                 <div class="d-flex flex-column h-100 text-center">
                                     <img src="img/body/menu/Nether/Dolci/nether-2.png" alt="Delizia Cremisi sweet"
@@ -702,7 +702,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-12 col-xl-4 text-center allergeni" data-ingredienti="grano latticini">
+                            <div class="col-12 col-xl-4 text-center allergens" data-ingredienti="grano latticini">
                                 <div class="d-flex flex-column h-100 text-center">
                                     <img src="img/body/menu/Nether/Dolci/nether-3.png" alt="Quadrato delle Anime sweet"
                                         class="img-fluid px-5 px-xl-0">
@@ -733,7 +733,7 @@
                         <div class="special-hamburger card-3d p-5">
                             <div class="row align-items-center gap-4 gap-xl-0">
 
-                                <div class="col-12 col-xl-4 order-2 order-xl-1 text-center px-xl-5 allergeni"
+                                <div class="col-12 col-xl-4 order-2 order-xl-1 text-center px-xl-5 allergens"
                                     data-ingredienti="grano vegetale">
 
                                     <img src="img/body/menu/End/Panini/BerryStack.png" alt="BerryStack Burger"
@@ -789,7 +789,7 @@
 
                         <div class="row gx-xl-5">
 
-                            <div class="col-12 col-xl-4 text-center mb-5 mb-xl-0 allergeni"
+                            <div class="col-12 col-xl-4 text-center mb-5 mb-xl-0 allergens"
                                 data-ingredienti="latticini">
                                 <div class="d-flex flex-column h-100 text-center">
                                     <img src="img/body/menu/End/Panini/end-1.png" alt="Il Portale Finale burger"
@@ -810,7 +810,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-12 col-xl-4 text-center mb-5 mb-xl-0 allergeni"
+                            <div class="col-12 col-xl-4 text-center mb-5 mb-xl-0 allergens"
                                 data-ingredienti="latticini vegetale">
                                 <div class="d-flex flex-column h-100 text-center">
                                     <img src="img/body/menu/End/Panini/end-2.png" alt="L’Eco dell’Ender burger"
@@ -831,7 +831,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-12 col-xl-4 text-center allergeni" data-ingredienti="grano">
+                            <div class="col-12 col-xl-4 text-center allergens" data-ingredienti="grano">
                                 <div class="d-flex flex-column h-100 text-center">
                                     <img src="img/body/menu/End/Panini/end-3.png" alt="Teletrasporto Croccante burger"
                                         class="img-fluid px-5 px-xl-0">
@@ -864,7 +864,7 @@
                     <div class="px-5 mb-5 sub-section">
                         <div class="row gx-xl-5">
 
-                            <div class="col-12 col-xl-4 text-center mb-5 mb-xl-0 allergeni"
+                            <div class="col-12 col-xl-4 text-center mb-5 mb-xl-0 allergens"
                                 data-ingredienti="latticini">
                                 <div class="d-flex flex-column h-100 text-center">
                                     <img src="img/body/menu/End/Bibite/end-1.png" alt="Nettare Corale drink"
@@ -938,7 +938,7 @@
                     <div class="px-5 pb-5 sub-section">
                         <div class="row gx-xl-5">
 
-                            <div class="col-12 col-xl-4 text-center mb-5 mb-xl-0 allergeni"
+                            <div class="col-12 col-xl-4 text-center mb-5 mb-xl-0 allergens"
                                 data-ingredienti="latticini">
                                 <div class="d-flex flex-column h-100 text-center">
                                     <img src="img/body/menu/End/Dolci/end-1.png" alt="Coppetta Corale sweet"
@@ -958,7 +958,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-12 col-xl-4 text-center mb-5 mb-xl-0 allergeni"
+                            <div class="col-12 col-xl-4 text-center mb-5 mb-xl-0 allergens"
                                 data-ingredienti="latticini">
                                 <div class="d-flex flex-column h-100 text-center">
                                     <img src="img/body/menu/End/Dolci/end-2.png" alt="Sundae dell'Abisso sweet"
