@@ -11,31 +11,31 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Step 1
-    const inputCode    = document.getElementById('inputCode');
+    const inputCode = document.getElementById('inputCode');
     const btnStep1Next = document.getElementById('btnStep1Next');
 
     // Step 2
     const worldCards = document.querySelectorAll('.world-card');
 
     // Step 3
-    const bookingForm   = document.getElementById('bookingForm');
-    const inputDate     = document.getElementById('inputDate');
-    const inputTime     = document.getElementById('inputTime');
-    const inputGuests   = document.getElementById('inputGuests');
+    const bookingForm = document.getElementById('bookingForm');
+    const inputDate = document.getElementById('inputDate');
+    const inputTime = document.getElementById('inputTime');
+    const inputGuests = document.getElementById('inputGuests');
     const inputNickname = document.getElementById('inputNickname');
-    const inputPhone    = document.getElementById('inputPhone');
-    const phonePrefix   = document.getElementById('phonePrefix');
-    const btnGuestsUp   = document.getElementById('btnGuestsUp');
+    const inputPhone = document.getElementById('inputPhone');
+    const phonePrefix = document.getElementById('phonePrefix');
+    const btnGuestsUp = document.getElementById('btnGuestsUp');
     const btnGuestsDown = document.getElementById('btnGuestsDown');
 
     // Step 4
     const confirmDetails = document.getElementById('confirmDetails');
-    const btnCancel      = document.getElementById('btnCancel');
+    const btnCancel = document.getElementById('btnCancel');
 
     /* State */
-    let currentStep  = 1;
+    let currentStep = 1;
     let selectedWorld = null;
-    let bookingData   = {};
+    let bookingData = {};
 
     /* Step Navigation */
     function goToStep(stepNumber) {
@@ -112,9 +112,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* Set Min Date to Today */
     const today = new Date();
-    const yyyy  = today.getFullYear();
-    const mm    = String(today.getMonth() + 1).padStart(2, '0');
-    const dd    = String(today.getDate()).padStart(2, '0');
+    const yyyy = today.getFullYear();
+    const mm = String(today.getMonth() + 1).padStart(2, '0');
+    const dd = String(today.getDate()).padStart(2, '0');
     inputDate.min = `${yyyy}-${mm}-${dd}`;
 
     /* Form Submission */
@@ -134,9 +134,20 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Validate phone (basic check: at least 6 digits)
-        const phoneDigits = inputPhone.value.replace(/\D/g, '');
-        if (phoneDigits.length < 6) {
+        if (inputDate.value) {
+            const selectedDate = new Date(inputDate.value);
+            const todayForCheck = new Date();
+            todayForCheck.setHours(0, 0, 0, 0);
+
+            if (selectedDate < todayForCheck) {
+                inputDate.classList.add('is-invalid');
+                isValid = false;
+            }
+        }
+
+        // Validate phone
+        const phoneRegex = /^[0-9\s]{6,15}$/;
+        if (!phoneRegex.test(inputPhone.value.trim())) {
             inputPhone.classList.add('is-invalid');
             isValid = false;
         }
@@ -147,16 +158,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Store booking data
-        bookingData.date     = inputDate.value;
-        bookingData.time     = inputTime.value;
-        bookingData.guests   = inputGuests.value;
+        bookingData.date = inputDate.value;
+        bookingData.time = inputTime.value;
+        bookingData.guests = inputGuests.value;
         bookingData.nickname = inputNickname.value.trim();
-        bookingData.phone    = phonePrefix.value + ' ' + inputPhone.value.trim();
+        bookingData.phone = phonePrefix.value + ' ' + inputPhone.value.trim();
 
         // Build confirmation summary
         const formattedDate = formatDate(bookingData.date);
         confirmDetails.innerHTML =
-            `<strong>${bookingData.nickname}</strong>, ti aspettiamo il ` +
+            `<strong>${bookingData.nickname}</strong>, ti aspettiamo ` +
             `<strong>${formattedDate}</strong> alle <strong>${bookingData.time}</strong> ` +
             `per <strong>${bookingData.guests}</strong> ${bookingData.guests === '1' ? 'persona' : 'persone'} ` +
             `nel mondo <strong class="world-label-${bookingData.world}">${capitalize(bookingData.world)}</strong>.`;
@@ -171,18 +182,34 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    /* Step 4 - Cancel Booking */
-    btnCancel.addEventListener('click', () => {
+    /* Step 4 - Cancel Booking con Messaggio di Successo */
+    btnCancel.addEventListener('click', (e) => {
+        e.preventDefault(); 
+
         if (confirm('Sei sicuro di voler cancellare la prenotazione?')) {
-            // Reset everything
+            
             bookingData   = {};
             selectedWorld = null;
-            bookingForm.reset();
+            if (typeof bookingForm.reset === 'function') bookingForm.reset();
             inputGuests.value = 2;
             inputCode.value   = '';
             worldCards.forEach((c) => c.classList.remove('selected'));
 
-            goToStep(1);
+            const step4Element = steps[4];
+            
+            step4Element.innerHTML = `
+                <div class="text-center py-5 flex flex-column align-items-center justify-content-center">
+                    <h2 class="mb-4">Prenotazione eliminata!</h2>
+                    <h4 class="mb-5">La tua prenotazione è stata <b>cancellata</b> con successo.</h4>
+                    <button id="btnBackToForm" class="btn btn-menu pushable inverted">
+                        <span class="front">TORNA AL FORM</span>
+                    </button>
+                </div>
+            `;
+
+            document.getElementById('btnBackToForm').addEventListener('click', () => {
+                window.location.reload(); 
+            });
         }
     });
 
