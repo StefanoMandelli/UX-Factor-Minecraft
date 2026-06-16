@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     btnStep1Next.addEventListener('click', () => {
         const code = inputCode.value.trim();
 
-        if (!code) {
+        if (code !== 'UXFACTOR') {
             inputCode.classList.add('is-invalid');
             shakeElement(inputCode);
             return;
