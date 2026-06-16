@@ -306,10 +306,10 @@ p {
 
 #title-home {
   text-shadow:
-    0 2px 0 #446a1b,
-    0 4px 0 #446a1b,
-    0 6px 0 #446a1b,
-    0 8px 0 #446a1b;
+    0 2px 0 var(--ux-global-color-accent-1),
+    0 4px 0 var(--ux-global-color-accent-1),
+    0 6px 0 var(--ux-global-color-accent-1),
+    0 8px 0 var(--ux-global-color-accent-1);
 }
 
 .text-shadow-titletaste {

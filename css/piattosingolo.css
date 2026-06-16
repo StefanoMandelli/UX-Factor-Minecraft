@@ -242,6 +242,21 @@
     top: 40%; 
 }
 
+#title-nether {
+  text-shadow:
+    0 2px 0 var(--ux-nether-color-accent),
+    0 4px 0 var(--ux-nether-color-accent),
+    0 6px 0 var(--ux-nether-color-accent),
+    0 8px 0 var(--ux-nether-color-accent);
+}
+
+#title-end {
+  text-shadow:
+    0 2px 0 var(--ux-end-color-accent),
+    0 4px 0 var(--ux-end-color-accent),
+    0 6px 0 var(--ux-end-color-accent),
+    0 8px 0 var(--ux-end-color-accent);
+}
 
 @media (min-width: 1200px) {
     .allergens-card {
