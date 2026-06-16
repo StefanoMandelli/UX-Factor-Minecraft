@@ -69,7 +69,7 @@
 }
 
 /*Immagini card*/
-.img-fluid .bread{
+.img-fluid.bread{
     width: 80%;
     height: auto;
 }
