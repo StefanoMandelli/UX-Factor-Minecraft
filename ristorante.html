@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/carosello.css">
 
     <link rel="icon" type="image/svg+xml" href="img/header/icons-minecraft.svg">
+
 </head>
 
 <body>
@@ -86,7 +87,7 @@
                 <img class="restaurant-hero" srcset="img/body/ristorante/ristorante-small.webp 400w, 
                 img/body/ristorante/ristorante-medium.webp 600w, 
                 img/body/ristorante/ristorante.webp 800w" sizes="(min-width: 1200px) 25vw, 100vw"
-                src="img/body/ristorante/ristorante.png" alt="dinecraft restaurant">
+                    src="img/body/ristorante/ristorante.png" alt="dinecraft restaurant">
             </div>
             <div class="col-12 col-xl-4 offset-xl-2 order-xl-1 align-self-xl-center">
                 <h1 class="mb-5" id="title-home">SCOPRI IL NOSTRO RISTORANTE</h1>
@@ -99,14 +100,16 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid text-center stone-background overflow-hidden">
+
+    <div class="container-fluid text-center stone-background overflow-hidden" id="p-section">
         <div class="row py-5 panel-restaurant justify-content-center gx-xl-5">
 
             <div class="col-10 col-lg-8 col-xl-4 pb-5 py-xl-0">
                 <img class="w-100" srcset="img/body/ristorante/immagine-overworld-small.webp 400w, 
                 img/body/ristorante/immagine-overworld-medium.webp 600w, 
-                img/body/ristorante/immagine-overworld.webp 800w" sizes="(min-width: 1200px) 25vw, (min-width: 992px) 50vw, 66vw"
-                src="img/body/ristorante/immagine-overworld.webp" alt="overworld image">
+                img/body/ristorante/immagine-overworld.webp 800w"
+                    sizes="(min-width: 1200px) 25vw, (min-width: 992px) 50vw, 66vw"
+                    src="img/body/ristorante/immagine-overworld.webp" alt="overworld image">
             </div>
 
             <div
@@ -133,8 +136,9 @@
                     alt="nether mushroom decoration">
                 <img class="w-100" srcset="img/body/ristorante/immagine-nether-small.webp 400w, 
                 img/body/ristorante/immagine-nether-medium.webp 600w, 
-                img/body/ristorante/immagine-nether.webp 800w" sizes="(min-width: 1200px) 25vw, (min-width: 992px) 50vw, 66vw"
-                src="img/body/ristorante/immagine-nether.webp" alt="nether image">
+                img/body/ristorante/immagine-nether.webp 800w"
+                    sizes="(min-width: 1200px) 25vw, (min-width: 992px) 50vw, 66vw"
+                    src="img/body/ristorante/immagine-nether.webp" alt="nether image">
             </div>
 
             <div
@@ -162,8 +166,9 @@
                     alt="tree decoration end">
                 <img class="w-100" srcset="img/body/ristorante/immagine-end-small.webp 400w, 
                 img/body/ristorante/immagine-end-medium.webp 600w, 
-                img/body/ristorante/immagine-end.webp 800w" sizes="(min-width: 1200px) 25vw, (min-width: 992px) 50vw, 66vw"
-                src="img/body/ristorante/immagine-end.webp" alt="end image">
+                img/body/ristorante/immagine-end.webp 800w"
+                    sizes="(min-width: 1200px) 25vw, (min-width: 992px) 50vw, 66vw"
+                    src="img/body/ristorante/immagine-end.webp" alt="end image">
             </div>
 
             <div
@@ -193,26 +198,34 @@
                         <input type="radio" name="slider" id="s3" checked>
                         <input type="radio" name="slider" id="s4">
                         <input type="radio" name="slider" id="s5">
-                        <label for="s1" id="slide1"></label>
-                        <label for="s2" id="slide2"></label>
-                        <label for="s3" id="slide3"></label>
-                        <label for="s4" id="slide4"></label>
-                        <label for="s5" id="slide5"></label>
+                        <label for="s1" id="slide1">
+                            <span class="visually-hidden">Mostra la foto 1 del ristorante</span>
+                        </label>
+                        <label for="s2" id="slide2">
+                            <span class="visually-hidden">Mostra la foto 2 del ristorante</span>
+                        </label>
+                        <label for="s3" id="slide3">
+                            <span class="visually-hidden">Mostra la foto 3 del ristorante</span>
+                        </label>
+                        <label for="s4" id="slide4">
+                            <span class="visually-hidden">Mostra la foto 4 del ristorante</span>
+                        </label>
+                        <label for="s5" id="slide5">
+                            <span class="visually-hidden">Mostra la foto 5 del ristorante</span>
+                        </label>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="container-fluid position-relative text-center redstone-background g-0">
+    <div class="container-fluid position-relative text-center redstone-background g-0" id="t-section">
         <div class="row py-5 g-0 d-flex justify-content-center align-items-center justify-content-xl-start">
             <div class="z-3 d-none col-xl-2 d-xl-block offset-xl-2">
-                <img class="lever" 
-                src="img/body/ristorante/leva-alzata.webp" alt="lever raised"
-                data-end-src="img/body/ristorante/leva-giù.webp">
+                <img class="lever" src="img/body/ristorante/leva-alzata.webp" alt="lever raised"
+                    data-end-src="img/body/ristorante/leva-giù.webp">
             </div>
-            <div
-                class="background-card-torch col-10 col-lg-6 col-xl-5 offset-xl-2 d-flex align-items-center ">
+            <div class="background-card-torch col-10 col-lg-6 col-xl-5 offset-xl-2 d-flex align-items-center ">
                 <div class="card z-3 card-3d card-3d-background torch-grid">
                     <div class="card-body scroll-section d-flex justify-content-center">
                         <img src="img/body/ristorante/torcia-disattivata-lg.webp" class="torch"
@@ -220,7 +233,8 @@
                         <div class="d-flex justify-content-end ">
                             <div class="torch-text text-center text-xl-start">
                                 <h2 class="d-none d-xl-block"> Più di un locale </h2>
-                                <p class="mb-0 paragraph-torch">Dinecraft è l'unico fast food dove l'antagonismo diventa armonia: i Villager gestiscono il locale e i Mob sono i benvenuti come clienti.
+                                <p class="mb-0 paragraph-torch">Dinecraft è l'unico fast food dove l'antagonismo diventa
+                                    armonia: i Villager gestiscono il locale e i Mob sono i benvenuti come clienti.
                                 </p>
                             </div>
                         </div>
@@ -233,12 +247,10 @@
     <div class="container-fluid position-relative text-center redstone-background g-0">
         <div class="row py-5 g-0 d-flex justify-content-center align-items-center justify-content-xl-start">
             <div class=" z-3 d-none col-xl-2 d-xl-block offset-xl-1 order-xl-2">
-                <img class="lever" 
-                src="img/body/ristorante/leva-alzata.webp" alt="lever raised"
-                data-end-src="img/body/ristorante/leva-giù.webp">
+                <img class="lever" src="img/body/ristorante/leva-alzata.webp" alt="lever raised"
+                    data-end-src="img/body/ristorante/leva-giù.webp">
             </div>
-            <div
-                class="background-card-torch col-10 col-lg-6 d-flex align-items-center col-xl-5 offset-xl-2">
+            <div class="background-card-torch col-10 col-lg-6 d-flex align-items-center col-xl-5 offset-xl-2">
                 <div class="card z-3 card-3d card-3d-background torch-grid">
                     <div class="card-body scroll-section d-flex justify-content-center">
                         <img src="img/body/ristorante/torcia-disattivata-lg.webp" class="torch"
@@ -246,7 +258,8 @@
                         <div class="d-flex justify-content-end ">
                             <div class="torch-text">
                                 <h2 class="d-none d-xl-block"> Sapore sostenibile </h2>
-                                <p class="mb-0 paragraph-torch">In Dinecraft la sostenibilità è fondamentale. La nostra filosofia unisce ingredienti a km zero, a packaging interamente biodegradabile.
+                                <p class="mb-0 paragraph-torch">In Dinecraft la sostenibilità è fondamentale. La nostra
+                                    filosofia unisce ingredienti a km zero, a packaging interamente biodegradabile.
                                 </p>
                             </div>
                         </div>
@@ -259,12 +272,10 @@
     <div class="container-fluid position-relative text-center redstone-background g-0">
         <div class="row py-5 g-0 d-flex justify-content-center align-items-center justify-content-xl-start">
             <div class=" z-3 d-none col-xl-2 d-xl-block offset-xl-2">
-                <img class="lever" 
-                src="img/body/ristorante/leva-alzata.webp" alt="lever raised"
-                data-end-src="img/body/ristorante/leva-giù.webp">
+                <img class="lever" src="img/body/ristorante/leva-alzata.webp" alt="lever raised"
+                    data-end-src="img/body/ristorante/leva-giù.webp">
             </div>
-            <div
-                class="background-card-torch col-10 col-lg-6 d-flex align-items-center col-xl-5 offset-xl-2">
+            <div class="background-card-torch col-10 col-lg-6 d-flex align-items-center col-xl-5 offset-xl-2">
                 <div class="card z-3 card-3d card-3d-background torch-grid">
                     <div class="card-body scroll-section d-flex justify-content-center">
                         <img src="img/body/ristorante/torcia-disattivata-lg.webp" class="torch"
@@ -272,7 +283,8 @@
                         <div class="d-flex justify-content-end ">
                             <div class="torch-text">
                                 <h2 class="d-none d-xl-block"> Bottino d'asporto </h2>
-                                <p class="mb-0 paragraph-torch">Vuoi saltare la fila? Con l'Area Market & Go esterna acquisti pasti rapidi e prodotti freschi. Prendi il tuo bottino e riparti!
+                                <p class="mb-0 paragraph-torch">Vuoi saltare la fila? Con l'Area Market & Go esterna
+                                    acquisti pasti rapidi e prodotti freschi. Prendi il tuo bottino e riparti!
                                 </p>
                             </div>
                         </div>
@@ -285,12 +297,10 @@
     <div class="container-fluid position-relative text-center redstone-background g-0">
         <div class="row py-5 g-0 d-flex justify-content-center align-items-center justify-content-xl-start">
             <div class=" z-3 d-none col-xl-2 d-xl-block offset-xl-1 order-xl-2">
-                <img class="lever" 
-                src="img/body/ristorante/leva-alzata.webp" alt="lever raised"
-                data-end-src="img/body/ristorante/leva-giù.webp">
+                <img class="lever" src="img/body/ristorante/leva-alzata.webp" alt="lever raised"
+                    data-end-src="img/body/ristorante/leva-giù.webp">
             </div>
-            <div
-                class="background-card-torch col-10 col-lg-6 d-flex align-items-center col-xl-5 offset-xl-2">
+            <div class="background-card-torch col-10 col-lg-6 d-flex align-items-center col-xl-5 offset-xl-2">
                 <div class="card z-3 card-3d card-3d-background torch-grid">
                     <div class="card-body scroll-section d-flex justify-content-center">
                         <img src="img/body/ristorante/torcia-disattivata-lg.webp" class="torch"
@@ -298,7 +308,8 @@
                         <div class="d-flex justify-content-end ">
                             <div class="torch-text">
                                 <h2 class="d-none d-xl-block"> Mission </h2>
-                                <p class="mb-0 paragraph-torch">La nostra missione è unire tutte le creature dei nostri mondi. Non c'è niente di meglio di un panino Dinecraft per mettere tutti d'accordo.
+                                <p class="mb-0 paragraph-torch">La nostra missione è unire tutte le creature dei nostri
+                                    mondi. Non c'è niente di meglio di un panino Dinecraft per mettere tutti d'accordo.
                                 </p>
                             </div>
                         </div>
