@@ -3,7 +3,7 @@
 @import url(piattosingolo1.css);
 
 .hero-promo {
-   background-image: url('../img/body/pagina-libera/HEROPROMO.png');
+   background-image: url('../img/body/pagina-libera/HEROPROMO.webp');
    background-size: cover;
    min-height: 100vh;
    width: 100vw;
@@ -23,12 +23,12 @@
 }
 
 .countdown-bg{
-    background-image: url('../img/body/pagina-libera/COUNTDOWN_bg.png');
+    background-image: url('../img/body/pagina-libera/COUNTDOWN_bg.webp');
     width: 100%;
 }
 
 .menu-events {
-    background-image: url('../img/body/pagina-libera/MENUPROMOdsk.png');
+    background-image: url('../img/body/pagina-libera/MENUPROMOdsk.webp');
     width: 100%;
 }
 
@@ -76,7 +76,7 @@
 
 /* Carosello premi */
 .carousel-slide{
-  background-image: url(../img/body/pagina-libera/ITEMS\ PROMO_bg.png);
+  background-image: url(../img/body/pagina-libera/ITEMS\ PROMO_bg.webp);
    width: 100%;
 }
 .carousel-container {
