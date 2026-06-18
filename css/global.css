@@ -198,7 +198,7 @@ body {
 
 /* Sfondo della navbar */
 .nav-custom-bg {
-  background-image: url("../img/header/navbar-bg.png");
+  background-image: url("../img/header/navbar-bg.webp");
 }
 
 /* Rimuove effetti sul burger menu */
@@ -216,7 +216,7 @@ body {
 }
 
 .navbar-collapse {
-  background-image: url("../img/header/navbar-bg.png");
+  background-image: url("../img/header/navbar-bg.webp");
 
   position: absolute;
   top: 0;
@@ -351,37 +351,37 @@ p {
 /* VARI BACKGROUND */
 
 .first-background {
-  background-image: url("../img/background/first-background.png");
+  background-image: url("../img/background/first-background.webp");
 }
 
 .redstone-background {
-  background-image: url("../img/background/redstone-background.png");
+  background-image: url("../img/background/redstone-background.webp");
   width: 100%;
 }
 
 .thunder-background {
-  background: url("../img/background/fulmine-background.png") center / cover no-repeat;
+  background: url("../img/background/fulmine-background.webp") center / cover no-repeat;
 }
 
 .amethyst-background {
-  background-image: url("../img/background/amethyst-background.png");
+  background-image: url("../img/background/amethyst-background.webp");
   width: 100%;
 }
 
 .stone-background {
-  background-image: url("../img/background/stone-background.png");
+  background-image: url("../img/background/stone-background.webp");
   width: 100%;
 }
 
 .gold-background {
-  background-image: url("../img/background/gold-background.png");
+  background-image: url("../img/background/gold-background.webp");
   width: 100%;
 }
 
 /* FOOTER */
 /* Sfondo del footer */
 .footer-custom-bg {
-  background-image: url("../img/footer/footer-bg.png");
+  background-image: url("../img/footer/footer-bg.webp");
 }
 
 #icon-twitter {
