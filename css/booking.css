@@ -33,21 +33,11 @@
     box-sizing: border-box;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    font-family: var(--font-family);
-    background-color: var(--color-bg-primary);
-    color: var(--color-white);
-    background-image: url(../img/background/first-background.png);
-}
-
 /* Page backgroung */
 .page-bg {
     position: relative;
     min-height: 1131px;
     padding: 24px 16px;
-    background-image: url("../img/background/first-background.png");
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -63,7 +53,7 @@ body {
     width: 100%;
     max-width: 1395px;
     min-height: 766px;
-    background-image: url("../img/body/prenota/booking_background.png");
+    background-image: url("../img/body/prenota/booking_background.webp");
     background-size: 200%;
     background-position: center;
     border-radius: var(--card-radius);
