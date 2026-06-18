@@ -33,6 +33,8 @@
 
 .torch-grid {
   background: var(--ux-torch-background);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .torch-grid.act {
@@ -95,16 +97,6 @@
   .card-body {
     padding: 4rem 1rem 4rem 0rem !important;
   }
-
-  .paragraph-torch {
-    font: 400 1rem/1.5rem var(--ux-font-DMSans);
-  }
-}
-
-@media (min-width: 768px) {
-  .paragraph-torch {
-    font: 400 1.2rem/1.7rem var(--ux-font-DMSans);
-  }
 }
 
 @media (min-width: 1600px) {
@@ -123,10 +115,6 @@
 
   .card-body {
     padding: 4rem 4rem 4rem 0rem !important;
-  }
-
-  .paragraph-torch {
-    font: 400 1.8rem/2.3rem var(--ux-font-DMSans);
   }
 
   .panel-restaurant {
