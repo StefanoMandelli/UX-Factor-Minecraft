@@ -14,17 +14,17 @@
 }
 
 .overworld {
-  background-image: url("../img/body/info/card-overworld.png");
+  background-image: url("../img/body/info/card-overworld.webp");
   background-color: #1a3323;
 }
 
 .nether {
-  background-image: url("../img/body/info/card-nether.png");
+  background-image: url("../img/body/info/card-nether.webp");
   background-color: #531f1d;
 }
 
 .end {
-  background-image: url("../img/body/info/card-end.png");
+  background-image: url("../img/body/info/card-end.webp");
   background-color: #3f1e54;
 }
 
