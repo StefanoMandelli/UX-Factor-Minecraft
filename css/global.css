@@ -344,7 +344,8 @@ p {
 
 .hero-model {
   width: 100%;
-  height: 500px;
+  height: 40vh;
+  min-height: 12rem;
   background-color: transparent;
 }
 
@@ -360,7 +361,8 @@ p {
 }
 
 .thunder-background {
-  background: url("../img/background/fulmine-background.webp") center / cover no-repeat;
+  background: url("../img/background/fulmine-background.webp") center / cover
+    no-repeat;
 }
 
 .amethyst-background {
@@ -408,7 +410,6 @@ p {
 }
 
 @media (hover: hover) {
-  
   .pushable:hover {
     background: var(--color-font);
   }
@@ -424,7 +425,6 @@ p {
     background: var(--color-font);
     color: var(--ux-global-color-accent-1);
   }
-  
 }
 
 @media (min-width: 576px) {
@@ -466,8 +466,6 @@ p {
     padding: 0.5em 1em;
     font-size: 1.2rem;
   }
-
-
 }
 
 @media (min-width: 992px) {
@@ -557,6 +555,11 @@ p {
     width: 23%;
     height: auto;
     top: 20%;
+  }
+
+  .hero-model {
+    width: 100%;
+    background-color: transparent;
   }
 }
 
