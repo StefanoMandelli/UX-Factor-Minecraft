@@ -3,7 +3,7 @@
 }
 
 .p-section {
-  padding: 6rem 3rem;
+  padding: 4rem 1.8rem;
 }
 
 .shop-card {
@@ -168,6 +168,11 @@ h2 {
 
 .code-info h4 .collaborations {
   color: var(--ux-end-color-accent);
+}
+@media screen and (min-width: 576px) {
+  .p-section {
+    padding: 6rem 3rem;
+  }
 }
 
 @media screen and (min-width: 992px) {
