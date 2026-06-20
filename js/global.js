@@ -13,7 +13,7 @@ const audioObjects = soundFiles.map(file => {
     return audio;
 });
 
-const allButtons = document.querySelectorAll('button, .btn, .nav-link, .nav-item, .pushable');
+const allButtons = document.querySelectorAll('button, .pushable');
 
 allButtons.forEach(button => {
     button.addEventListener('click', () => {

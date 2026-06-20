@@ -27,18 +27,12 @@ document.addEventListener('DOMContentLoaded', () => {
         cards.forEach(card => {
             const rect = card.getBoundingClientRect();
 
-            // Calcoliamo quanto la card è vicina al centro dello schermo (da 0 a 1)
             const cardCenterY = rect.top + rect.height / 2;
             const distanceFromCenter = (cardCenterY - windowHeight / 2) / (windowHeight / 2);
 
-            // Limitiamo l'effetto: se la card è fuori vista, non calcoliamo nulla
             if (rect.top < windowHeight && rect.bottom > 0) {
-                // L'inclinazione sull'asse X dipenderà dalla posizione verticale
-                // Più è in alto, più si inclina "indietro", più è in basso, più "in avanti"
-
-                // La card si inclina sia verticalmente che lateralmente mentre scivola via
                 card.style.transform = `perspective(800px) rotateX(${distanceFromCenter * 4}deg) rotateY(${distanceFromCenter * 4}deg)`;
-                card.style.transition = "transform 0.5s ease-out"; // Per rendere il movimento fluido
+                card.style.transition = "transform 0.5s ease-out";
             }
         });
     });

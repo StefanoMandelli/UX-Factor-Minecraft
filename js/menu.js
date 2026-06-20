@@ -45,7 +45,6 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(menuSection);
     }
 
-    // Seleziona le checkbox usando la classe corretta presente nell'HTML
     const checkboxes = document.querySelectorAll(".filter-checkbox");
     const panini = document.querySelectorAll(".allergens");
 
@@ -54,13 +53,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     function filtraPanini() {
-        // Recupera i valori delle checkbox attualmente selezionate
         const filtriAttivi = Array.from(checkboxes)
             .filter(i => i.checked)
             .map(i => i.value);
 
         panini.forEach(panino => {
-            // Recupera gli ingredienti associati al panino dall'attributo HTML
             const attrIngredienti = panino.getAttribute("data-ingredienti");
             const ingredientiPanino = attrIngredienti ? attrIngredienti.split(" ") : [];
 
@@ -68,7 +65,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 // Se non ci sono filtri attivi, mostra tutti i panini normalmente
                 panino.classList.remove("filter-out");
             } else {
-                // Controlla se il panino contiene ALMENO uno degli ingredienti selezionati
                 const corrisponde = filtriAttivi.some(ingr => ingredientiPanino.includes(ingr));
 
                 if (corrisponde) {
@@ -84,6 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+// Dizionario per il multi-lingua
 const dizionario = {
     "it": {
         "sub-price-special": "Scopri questo panino nelle diverse versioni a partire da:",

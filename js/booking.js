@@ -1,8 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     'use strict';
 
-    /* DOM References */
-    // Steps
     const steps = {
         1: document.getElementById('step1'),
         2: document.getElementById('step2'),
@@ -32,22 +30,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const confirmDetails = document.getElementById('confirmDetails');
     const btnCancel = document.getElementById('btnCancel');
 
-    /* State */
+
     let currentStep = 1;
     let selectedWorld = null;
     let bookingData = {};
 
-    /* Step Navigation */
-    function goToStep(stepNumber) {
-        // Hide current step
-        steps[currentStep].classList.remove('step-active');
 
-        // Show target step
+    function goToStep(stepNumber) {
+        steps[currentStep].classList.remove('step-active');
         currentStep = stepNumber;
         steps[currentStep].classList.add('step-active');
     }
 
-    /* Step 1 - Code Input */
+    /* Step 1 */
     btnStep1Next.addEventListener('click', () => {
         const code = inputCode.value.trim();
 
@@ -62,12 +57,10 @@ document.addEventListener('DOMContentLoaded', () => {
         goToStep(2);
     });
 
-    // Remove invalid state on input
     inputCode.addEventListener('input', () => {
         inputCode.classList.remove('is-invalid');
     });
 
-    // Allow Enter key to proceed
     inputCode.addEventListener('keydown', (e) => {
         if (e.key === 'Enter') {
             e.preventDefault();
@@ -75,25 +68,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    /* Step 2 - World Selection */
+    /* Step 2 */
     worldCards.forEach((card) => {
         card.addEventListener('click', () => {
-            // Remove previous selection
             worldCards.forEach((c) => c.classList.remove('selected'));
 
-            // Mark current selection
             card.classList.add('selected');
             selectedWorld = card.dataset.world;
             bookingData.world = selectedWorld;
 
-            // Brief delay then proceed
             setTimeout(() => {
                 goToStep(3);
             }, 350);
         });
     });
 
-    /* Step 3 - Guest Stepper */
+    /* Step 3 */
     btnGuestsUp.addEventListener('click', () => {
         let val = parseInt(inputGuests.value, 10);
         const max = parseInt(inputGuests.max, 10);
@@ -110,18 +100,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    /* Set Min Date to Today */
     const today = new Date();
     const yyyy = today.getFullYear();
     const mm = String(today.getMonth() + 1).padStart(2, '0');
     const dd = String(today.getDate()).padStart(2, '0');
     inputDate.min = `${yyyy}-${mm}-${dd}`;
 
-    /* Form Submission */
     bookingForm.addEventListener('submit', (e) => {
         e.preventDefault();
 
-        // Validate all fields
         let isValid = true;
         const requiredFields = [inputDate, inputTime, inputNickname, inputPhone];
 
@@ -145,7 +132,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        // Validate phone
         const phoneRegex = /^[0-9\s]{6,15}$/;
         if (!phoneRegex.test(inputPhone.value.trim())) {
             inputPhone.classList.add('is-invalid');
@@ -157,14 +143,12 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // Store booking data
         bookingData.date = inputDate.value;
         bookingData.time = inputTime.value;
         bookingData.guests = inputGuests.value;
         bookingData.nickname = inputNickname.value.trim();
         bookingData.phone = phonePrefix.value + ' ' + inputPhone.value.trim();
 
-        // Build confirmation summary
         const formattedDate = formatDate(bookingData.date);
         confirmDetails.innerHTML =
             `<strong>${bookingData.nickname}</strong>, ti aspettiamo ` +
@@ -175,14 +159,13 @@ document.addEventListener('DOMContentLoaded', () => {
         goToStep(4);
     });
 
-    // Remove invalid state on input for all form fields
     [inputDate, inputTime, inputNickname, inputPhone].forEach((field) => {
         field.addEventListener('input', () => {
             field.classList.remove('is-invalid');
         });
     });
 
-    /* Step 4 - Cancel Booking con Messaggio di Successo */
+    /* Step 4 */
     btnCancel.addEventListener('click', (e) => {
         e.preventDefault(); 
 
@@ -213,11 +196,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    /* Utilities */
-
-    /**
-     * Shake animation for invalid fields
-     */
     function shakeElement(el) {
         if (!el) return;
         el.classList.add('shake-anim');
@@ -226,9 +204,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }, { once: true });
     }
 
-    /**
-     * Format date string (YYYY-MM-DD) to Italian locale
-     */
     function formatDate(dateStr) {
         const [y, m, d] = dateStr.split('-').map(Number);
         const date = new Date(y, m - 1, d);
@@ -240,9 +215,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    /**
-     * Capitalize first letter
-     */
     function capitalize(str) {
         return str.charAt(0).toUpperCase() + str.slice(1);
     }
