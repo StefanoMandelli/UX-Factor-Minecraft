@@ -9,22 +9,28 @@
     <title>DineCraft | Menù - Overworld, Nether ed End</title>
 
     <!-- SEO -->
-    <meta name="description" content="Esplora il leggendaro menù di DineCraft. Hamburger, bibite e dolci ispirati ai biomi di Minecraft: dall'Overworld al Nether, fino al vuoto dell'End.">
-    <meta name="keywords" content="menu dinecraft, hamburger minecraft, cibo minecraft, ristorante overworld, ristorante nether, ristorante end, greenstack, shadowstack, berrystack">
+    <meta name="description"
+        content="Esplora il leggendaro menù di DineCraft. Hamburger, bibite e dolci ispirati ai biomi di Minecraft: dall'Overworld al Nether, fino al vuoto dell'End.">
+    <meta name="keywords"
+        content="menu dinecraft, hamburger minecraft, cibo minecraft, ristorante overworld, ristorante nether, ristorante end, greenstack, shadowstack, berrystack">
     <meta name="author" content="UX-Factor">
     <meta name="robots" content="index, follow">
-    
+
     <meta property="og:type" content="website">
     <meta property="og:title" content="DineCraft | Esplora il nostro menù">
-    <meta property="og:description" content="Scopri i nostri piatti leggendari: hamburger, bibite e dolci divisi in tre dimensioni. Scegli il tuo bioma e riempi la tua barra della fame!">
-    <meta property="og:image" content="https://stefanomandelli.github.io/UX-Factor-Minecraft/img/body/homepage/menu-homepage.webp"> 
+    <meta property="og:description"
+        content="Scopri i nostri piatti leggendari: hamburger, bibite e dolci divisi in tre dimensioni. Scegli il tuo bioma e riempi la tua barra della fame!">
+    <meta property="og:image"
+        content="https://stefanomandelli.github.io/UX-Factor-Minecraft/img/body/homepage/menu-homepage.webp">
     <meta property="og:url" content="https://stefanomandelli.github.io/UX-Factor-Minecraft/menu.html">
     <meta property="og:site_name" content="DineCraft">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="DineCraft | Esplora il nostro menù">
-    <meta name="twitter:description" content="Scopri i nostri piatti leggendari: hamburger, bibite e dolci divisi in tre dimensioni. Scegli il tuo bioma e riempi la tua barra della fame!">
-    <meta name="twitter:image" content="https://stefanomandelli.github.io/UX-Factor-Minecraft/img/body/homepage/menu-homepage.webp">
+    <meta name="twitter:description"
+        content="Scopri i nostri piatti leggendari: hamburger, bibite e dolci divisi in tre dimensioni. Scegli il tuo bioma e riempi la tua barra della fame!">
+    <meta name="twitter:image"
+        content="https://stefanomandelli.github.io/UX-Factor-Minecraft/img/body/homepage/menu-homepage.webp">
 
     <!-- Css e librerie -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -107,15 +113,9 @@
     <div class="g-0 container-fluid text-center text-xl-start first-background">
         <div class="hero-desktop row p-5 g-0">
             <div class="col-12 col-xl-3 offset-xl-1 order-xl-2 pb-5 d-flex justify-content-center align-items-center">
-                <model-viewer 
-                    src="img/body/menu/contattaci-compressed.glb" 
-                    alt="Creeper con menu in mano 3D"
-                    shadow-intensity="1" 
-                    auto-rotate 
-                    rotation-per-second="40deg" 
-                    interaction-prompt="none"
-                    class="hero-model" 
-                    poster="img/body/menu/mascotte-menu.png">
+                <model-viewer src="img/body/menu/contattaci-compressed.glb" alt="Creeper con menu in mano 3D"
+                    shadow-intensity="1" auto-rotate rotation-per-second="40deg" interaction-prompt="none"
+                    class="hero-model" poster="img/body/menu/mascotte-menu.png">
                 </model-viewer>
             </div>
             <div class="col-12 col-xl-4 offset-xl-2 order-xl-1 align-self-xl-center">
@@ -209,8 +209,12 @@
                                 <div class="col-12 col-xl-4 order-2 order-xl-1 text-center px-xl-5 allergens"
                                     data-ingredienti="grano vegetale">
 
-                                    <img src="img/body/menu/Overworld/Panini/GreenStack.png" alt="GreenStack Burger"
-                                        class="img-fluid w-100" loading="lazy">
+                                    <img class="img-fluid w-100" srcset="img/body/menu/Overworld/Panini/GreenStack-small.webp 400w, 
+                                    img/body/menu/Overworld/Panini/GreenStack-medium.webp 600w, 
+                                    img/body/menu/Overworld/Panini/GreenStack.webp 800w"
+                                        sizes="(min-width: 1200px) 33vw, 100vw"
+                                        src="img/body/menu/Overworld/Panini/GreenStack.webp" alt="GreenStack Burger"
+                                        loading="lazy">
 
                                     <h3 class="mb-4" data-i18n="sub-price-special">Scopri questo panino nelle diverse
                                         versioni a partire da:</h3>
@@ -265,8 +269,12 @@
                             <div class="col-12 col-xl-4 text-center mb-5 mb-xl-0 allergens"
                                 data-ingredienti="grano vegetale">
                                 <div class="d-flex flex-column h-100 text-center">
-                                    <img src="img/body/menu/Overworld/Panini/overworld-1.png"
-                                        alt="DC Classic Craft burger" class="img-fluid px-5 px-xl-0" loading="lazy">
+                                
+                                    <img class="img-fluid px-5 px-xl-0" srcset="img/body/menu/Overworld/Panini/overworld-1-small.webp 400w, 
+                                    img/body/menu/Overworld/Panini/overworld-1-medium.webp 600w, 
+                                    img/body/menu/Overworld/Panini/overworld-1.webp 800w" sizes="(min-width: 1200px) 33vw, 80vw"
+                                        src="img/body/menu/Overworld/Panini/overworld-1.webp"
+                                        alt="DC Classic Craft burger" loading="lazy">
                                     <h2 class="mb-3 special-title">DC Classic Craft</h2>
 
                                     <div class="mt-auto">
@@ -362,7 +370,8 @@
                             <div class="col-12 col-xl-4 text-center mb-5 mb-xl-0">
                                 <div class="d-flex flex-column h-100 text-center">
                                     <img src="img/body/menu/Overworld/Bibite/overworld-2.png"
-                                        alt="Respiro del ghiacciaio drink" class="img-fluid px-5 px-xl-0" loading="lazy">
+                                        alt="Respiro del ghiacciaio drink" class="img-fluid px-5 px-xl-0"
+                                        loading="lazy">
                                     <h2 class="mb-3 special-title">Respiro del ghiacciaio</h2>
 
                                     <div class="mt-auto">
@@ -416,7 +425,8 @@
                                 data-ingredienti="grano latticini">
                                 <div class="d-flex flex-column h-100 text-center">
                                     <img src="img/body/menu/Overworld/Dolci/overworld-1.png"
-                                        alt="Terra Antica della Mesa sweet" class="img-fluid px-5 px-xl-0" loading="lazy">
+                                        alt="Terra Antica della Mesa sweet" class="img-fluid px-5 px-xl-0"
+                                        loading="lazy">
                                     <h2 class="mb-3 special-title">Terra Antica della Mesa</h2>
 
                                     <div class="mt-auto">
@@ -489,8 +499,12 @@
                                 <div class="col-12 col-xl-4 order-2 order-xl-1 text-center px-xl-5 allergens"
                                     data-ingredienti="grano latticini vegetale">
 
-                                    <img src="img/body/menu/Nether/Panini/ShadowStack.png" alt="ShadowStack Burger"
-                                        class="img-fluid w-100" loading="lazy">
+                                    <img class="img-fluid w-100" srcset="img/body/menu/Nether/Panini/ShadowStack-small.webp 400w, 
+                                    img/body/menu/Nether/Panini/ShadowStack-medium.webp 600w, 
+                                    img/body/menu/Nether/Panini/ShadowStack.webp 800w"
+                                        sizes="(min-width: 1200px) 33vw, 100vw"
+                                        src="img/body/menu/Nether/Panini/ShadowStack.webp" alt="ShadowStack Burger"
+                                        loading="lazy">
 
                                     <h3 class="mb-4" data-i18n="sub-price-special">Scopri questo panino nelle diverse
                                         versioni a partire da:</h3>
@@ -641,7 +655,8 @@
                                 data-ingredienti="latticini">
                                 <div class="d-flex flex-column h-100 text-center">
                                     <img src="img/body/menu/Nether/Bibite/nether-2.png"
-                                        alt="Tonico della Blackstone drink" class="img-fluid px-5 px-xl-0" loading="lazy">
+                                        alt="Tonico della Blackstone drink" class="img-fluid px-5 px-xl-0"
+                                        loading="lazy">
                                     <h2 class="mb-3 special-title">Tonico della Blackstone</h2>
 
                                     <div class="mt-auto">
@@ -765,8 +780,12 @@
                                 <div class="col-12 col-xl-4 order-2 order-xl-1 text-center px-xl-5 allergens"
                                     data-ingredienti="grano vegetale">
 
-                                    <img src="img/body/menu/End/Panini/BerryStack.png" alt="BerryStack Burger"
-                                        class="img-fluid w-100" loading="lazy">
+                                    <img class="img-fluid w-100" srcset="img/body/menu/End/Panini/BerryStack-small.webp 400w, 
+                                    img/body/menu/End/Panini/BerryStack-medium.webp 600w, 
+                                    img/body/menu/End/Panini/BerryStack.webp 800w"
+                                        sizes="(min-width: 1200px) 33vw, 100vw"
+                                        src="img/body/menu/End/Panini/BerryStack.webp" alt="BerryStack Burger"
+                                        loading="lazy">
 
                                     <h3 class="mb-4" data-i18n="sub-price-special">Scopri questo panino nelle diverse
                                         versioni a partire da:</h3>
@@ -1110,9 +1129,14 @@
             </div>
 
             <div class="col-12 col-lg-4 order-5 order-lg-5 text-center text-lg-end">
-                <span class="mx-2"><a href="https://www.microsoft.com/it-it/privacy/privacystatement#mainpersonaldatawecollectmodule" class="text-decoration-none text-reset">Privacy Policy</a></span>
-                <span class="mx-2"><a href="https://www.minecraft.net/it-it/eula" class="text-decoration-none text-reset">Terms & Conditions</a></span>
-                <span class="mx-2"><a href="https://www.microsoft.com/it-it/privacy/privacystatement#maincookiessimilartechnologiesmodule" class="text-decoration-none text-reset">Cookie Policy</a></span>
+                <span class="mx-2"><a
+                        href="https://www.microsoft.com/it-it/privacy/privacystatement#mainpersonaldatawecollectmodule"
+                        class="text-decoration-none text-reset">Privacy Policy</a></span>
+                <span class="mx-2"><a href="https://www.minecraft.net/it-it/eula"
+                        class="text-decoration-none text-reset">Terms & Conditions</a></span>
+                <span class="mx-2"><a
+                        href="https://www.microsoft.com/it-it/privacy/privacystatement#maincookiessimilartechnologiesmodule"
+                        class="text-decoration-none text-reset">Cookie Policy</a></span>
             </div>
 
         </div>
