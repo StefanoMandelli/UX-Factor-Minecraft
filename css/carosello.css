@@ -114,23 +114,23 @@ body {
 
 /* COLORI DECISI PER IL TEST */
 #slide1 {
-  background: url("../img/body/ristorante/immagine1ristorante.png") center / cover no-repeat;
+  background: url("../img/body/ristorante/immagine1ristorante.webp") center / cover no-repeat;
 }
 
 #slide2 {
-  background: url("../img/body/ristorante/immagine2ristorante.png") center / cover no-repeat;
+  background: url("../img/body/ristorante/immagine2ristorante.webp") center / cover no-repeat;
 }
 
 #slide3 {
-  background: url("../img/body/ristorante/immagine3ristorante.png") center / cover no-repeat;
+  background: url("../img/body/ristorante/immagine3ristorante.webp") center / cover no-repeat;
 }
 
 #slide4 {
-  background: url("../img/body/ristorante/immagine4ristorante.jpg") center / cover no-repeat;
+  background: url("../img/body/ristorante/immagine4ristorante.webp") center / cover no-repeat;
 }
 
 #slide5 {
-  background: url("../img/body/ristorante/immagine5ristorante.jpg") center / cover no-repeat;
+  background: url("../img/body/ristorante/immagine5ristorante.webp") center / cover no-repeat;
 }
 
 @media (min-width: 576px) {
