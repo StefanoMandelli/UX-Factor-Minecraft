@@ -4,49 +4,41 @@ document.addEventListener("DOMContentLoaded", () => {
     tutteLeLeve.forEach(leva => {
         const srcLevaOriginale = leva.src;
         const srcsetLevaOriginale = leva.srcset;
-
         const srcLevaFinale = leva.getAttribute('data-end-src');
         const srcsetLevaFinale = leva.getAttribute('data-end-srcset');
 
-        let isLevaAlzata = true;
+        // Salviamo lo stato direttamente sull'elemento DOM per poterlo resettare dall'esterno
+        leva.isLevaAlzata = true;
 
         leva.addEventListener('click', function() {
+            // Questo comportamento deve attivarsi SOLO dai 1200px in su
+            if (window.innerWidth < 1200) return;
+
             const rigaPadre = leva.closest('.row');
-            
             const torchImage = rigaPadre.querySelector('.torch');
             const torchGrid = rigaPadre.querySelector('.torch-grid');
             const torchText = rigaPadre.querySelector('.torch-text');
 
-            if (isLevaAlzata) {
+            if (leva.isLevaAlzata) {
                 leva.src = srcLevaFinale;
                 if (srcsetLevaFinale) leva.srcset = srcsetLevaFinale;
                 
-                if (torchText) {
-                    torchText.classList.add('torch-text-active');
-                    torchGrid.classList.add('act');
-                }
-                
-                if (torchImage) {
-                    torchImage.src = torchImage.dataset.endSrc; 
-                }
-                
-                isLevaAlzata = false; 
+                if (torchText) torchText.classList.add('torch-text-active');
+                if (torchGrid) torchGrid.classList.add('act');
+                if (torchImage) torchImage.src = torchImage.dataset.endSrc; 
 
+                leva.isLevaAlzata = false; 
             } else {
                 leva.src = srcLevaOriginale;
                 leva.srcset = srcsetLevaOriginale;
                 
-                if (torchText) {
-                    torchText.classList.remove('torch-text-active');
-                    torchGrid.classList.remove('act');
-                }
+                if (torchText) torchText.classList.remove('torch-text-active');
+                if (torchGrid) torchGrid.classList.remove('act');
+                if (torchImage) torchImage.src = "img/body/ristorante/torcia-disattivata-lg.webp";
                 
-                if (torchImage) {
-                    torchImage.src = "img/body/ristorante/torcia-disattivata-lg.webp";
-                }
-                
-                isLevaAlzata = true;
-            }
+                leva.isLevaAlzata = true;
+            }       
+            
         });
     });
 });
