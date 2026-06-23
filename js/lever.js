@@ -7,11 +7,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const srcLevaFinale = leva.getAttribute('data-end-src');
         const srcsetLevaFinale = leva.getAttribute('data-end-srcset');
 
-        // Salviamo lo stato direttamente sull'elemento DOM per poterlo resettare dall'esterno
+ 
         leva.isLevaAlzata = true;
 
         leva.addEventListener('click', function() {
-            // Questo comportamento deve attivarsi SOLO dai 1200px in su
+            
             if (window.innerWidth < 1200) return;
 
             const rigaPadre = leva.closest('.row');
