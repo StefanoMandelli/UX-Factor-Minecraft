@@ -99,6 +99,11 @@
 }
 
 @media (min-width: 1200px) {
+  
+  .img-restaurant{
+    transform: scale(1.8);
+  }
+  
   .torch {
     width: 30%;
     position: absolute;
