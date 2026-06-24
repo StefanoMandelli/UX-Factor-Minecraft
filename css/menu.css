@@ -324,8 +324,8 @@ body:has(.end-btn.active) #language-switcher {
 
 @media (min-width: 576px) {
   .special-section {
-    padding-left: 7rem !important;
-    padding-right: 7rem !important;
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
   }
 }
 
